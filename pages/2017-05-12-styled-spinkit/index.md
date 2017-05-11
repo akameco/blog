@@ -35,18 +35,29 @@ Propsやコンポーネントは以下の通り。
 
 ## react-storybook
 React StoryBookを使って開発してみたが、非常によかった。
-以下がその操作画面である。
+以下がその操作画面だ。
 propsの変更や背景を変えてコンポーネントを確認できる。
 styled-spinkitでは、colorとsizeが変更可能だ。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SafaQIPjVkA" frameborder="0" allowfullscreen></iframe>
 
 そのままgithub-pagesを使ってデモにしたので、実際にpropsや背景をいじってみるのとその良さを一部体験できる。
-Addonの追加により色々可能になって便利である。
 
 [DEMO: React Storybook](https://akameco.github.io/styled-spinkit/?knob-color=%23333&knob-number=40&selectedKind=ChangeDots&selectedStory=render&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-actions%2Factions-panel)
 
+すぐにpropsに変更によってどう変わるのかが確認できるのは非常にメリットだ。
+
+また、Addonの追加により色々可能になって便利だった。
+knobsはpropsを変更可能にするアドオン。
+backgroundsはその名の通り背景を変更するアドオンだ。
+
+- @kadira/storybook-addon-knobs
+- react-storybook-addon-backgrounds
+
+
 今回はclickなどのアクションがないので、その威力を十二分には発揮してないが、HMRによってストレスなく開発でき、Reactを使うなら必須だろうと思う。
+
+Storybookについてはまた記事にしたいと思う。
 
 ## styled-components
 
@@ -56,8 +67,7 @@ Addonの追加により色々可能になって便利である。
 
 いくつかその利点を述べたい。
 
-が、使い方はREADMEが詳しいので一切書かない。
-各々上記のリンクからREADMEを読んでほしい。
+が、使い方はREADMEが詳しいので一切書かないので、各々上記のリンクからREADMEを読んでほしい。
 
 さて、最も大きく、そして最大の利点はstyle属性へ付加するのではなく、headにcssを出力する点にある。
 styled-componentsはstyleのhashを計算それをclassNameとし、styleタグにcssを出力する。
@@ -95,7 +105,7 @@ package.jsonにes向けにビルドしたライブラリは、`module`と`jsnext
 
 ちなみに、ある理由から安定版である1.4.7ではなく、v2を使っている。
 
-そのある理由とは、ネストした子コンポーネントへのスタイリングである。
+そのある理由とは、ネストした子コンポーネントへのスタイリングだ。
 これは親へのスタイリングのためのpropsを子へ流すのに便利だ。
 例えば、子コンポーネントが同じbackground-colorを必要とするとき、全ての子コンポーネントにpropsで渡さずに親に渡してやるだけで済む。
 
@@ -144,7 +154,6 @@ const App = () => (
 この機能がv2からの対応でv1では使えない。
 そのため2.0.0-17を指定して使っている。(その分、バグる可能性大だ。これは大きなデメリットである)
 
-
 ### デメリット
 さて、デメリットを述べないのはフェアじゃない。
 僕は狂信者ではないので、いくつかデメリットも書こうと思う。
@@ -152,7 +161,6 @@ const App = () => (
 1. v2は壊れる。
 
 styled-componentsのv2はいわゆるベータ版だ。
-依存の依存がsemverを無視してぶっ壊れてどうしよもない状況になった。
 v2をプロジェクトに導入するには早すぎる。
 SSR対応など目玉機能もあるとはいえ、悪いことは言わないので大人しくv1を使った方がいい。
 
