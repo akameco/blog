@@ -26,6 +26,9 @@ class BlogIndex extends React.Component {
           meta={[
             { name: 'description', content: 'akameco' },
             { name: 'keywords', content: 'blog, articles' },
+            { name: 'twitter:card', content: 'summary' },
+            { name: 'twitter:site', content: '@akameco' },
+            { name: 'twitter:title', content: 'akameco blog' },
           ]}
         />
         <ul>
