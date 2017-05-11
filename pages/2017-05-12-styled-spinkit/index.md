@@ -10,7 +10,6 @@ path: "/styled-spinkit/"
 
 シンプルなローディングコンポーネントがほしくてつくった。
 基本的には、[SpinKit](https://github.com/tobiasahlin/SpinKit)をそのままコンポーネント化した。
-コンポーネントにする利点は、colorやsizeなどカスタマイズが容易になり再利用性が高くなる。
 
 Propsやコンポーネントは以下の通り。
 
