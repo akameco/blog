@@ -1,5 +1,6 @@
 // @flow
 import React from 'react'
+import PropTypes from 'prop-types'
 import moment from 'moment'
 import Helmet from 'react-helmet'
 import ReadNext from '../components/ReadNext'
@@ -10,6 +11,10 @@ import Bio from 'components/Bio'
 import '../css/zenburn.css'
 
 class MarkdownWrapper extends React.Component {
+  static PropTypes = {
+    route: PropTypes.object,
+  }
+
   render() {
     const { route } = this.props
     const post = route.page.data
@@ -37,10 +42,6 @@ class MarkdownWrapper extends React.Component {
       </div>
     )
   }
-}
-
-MarkdownWrapper.propTypes = {
-  route: React.PropTypes.object,
 }
 
 export default MarkdownWrapper

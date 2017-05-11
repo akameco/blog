@@ -1,4 +1,6 @@
+// @flow
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router'
 import sortBy from 'lodash/sortBy'
 import get from 'lodash/get'
@@ -11,7 +13,7 @@ import Bio from 'components/Bio'
 
 class BlogIndex extends React.Component {
   static propTypes = {
-    route: React.PropTypes.object,
+    route: PropTypes.object,
   }
 
   render() {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { prefixLink } from 'gatsby-helpers'
 import { GoogleFont, TypographyStyle } from 'react-typography'
@@ -8,9 +9,7 @@ const BUILD_TIME = new Date().getTime()
 
 module.exports = class extends Component {
   static displayName: 'HTML'
-  static propTypes: {
-    body: React.PropTypes.string,
-  }
+  static propTypes: { body: PropTypes.string }
 
   render() {
     const { body } = this.props

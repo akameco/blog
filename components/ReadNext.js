@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import { prune, include as includes } from 'underscore.string'
@@ -7,8 +8,8 @@ import { rhythm, scale } from 'utils/typography'
 
 export default class ReadNext extends React.Component {
   static propTypes = {
-    post: React.PropTypes.object.isRequired,
-    pages: React.PropTypes.array,
+    post: PropTypes.object.isRequired,
+    pages: PropTypes.array,
   }
 
   render() {
