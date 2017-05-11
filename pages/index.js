@@ -29,6 +29,7 @@ class BlogIndex extends React.Component {
             { name: 'twitter:card', content: 'summary' },
             { name: 'twitter:site', content: '@akameco' },
             { name: 'twitter:title', content: 'akameco blog' },
+            { name: 'twitter:description', content: 'akameco blog' },
           ]}
         />
         <ul>
