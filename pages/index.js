@@ -10,6 +10,10 @@ import include from 'underscore.string/include'
 import Bio from 'components/Bio'
 
 class BlogIndex extends React.Component {
+  static propTypes = {
+    route: React.PropTypes.object,
+  }
+
   render() {
     // Sort pages.
     const sortedPages = sortBy(this.props.route.pages, 'data.date').reverse()
@@ -51,10 +55,6 @@ class BlogIndex extends React.Component {
       </div>
     )
   }
-}
-
-BlogIndex.propTypes = {
-  route: React.PropTypes.object,
 }
 
 export default BlogIndex

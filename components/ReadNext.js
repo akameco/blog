@@ -5,7 +5,12 @@ import { prune, include as includes } from 'underscore.string'
 import find from 'lodash/find'
 import { rhythm, scale } from 'utils/typography'
 
-class ReadNext extends React.Component {
+export default class ReadNext extends React.Component {
+  static propTypes = {
+    post: React.PropTypes.object.isRequired,
+    pages: React.PropTypes.array,
+  }
+
   render() {
     const { pages, post } = this.props
     const { readNext } = post
@@ -56,10 +61,3 @@ class ReadNext extends React.Component {
     }
   }
 }
-
-ReadNext.propTypes = {
-  post: React.PropTypes.object.isRequired,
-  pages: React.PropTypes.array,
-}
-
-export default ReadNext

@@ -3,7 +3,7 @@ import { config } from 'config'
 import { rhythm } from 'utils/typography'
 import profilePic from './avater.png'
 
-class Bio extends React.Component {
+class Bio extends React.PureComponent {
   render() {
     return (
       <p style={{ marginBottom: rhythm(2.5) }}>

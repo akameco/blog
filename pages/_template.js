@@ -6,6 +6,12 @@ import { rhythm, scale } from 'utils/typography'
 import { config } from 'config'
 
 class Template extends React.Component {
+  static propTypes = {
+    children: React.PropTypes.any,
+    location: React.PropTypes.object,
+    route: React.PropTypes.object,
+  }
+
   render() {
     const { location, children } = this.props
     let header
@@ -63,12 +69,6 @@ class Template extends React.Component {
       </Container>
     )
   }
-}
-
-Template.propTypes = {
-  children: React.PropTypes.any,
-  location: React.PropTypes.object,
-  route: React.PropTypes.object,
 }
 
 export default Template

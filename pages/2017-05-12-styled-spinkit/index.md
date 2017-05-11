@@ -38,7 +38,9 @@ React StoryBookを使って開発してみたが、非常によかった。
 propsの変更や背景を変えてコンポーネントを確認できる。
 styled-spinkitでは、colorとsizeが変更可能だ。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SafaQIPjVkA" frameborder="0" allowfullscreen></iframe>
+<div class="youtube">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/SafaQIPjVkA" frameborder="0" allowfullscreen></iframe>
+</div>
 
 そのままgithub-pagesを使ってデモにしたので、実際にpropsや背景をいじってみるのとその良さを一部体験できる。
 
