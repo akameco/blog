@@ -46,5 +46,5 @@ OGPについては以下のサイトが参考になった。
       striptags(post.body).replace(/\r?\n/g, '').slice(0, 120) + '...'
 ```
 
-[ericnorris](https://github.com/ericnorris/striptags)を使ってpost.bodyとして渡ってきたjsxをパースして文字列に変換して最後に...を追加してる。
+[striptags](https://github.com/ericnorris/striptags)を使ってpost.bodyとして渡ってきたjsxをパースして文字列に変換して最後に...を追加してる。
 この辺は文字数オーバーしてると自動で付けてくれるっぽいので必要ないかもしれない。
