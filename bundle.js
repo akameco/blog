@@ -31091,7 +31091,8 @@
 				"data": {
 					"title": "first post",
 					"date": "2017-05-11",
-					"path": "/first-post/"
+					"path": "/first-post/",
+					"image": "https://akameco.github.io/blog/spring.gif"
 				}
 			},
 			{
@@ -34469,7 +34470,7 @@
 	
 	      var title = post.title + ' | ' + _config.config.blogTitle;
 	      var postUrl = _url2.default.resolve(_config.config.siteUrl, route.path);
-	      var description = (0, _striptags2.default)(post.body);
+	      var description = (0, _striptags2.default)(post.body).replace(/\r?\n/g, '').slice(0, 120) + '...';
 	
 	      return _react2.default.createElement(
 	        'div',
@@ -46039,7 +46040,7 @@
 /* 561 */
 /***/ function(module, exports) {
 
-	module.exports = {"title":"first post","date":"2017-05-11","path":"/first-post/","body":"<p>HMRがないと文章を書く気持ちになれないので、<a href=\"https://github.com/gatsbyjs/gatsby\">gatsbyjs</a>を試してみることにした。</p>\n<p><img src=\"./spring.gif\" alt=\"spring\"></p>\n<p>しかし、どうやら記事を消しても反映されない。\nどこかバグってるっぽい。</p>\n<p>はやくもやる気なくなってきた。</p>\n<p>TwitterCard対応、RSS対応、SEO。\n無限にやることある。</p>\n"}
+	module.exports = {"title":"first post","date":"2017-05-11","path":"/first-post/","image":"https://akameco.github.io/blog/spring.gif","body":"<p>HMRがないと文章を書く気持ちになれないので、<a href=\"https://github.com/gatsbyjs/gatsby\">gatsbyjs</a>を試してみることにした。</p>\n<p><img src=\"./spring.gif\" alt=\"spring\"></p>\n<p>しかし、どうやら記事を消しても反映されない。\nどこかバグってるっぽい。</p>\n<p>はやくもやる気なくなってきた。</p>\n<p>TwitterCard対応、RSS対応、SEO。\n無限にやることある。</p>\n"}
 
 /***/ },
 /* 562 */
