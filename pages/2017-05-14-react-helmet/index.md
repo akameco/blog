@@ -2,7 +2,7 @@
 title: React Helmetを使ってOGP対応した
 date: "2017-05-14"
 path: "/react-helmet/"
-image: https://raw.githubusercontent.com/akameco/blog/master/pages/2017-05-14-react-helmet/ogp.png
+image: https://akameco.github.io/blog/react-helmet/ogp.png
 ---
 
 Reaact Helmetを使ってこのブログのOGP対応した。
