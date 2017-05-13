@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[567, 7],
+[568, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5756,7 +5756,7 @@
 
 /***/ },
 /* 49 */
-[567, 34],
+[568, 34],
 /* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31162,6 +31162,27 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2017-05-14-react-helmet",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2017-05-14-react-helmet",
+					"stem": "index",
+					"path": "2017-05-14-react-helmet/index.md"
+				},
+				"requirePath": "2017-05-14-react-helmet/index.md",
+				"path": "/react-helmet/",
+				"data": {
+					"title": "React Helmetを使ってOGP対応した",
+					"date": "2017-05-14",
+					"path": "/react-helmet/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "",
 					"base": "404.md",
 					"ext": "md",
@@ -34477,7 +34498,7 @@
 	        { className: 'markdown' },
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: title,
-	          meta: [{ name: 'description', content: description }, { property: 'og:title', content: post.title }, { property: 'og:type', content: 'blog' }, { property: 'og:url', content: postUrl }, { property: 'og:image', content: post.image || _config.config.ogImage }, { property: 'og:description', content: description }, { name: 'twitter:card', content: 'summary' }, { name: 'twitter:site', content: '@akameco' }]
+	          meta: [{ name: 'description', content: description }, { property: 'fb:add_id', content: '1675789832727941' }, { property: 'og:title', content: post.title }, { property: 'og:type', content: 'blog' }, { property: 'og:url', content: postUrl }, { property: 'og:image', content: post.image || _config.config.ogImage }, { property: 'og:description', content: description }, { name: 'twitter:card', content: 'summary' }, { name: 'twitter:site', content: '@akameco' }]
 	        }),
 	        _react2.default.createElement(
 	          'h2',
@@ -46018,9 +46039,10 @@
 		"./2017-05-12-gatsby-1/index.md": 562,
 		"./2017-05-12-styled-spinkit/index.md": 563,
 		"./2017-05-13-touch-alt/index.md": 564,
-		"./404.md": 565,
+		"./2017-05-14-react-helmet/index.md": 565,
+		"./404.md": 566,
 		"./_template.js": 385,
-		"./index.js": 566
+		"./index.js": 567
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46064,10 +46086,16 @@
 /* 565 */
 /***/ function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"React Helmetを使ってOGP対応した","date":"2017-05-14","path":"/react-helmet/","body":"<p>Reaact Helmetを使ってこのブログのOGP対応した。</p>\n<p><a href=\"https://github.com/nfl/react-helmet\">nfl/react-helmet: A document head manager for React</a></p>\n<p>このブログはReactを使って書かれているのでOGP対応がちょいめんどい。\nしかし、React Helmetを使って簡単に可能できた。</p>\n<p>gatsby.jsだとwrappers/md.jsに以下を追記した。</p>\n<pre><code class=\"language-js\">&lt;Helmet\n\ttitle={title}\n\tmeta={[\n\t\t{ <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">'description'</span>, <span class=\"hljs-attr\">content</span>: description },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:title'</span>, <span class=\"hljs-attr\">content</span>: post.title },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:type'</span>, <span class=\"hljs-attr\">content</span>: <span class=\"hljs-string\">'blog'</span> },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:url'</span>, <span class=\"hljs-attr\">content</span>: postUrl },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:image'</span>, <span class=\"hljs-attr\">content</span>: post.image || config.ogImage },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:description'</span>, <span class=\"hljs-attr\">content</span>: description },\n\t\t{ <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">'twitter:card'</span>, <span class=\"hljs-attr\">content</span>: <span class=\"hljs-string\">'summary'</span> },\n\t\t{ <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">'twitter:site'</span>, <span class=\"hljs-attr\">content</span>: <span class=\"hljs-string\">'@akameco'</span> },\n\t]}\n/&gt;\n</code></pre>\n<p>OGPについては以下のサイトが参考になった。</p>\n<p><a href=\"https://ferret-plus.com/610\">Facebook・TwitterのOGP設定方法まとめ｜ferret [フェレット]</a></p>\n<p>また、上記のdescriptionだけど、文字数制限があるので雑に以下のようにした。</p>\n<pre><code class=\"language-js\">    <span class=\"hljs-keyword\">const</span> description =\n      striptags(post.body).replace(<span class=\"hljs-regexp\">/\\r?\\n/g</span>, <span class=\"hljs-string\">''</span>).slice(<span class=\"hljs-number\">0</span>, <span class=\"hljs-number\">120</span>) + <span class=\"hljs-string\">'...'</span>\n</code></pre>\n<p><a href=\"https://github.com/ericnorris/striptags\">ericnorris</a>を使ってpost.bodyとして渡ってきたjsxをパースして文字列に変換して最後に…を追加してる。\nこの辺は文字数オーバーしてると自動で付けてくれるっぽいので必要ないかもしれない。</p>\n"}
 
 /***/ },
 /* 566 */
+/***/ function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ },
+/* 567 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46183,7 +46211,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 567 */
+/* 568 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
