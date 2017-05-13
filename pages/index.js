@@ -30,9 +30,9 @@ class BlogIndex extends React.Component {
         <Helmet
           title={config.blogTitle}
           meta={[
-            { name: 'description', content: 'akameco' },
+            { name: 'description', content: 'akameco blog' },
             { name: 'keywords', content: 'blog, articles' },
-            { property: 'og:title', content: config.blogTitle },
+            { property: 'og:site_name', content: config.blogTitle },
             { property: 'og:type', content: 'blog' },
             { property: 'og:url', content: config.siteUrl },
             { property: 'og:image', content: config.ogImage },

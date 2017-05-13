@@ -7,6 +7,7 @@ import Helmet from 'react-helmet'
 import ReadNext from '../components/ReadNext'
 import { rhythm } from 'utils/typography'
 import { config } from 'config'
+import striptags from 'striptags'
 import Bio from 'components/Bio'
 
 import '../css/zenburn.css'
@@ -22,20 +23,22 @@ class MarkdownWrapper extends React.Component {
 
     const title = `${post.title} | ${config.blogTitle}`
     const postUrl = url.resolve(config.siteUrl, route.path)
+    const description =
+      striptags(post.body).replace(/\r?\n/g, '').slice(0, 120) + '...'
 
     return (
       <div className="markdown">
         <Helmet
           title={title}
           meta={[
-            { property: 'og:title', content: title },
+            { name: 'description', content: description },
+            { property: 'og:title', content: post.title },
             { property: 'og:type', content: 'blog' },
             { property: 'og:url', content: postUrl },
             { property: 'og:image', content: post.image || config.ogImage },
+            { property: 'og:description', content: description },
             { name: 'twitter:card', content: 'summary' },
             { name: 'twitter:site', content: '@akameco' },
-            { name: 'twitter:title', content: title },
-            { name: 'twitter:description', content: 'akameco blog' },
           ]}
         />
         <h2 style={{ marginTop: 0 }}>{post.title}</h2>
