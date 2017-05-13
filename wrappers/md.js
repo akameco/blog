@@ -32,6 +32,7 @@ class MarkdownWrapper extends React.Component {
           title={title}
           meta={[
             { name: 'description', content: description },
+            { property: 'fb:add_id', content: '1675789832727941' },
             { property: 'og:title', content: post.title },
             { property: 'og:type', content: 'blog' },
             { property: 'og:url', content: postUrl },
