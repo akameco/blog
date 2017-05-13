@@ -1,3 +1,5 @@
 blogTitle = "akameco Blog"
 authorName = "akameco"
 linkPrefix = "/blog"
+siteUrl = "https://akameco.github.io/blog/"
+ogImage = "https://avatars3.githubusercontent.com/u/4002137?v=3&s=400"

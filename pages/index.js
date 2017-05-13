@@ -32,6 +32,10 @@ class BlogIndex extends React.Component {
           meta={[
             { name: 'description', content: 'akameco' },
             { name: 'keywords', content: 'blog, articles' },
+            { property: 'og:title', content: config.blogTitle },
+            { property: 'og:type', content: 'blog' },
+            { property: 'og:url', content: config.siteUrl },
+            { property: 'og:image', content: config.ogImage },
             { name: 'twitter:card', content: 'summary' },
             { name: 'twitter:site', content: '@akameco' },
             { name: 'twitter:title', content: 'akameco blog' },
