@@ -74,7 +74,7 @@ of this software and associated documentation files (the "Software"), to deal
 自分はわりとyeomenでテンプレートを作成することが多いが、既存のプロジェクトにわりといつも使う設定を持ってきたいときに便利であると思う。
 例えば、.babelrcや.eslinrc、.editorconfigなどがそれだ。
 
-自分で使ってて便利なので、是非使ってくれたら嬉しいな。
+自分で使っててわりと便利なので、是非使ってくれると嬉しい。
 
 [akameco/touch-alt: Create from a template instead of a new file](https://github.com/akameco/touch-alt)
 
