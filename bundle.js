@@ -31092,7 +31092,7 @@
 					"title": "first post",
 					"date": "2017-05-11",
 					"path": "/first-post/",
-					"image": "https://akameco.github.io/blog/spring.gif"
+					"image": "https://akameco.github.io/blog/first-post/spring.gif"
 				}
 			},
 			{
@@ -46040,7 +46040,7 @@
 /* 561 */
 /***/ function(module, exports) {
 
-	module.exports = {"title":"first post","date":"2017-05-11","path":"/first-post/","image":"https://akameco.github.io/blog/spring.gif","body":"<p>HMRがないと文章を書く気持ちになれないので、<a href=\"https://github.com/gatsbyjs/gatsby\">gatsbyjs</a>を試してみることにした。</p>\n<p><img src=\"./spring.gif\" alt=\"spring\"></p>\n<p>しかし、どうやら記事を消しても反映されない。\nどこかバグってるっぽい。</p>\n<p>はやくもやる気なくなってきた。</p>\n<p>TwitterCard対応、RSS対応、SEO。\n無限にやることある。</p>\n"}
+	module.exports = {"title":"first post","date":"2017-05-11","path":"/first-post/","image":"https://akameco.github.io/blog/first-post/spring.gif","body":"<p>HMRがないと文章を書く気持ちになれないので、<a href=\"https://github.com/gatsbyjs/gatsby\">gatsbyjs</a>を試してみることにした。</p>\n<p><img src=\"./spring.gif\" alt=\"spring\"></p>\n<p>しかし、どうやら記事を消しても反映されない。\nどこかバグってるっぽい。</p>\n<p>はやくもやる気なくなってきた。</p>\n<p>TwitterCard対応、RSS対応、SEO。\n無限にやることある。</p>\n"}
 
 /***/ },
 /* 562 */
