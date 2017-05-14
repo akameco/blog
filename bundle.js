@@ -31147,7 +31147,8 @@
 					"title": "first post",
 					"date": "2017-05-11",
 					"path": "/first-post/",
-					"image": "https://akameco.github.io/blog/first-post/spring.gif"
+					"image": "https://akameco.github.io/blog/first-post/spring.gif",
+					"readNext": "/gatsby1/"
 				}
 			},
 			{
@@ -31168,7 +31169,8 @@
 				"data": {
 					"title": "Blogの設定",
 					"date": "2017-05-12",
-					"path": "/gatsby1/"
+					"path": "/gatsby1/",
+					"readNext": "/react-helmet/"
 				}
 			},
 			{
@@ -34574,21 +34576,21 @@
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
-	var _ReadNext = __webpack_require__(465);
-	
-	var _ReadNext2 = _interopRequireDefault(_ReadNext);
-	
 	var _typography = __webpack_require__(401);
 	
 	var _config = __webpack_require__(384);
 	
-	var _striptags = __webpack_require__(545);
+	var _striptags = __webpack_require__(465);
 	
 	var _striptags2 = _interopRequireDefault(_striptags);
 	
-	var _Bio = __webpack_require__(546);
+	var _Bio = __webpack_require__(466);
 	
 	var _Bio2 = _interopRequireDefault(_Bio);
+	
+	var _ReadNext = __webpack_require__(468);
+	
+	var _ReadNext2 = _interopRequireDefault(_ReadNext);
 	
 	__webpack_require__(548);
 	
@@ -34644,11 +34646,7 @@
 	          'Posted ',
 	          (0, _moment2.default)(post.date).format('MMMM D, YYYY')
 	        ),
-	        _react2.default.createElement('hr', {
-	          style: {
-	            marginBottom: (0, _typography.rhythm)(2)
-	          }
-	        }),
+	        _react2.default.createElement('hr', null),
 	        _react2.default.createElement(_ReadNext2.default, { post: post, pages: route.pages }),
 	        _react2.default.createElement(_Bio2.default, null)
 	      );
@@ -42523,2112 +42521,6 @@
 /* 465 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(2);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _propTypes = __webpack_require__(387);
-	
-	var _propTypes2 = _interopRequireDefault(_propTypes);
-	
-	var _reactRouter = __webpack_require__(170);
-	
-	var _gatsbyHelpers = __webpack_require__(383);
-	
-	var _underscore = __webpack_require__(466);
-	
-	var _find = __webpack_require__(538);
-	
-	var _find2 = _interopRequireDefault(_find);
-	
-	var _typography = __webpack_require__(401);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var ReadNext = function (_React$Component) {
-	  _inherits(ReadNext, _React$Component);
-	
-	  function ReadNext() {
-	    _classCallCheck(this, ReadNext);
-	
-	    return _possibleConstructorReturn(this, (ReadNext.__proto__ || Object.getPrototypeOf(ReadNext)).apply(this, arguments));
-	  }
-	
-	  _createClass(ReadNext, [{
-	    key: 'render',
-	    value: function render() {
-	      var _props = this.props,
-	          pages = _props.pages,
-	          post = _props.post;
-	      var readNext = post.readNext;
-	
-	      var nextPost = void 0;
-	      if (readNext) {
-	        nextPost = (0, _find2.default)(pages, function (page) {
-	          return (0, _underscore.include)(page.path, readNext);
-	        });
-	      }
-	      if (!nextPost) {
-	        return _react2.default.createElement('noscript', null);
-	      } else {
-	        nextPost = (0, _find2.default)(pages, function (page) {
-	          return (0, _underscore.include)(page.path, readNext.slice(1, -1));
-	        });
-	        // Create pruned version of the body.
-	        var html = nextPost.data.body;
-	        var body = (0, _underscore.prune)(html.replace(/<[^>]*>/g, ''), 200);
-	
-	        return _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'h6',
-	            {
-	              style: _extends({}, (0, _typography.scale)(-0.5), {
-	                margin: 0,
-	                letterSpacing: -0.25
-	              })
-	            },
-	            'READ THIS NEXT:'
-	          ),
-	          _react2.default.createElement(
-	            'h3',
-	            {
-	              style: {
-	                marginTop: 0,
-	                marginBottom: (0, _typography.rhythm)(1 / 4)
-	              }
-	            },
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              {
-	                to: {
-	                  pathname: (0, _gatsbyHelpers.prefixLink)(nextPost.path),
-	                  query: {
-	                    readNext: true
-	                  }
-	                }
-	              },
-	              nextPost.data.title
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            body
-	          ),
-	          _react2.default.createElement('hr', null)
-	        );
-	      }
-	    }
-	  }]);
-	
-	  return ReadNext;
-	}(_react2.default.Component);
-	
-	ReadNext.propTypes = {
-	  post: _propTypes2.default.object.isRequired,
-	  pages: _propTypes2.default.array
-	};
-	exports.default = ReadNext;
-	module.exports = exports['default'];
-
-/***/ },
-/* 466 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-	* Underscore.string
-	* (c) 2010 Esa-Matti Suuronen <esa-matti aet suuronen dot org>
-	* Underscore.string is freely distributable under the terms of the MIT license.
-	* Documentation: https://github.com/epeli/underscore.string
-	* Some code is borrowed from MooTools and Alexandru Marasteanu.
-	* Version '3.3.4'
-	* @preserve
-	*/
-	
-	'use strict';
-	
-	function s(value) {
-	  /* jshint validthis: true */
-	  if (!(this instanceof s)) return new s(value);
-	  this._wrapped = value;
-	}
-	
-	s.VERSION = '3.3.4';
-	
-	s.isBlank          = __webpack_require__(467);
-	s.stripTags        = __webpack_require__(469);
-	s.capitalize       = __webpack_require__(470);
-	s.decapitalize     = __webpack_require__(471);
-	s.chop             = __webpack_require__(472);
-	s.trim             = __webpack_require__(473);
-	s.clean            = __webpack_require__(476);
-	s.cleanDiacritics  = __webpack_require__(477);
-	s.count            = __webpack_require__(478);
-	s.chars            = __webpack_require__(479);
-	s.swapCase         = __webpack_require__(480);
-	s.escapeHTML       = __webpack_require__(481);
-	s.unescapeHTML     = __webpack_require__(483);
-	s.splice           = __webpack_require__(485);
-	s.insert           = __webpack_require__(486);
-	s.replaceAll       = __webpack_require__(487);
-	s.include          = __webpack_require__(488);
-	s.join             = __webpack_require__(489);
-	s.lines            = __webpack_require__(490);
-	s.dedent           = __webpack_require__(491);
-	s.reverse          = __webpack_require__(492);
-	s.startsWith       = __webpack_require__(493);
-	s.endsWith         = __webpack_require__(495);
-	s.pred             = __webpack_require__(496);
-	s.succ             = __webpack_require__(498);
-	s.titleize         = __webpack_require__(499);
-	s.camelize         = __webpack_require__(500);
-	s.underscored      = __webpack_require__(501);
-	s.dasherize        = __webpack_require__(502);
-	s.classify         = __webpack_require__(503);
-	s.humanize         = __webpack_require__(504);
-	s.ltrim            = __webpack_require__(505);
-	s.rtrim            = __webpack_require__(506);
-	s.truncate         = __webpack_require__(507);
-	s.prune            = __webpack_require__(508);
-	s.words            = __webpack_require__(509);
-	s.pad              = __webpack_require__(510);
-	s.lpad             = __webpack_require__(512);
-	s.rpad             = __webpack_require__(513);
-	s.lrpad            = __webpack_require__(514);
-	s.sprintf          = __webpack_require__(515);
-	s.vsprintf         = __webpack_require__(518);
-	s.toNumber         = __webpack_require__(519);
-	s.numberFormat     = __webpack_require__(520);
-	s.strRight         = __webpack_require__(521);
-	s.strRightBack     = __webpack_require__(522);
-	s.strLeft          = __webpack_require__(523);
-	s.strLeftBack      = __webpack_require__(524);
-	s.toSentence       = __webpack_require__(525);
-	s.toSentenceSerial = __webpack_require__(526);
-	s.slugify          = __webpack_require__(527);
-	s.surround         = __webpack_require__(528);
-	s.quote            = __webpack_require__(529);
-	s.unquote          = __webpack_require__(530);
-	s.repeat           = __webpack_require__(531);
-	s.naturalCmp       = __webpack_require__(532);
-	s.levenshtein      = __webpack_require__(533);
-	s.toBoolean        = __webpack_require__(534);
-	s.exports          = __webpack_require__(535);
-	s.escapeRegExp     = __webpack_require__(475);
-	s.wrap             = __webpack_require__(536);
-	s.map              = __webpack_require__(537);
-	
-	// Aliases
-	s.strip     = s.trim;
-	s.lstrip    = s.ltrim;
-	s.rstrip    = s.rtrim;
-	s.center    = s.lrpad;
-	s.rjust     = s.lpad;
-	s.ljust     = s.rpad;
-	s.contains  = s.include;
-	s.q         = s.quote;
-	s.toBool    = s.toBoolean;
-	s.camelcase = s.camelize;
-	s.mapChars  = s.map;
-	
-	
-	// Implement chaining
-	s.prototype = {
-	  value: function value() {
-	    return this._wrapped;
-	  }
-	};
-	
-	function fn2method(key, fn) {
-	  if (typeof fn !== 'function') return;
-	  s.prototype[key] = function() {
-	    var args = [this._wrapped].concat(Array.prototype.slice.call(arguments));
-	    var res = fn.apply(null, args);
-	    // if the result is non-string stop the chain and return the value
-	    return typeof res === 'string' ? new s(res) : res;
-	  };
-	}
-	
-	// Copy functions to instance methods for chaining
-	for (var key in s) fn2method(key, s[key]);
-	
-	fn2method('tap', function tap(string, fn) {
-	  return fn(string);
-	});
-	
-	function prototype2method(methodName) {
-	  fn2method(methodName, function(context) {
-	    var args = Array.prototype.slice.call(arguments, 1);
-	    return String.prototype[methodName].apply(context, args);
-	  });
-	}
-	
-	var prototypeMethods = [
-	  'toUpperCase',
-	  'toLowerCase',
-	  'split',
-	  'replace',
-	  'slice',
-	  'substring',
-	  'substr',
-	  'concat'
-	];
-	
-	for (var method in prototypeMethods) prototype2method(prototypeMethods[method]);
-	
-	
-	module.exports = s;
-
-
-/***/ },
-/* 467 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function isBlank(str) {
-	  return (/^\s*$/).test(makeString(str));
-	};
-
-
-/***/ },
-/* 468 */
-/***/ function(module, exports) {
-
-	/**
-	 * Ensure some object is a coerced to a string
-	 **/
-	module.exports = function makeString(object) {
-	  if (object == null) return '';
-	  return '' + object;
-	};
-
-
-/***/ },
-/* 469 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function stripTags(str) {
-	  return makeString(str).replace(/<\/?[^>]+>/g, '');
-	};
-
-
-/***/ },
-/* 470 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function capitalize(str, lowercaseRest) {
-	  str = makeString(str);
-	  var remainingChars = !lowercaseRest ? str.slice(1) : str.slice(1).toLowerCase();
-	
-	  return str.charAt(0).toUpperCase() + remainingChars;
-	};
-
-
-/***/ },
-/* 471 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function decapitalize(str) {
-	  str = makeString(str);
-	  return str.charAt(0).toLowerCase() + str.slice(1);
-	};
-
-
-/***/ },
-/* 472 */
-/***/ function(module, exports) {
-
-	module.exports = function chop(str, step) {
-	  if (str == null) return [];
-	  str = String(str);
-	  step = ~~step;
-	  return step > 0 ? str.match(new RegExp('.{1,' + step + '}', 'g')) : [str];
-	};
-
-
-/***/ },
-/* 473 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	var defaultToWhiteSpace = __webpack_require__(474);
-	var nativeTrim = String.prototype.trim;
-	
-	module.exports = function trim(str, characters) {
-	  str = makeString(str);
-	  if (!characters && nativeTrim) return nativeTrim.call(str);
-	  characters = defaultToWhiteSpace(characters);
-	  return str.replace(new RegExp('^' + characters + '+|' + characters + '+$', 'g'), '');
-	};
-
-
-/***/ },
-/* 474 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var escapeRegExp = __webpack_require__(475);
-	
-	module.exports = function defaultToWhiteSpace(characters) {
-	  if (characters == null)
-	    return '\\s';
-	  else if (characters.source)
-	    return characters.source;
-	  else
-	    return '[' + escapeRegExp(characters) + ']';
-	};
-
-
-/***/ },
-/* 475 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function escapeRegExp(str) {
-	  return makeString(str).replace(/([.*+?^=!:${}()|[\]\/\\])/g, '\\$1');
-	};
-
-
-/***/ },
-/* 476 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var trim = __webpack_require__(473);
-	
-	module.exports = function clean(str) {
-	  return trim(str).replace(/\s\s+/g, ' ');
-	};
-
-
-/***/ },
-/* 477 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	var makeString = __webpack_require__(468);
-	
-	var from  = 'ąàáäâãåæăćčĉęèéëêĝĥìíïîĵłľńňòóöőôõðøśșşšŝťțţŭùúüűûñÿýçżźž',
-	  to    = 'aaaaaaaaaccceeeeeghiiiijllnnoooooooossssstttuuuuuunyyczzz';
-	
-	from += from.toUpperCase();
-	to += to.toUpperCase();
-	
-	to = to.split('');
-	
-	// for tokens requireing multitoken output
-	from += 'ß';
-	to.push('ss');
-	
-	
-	module.exports = function cleanDiacritics(str) {
-	  return makeString(str).replace(/.{1}/g, function(c){
-	    var index = from.indexOf(c);
-	    return index === -1 ? c : to[index];
-	  });
-	};
-
-
-/***/ },
-/* 478 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function(str, substr) {
-	  str = makeString(str);
-	  substr = makeString(substr);
-	
-	  if (str.length === 0 || substr.length === 0) return 0;
-	  
-	  return str.split(substr).length - 1;
-	};
-
-
-/***/ },
-/* 479 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function chars(str) {
-	  return makeString(str).split('');
-	};
-
-
-/***/ },
-/* 480 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function swapCase(str) {
-	  return makeString(str).replace(/\S/g, function(c) {
-	    return c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase();
-	  });
-	};
-
-
-/***/ },
-/* 481 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	var escapeChars = __webpack_require__(482);
-	
-	var regexString = '[';
-	for(var key in escapeChars) {
-	  regexString += key;
-	}
-	regexString += ']';
-	
-	var regex = new RegExp( regexString, 'g');
-	
-	module.exports = function escapeHTML(str) {
-	
-	  return makeString(str).replace(regex, function(m) {
-	    return '&' + escapeChars[m] + ';';
-	  });
-	};
-
-
-/***/ },
-/* 482 */
-/***/ function(module, exports) {
-
-	/* We're explicitly defining the list of entities we want to escape.
-	nbsp is an HTML entity, but we don't want to escape all space characters in a string, hence its omission in this map.
-	
-	*/
-	var escapeChars = {
-	  '¢' : 'cent',
-	  '£' : 'pound',
-	  '¥' : 'yen',
-	  '€': 'euro',
-	  '©' :'copy',
-	  '®' : 'reg',
-	  '<' : 'lt',
-	  '>' : 'gt',
-	  '"' : 'quot',
-	  '&' : 'amp',
-	  '\'' : '#39'
-	};
-	
-	module.exports = escapeChars;
-
-
-/***/ },
-/* 483 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	var htmlEntities = __webpack_require__(484);
-	
-	module.exports = function unescapeHTML(str) {
-	  return makeString(str).replace(/\&([^;]+);/g, function(entity, entityCode) {
-	    var match;
-	
-	    if (entityCode in htmlEntities) {
-	      return htmlEntities[entityCode];
-	    /*eslint no-cond-assign: 0*/
-	    } else if (match = entityCode.match(/^#x([\da-fA-F]+)$/)) {
-	      return String.fromCharCode(parseInt(match[1], 16));
-	    /*eslint no-cond-assign: 0*/
-	    } else if (match = entityCode.match(/^#(\d+)$/)) {
-	      return String.fromCharCode(~~match[1]);
-	    } else {
-	      return entity;
-	    }
-	  });
-	};
-
-
-/***/ },
-/* 484 */
-/***/ function(module, exports) {
-
-	/*
-	We're explicitly defining the list of entities that might see in escape HTML strings
-	*/
-	var htmlEntities = {
-	  nbsp: ' ',
-	  cent: '¢',
-	  pound: '£',
-	  yen: '¥',
-	  euro: '€',
-	  copy: '©',
-	  reg: '®',
-	  lt: '<',
-	  gt: '>',
-	  quot: '"',
-	  amp: '&',
-	  apos: '\''
-	};
-	
-	module.exports = htmlEntities;
-
-
-/***/ },
-/* 485 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var chars = __webpack_require__(479);
-	
-	module.exports = function splice(str, i, howmany, substr) {
-	  var arr = chars(str);
-	  arr.splice(~~i, ~~howmany, substr);
-	  return arr.join('');
-	};
-
-
-/***/ },
-/* 486 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var splice = __webpack_require__(485);
-	
-	module.exports = function insert(str, i, substr) {
-	  return splice(str, i, 0, substr);
-	};
-
-
-/***/ },
-/* 487 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function replaceAll(str, find, replace, ignorecase) {
-	  var flags = (ignorecase === true)?'gi':'g';
-	  var reg = new RegExp(find, flags);
-	
-	  return makeString(str).replace(reg, replace);
-	};
-
-
-/***/ },
-/* 488 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function include(str, needle) {
-	  if (needle === '') return true;
-	  return makeString(str).indexOf(needle) !== -1;
-	};
-
-
-/***/ },
-/* 489 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	var slice = [].slice;
-	
-	module.exports = function join() {
-	  var args = slice.call(arguments),
-	    separator = args.shift();
-	
-	  return args.join(makeString(separator));
-	};
-
-
-/***/ },
-/* 490 */
-/***/ function(module, exports) {
-
-	module.exports = function lines(str) {
-	  if (str == null) return [];
-	  return String(str).split(/\r\n?|\n/);
-	};
-
-
-/***/ },
-/* 491 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	function getIndent(str) {
-	  var matches = str.match(/^[\s\\t]*/gm);
-	  var indent = matches[0].length;
-	  
-	  for (var i = 1; i < matches.length; i++) {
-	    indent = Math.min(matches[i].length, indent);
-	  }
-	
-	  return indent;
-	}
-	
-	module.exports = function dedent(str, pattern) {
-	  str = makeString(str);
-	  var indent = getIndent(str);
-	  var reg;
-	
-	  if (indent === 0) return str;
-	
-	  if (typeof pattern === 'string') {
-	    reg = new RegExp('^' + pattern, 'gm');
-	  } else {
-	    reg = new RegExp('^[ \\t]{' + indent + '}', 'gm');
-	  }
-	
-	  return str.replace(reg, '');
-	};
-
-
-/***/ },
-/* 492 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var chars = __webpack_require__(479);
-	
-	module.exports = function reverse(str) {
-	  return chars(str).reverse().join('');
-	};
-
-
-/***/ },
-/* 493 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	var toPositive = __webpack_require__(494);
-	
-	module.exports = function startsWith(str, starts, position) {
-	  str = makeString(str);
-	  starts = '' + starts;
-	  position = position == null ? 0 : Math.min(toPositive(position), str.length);
-	  return str.lastIndexOf(starts, position) === position;
-	};
-
-
-/***/ },
-/* 494 */
-/***/ function(module, exports) {
-
-	module.exports = function toPositive(number) {
-	  return number < 0 ? 0 : (+number || 0);
-	};
-
-
-/***/ },
-/* 495 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	var toPositive = __webpack_require__(494);
-	
-	module.exports = function endsWith(str, ends, position) {
-	  str = makeString(str);
-	  ends = '' + ends;
-	  if (typeof position == 'undefined') {
-	    position = str.length - ends.length;
-	  } else {
-	    position = Math.min(toPositive(position), str.length) - ends.length;
-	  }
-	  return position >= 0 && str.indexOf(ends, position) === position;
-	};
-
-
-/***/ },
-/* 496 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var adjacent = __webpack_require__(497);
-	
-	module.exports = function succ(str) {
-	  return adjacent(str, -1);
-	};
-
-
-/***/ },
-/* 497 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function adjacent(str, direction) {
-	  str = makeString(str);
-	  if (str.length === 0) {
-	    return '';
-	  }
-	  return str.slice(0, -1) + String.fromCharCode(str.charCodeAt(str.length - 1) + direction);
-	};
-
-
-/***/ },
-/* 498 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var adjacent = __webpack_require__(497);
-	
-	module.exports = function succ(str) {
-	  return adjacent(str, 1);
-	};
-
-
-/***/ },
-/* 499 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function titleize(str) {
-	  return makeString(str).toLowerCase().replace(/(?:^|\s|-)\S/g, function(c) {
-	    return c.toUpperCase();
-	  });
-	};
-
-
-/***/ },
-/* 500 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var trim = __webpack_require__(473);
-	var decap = __webpack_require__(471);
-	
-	module.exports = function camelize(str, decapitalize) {
-	  str = trim(str).replace(/[-_\s]+(.)?/g, function(match, c) {
-	    return c ? c.toUpperCase() : '';
-	  });
-	
-	  if (decapitalize === true) {
-	    return decap(str);
-	  } else {
-	    return str;
-	  }
-	};
-
-
-/***/ },
-/* 501 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var trim = __webpack_require__(473);
-	
-	module.exports = function underscored(str) {
-	  return trim(str).replace(/([a-z\d])([A-Z]+)/g, '$1_$2').replace(/[-\s]+/g, '_').toLowerCase();
-	};
-
-
-/***/ },
-/* 502 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var trim = __webpack_require__(473);
-	
-	module.exports = function dasherize(str) {
-	  return trim(str).replace(/([A-Z])/g, '-$1').replace(/[-_\s]+/g, '-').toLowerCase();
-	};
-
-
-/***/ },
-/* 503 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var capitalize = __webpack_require__(470);
-	var camelize = __webpack_require__(500);
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function classify(str) {
-	  str = makeString(str);
-	  return capitalize(camelize(str.replace(/[\W_]/g, ' ')).replace(/\s/g, ''));
-	};
-
-
-/***/ },
-/* 504 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var capitalize = __webpack_require__(470);
-	var underscored = __webpack_require__(501);
-	var trim = __webpack_require__(473);
-	
-	module.exports = function humanize(str) {
-	  return capitalize(trim(underscored(str).replace(/_id$/, '').replace(/_/g, ' ')));
-	};
-
-
-/***/ },
-/* 505 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	var defaultToWhiteSpace = __webpack_require__(474);
-	var nativeTrimLeft = String.prototype.trimLeft;
-	
-	module.exports = function ltrim(str, characters) {
-	  str = makeString(str);
-	  if (!characters && nativeTrimLeft) return nativeTrimLeft.call(str);
-	  characters = defaultToWhiteSpace(characters);
-	  return str.replace(new RegExp('^' + characters + '+'), '');
-	};
-
-
-/***/ },
-/* 506 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	var defaultToWhiteSpace = __webpack_require__(474);
-	var nativeTrimRight = String.prototype.trimRight;
-	
-	module.exports = function rtrim(str, characters) {
-	  str = makeString(str);
-	  if (!characters && nativeTrimRight) return nativeTrimRight.call(str);
-	  characters = defaultToWhiteSpace(characters);
-	  return str.replace(new RegExp(characters + '+$'), '');
-	};
-
-
-/***/ },
-/* 507 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function truncate(str, length, truncateStr) {
-	  str = makeString(str);
-	  truncateStr = truncateStr || '...';
-	  length = ~~length;
-	  return str.length > length ? str.slice(0, length) + truncateStr : str;
-	};
-
-
-/***/ },
-/* 508 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * _s.prune: a more elegant version of truncate
-	 * prune extra chars, never leaving a half-chopped word.
-	 * @author github.com/rwz
-	 */
-	var makeString = __webpack_require__(468);
-	var rtrim = __webpack_require__(506);
-	
-	module.exports = function prune(str, length, pruneStr) {
-	  str = makeString(str);
-	  length = ~~length;
-	  pruneStr = pruneStr != null ? String(pruneStr) : '...';
-	
-	  if (str.length <= length) return str;
-	
-	  var tmpl = function(c) {
-	      return c.toUpperCase() !== c.toLowerCase() ? 'A' : ' ';
-	    },
-	    template = str.slice(0, length + 1).replace(/.(?=\W*\w*$)/g, tmpl); // 'Hello, world' -> 'HellAA AAAAA'
-	
-	  if (template.slice(template.length - 2).match(/\w\w/))
-	    template = template.replace(/\s*\S+$/, '');
-	  else
-	    template = rtrim(template.slice(0, template.length - 1));
-	
-	  return (template + pruneStr).length > str.length ? str : str.slice(0, template.length) + pruneStr;
-	};
-
-
-/***/ },
-/* 509 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var isBlank = __webpack_require__(467);
-	var trim = __webpack_require__(473);
-	
-	module.exports = function words(str, delimiter) {
-	  if (isBlank(str)) return [];
-	  return trim(str, delimiter).split(delimiter || /\s+/);
-	};
-
-
-/***/ },
-/* 510 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	var strRepeat = __webpack_require__(511);
-	
-	module.exports = function pad(str, length, padStr, type) {
-	  str = makeString(str);
-	  length = ~~length;
-	
-	  var padlen = 0;
-	
-	  if (!padStr)
-	    padStr = ' ';
-	  else if (padStr.length > 1)
-	    padStr = padStr.charAt(0);
-	
-	  switch (type) {
-	  case 'right':
-	    padlen = length - str.length;
-	    return str + strRepeat(padStr, padlen);
-	  case 'both':
-	    padlen = length - str.length;
-	    return strRepeat(padStr, Math.ceil(padlen / 2)) + str + strRepeat(padStr, Math.floor(padlen / 2));
-	  default: // 'left'
-	    padlen = length - str.length;
-	    return strRepeat(padStr, padlen) + str;
-	  }
-	};
-
-
-/***/ },
-/* 511 */
-/***/ function(module, exports) {
-
-	module.exports = function strRepeat(str, qty){
-	  if (qty < 1) return '';
-	  var result = '';
-	  while (qty > 0) {
-	    if (qty & 1) result += str;
-	    qty >>= 1, str += str;
-	  }
-	  return result;
-	};
-
-
-/***/ },
-/* 512 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var pad = __webpack_require__(510);
-	
-	module.exports = function lpad(str, length, padStr) {
-	  return pad(str, length, padStr);
-	};
-
-
-/***/ },
-/* 513 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var pad = __webpack_require__(510);
-	
-	module.exports = function rpad(str, length, padStr) {
-	  return pad(str, length, padStr, 'right');
-	};
-
-
-/***/ },
-/* 514 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var pad = __webpack_require__(510);
-	
-	module.exports = function lrpad(str, length, padStr) {
-	  return pad(str, length, padStr, 'both');
-	};
-
-
-/***/ },
-/* 515 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var deprecate = __webpack_require__(516);
-	
-	module.exports = deprecate(__webpack_require__(517).sprintf,
-	  'sprintf() will be removed in the next major release, use the sprintf-js package instead.');
-
-
-/***/ },
-/* 516 */
-/***/ function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {
-	/**
-	 * Module exports.
-	 */
-	
-	module.exports = deprecate;
-	
-	/**
-	 * Mark that a method should not be used.
-	 * Returns a modified function which warns once by default.
-	 *
-	 * If `localStorage.noDeprecation = true` is set, then it is a no-op.
-	 *
-	 * If `localStorage.throwDeprecation = true` is set, then deprecated functions
-	 * will throw an Error when invoked.
-	 *
-	 * If `localStorage.traceDeprecation = true` is set, then deprecated functions
-	 * will invoke `console.trace()` instead of `console.error()`.
-	 *
-	 * @param {Function} fn - the function to deprecate
-	 * @param {String} msg - the string to print to the console when `fn` is invoked
-	 * @returns {Function} a new "deprecated" version of `fn`
-	 * @api public
-	 */
-	
-	function deprecate (fn, msg) {
-	  if (config('noDeprecation')) {
-	    return fn;
-	  }
-	
-	  var warned = false;
-	  function deprecated() {
-	    if (!warned) {
-	      if (config('throwDeprecation')) {
-	        throw new Error(msg);
-	      } else if (config('traceDeprecation')) {
-	        console.trace(msg);
-	      } else {
-	        console.warn(msg);
-	      }
-	      warned = true;
-	    }
-	    return fn.apply(this, arguments);
-	  }
-	
-	  return deprecated;
-	}
-	
-	/**
-	 * Checks `localStorage` for boolean values for the given `name`.
-	 *
-	 * @param {String} name
-	 * @returns {Boolean}
-	 * @api private
-	 */
-	
-	function config (name) {
-	  // accessing global.localStorage can trigger a DOMException in sandboxed iframes
-	  try {
-	    if (!global.localStorage) return false;
-	  } catch (_) {
-	    return false;
-	  }
-	  var val = global.localStorage[name];
-	  if (null == val) return false;
-	  return String(val).toLowerCase() === 'true';
-	}
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 517 */
-/***/ function(module, exports, __webpack_require__) {
-
-	(function(window) {
-	    var re = {
-	        not_string: /[^s]/,
-	        number: /[diefg]/,
-	        json: /[j]/,
-	        not_json: /[^j]/,
-	        text: /^[^\x25]+/,
-	        modulo: /^\x25{2}/,
-	        placeholder: /^\x25(?:([1-9]\d*)\$|\(([^\)]+)\))?(\+)?(0|'[^$])?(-)?(\d+)?(?:\.(\d+))?([b-gijosuxX])/,
-	        key: /^([a-z_][a-z_\d]*)/i,
-	        key_access: /^\.([a-z_][a-z_\d]*)/i,
-	        index_access: /^\[(\d+)\]/,
-	        sign: /^[\+\-]/
-	    }
-	
-	    function sprintf() {
-	        var key = arguments[0], cache = sprintf.cache
-	        if (!(cache[key] && cache.hasOwnProperty(key))) {
-	            cache[key] = sprintf.parse(key)
-	        }
-	        return sprintf.format.call(null, cache[key], arguments)
-	    }
-	
-	    sprintf.format = function(parse_tree, argv) {
-	        var cursor = 1, tree_length = parse_tree.length, node_type = "", arg, output = [], i, k, match, pad, pad_character, pad_length, is_positive = true, sign = ""
-	        for (i = 0; i < tree_length; i++) {
-	            node_type = get_type(parse_tree[i])
-	            if (node_type === "string") {
-	                output[output.length] = parse_tree[i]
-	            }
-	            else if (node_type === "array") {
-	                match = parse_tree[i] // convenience purposes only
-	                if (match[2]) { // keyword argument
-	                    arg = argv[cursor]
-	                    for (k = 0; k < match[2].length; k++) {
-	                        if (!arg.hasOwnProperty(match[2][k])) {
-	                            throw new Error(sprintf("[sprintf] property '%s' does not exist", match[2][k]))
-	                        }
-	                        arg = arg[match[2][k]]
-	                    }
-	                }
-	                else if (match[1]) { // positional argument (explicit)
-	                    arg = argv[match[1]]
-	                }
-	                else { // positional argument (implicit)
-	                    arg = argv[cursor++]
-	                }
-	
-	                if (get_type(arg) == "function") {
-	                    arg = arg()
-	                }
-	
-	                if (re.not_string.test(match[8]) && re.not_json.test(match[8]) && (get_type(arg) != "number" && isNaN(arg))) {
-	                    throw new TypeError(sprintf("[sprintf] expecting number but found %s", get_type(arg)))
-	                }
-	
-	                if (re.number.test(match[8])) {
-	                    is_positive = arg >= 0
-	                }
-	
-	                switch (match[8]) {
-	                    case "b":
-	                        arg = arg.toString(2)
-	                    break
-	                    case "c":
-	                        arg = String.fromCharCode(arg)
-	                    break
-	                    case "d":
-	                    case "i":
-	                        arg = parseInt(arg, 10)
-	                    break
-	                    case "j":
-	                        arg = JSON.stringify(arg, null, match[6] ? parseInt(match[6]) : 0)
-	                    break
-	                    case "e":
-	                        arg = match[7] ? arg.toExponential(match[7]) : arg.toExponential()
-	                    break
-	                    case "f":
-	                        arg = match[7] ? parseFloat(arg).toFixed(match[7]) : parseFloat(arg)
-	                    break
-	                    case "g":
-	                        arg = match[7] ? parseFloat(arg).toPrecision(match[7]) : parseFloat(arg)
-	                    break
-	                    case "o":
-	                        arg = arg.toString(8)
-	                    break
-	                    case "s":
-	                        arg = ((arg = String(arg)) && match[7] ? arg.substring(0, match[7]) : arg)
-	                    break
-	                    case "u":
-	                        arg = arg >>> 0
-	                    break
-	                    case "x":
-	                        arg = arg.toString(16)
-	                    break
-	                    case "X":
-	                        arg = arg.toString(16).toUpperCase()
-	                    break
-	                }
-	                if (re.json.test(match[8])) {
-	                    output[output.length] = arg
-	                }
-	                else {
-	                    if (re.number.test(match[8]) && (!is_positive || match[3])) {
-	                        sign = is_positive ? "+" : "-"
-	                        arg = arg.toString().replace(re.sign, "")
-	                    }
-	                    else {
-	                        sign = ""
-	                    }
-	                    pad_character = match[4] ? match[4] === "0" ? "0" : match[4].charAt(1) : " "
-	                    pad_length = match[6] - (sign + arg).length
-	                    pad = match[6] ? (pad_length > 0 ? str_repeat(pad_character, pad_length) : "") : ""
-	                    output[output.length] = match[5] ? sign + arg + pad : (pad_character === "0" ? sign + pad + arg : pad + sign + arg)
-	                }
-	            }
-	        }
-	        return output.join("")
-	    }
-	
-	    sprintf.cache = {}
-	
-	    sprintf.parse = function(fmt) {
-	        var _fmt = fmt, match = [], parse_tree = [], arg_names = 0
-	        while (_fmt) {
-	            if ((match = re.text.exec(_fmt)) !== null) {
-	                parse_tree[parse_tree.length] = match[0]
-	            }
-	            else if ((match = re.modulo.exec(_fmt)) !== null) {
-	                parse_tree[parse_tree.length] = "%"
-	            }
-	            else if ((match = re.placeholder.exec(_fmt)) !== null) {
-	                if (match[2]) {
-	                    arg_names |= 1
-	                    var field_list = [], replacement_field = match[2], field_match = []
-	                    if ((field_match = re.key.exec(replacement_field)) !== null) {
-	                        field_list[field_list.length] = field_match[1]
-	                        while ((replacement_field = replacement_field.substring(field_match[0].length)) !== "") {
-	                            if ((field_match = re.key_access.exec(replacement_field)) !== null) {
-	                                field_list[field_list.length] = field_match[1]
-	                            }
-	                            else if ((field_match = re.index_access.exec(replacement_field)) !== null) {
-	                                field_list[field_list.length] = field_match[1]
-	                            }
-	                            else {
-	                                throw new SyntaxError("[sprintf] failed to parse named argument key")
-	                            }
-	                        }
-	                    }
-	                    else {
-	                        throw new SyntaxError("[sprintf] failed to parse named argument key")
-	                    }
-	                    match[2] = field_list
-	                }
-	                else {
-	                    arg_names |= 2
-	                }
-	                if (arg_names === 3) {
-	                    throw new Error("[sprintf] mixing positional and named placeholders is not (yet) supported")
-	                }
-	                parse_tree[parse_tree.length] = match
-	            }
-	            else {
-	                throw new SyntaxError("[sprintf] unexpected placeholder")
-	            }
-	            _fmt = _fmt.substring(match[0].length)
-	        }
-	        return parse_tree
-	    }
-	
-	    var vsprintf = function(fmt, argv, _argv) {
-	        _argv = (argv || []).slice(0)
-	        _argv.splice(0, 0, fmt)
-	        return sprintf.apply(null, _argv)
-	    }
-	
-	    /**
-	     * helpers
-	     */
-	    function get_type(variable) {
-	        return Object.prototype.toString.call(variable).slice(8, -1).toLowerCase()
-	    }
-	
-	    function str_repeat(input, multiplier) {
-	        return Array(multiplier + 1).join(input)
-	    }
-	
-	    /**
-	     * export to either browser or node.js
-	     */
-	    if (true) {
-	        exports.sprintf = sprintf
-	        exports.vsprintf = vsprintf
-	    }
-	    else {
-	        window.sprintf = sprintf
-	        window.vsprintf = vsprintf
-	
-	        if (typeof define === "function" && define.amd) {
-	            define(function() {
-	                return {
-	                    sprintf: sprintf,
-	                    vsprintf: vsprintf
-	                }
-	            })
-	        }
-	    }
-	})(typeof window === "undefined" ? this : window);
-
-
-/***/ },
-/* 518 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var deprecate = __webpack_require__(516);
-	
-	module.exports = deprecate(__webpack_require__(517).vsprintf,
-	  'vsprintf() will be removed in the next major release, use the sprintf-js package instead.');
-
-
-/***/ },
-/* 519 */
-/***/ function(module, exports) {
-
-	module.exports = function toNumber(num, precision) {
-	  if (num == null) return 0;
-	  var factor = Math.pow(10, isFinite(precision) ? precision : 0);
-	  return Math.round(num * factor) / factor;
-	};
-
-
-/***/ },
-/* 520 */
-/***/ function(module, exports) {
-
-	module.exports = function numberFormat(number, dec, dsep, tsep) {
-	  if (isNaN(number) || number == null) return '';
-	
-	  number = number.toFixed(~~dec);
-	  tsep = typeof tsep == 'string' ? tsep : ',';
-	
-	  var parts = number.split('.'),
-	    fnums = parts[0],
-	    decimals = parts[1] ? (dsep || '.') + parts[1] : '';
-	
-	  return fnums.replace(/(\d)(?=(?:\d{3})+$)/g, '$1' + tsep) + decimals;
-	};
-
-
-/***/ },
-/* 521 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function strRight(str, sep) {
-	  str = makeString(str);
-	  sep = makeString(sep);
-	  var pos = !sep ? -1 : str.indexOf(sep);
-	  return~ pos ? str.slice(pos + sep.length, str.length) : str;
-	};
-
-
-/***/ },
-/* 522 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function strRightBack(str, sep) {
-	  str = makeString(str);
-	  sep = makeString(sep);
-	  var pos = !sep ? -1 : str.lastIndexOf(sep);
-	  return~ pos ? str.slice(pos + sep.length, str.length) : str;
-	};
-
-
-/***/ },
-/* 523 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function strLeft(str, sep) {
-	  str = makeString(str);
-	  sep = makeString(sep);
-	  var pos = !sep ? -1 : str.indexOf(sep);
-	  return~ pos ? str.slice(0, pos) : str;
-	};
-
-
-/***/ },
-/* 524 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function strLeftBack(str, sep) {
-	  str = makeString(str);
-	  sep = makeString(sep);
-	  var pos = str.lastIndexOf(sep);
-	  return~ pos ? str.slice(0, pos) : str;
-	};
-
-
-/***/ },
-/* 525 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var rtrim = __webpack_require__(506);
-	
-	module.exports = function toSentence(array, separator, lastSeparator, serial) {
-	  separator = separator || ', ';
-	  lastSeparator = lastSeparator || ' and ';
-	  var a = array.slice(),
-	    lastMember = a.pop();
-	
-	  if (array.length > 2 && serial) lastSeparator = rtrim(separator) + lastSeparator;
-	
-	  return a.length ? a.join(separator) + lastSeparator + lastMember : lastMember;
-	};
-
-
-/***/ },
-/* 526 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var toSentence = __webpack_require__(525);
-	
-	module.exports = function toSentenceSerial(array, sep, lastSep) {
-	  return toSentence(array, sep, lastSep, true);
-	};
-
-
-/***/ },
-/* 527 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var trim = __webpack_require__(473);
-	var dasherize = __webpack_require__(502);
-	var cleanDiacritics = __webpack_require__(477);
-	
-	module.exports = function slugify(str) {
-	  return trim(dasherize(cleanDiacritics(str).replace(/[^\w\s-]/g, '-').toLowerCase()), '-');
-	};
-
-
-/***/ },
-/* 528 */
-/***/ function(module, exports) {
-
-	module.exports = function surround(str, wrapper) {
-	  return [wrapper, str, wrapper].join('');
-	};
-
-
-/***/ },
-/* 529 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var surround = __webpack_require__(528);
-	
-	module.exports = function quote(str, quoteChar) {
-	  return surround(str, quoteChar || '"');
-	};
-
-
-/***/ },
-/* 530 */
-/***/ function(module, exports) {
-
-	module.exports = function unquote(str, quoteChar) {
-	  quoteChar = quoteChar || '"';
-	  if (str[0] === quoteChar && str[str.length - 1] === quoteChar)
-	    return str.slice(1, str.length - 1);
-	  else return str;
-	};
-
-
-/***/ },
-/* 531 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	var strRepeat = __webpack_require__(511);
-	
-	module.exports = function repeat(str, qty, separator) {
-	  str = makeString(str);
-	
-	  qty = ~~qty;
-	
-	  // using faster implementation if separator is not needed;
-	  if (separator == null) return strRepeat(str, qty);
-	
-	  // this one is about 300x slower in Google Chrome
-	  /*eslint no-empty: 0*/
-	  for (var repeat = []; qty > 0; repeat[--qty] = str) {}
-	  return repeat.join(separator);
-	};
-
-
-/***/ },
-/* 532 */
-/***/ function(module, exports) {
-
-	module.exports = function naturalCmp(str1, str2) {
-	  if (str1 == str2) return 0;
-	  if (!str1) return -1;
-	  if (!str2) return 1;
-	
-	  var cmpRegex = /(\.\d+|\d+|\D+)/g,
-	    tokens1 = String(str1).match(cmpRegex),
-	    tokens2 = String(str2).match(cmpRegex),
-	    count = Math.min(tokens1.length, tokens2.length);
-	
-	  for (var i = 0; i < count; i++) {
-	    var a = tokens1[i],
-	      b = tokens2[i];
-	
-	    if (a !== b) {
-	      var num1 = +a;
-	      var num2 = +b;
-	      if (num1 === num1 && num2 === num2) {
-	        return num1 > num2 ? 1 : -1;
-	      }
-	      return a < b ? -1 : 1;
-	    }
-	  }
-	
-	  if (tokens1.length != tokens2.length)
-	    return tokens1.length - tokens2.length;
-	
-	  return str1 < str2 ? -1 : 1;
-	};
-
-
-/***/ },
-/* 533 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	/**
-	 * Based on the implementation here: https://github.com/hiddentao/fast-levenshtein
-	 */
-	module.exports = function levenshtein(str1, str2) {
-	  'use strict';
-	  str1 = makeString(str1);
-	  str2 = makeString(str2);
-	
-	  // Short cut cases  
-	  if (str1 === str2) return 0;
-	  if (!str1 || !str2) return Math.max(str1.length, str2.length);
-	
-	  // two rows
-	  var prevRow = new Array(str2.length + 1);
-	
-	  // initialise previous row
-	  for (var i = 0; i < prevRow.length; ++i) {
-	    prevRow[i] = i;
-	  }
-	
-	  // calculate current row distance from previous row
-	  for (i = 0; i < str1.length; ++i) {
-	    var nextCol = i + 1;
-	
-	    for (var j = 0; j < str2.length; ++j) {
-	      var curCol = nextCol;
-	
-	      // substution
-	      nextCol = prevRow[j] + ( (str1.charAt(i) === str2.charAt(j)) ? 0 : 1 );
-	      // insertion
-	      var tmp = curCol + 1;
-	      if (nextCol > tmp) {
-	        nextCol = tmp;
-	      }
-	      // deletion
-	      tmp = prevRow[j + 1] + 1;
-	      if (nextCol > tmp) {
-	        nextCol = tmp;
-	      }
-	
-	      // copy current col value into previous (in preparation for next iteration)
-	      prevRow[j] = curCol;
-	    }
-	
-	    // copy last col value into previous (in preparation for next iteration)
-	    prevRow[j] = nextCol;
-	  }
-	
-	  return nextCol;
-	};
-
-
-/***/ },
-/* 534 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var trim = __webpack_require__(473);
-	
-	function boolMatch(s, matchers) {
-	  var i, matcher, down = s.toLowerCase();
-	  matchers = [].concat(matchers);
-	  for (i = 0; i < matchers.length; i += 1) {
-	    matcher = matchers[i];
-	    if (!matcher) continue;
-	    if (matcher.test && matcher.test(s)) return true;
-	    if (matcher.toLowerCase() === down) return true;
-	  }
-	}
-	
-	module.exports = function toBoolean(str, trueValues, falseValues) {
-	  if (typeof str === 'number') str = '' + str;
-	  if (typeof str !== 'string') return !!str;
-	  str = trim(str);
-	  if (boolMatch(str, trueValues || ['true', '1'])) return true;
-	  if (boolMatch(str, falseValues || ['false', '0'])) return false;
-	};
-
-
-/***/ },
-/* 535 */
-/***/ function(module, exports) {
-
-	module.exports = function() {
-	  var result = {};
-	
-	  for (var prop in this) {
-	    if (!this.hasOwnProperty(prop) || prop.match(/^(?:include|contains|reverse|join|map|wrap)$/)) continue;
-	    result[prop] = this[prop];
-	  }
-	
-	  return result;
-	};
-
-
-/***/ },
-/* 536 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// Wrap
-	// wraps a string by a certain width
-	
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function wrap(str, options){
-	  str = makeString(str);
-	  
-	  options = options || {};
-	  
-	  var width = options.width || 75;
-	  var seperator = options.seperator || '\n';
-	  var cut = options.cut || false;
-	  var preserveSpaces = options.preserveSpaces || false;
-	  var trailingSpaces = options.trailingSpaces || false;
-	  
-	  var result;
-	  
-	  if(width <= 0){
-	    return str;
-	  }
-	  
-	  else if(!cut){
-	  
-	    var words = str.split(' ');
-	    var current_column = 0;
-	    result = '';
-	  
-	    while(words.length > 0){
-	      
-	      // if adding a space and the next word would cause this line to be longer than width...
-	      if(1 + words[0].length + current_column > width){
-	        //start a new line if this line is not already empty
-	        if(current_column > 0){
-	          // add a space at the end of the line is preserveSpaces is true
-	          if (preserveSpaces){
-	            result += ' ';
-	            current_column++;
-	          }
-	          // fill the rest of the line with spaces if trailingSpaces option is true
-	          else if(trailingSpaces){
-	            while(current_column < width){
-	              result += ' ';
-	              current_column++;
-	            }            
-	          }
-	          //start new line
-	          result += seperator;
-	          current_column = 0;
-	        }
-	      }
-	  
-	      // if not at the begining of the line, add a space in front of the word
-	      if(current_column > 0){
-	        result += ' ';
-	        current_column++;
-	      }
-	  
-	      // tack on the next word, update current column, a pop words array
-	      result += words[0];
-	      current_column += words[0].length;
-	      words.shift();
-	  
-	    }
-	  
-	    // fill the rest of the line with spaces if trailingSpaces option is true
-	    if(trailingSpaces){
-	      while(current_column < width){
-	        result += ' ';
-	        current_column++;
-	      }            
-	    }
-	  
-	    return result;
-	  
-	  }
-	  
-	  else {
-	  
-	    var index = 0;
-	    result = '';
-	  
-	    // walk through each character and add seperators where appropriate
-	    while(index < str.length){
-	      if(index % width == 0 && index > 0){
-	        result += seperator;
-	      }
-	      result += str.charAt(index);
-	      index++;
-	    }
-	  
-	    // fill the rest of the line with spaces if trailingSpaces option is true
-	    if(trailingSpaces){
-	      while(index % width > 0){
-	        result += ' ';
-	        index++;
-	      }            
-	    }
-	    
-	    return result;
-	  }
-	};
-
-
-/***/ },
-/* 537 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var makeString = __webpack_require__(468);
-	
-	module.exports = function(str, callback) {
-	  str = makeString(str);
-	
-	  if (str.length === 0 || typeof callback !== 'function') return str;
-	
-	  return str.replace(/./g, callback);
-	};
-
-
-/***/ },
-/* 538 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var createFind = __webpack_require__(539),
-	    findIndex = __webpack_require__(540);
-	
-	/**
-	 * Iterates over elements of `collection`, returning the first element
-	 * `predicate` returns truthy for. The predicate is invoked with three
-	 * arguments: (value, index|key, collection).
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 0.1.0
-	 * @category Collection
-	 * @param {Array|Object} collection The collection to inspect.
-	 * @param {Function} [predicate=_.identity] The function invoked per iteration.
-	 * @param {number} [fromIndex=0] The index to search from.
-	 * @returns {*} Returns the matched element, else `undefined`.
-	 * @example
-	 *
-	 * var users = [
-	 *   { 'user': 'barney',  'age': 36, 'active': true },
-	 *   { 'user': 'fred',    'age': 40, 'active': false },
-	 *   { 'user': 'pebbles', 'age': 1,  'active': true }
-	 * ];
-	 *
-	 * _.find(users, function(o) { return o.age < 40; });
-	 * // => object for 'barney'
-	 *
-	 * // The `_.matches` iteratee shorthand.
-	 * _.find(users, { 'age': 1, 'active': true });
-	 * // => object for 'pebbles'
-	 *
-	 * // The `_.matchesProperty` iteratee shorthand.
-	 * _.find(users, ['active', false]);
-	 * // => object for 'fred'
-	 *
-	 * // The `_.property` iteratee shorthand.
-	 * _.find(users, 'active');
-	 * // => object for 'barney'
-	 */
-	var find = createFind(findIndex);
-	
-	module.exports = find;
-
-
-/***/ },
-/* 539 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var baseIteratee = __webpack_require__(280),
-	    isArrayLike = __webpack_require__(276),
-	    keys = __webpack_require__(250);
-	
-	/**
-	 * Creates a `_.find` or `_.findLast` function.
-	 *
-	 * @private
-	 * @param {Function} findIndexFunc The function to find the collection index.
-	 * @returns {Function} Returns the new find function.
-	 */
-	function createFind(findIndexFunc) {
-	  return function(collection, predicate, fromIndex) {
-	    var iterable = Object(collection);
-	    if (!isArrayLike(collection)) {
-	      var iteratee = baseIteratee(predicate, 3);
-	      collection = keys(collection);
-	      predicate = function(key) { return iteratee(iterable[key], key, iterable); };
-	    }
-	    var index = findIndexFunc(collection, predicate, fromIndex);
-	    return index > -1 ? iterable[iteratee ? collection[index] : index] : undefined;
-	  };
-	}
-	
-	module.exports = createFind;
-
-
-/***/ },
-/* 540 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var baseFindIndex = __webpack_require__(541),
-	    baseIteratee = __webpack_require__(280),
-	    toInteger = __webpack_require__(542);
-	
-	/* Built-in method references for those with the same name as other `lodash` methods. */
-	var nativeMax = Math.max;
-	
-	/**
-	 * This method is like `_.find` except that it returns the index of the first
-	 * element `predicate` returns truthy for instead of the element itself.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 1.1.0
-	 * @category Array
-	 * @param {Array} array The array to inspect.
-	 * @param {Function} [predicate=_.identity] The function invoked per iteration.
-	 * @param {number} [fromIndex=0] The index to search from.
-	 * @returns {number} Returns the index of the found element, else `-1`.
-	 * @example
-	 *
-	 * var users = [
-	 *   { 'user': 'barney',  'active': false },
-	 *   { 'user': 'fred',    'active': false },
-	 *   { 'user': 'pebbles', 'active': true }
-	 * ];
-	 *
-	 * _.findIndex(users, function(o) { return o.user == 'barney'; });
-	 * // => 0
-	 *
-	 * // The `_.matches` iteratee shorthand.
-	 * _.findIndex(users, { 'user': 'fred', 'active': false });
-	 * // => 1
-	 *
-	 * // The `_.matchesProperty` iteratee shorthand.
-	 * _.findIndex(users, ['active', false]);
-	 * // => 0
-	 *
-	 * // The `_.property` iteratee shorthand.
-	 * _.findIndex(users, 'active');
-	 * // => 2
-	 */
-	function findIndex(array, predicate, fromIndex) {
-	  var length = array == null ? 0 : array.length;
-	  if (!length) {
-	    return -1;
-	  }
-	  var index = fromIndex == null ? 0 : toInteger(fromIndex);
-	  if (index < 0) {
-	    index = nativeMax(length + index, 0);
-	  }
-	  return baseFindIndex(array, baseIteratee(predicate, 3), index);
-	}
-	
-	module.exports = findIndex;
-
-
-/***/ },
-/* 541 */
-/***/ function(module, exports) {
-
-	/**
-	 * The base implementation of `_.findIndex` and `_.findLastIndex` without
-	 * support for iteratee shorthands.
-	 *
-	 * @private
-	 * @param {Array} array The array to inspect.
-	 * @param {Function} predicate The function invoked per iteration.
-	 * @param {number} fromIndex The index to search from.
-	 * @param {boolean} [fromRight] Specify iterating from right to left.
-	 * @returns {number} Returns the index of the matched value, else `-1`.
-	 */
-	function baseFindIndex(array, predicate, fromIndex, fromRight) {
-	  var length = array.length,
-	      index = fromIndex + (fromRight ? 1 : -1);
-	
-	  while ((fromRight ? index-- : ++index < length)) {
-	    if (predicate(array[index], index, array)) {
-	      return index;
-	    }
-	  }
-	  return -1;
-	}
-	
-	module.exports = baseFindIndex;
-
-
-/***/ },
-/* 542 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var toFinite = __webpack_require__(543);
-	
-	/**
-	 * Converts `value` to an integer.
-	 *
-	 * **Note:** This method is loosely based on
-	 * [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to convert.
-	 * @returns {number} Returns the converted integer.
-	 * @example
-	 *
-	 * _.toInteger(3.2);
-	 * // => 3
-	 *
-	 * _.toInteger(Number.MIN_VALUE);
-	 * // => 0
-	 *
-	 * _.toInteger(Infinity);
-	 * // => 1.7976931348623157e+308
-	 *
-	 * _.toInteger('3.2');
-	 * // => 3
-	 */
-	function toInteger(value) {
-	  var result = toFinite(value),
-	      remainder = result % 1;
-	
-	  return result === result ? (remainder ? result - remainder : result) : 0;
-	}
-	
-	module.exports = toInteger;
-
-
-/***/ },
-/* 543 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var toNumber = __webpack_require__(544);
-	
-	/** Used as references for various `Number` constants. */
-	var INFINITY = 1 / 0,
-	    MAX_INTEGER = 1.7976931348623157e+308;
-	
-	/**
-	 * Converts `value` to a finite number.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.12.0
-	 * @category Lang
-	 * @param {*} value The value to convert.
-	 * @returns {number} Returns the converted number.
-	 * @example
-	 *
-	 * _.toFinite(3.2);
-	 * // => 3.2
-	 *
-	 * _.toFinite(Number.MIN_VALUE);
-	 * // => 5e-324
-	 *
-	 * _.toFinite(Infinity);
-	 * // => 1.7976931348623157e+308
-	 *
-	 * _.toFinite('3.2');
-	 * // => 3.2
-	 */
-	function toFinite(value) {
-	  if (!value) {
-	    return value === 0 ? value : 0;
-	  }
-	  value = toNumber(value);
-	  if (value === INFINITY || value === -INFINITY) {
-	    var sign = (value < 0 ? -1 : 1);
-	    return sign * MAX_INTEGER;
-	  }
-	  return value === value ? value : 0;
-	}
-	
-	module.exports = toFinite;
-
-
-/***/ },
-/* 544 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var isObject = __webpack_require__(278),
-	    isSymbol = __webpack_require__(350);
-	
-	/** Used as references for various `Number` constants. */
-	var NAN = 0 / 0;
-	
-	/** Used to match leading and trailing whitespace. */
-	var reTrim = /^\s+|\s+$/g;
-	
-	/** Used to detect bad signed hexadecimal string values. */
-	var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
-	
-	/** Used to detect binary string values. */
-	var reIsBinary = /^0b[01]+$/i;
-	
-	/** Used to detect octal string values. */
-	var reIsOctal = /^0o[0-7]+$/i;
-	
-	/** Built-in method references without a dependency on `root`. */
-	var freeParseInt = parseInt;
-	
-	/**
-	 * Converts `value` to a number.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to process.
-	 * @returns {number} Returns the number.
-	 * @example
-	 *
-	 * _.toNumber(3.2);
-	 * // => 3.2
-	 *
-	 * _.toNumber(Number.MIN_VALUE);
-	 * // => 5e-324
-	 *
-	 * _.toNumber(Infinity);
-	 * // => Infinity
-	 *
-	 * _.toNumber('3.2');
-	 * // => 3.2
-	 */
-	function toNumber(value) {
-	  if (typeof value == 'number') {
-	    return value;
-	  }
-	  if (isSymbol(value)) {
-	    return NAN;
-	  }
-	  if (isObject(value)) {
-	    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
-	    value = isObject(other) ? (other + '') : other;
-	  }
-	  if (typeof value != 'string') {
-	    return value === 0 ? value : +value;
-	  }
-	  value = value.replace(reTrim, '');
-	  var isBinary = reIsBinary.test(value);
-	  return (isBinary || reIsOctal.test(value))
-	    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
-	    : (reIsBadHex.test(value) ? NAN : +value);
-	}
-	
-	module.exports = toNumber;
-
-
-/***/ },
-/* 545 */
-/***/ function(module, exports, __webpack_require__) {
-
 	var __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
 	
 	(function (global) {
@@ -44851,7 +42743,7 @@
 
 
 /***/ },
-/* 546 */
+/* 466 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44870,7 +42762,7 @@
 	
 	var _typography = __webpack_require__(401);
 	
-	var _avater = __webpack_require__(547);
+	var _avater = __webpack_require__(467);
 	
 	var _avater2 = _interopRequireDefault(_avater);
 	
@@ -44946,10 +42838,2114 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 547 */
+/* 467 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "ef54ebc0c0388df879a678b52f7e8ee0.png";
+
+/***/ },
+/* 468 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _propTypes = __webpack_require__(387);
+	
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+	
+	var _reactRouter = __webpack_require__(170);
+	
+	var _gatsbyHelpers = __webpack_require__(383);
+	
+	var _underscore = __webpack_require__(469);
+	
+	var _find = __webpack_require__(541);
+	
+	var _find2 = _interopRequireDefault(_find);
+	
+	var _typography = __webpack_require__(401);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ReadNext = function (_React$Component) {
+	  _inherits(ReadNext, _React$Component);
+	
+	  function ReadNext() {
+	    _classCallCheck(this, ReadNext);
+	
+	    return _possibleConstructorReturn(this, (ReadNext.__proto__ || Object.getPrototypeOf(ReadNext)).apply(this, arguments));
+	  }
+	
+	  _createClass(ReadNext, [{
+	    key: 'render',
+	    value: function render() {
+	      var _props = this.props,
+	          pages = _props.pages,
+	          post = _props.post;
+	      var readNext = post.readNext;
+	
+	      var nextPost = void 0;
+	      if (readNext) {
+	        nextPost = (0, _find2.default)(pages, function (page) {
+	          return (0, _underscore.include)(page.path, readNext);
+	        });
+	      }
+	      if (!nextPost) {
+	        return null;
+	      } else {
+	        nextPost = (0, _find2.default)(pages, function (page) {
+	          return (0, _underscore.include)(page.path, readNext.slice(1, -1));
+	        });
+	        // Create pruned version of the body.
+	        var html = nextPost.data.body;
+	        var body = (0, _underscore.prune)(html.replace(/<[^>]*>/g, ''), 150);
+	
+	        return _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'h6',
+	            {
+	              style: {
+	                margin: 0,
+	                letterSpacing: -0.25
+	              }
+	            },
+	            '\u6B21\u306E\u8A18\u4E8B'
+	          ),
+	          _react2.default.createElement(
+	            'h4',
+	            {
+	              style: {
+	                marginTop: 0,
+	                marginBottom: (0, _typography.rhythm)(1 / 4)
+	              }
+	            },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              {
+	                to: {
+	                  pathname: (0, _gatsbyHelpers.prefixLink)(nextPost.path),
+	                  query: {
+	                    readNext: true
+	                  }
+	                }
+	              },
+	              nextPost.data.title
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            body
+	          ),
+	          _react2.default.createElement('hr', null)
+	        );
+	      }
+	    }
+	  }]);
+	
+	  return ReadNext;
+	}(_react2.default.Component);
+	
+	ReadNext.propTypes = {
+	  post: _propTypes2.default.object.isRequired,
+	  pages: _propTypes2.default.array
+	};
+	exports.default = ReadNext;
+	module.exports = exports['default'];
+
+/***/ },
+/* 469 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+	* Underscore.string
+	* (c) 2010 Esa-Matti Suuronen <esa-matti aet suuronen dot org>
+	* Underscore.string is freely distributable under the terms of the MIT license.
+	* Documentation: https://github.com/epeli/underscore.string
+	* Some code is borrowed from MooTools and Alexandru Marasteanu.
+	* Version '3.3.4'
+	* @preserve
+	*/
+	
+	'use strict';
+	
+	function s(value) {
+	  /* jshint validthis: true */
+	  if (!(this instanceof s)) return new s(value);
+	  this._wrapped = value;
+	}
+	
+	s.VERSION = '3.3.4';
+	
+	s.isBlank          = __webpack_require__(470);
+	s.stripTags        = __webpack_require__(472);
+	s.capitalize       = __webpack_require__(473);
+	s.decapitalize     = __webpack_require__(474);
+	s.chop             = __webpack_require__(475);
+	s.trim             = __webpack_require__(476);
+	s.clean            = __webpack_require__(479);
+	s.cleanDiacritics  = __webpack_require__(480);
+	s.count            = __webpack_require__(481);
+	s.chars            = __webpack_require__(482);
+	s.swapCase         = __webpack_require__(483);
+	s.escapeHTML       = __webpack_require__(484);
+	s.unescapeHTML     = __webpack_require__(486);
+	s.splice           = __webpack_require__(488);
+	s.insert           = __webpack_require__(489);
+	s.replaceAll       = __webpack_require__(490);
+	s.include          = __webpack_require__(491);
+	s.join             = __webpack_require__(492);
+	s.lines            = __webpack_require__(493);
+	s.dedent           = __webpack_require__(494);
+	s.reverse          = __webpack_require__(495);
+	s.startsWith       = __webpack_require__(496);
+	s.endsWith         = __webpack_require__(498);
+	s.pred             = __webpack_require__(499);
+	s.succ             = __webpack_require__(501);
+	s.titleize         = __webpack_require__(502);
+	s.camelize         = __webpack_require__(503);
+	s.underscored      = __webpack_require__(504);
+	s.dasherize        = __webpack_require__(505);
+	s.classify         = __webpack_require__(506);
+	s.humanize         = __webpack_require__(507);
+	s.ltrim            = __webpack_require__(508);
+	s.rtrim            = __webpack_require__(509);
+	s.truncate         = __webpack_require__(510);
+	s.prune            = __webpack_require__(511);
+	s.words            = __webpack_require__(512);
+	s.pad              = __webpack_require__(513);
+	s.lpad             = __webpack_require__(515);
+	s.rpad             = __webpack_require__(516);
+	s.lrpad            = __webpack_require__(517);
+	s.sprintf          = __webpack_require__(518);
+	s.vsprintf         = __webpack_require__(521);
+	s.toNumber         = __webpack_require__(522);
+	s.numberFormat     = __webpack_require__(523);
+	s.strRight         = __webpack_require__(524);
+	s.strRightBack     = __webpack_require__(525);
+	s.strLeft          = __webpack_require__(526);
+	s.strLeftBack      = __webpack_require__(527);
+	s.toSentence       = __webpack_require__(528);
+	s.toSentenceSerial = __webpack_require__(529);
+	s.slugify          = __webpack_require__(530);
+	s.surround         = __webpack_require__(531);
+	s.quote            = __webpack_require__(532);
+	s.unquote          = __webpack_require__(533);
+	s.repeat           = __webpack_require__(534);
+	s.naturalCmp       = __webpack_require__(535);
+	s.levenshtein      = __webpack_require__(536);
+	s.toBoolean        = __webpack_require__(537);
+	s.exports          = __webpack_require__(538);
+	s.escapeRegExp     = __webpack_require__(478);
+	s.wrap             = __webpack_require__(539);
+	s.map              = __webpack_require__(540);
+	
+	// Aliases
+	s.strip     = s.trim;
+	s.lstrip    = s.ltrim;
+	s.rstrip    = s.rtrim;
+	s.center    = s.lrpad;
+	s.rjust     = s.lpad;
+	s.ljust     = s.rpad;
+	s.contains  = s.include;
+	s.q         = s.quote;
+	s.toBool    = s.toBoolean;
+	s.camelcase = s.camelize;
+	s.mapChars  = s.map;
+	
+	
+	// Implement chaining
+	s.prototype = {
+	  value: function value() {
+	    return this._wrapped;
+	  }
+	};
+	
+	function fn2method(key, fn) {
+	  if (typeof fn !== 'function') return;
+	  s.prototype[key] = function() {
+	    var args = [this._wrapped].concat(Array.prototype.slice.call(arguments));
+	    var res = fn.apply(null, args);
+	    // if the result is non-string stop the chain and return the value
+	    return typeof res === 'string' ? new s(res) : res;
+	  };
+	}
+	
+	// Copy functions to instance methods for chaining
+	for (var key in s) fn2method(key, s[key]);
+	
+	fn2method('tap', function tap(string, fn) {
+	  return fn(string);
+	});
+	
+	function prototype2method(methodName) {
+	  fn2method(methodName, function(context) {
+	    var args = Array.prototype.slice.call(arguments, 1);
+	    return String.prototype[methodName].apply(context, args);
+	  });
+	}
+	
+	var prototypeMethods = [
+	  'toUpperCase',
+	  'toLowerCase',
+	  'split',
+	  'replace',
+	  'slice',
+	  'substring',
+	  'substr',
+	  'concat'
+	];
+	
+	for (var method in prototypeMethods) prototype2method(prototypeMethods[method]);
+	
+	
+	module.exports = s;
+
+
+/***/ },
+/* 470 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function isBlank(str) {
+	  return (/^\s*$/).test(makeString(str));
+	};
+
+
+/***/ },
+/* 471 */
+/***/ function(module, exports) {
+
+	/**
+	 * Ensure some object is a coerced to a string
+	 **/
+	module.exports = function makeString(object) {
+	  if (object == null) return '';
+	  return '' + object;
+	};
+
+
+/***/ },
+/* 472 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function stripTags(str) {
+	  return makeString(str).replace(/<\/?[^>]+>/g, '');
+	};
+
+
+/***/ },
+/* 473 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function capitalize(str, lowercaseRest) {
+	  str = makeString(str);
+	  var remainingChars = !lowercaseRest ? str.slice(1) : str.slice(1).toLowerCase();
+	
+	  return str.charAt(0).toUpperCase() + remainingChars;
+	};
+
+
+/***/ },
+/* 474 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function decapitalize(str) {
+	  str = makeString(str);
+	  return str.charAt(0).toLowerCase() + str.slice(1);
+	};
+
+
+/***/ },
+/* 475 */
+/***/ function(module, exports) {
+
+	module.exports = function chop(str, step) {
+	  if (str == null) return [];
+	  str = String(str);
+	  step = ~~step;
+	  return step > 0 ? str.match(new RegExp('.{1,' + step + '}', 'g')) : [str];
+	};
+
+
+/***/ },
+/* 476 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	var defaultToWhiteSpace = __webpack_require__(477);
+	var nativeTrim = String.prototype.trim;
+	
+	module.exports = function trim(str, characters) {
+	  str = makeString(str);
+	  if (!characters && nativeTrim) return nativeTrim.call(str);
+	  characters = defaultToWhiteSpace(characters);
+	  return str.replace(new RegExp('^' + characters + '+|' + characters + '+$', 'g'), '');
+	};
+
+
+/***/ },
+/* 477 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var escapeRegExp = __webpack_require__(478);
+	
+	module.exports = function defaultToWhiteSpace(characters) {
+	  if (characters == null)
+	    return '\\s';
+	  else if (characters.source)
+	    return characters.source;
+	  else
+	    return '[' + escapeRegExp(characters) + ']';
+	};
+
+
+/***/ },
+/* 478 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function escapeRegExp(str) {
+	  return makeString(str).replace(/([.*+?^=!:${}()|[\]\/\\])/g, '\\$1');
+	};
+
+
+/***/ },
+/* 479 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var trim = __webpack_require__(476);
+	
+	module.exports = function clean(str) {
+	  return trim(str).replace(/\s\s+/g, ' ');
+	};
+
+
+/***/ },
+/* 480 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	var makeString = __webpack_require__(471);
+	
+	var from  = 'ąàáäâãåæăćčĉęèéëêĝĥìíïîĵłľńňòóöőôõðøśșşšŝťțţŭùúüűûñÿýçżźž',
+	  to    = 'aaaaaaaaaccceeeeeghiiiijllnnoooooooossssstttuuuuuunyyczzz';
+	
+	from += from.toUpperCase();
+	to += to.toUpperCase();
+	
+	to = to.split('');
+	
+	// for tokens requireing multitoken output
+	from += 'ß';
+	to.push('ss');
+	
+	
+	module.exports = function cleanDiacritics(str) {
+	  return makeString(str).replace(/.{1}/g, function(c){
+	    var index = from.indexOf(c);
+	    return index === -1 ? c : to[index];
+	  });
+	};
+
+
+/***/ },
+/* 481 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function(str, substr) {
+	  str = makeString(str);
+	  substr = makeString(substr);
+	
+	  if (str.length === 0 || substr.length === 0) return 0;
+	  
+	  return str.split(substr).length - 1;
+	};
+
+
+/***/ },
+/* 482 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function chars(str) {
+	  return makeString(str).split('');
+	};
+
+
+/***/ },
+/* 483 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function swapCase(str) {
+	  return makeString(str).replace(/\S/g, function(c) {
+	    return c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase();
+	  });
+	};
+
+
+/***/ },
+/* 484 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	var escapeChars = __webpack_require__(485);
+	
+	var regexString = '[';
+	for(var key in escapeChars) {
+	  regexString += key;
+	}
+	regexString += ']';
+	
+	var regex = new RegExp( regexString, 'g');
+	
+	module.exports = function escapeHTML(str) {
+	
+	  return makeString(str).replace(regex, function(m) {
+	    return '&' + escapeChars[m] + ';';
+	  });
+	};
+
+
+/***/ },
+/* 485 */
+/***/ function(module, exports) {
+
+	/* We're explicitly defining the list of entities we want to escape.
+	nbsp is an HTML entity, but we don't want to escape all space characters in a string, hence its omission in this map.
+	
+	*/
+	var escapeChars = {
+	  '¢' : 'cent',
+	  '£' : 'pound',
+	  '¥' : 'yen',
+	  '€': 'euro',
+	  '©' :'copy',
+	  '®' : 'reg',
+	  '<' : 'lt',
+	  '>' : 'gt',
+	  '"' : 'quot',
+	  '&' : 'amp',
+	  '\'' : '#39'
+	};
+	
+	module.exports = escapeChars;
+
+
+/***/ },
+/* 486 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	var htmlEntities = __webpack_require__(487);
+	
+	module.exports = function unescapeHTML(str) {
+	  return makeString(str).replace(/\&([^;]+);/g, function(entity, entityCode) {
+	    var match;
+	
+	    if (entityCode in htmlEntities) {
+	      return htmlEntities[entityCode];
+	    /*eslint no-cond-assign: 0*/
+	    } else if (match = entityCode.match(/^#x([\da-fA-F]+)$/)) {
+	      return String.fromCharCode(parseInt(match[1], 16));
+	    /*eslint no-cond-assign: 0*/
+	    } else if (match = entityCode.match(/^#(\d+)$/)) {
+	      return String.fromCharCode(~~match[1]);
+	    } else {
+	      return entity;
+	    }
+	  });
+	};
+
+
+/***/ },
+/* 487 */
+/***/ function(module, exports) {
+
+	/*
+	We're explicitly defining the list of entities that might see in escape HTML strings
+	*/
+	var htmlEntities = {
+	  nbsp: ' ',
+	  cent: '¢',
+	  pound: '£',
+	  yen: '¥',
+	  euro: '€',
+	  copy: '©',
+	  reg: '®',
+	  lt: '<',
+	  gt: '>',
+	  quot: '"',
+	  amp: '&',
+	  apos: '\''
+	};
+	
+	module.exports = htmlEntities;
+
+
+/***/ },
+/* 488 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var chars = __webpack_require__(482);
+	
+	module.exports = function splice(str, i, howmany, substr) {
+	  var arr = chars(str);
+	  arr.splice(~~i, ~~howmany, substr);
+	  return arr.join('');
+	};
+
+
+/***/ },
+/* 489 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var splice = __webpack_require__(488);
+	
+	module.exports = function insert(str, i, substr) {
+	  return splice(str, i, 0, substr);
+	};
+
+
+/***/ },
+/* 490 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function replaceAll(str, find, replace, ignorecase) {
+	  var flags = (ignorecase === true)?'gi':'g';
+	  var reg = new RegExp(find, flags);
+	
+	  return makeString(str).replace(reg, replace);
+	};
+
+
+/***/ },
+/* 491 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function include(str, needle) {
+	  if (needle === '') return true;
+	  return makeString(str).indexOf(needle) !== -1;
+	};
+
+
+/***/ },
+/* 492 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	var slice = [].slice;
+	
+	module.exports = function join() {
+	  var args = slice.call(arguments),
+	    separator = args.shift();
+	
+	  return args.join(makeString(separator));
+	};
+
+
+/***/ },
+/* 493 */
+/***/ function(module, exports) {
+
+	module.exports = function lines(str) {
+	  if (str == null) return [];
+	  return String(str).split(/\r\n?|\n/);
+	};
+
+
+/***/ },
+/* 494 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	function getIndent(str) {
+	  var matches = str.match(/^[\s\\t]*/gm);
+	  var indent = matches[0].length;
+	  
+	  for (var i = 1; i < matches.length; i++) {
+	    indent = Math.min(matches[i].length, indent);
+	  }
+	
+	  return indent;
+	}
+	
+	module.exports = function dedent(str, pattern) {
+	  str = makeString(str);
+	  var indent = getIndent(str);
+	  var reg;
+	
+	  if (indent === 0) return str;
+	
+	  if (typeof pattern === 'string') {
+	    reg = new RegExp('^' + pattern, 'gm');
+	  } else {
+	    reg = new RegExp('^[ \\t]{' + indent + '}', 'gm');
+	  }
+	
+	  return str.replace(reg, '');
+	};
+
+
+/***/ },
+/* 495 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var chars = __webpack_require__(482);
+	
+	module.exports = function reverse(str) {
+	  return chars(str).reverse().join('');
+	};
+
+
+/***/ },
+/* 496 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	var toPositive = __webpack_require__(497);
+	
+	module.exports = function startsWith(str, starts, position) {
+	  str = makeString(str);
+	  starts = '' + starts;
+	  position = position == null ? 0 : Math.min(toPositive(position), str.length);
+	  return str.lastIndexOf(starts, position) === position;
+	};
+
+
+/***/ },
+/* 497 */
+/***/ function(module, exports) {
+
+	module.exports = function toPositive(number) {
+	  return number < 0 ? 0 : (+number || 0);
+	};
+
+
+/***/ },
+/* 498 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	var toPositive = __webpack_require__(497);
+	
+	module.exports = function endsWith(str, ends, position) {
+	  str = makeString(str);
+	  ends = '' + ends;
+	  if (typeof position == 'undefined') {
+	    position = str.length - ends.length;
+	  } else {
+	    position = Math.min(toPositive(position), str.length) - ends.length;
+	  }
+	  return position >= 0 && str.indexOf(ends, position) === position;
+	};
+
+
+/***/ },
+/* 499 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var adjacent = __webpack_require__(500);
+	
+	module.exports = function succ(str) {
+	  return adjacent(str, -1);
+	};
+
+
+/***/ },
+/* 500 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function adjacent(str, direction) {
+	  str = makeString(str);
+	  if (str.length === 0) {
+	    return '';
+	  }
+	  return str.slice(0, -1) + String.fromCharCode(str.charCodeAt(str.length - 1) + direction);
+	};
+
+
+/***/ },
+/* 501 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var adjacent = __webpack_require__(500);
+	
+	module.exports = function succ(str) {
+	  return adjacent(str, 1);
+	};
+
+
+/***/ },
+/* 502 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function titleize(str) {
+	  return makeString(str).toLowerCase().replace(/(?:^|\s|-)\S/g, function(c) {
+	    return c.toUpperCase();
+	  });
+	};
+
+
+/***/ },
+/* 503 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var trim = __webpack_require__(476);
+	var decap = __webpack_require__(474);
+	
+	module.exports = function camelize(str, decapitalize) {
+	  str = trim(str).replace(/[-_\s]+(.)?/g, function(match, c) {
+	    return c ? c.toUpperCase() : '';
+	  });
+	
+	  if (decapitalize === true) {
+	    return decap(str);
+	  } else {
+	    return str;
+	  }
+	};
+
+
+/***/ },
+/* 504 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var trim = __webpack_require__(476);
+	
+	module.exports = function underscored(str) {
+	  return trim(str).replace(/([a-z\d])([A-Z]+)/g, '$1_$2').replace(/[-\s]+/g, '_').toLowerCase();
+	};
+
+
+/***/ },
+/* 505 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var trim = __webpack_require__(476);
+	
+	module.exports = function dasherize(str) {
+	  return trim(str).replace(/([A-Z])/g, '-$1').replace(/[-_\s]+/g, '-').toLowerCase();
+	};
+
+
+/***/ },
+/* 506 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var capitalize = __webpack_require__(473);
+	var camelize = __webpack_require__(503);
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function classify(str) {
+	  str = makeString(str);
+	  return capitalize(camelize(str.replace(/[\W_]/g, ' ')).replace(/\s/g, ''));
+	};
+
+
+/***/ },
+/* 507 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var capitalize = __webpack_require__(473);
+	var underscored = __webpack_require__(504);
+	var trim = __webpack_require__(476);
+	
+	module.exports = function humanize(str) {
+	  return capitalize(trim(underscored(str).replace(/_id$/, '').replace(/_/g, ' ')));
+	};
+
+
+/***/ },
+/* 508 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	var defaultToWhiteSpace = __webpack_require__(477);
+	var nativeTrimLeft = String.prototype.trimLeft;
+	
+	module.exports = function ltrim(str, characters) {
+	  str = makeString(str);
+	  if (!characters && nativeTrimLeft) return nativeTrimLeft.call(str);
+	  characters = defaultToWhiteSpace(characters);
+	  return str.replace(new RegExp('^' + characters + '+'), '');
+	};
+
+
+/***/ },
+/* 509 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	var defaultToWhiteSpace = __webpack_require__(477);
+	var nativeTrimRight = String.prototype.trimRight;
+	
+	module.exports = function rtrim(str, characters) {
+	  str = makeString(str);
+	  if (!characters && nativeTrimRight) return nativeTrimRight.call(str);
+	  characters = defaultToWhiteSpace(characters);
+	  return str.replace(new RegExp(characters + '+$'), '');
+	};
+
+
+/***/ },
+/* 510 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function truncate(str, length, truncateStr) {
+	  str = makeString(str);
+	  truncateStr = truncateStr || '...';
+	  length = ~~length;
+	  return str.length > length ? str.slice(0, length) + truncateStr : str;
+	};
+
+
+/***/ },
+/* 511 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * _s.prune: a more elegant version of truncate
+	 * prune extra chars, never leaving a half-chopped word.
+	 * @author github.com/rwz
+	 */
+	var makeString = __webpack_require__(471);
+	var rtrim = __webpack_require__(509);
+	
+	module.exports = function prune(str, length, pruneStr) {
+	  str = makeString(str);
+	  length = ~~length;
+	  pruneStr = pruneStr != null ? String(pruneStr) : '...';
+	
+	  if (str.length <= length) return str;
+	
+	  var tmpl = function(c) {
+	      return c.toUpperCase() !== c.toLowerCase() ? 'A' : ' ';
+	    },
+	    template = str.slice(0, length + 1).replace(/.(?=\W*\w*$)/g, tmpl); // 'Hello, world' -> 'HellAA AAAAA'
+	
+	  if (template.slice(template.length - 2).match(/\w\w/))
+	    template = template.replace(/\s*\S+$/, '');
+	  else
+	    template = rtrim(template.slice(0, template.length - 1));
+	
+	  return (template + pruneStr).length > str.length ? str : str.slice(0, template.length) + pruneStr;
+	};
+
+
+/***/ },
+/* 512 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var isBlank = __webpack_require__(470);
+	var trim = __webpack_require__(476);
+	
+	module.exports = function words(str, delimiter) {
+	  if (isBlank(str)) return [];
+	  return trim(str, delimiter).split(delimiter || /\s+/);
+	};
+
+
+/***/ },
+/* 513 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	var strRepeat = __webpack_require__(514);
+	
+	module.exports = function pad(str, length, padStr, type) {
+	  str = makeString(str);
+	  length = ~~length;
+	
+	  var padlen = 0;
+	
+	  if (!padStr)
+	    padStr = ' ';
+	  else if (padStr.length > 1)
+	    padStr = padStr.charAt(0);
+	
+	  switch (type) {
+	  case 'right':
+	    padlen = length - str.length;
+	    return str + strRepeat(padStr, padlen);
+	  case 'both':
+	    padlen = length - str.length;
+	    return strRepeat(padStr, Math.ceil(padlen / 2)) + str + strRepeat(padStr, Math.floor(padlen / 2));
+	  default: // 'left'
+	    padlen = length - str.length;
+	    return strRepeat(padStr, padlen) + str;
+	  }
+	};
+
+
+/***/ },
+/* 514 */
+/***/ function(module, exports) {
+
+	module.exports = function strRepeat(str, qty){
+	  if (qty < 1) return '';
+	  var result = '';
+	  while (qty > 0) {
+	    if (qty & 1) result += str;
+	    qty >>= 1, str += str;
+	  }
+	  return result;
+	};
+
+
+/***/ },
+/* 515 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var pad = __webpack_require__(513);
+	
+	module.exports = function lpad(str, length, padStr) {
+	  return pad(str, length, padStr);
+	};
+
+
+/***/ },
+/* 516 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var pad = __webpack_require__(513);
+	
+	module.exports = function rpad(str, length, padStr) {
+	  return pad(str, length, padStr, 'right');
+	};
+
+
+/***/ },
+/* 517 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var pad = __webpack_require__(513);
+	
+	module.exports = function lrpad(str, length, padStr) {
+	  return pad(str, length, padStr, 'both');
+	};
+
+
+/***/ },
+/* 518 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var deprecate = __webpack_require__(519);
+	
+	module.exports = deprecate(__webpack_require__(520).sprintf,
+	  'sprintf() will be removed in the next major release, use the sprintf-js package instead.');
+
+
+/***/ },
+/* 519 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {
+	/**
+	 * Module exports.
+	 */
+	
+	module.exports = deprecate;
+	
+	/**
+	 * Mark that a method should not be used.
+	 * Returns a modified function which warns once by default.
+	 *
+	 * If `localStorage.noDeprecation = true` is set, then it is a no-op.
+	 *
+	 * If `localStorage.throwDeprecation = true` is set, then deprecated functions
+	 * will throw an Error when invoked.
+	 *
+	 * If `localStorage.traceDeprecation = true` is set, then deprecated functions
+	 * will invoke `console.trace()` instead of `console.error()`.
+	 *
+	 * @param {Function} fn - the function to deprecate
+	 * @param {String} msg - the string to print to the console when `fn` is invoked
+	 * @returns {Function} a new "deprecated" version of `fn`
+	 * @api public
+	 */
+	
+	function deprecate (fn, msg) {
+	  if (config('noDeprecation')) {
+	    return fn;
+	  }
+	
+	  var warned = false;
+	  function deprecated() {
+	    if (!warned) {
+	      if (config('throwDeprecation')) {
+	        throw new Error(msg);
+	      } else if (config('traceDeprecation')) {
+	        console.trace(msg);
+	      } else {
+	        console.warn(msg);
+	      }
+	      warned = true;
+	    }
+	    return fn.apply(this, arguments);
+	  }
+	
+	  return deprecated;
+	}
+	
+	/**
+	 * Checks `localStorage` for boolean values for the given `name`.
+	 *
+	 * @param {String} name
+	 * @returns {Boolean}
+	 * @api private
+	 */
+	
+	function config (name) {
+	  // accessing global.localStorage can trigger a DOMException in sandboxed iframes
+	  try {
+	    if (!global.localStorage) return false;
+	  } catch (_) {
+	    return false;
+	  }
+	  var val = global.localStorage[name];
+	  if (null == val) return false;
+	  return String(val).toLowerCase() === 'true';
+	}
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 520 */
+/***/ function(module, exports, __webpack_require__) {
+
+	(function(window) {
+	    var re = {
+	        not_string: /[^s]/,
+	        number: /[diefg]/,
+	        json: /[j]/,
+	        not_json: /[^j]/,
+	        text: /^[^\x25]+/,
+	        modulo: /^\x25{2}/,
+	        placeholder: /^\x25(?:([1-9]\d*)\$|\(([^\)]+)\))?(\+)?(0|'[^$])?(-)?(\d+)?(?:\.(\d+))?([b-gijosuxX])/,
+	        key: /^([a-z_][a-z_\d]*)/i,
+	        key_access: /^\.([a-z_][a-z_\d]*)/i,
+	        index_access: /^\[(\d+)\]/,
+	        sign: /^[\+\-]/
+	    }
+	
+	    function sprintf() {
+	        var key = arguments[0], cache = sprintf.cache
+	        if (!(cache[key] && cache.hasOwnProperty(key))) {
+	            cache[key] = sprintf.parse(key)
+	        }
+	        return sprintf.format.call(null, cache[key], arguments)
+	    }
+	
+	    sprintf.format = function(parse_tree, argv) {
+	        var cursor = 1, tree_length = parse_tree.length, node_type = "", arg, output = [], i, k, match, pad, pad_character, pad_length, is_positive = true, sign = ""
+	        for (i = 0; i < tree_length; i++) {
+	            node_type = get_type(parse_tree[i])
+	            if (node_type === "string") {
+	                output[output.length] = parse_tree[i]
+	            }
+	            else if (node_type === "array") {
+	                match = parse_tree[i] // convenience purposes only
+	                if (match[2]) { // keyword argument
+	                    arg = argv[cursor]
+	                    for (k = 0; k < match[2].length; k++) {
+	                        if (!arg.hasOwnProperty(match[2][k])) {
+	                            throw new Error(sprintf("[sprintf] property '%s' does not exist", match[2][k]))
+	                        }
+	                        arg = arg[match[2][k]]
+	                    }
+	                }
+	                else if (match[1]) { // positional argument (explicit)
+	                    arg = argv[match[1]]
+	                }
+	                else { // positional argument (implicit)
+	                    arg = argv[cursor++]
+	                }
+	
+	                if (get_type(arg) == "function") {
+	                    arg = arg()
+	                }
+	
+	                if (re.not_string.test(match[8]) && re.not_json.test(match[8]) && (get_type(arg) != "number" && isNaN(arg))) {
+	                    throw new TypeError(sprintf("[sprintf] expecting number but found %s", get_type(arg)))
+	                }
+	
+	                if (re.number.test(match[8])) {
+	                    is_positive = arg >= 0
+	                }
+	
+	                switch (match[8]) {
+	                    case "b":
+	                        arg = arg.toString(2)
+	                    break
+	                    case "c":
+	                        arg = String.fromCharCode(arg)
+	                    break
+	                    case "d":
+	                    case "i":
+	                        arg = parseInt(arg, 10)
+	                    break
+	                    case "j":
+	                        arg = JSON.stringify(arg, null, match[6] ? parseInt(match[6]) : 0)
+	                    break
+	                    case "e":
+	                        arg = match[7] ? arg.toExponential(match[7]) : arg.toExponential()
+	                    break
+	                    case "f":
+	                        arg = match[7] ? parseFloat(arg).toFixed(match[7]) : parseFloat(arg)
+	                    break
+	                    case "g":
+	                        arg = match[7] ? parseFloat(arg).toPrecision(match[7]) : parseFloat(arg)
+	                    break
+	                    case "o":
+	                        arg = arg.toString(8)
+	                    break
+	                    case "s":
+	                        arg = ((arg = String(arg)) && match[7] ? arg.substring(0, match[7]) : arg)
+	                    break
+	                    case "u":
+	                        arg = arg >>> 0
+	                    break
+	                    case "x":
+	                        arg = arg.toString(16)
+	                    break
+	                    case "X":
+	                        arg = arg.toString(16).toUpperCase()
+	                    break
+	                }
+	                if (re.json.test(match[8])) {
+	                    output[output.length] = arg
+	                }
+	                else {
+	                    if (re.number.test(match[8]) && (!is_positive || match[3])) {
+	                        sign = is_positive ? "+" : "-"
+	                        arg = arg.toString().replace(re.sign, "")
+	                    }
+	                    else {
+	                        sign = ""
+	                    }
+	                    pad_character = match[4] ? match[4] === "0" ? "0" : match[4].charAt(1) : " "
+	                    pad_length = match[6] - (sign + arg).length
+	                    pad = match[6] ? (pad_length > 0 ? str_repeat(pad_character, pad_length) : "") : ""
+	                    output[output.length] = match[5] ? sign + arg + pad : (pad_character === "0" ? sign + pad + arg : pad + sign + arg)
+	                }
+	            }
+	        }
+	        return output.join("")
+	    }
+	
+	    sprintf.cache = {}
+	
+	    sprintf.parse = function(fmt) {
+	        var _fmt = fmt, match = [], parse_tree = [], arg_names = 0
+	        while (_fmt) {
+	            if ((match = re.text.exec(_fmt)) !== null) {
+	                parse_tree[parse_tree.length] = match[0]
+	            }
+	            else if ((match = re.modulo.exec(_fmt)) !== null) {
+	                parse_tree[parse_tree.length] = "%"
+	            }
+	            else if ((match = re.placeholder.exec(_fmt)) !== null) {
+	                if (match[2]) {
+	                    arg_names |= 1
+	                    var field_list = [], replacement_field = match[2], field_match = []
+	                    if ((field_match = re.key.exec(replacement_field)) !== null) {
+	                        field_list[field_list.length] = field_match[1]
+	                        while ((replacement_field = replacement_field.substring(field_match[0].length)) !== "") {
+	                            if ((field_match = re.key_access.exec(replacement_field)) !== null) {
+	                                field_list[field_list.length] = field_match[1]
+	                            }
+	                            else if ((field_match = re.index_access.exec(replacement_field)) !== null) {
+	                                field_list[field_list.length] = field_match[1]
+	                            }
+	                            else {
+	                                throw new SyntaxError("[sprintf] failed to parse named argument key")
+	                            }
+	                        }
+	                    }
+	                    else {
+	                        throw new SyntaxError("[sprintf] failed to parse named argument key")
+	                    }
+	                    match[2] = field_list
+	                }
+	                else {
+	                    arg_names |= 2
+	                }
+	                if (arg_names === 3) {
+	                    throw new Error("[sprintf] mixing positional and named placeholders is not (yet) supported")
+	                }
+	                parse_tree[parse_tree.length] = match
+	            }
+	            else {
+	                throw new SyntaxError("[sprintf] unexpected placeholder")
+	            }
+	            _fmt = _fmt.substring(match[0].length)
+	        }
+	        return parse_tree
+	    }
+	
+	    var vsprintf = function(fmt, argv, _argv) {
+	        _argv = (argv || []).slice(0)
+	        _argv.splice(0, 0, fmt)
+	        return sprintf.apply(null, _argv)
+	    }
+	
+	    /**
+	     * helpers
+	     */
+	    function get_type(variable) {
+	        return Object.prototype.toString.call(variable).slice(8, -1).toLowerCase()
+	    }
+	
+	    function str_repeat(input, multiplier) {
+	        return Array(multiplier + 1).join(input)
+	    }
+	
+	    /**
+	     * export to either browser or node.js
+	     */
+	    if (true) {
+	        exports.sprintf = sprintf
+	        exports.vsprintf = vsprintf
+	    }
+	    else {
+	        window.sprintf = sprintf
+	        window.vsprintf = vsprintf
+	
+	        if (typeof define === "function" && define.amd) {
+	            define(function() {
+	                return {
+	                    sprintf: sprintf,
+	                    vsprintf: vsprintf
+	                }
+	            })
+	        }
+	    }
+	})(typeof window === "undefined" ? this : window);
+
+
+/***/ },
+/* 521 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var deprecate = __webpack_require__(519);
+	
+	module.exports = deprecate(__webpack_require__(520).vsprintf,
+	  'vsprintf() will be removed in the next major release, use the sprintf-js package instead.');
+
+
+/***/ },
+/* 522 */
+/***/ function(module, exports) {
+
+	module.exports = function toNumber(num, precision) {
+	  if (num == null) return 0;
+	  var factor = Math.pow(10, isFinite(precision) ? precision : 0);
+	  return Math.round(num * factor) / factor;
+	};
+
+
+/***/ },
+/* 523 */
+/***/ function(module, exports) {
+
+	module.exports = function numberFormat(number, dec, dsep, tsep) {
+	  if (isNaN(number) || number == null) return '';
+	
+	  number = number.toFixed(~~dec);
+	  tsep = typeof tsep == 'string' ? tsep : ',';
+	
+	  var parts = number.split('.'),
+	    fnums = parts[0],
+	    decimals = parts[1] ? (dsep || '.') + parts[1] : '';
+	
+	  return fnums.replace(/(\d)(?=(?:\d{3})+$)/g, '$1' + tsep) + decimals;
+	};
+
+
+/***/ },
+/* 524 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function strRight(str, sep) {
+	  str = makeString(str);
+	  sep = makeString(sep);
+	  var pos = !sep ? -1 : str.indexOf(sep);
+	  return~ pos ? str.slice(pos + sep.length, str.length) : str;
+	};
+
+
+/***/ },
+/* 525 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function strRightBack(str, sep) {
+	  str = makeString(str);
+	  sep = makeString(sep);
+	  var pos = !sep ? -1 : str.lastIndexOf(sep);
+	  return~ pos ? str.slice(pos + sep.length, str.length) : str;
+	};
+
+
+/***/ },
+/* 526 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function strLeft(str, sep) {
+	  str = makeString(str);
+	  sep = makeString(sep);
+	  var pos = !sep ? -1 : str.indexOf(sep);
+	  return~ pos ? str.slice(0, pos) : str;
+	};
+
+
+/***/ },
+/* 527 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function strLeftBack(str, sep) {
+	  str = makeString(str);
+	  sep = makeString(sep);
+	  var pos = str.lastIndexOf(sep);
+	  return~ pos ? str.slice(0, pos) : str;
+	};
+
+
+/***/ },
+/* 528 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var rtrim = __webpack_require__(509);
+	
+	module.exports = function toSentence(array, separator, lastSeparator, serial) {
+	  separator = separator || ', ';
+	  lastSeparator = lastSeparator || ' and ';
+	  var a = array.slice(),
+	    lastMember = a.pop();
+	
+	  if (array.length > 2 && serial) lastSeparator = rtrim(separator) + lastSeparator;
+	
+	  return a.length ? a.join(separator) + lastSeparator + lastMember : lastMember;
+	};
+
+
+/***/ },
+/* 529 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var toSentence = __webpack_require__(528);
+	
+	module.exports = function toSentenceSerial(array, sep, lastSep) {
+	  return toSentence(array, sep, lastSep, true);
+	};
+
+
+/***/ },
+/* 530 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var trim = __webpack_require__(476);
+	var dasherize = __webpack_require__(505);
+	var cleanDiacritics = __webpack_require__(480);
+	
+	module.exports = function slugify(str) {
+	  return trim(dasherize(cleanDiacritics(str).replace(/[^\w\s-]/g, '-').toLowerCase()), '-');
+	};
+
+
+/***/ },
+/* 531 */
+/***/ function(module, exports) {
+
+	module.exports = function surround(str, wrapper) {
+	  return [wrapper, str, wrapper].join('');
+	};
+
+
+/***/ },
+/* 532 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var surround = __webpack_require__(531);
+	
+	module.exports = function quote(str, quoteChar) {
+	  return surround(str, quoteChar || '"');
+	};
+
+
+/***/ },
+/* 533 */
+/***/ function(module, exports) {
+
+	module.exports = function unquote(str, quoteChar) {
+	  quoteChar = quoteChar || '"';
+	  if (str[0] === quoteChar && str[str.length - 1] === quoteChar)
+	    return str.slice(1, str.length - 1);
+	  else return str;
+	};
+
+
+/***/ },
+/* 534 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	var strRepeat = __webpack_require__(514);
+	
+	module.exports = function repeat(str, qty, separator) {
+	  str = makeString(str);
+	
+	  qty = ~~qty;
+	
+	  // using faster implementation if separator is not needed;
+	  if (separator == null) return strRepeat(str, qty);
+	
+	  // this one is about 300x slower in Google Chrome
+	  /*eslint no-empty: 0*/
+	  for (var repeat = []; qty > 0; repeat[--qty] = str) {}
+	  return repeat.join(separator);
+	};
+
+
+/***/ },
+/* 535 */
+/***/ function(module, exports) {
+
+	module.exports = function naturalCmp(str1, str2) {
+	  if (str1 == str2) return 0;
+	  if (!str1) return -1;
+	  if (!str2) return 1;
+	
+	  var cmpRegex = /(\.\d+|\d+|\D+)/g,
+	    tokens1 = String(str1).match(cmpRegex),
+	    tokens2 = String(str2).match(cmpRegex),
+	    count = Math.min(tokens1.length, tokens2.length);
+	
+	  for (var i = 0; i < count; i++) {
+	    var a = tokens1[i],
+	      b = tokens2[i];
+	
+	    if (a !== b) {
+	      var num1 = +a;
+	      var num2 = +b;
+	      if (num1 === num1 && num2 === num2) {
+	        return num1 > num2 ? 1 : -1;
+	      }
+	      return a < b ? -1 : 1;
+	    }
+	  }
+	
+	  if (tokens1.length != tokens2.length)
+	    return tokens1.length - tokens2.length;
+	
+	  return str1 < str2 ? -1 : 1;
+	};
+
+
+/***/ },
+/* 536 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	/**
+	 * Based on the implementation here: https://github.com/hiddentao/fast-levenshtein
+	 */
+	module.exports = function levenshtein(str1, str2) {
+	  'use strict';
+	  str1 = makeString(str1);
+	  str2 = makeString(str2);
+	
+	  // Short cut cases  
+	  if (str1 === str2) return 0;
+	  if (!str1 || !str2) return Math.max(str1.length, str2.length);
+	
+	  // two rows
+	  var prevRow = new Array(str2.length + 1);
+	
+	  // initialise previous row
+	  for (var i = 0; i < prevRow.length; ++i) {
+	    prevRow[i] = i;
+	  }
+	
+	  // calculate current row distance from previous row
+	  for (i = 0; i < str1.length; ++i) {
+	    var nextCol = i + 1;
+	
+	    for (var j = 0; j < str2.length; ++j) {
+	      var curCol = nextCol;
+	
+	      // substution
+	      nextCol = prevRow[j] + ( (str1.charAt(i) === str2.charAt(j)) ? 0 : 1 );
+	      // insertion
+	      var tmp = curCol + 1;
+	      if (nextCol > tmp) {
+	        nextCol = tmp;
+	      }
+	      // deletion
+	      tmp = prevRow[j + 1] + 1;
+	      if (nextCol > tmp) {
+	        nextCol = tmp;
+	      }
+	
+	      // copy current col value into previous (in preparation for next iteration)
+	      prevRow[j] = curCol;
+	    }
+	
+	    // copy last col value into previous (in preparation for next iteration)
+	    prevRow[j] = nextCol;
+	  }
+	
+	  return nextCol;
+	};
+
+
+/***/ },
+/* 537 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var trim = __webpack_require__(476);
+	
+	function boolMatch(s, matchers) {
+	  var i, matcher, down = s.toLowerCase();
+	  matchers = [].concat(matchers);
+	  for (i = 0; i < matchers.length; i += 1) {
+	    matcher = matchers[i];
+	    if (!matcher) continue;
+	    if (matcher.test && matcher.test(s)) return true;
+	    if (matcher.toLowerCase() === down) return true;
+	  }
+	}
+	
+	module.exports = function toBoolean(str, trueValues, falseValues) {
+	  if (typeof str === 'number') str = '' + str;
+	  if (typeof str !== 'string') return !!str;
+	  str = trim(str);
+	  if (boolMatch(str, trueValues || ['true', '1'])) return true;
+	  if (boolMatch(str, falseValues || ['false', '0'])) return false;
+	};
+
+
+/***/ },
+/* 538 */
+/***/ function(module, exports) {
+
+	module.exports = function() {
+	  var result = {};
+	
+	  for (var prop in this) {
+	    if (!this.hasOwnProperty(prop) || prop.match(/^(?:include|contains|reverse|join|map|wrap)$/)) continue;
+	    result[prop] = this[prop];
+	  }
+	
+	  return result;
+	};
+
+
+/***/ },
+/* 539 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// Wrap
+	// wraps a string by a certain width
+	
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function wrap(str, options){
+	  str = makeString(str);
+	  
+	  options = options || {};
+	  
+	  var width = options.width || 75;
+	  var seperator = options.seperator || '\n';
+	  var cut = options.cut || false;
+	  var preserveSpaces = options.preserveSpaces || false;
+	  var trailingSpaces = options.trailingSpaces || false;
+	  
+	  var result;
+	  
+	  if(width <= 0){
+	    return str;
+	  }
+	  
+	  else if(!cut){
+	  
+	    var words = str.split(' ');
+	    var current_column = 0;
+	    result = '';
+	  
+	    while(words.length > 0){
+	      
+	      // if adding a space and the next word would cause this line to be longer than width...
+	      if(1 + words[0].length + current_column > width){
+	        //start a new line if this line is not already empty
+	        if(current_column > 0){
+	          // add a space at the end of the line is preserveSpaces is true
+	          if (preserveSpaces){
+	            result += ' ';
+	            current_column++;
+	          }
+	          // fill the rest of the line with spaces if trailingSpaces option is true
+	          else if(trailingSpaces){
+	            while(current_column < width){
+	              result += ' ';
+	              current_column++;
+	            }            
+	          }
+	          //start new line
+	          result += seperator;
+	          current_column = 0;
+	        }
+	      }
+	  
+	      // if not at the begining of the line, add a space in front of the word
+	      if(current_column > 0){
+	        result += ' ';
+	        current_column++;
+	      }
+	  
+	      // tack on the next word, update current column, a pop words array
+	      result += words[0];
+	      current_column += words[0].length;
+	      words.shift();
+	  
+	    }
+	  
+	    // fill the rest of the line with spaces if trailingSpaces option is true
+	    if(trailingSpaces){
+	      while(current_column < width){
+	        result += ' ';
+	        current_column++;
+	      }            
+	    }
+	  
+	    return result;
+	  
+	  }
+	  
+	  else {
+	  
+	    var index = 0;
+	    result = '';
+	  
+	    // walk through each character and add seperators where appropriate
+	    while(index < str.length){
+	      if(index % width == 0 && index > 0){
+	        result += seperator;
+	      }
+	      result += str.charAt(index);
+	      index++;
+	    }
+	  
+	    // fill the rest of the line with spaces if trailingSpaces option is true
+	    if(trailingSpaces){
+	      while(index % width > 0){
+	        result += ' ';
+	        index++;
+	      }            
+	    }
+	    
+	    return result;
+	  }
+	};
+
+
+/***/ },
+/* 540 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var makeString = __webpack_require__(471);
+	
+	module.exports = function(str, callback) {
+	  str = makeString(str);
+	
+	  if (str.length === 0 || typeof callback !== 'function') return str;
+	
+	  return str.replace(/./g, callback);
+	};
+
+
+/***/ },
+/* 541 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var createFind = __webpack_require__(542),
+	    findIndex = __webpack_require__(543);
+	
+	/**
+	 * Iterates over elements of `collection`, returning the first element
+	 * `predicate` returns truthy for. The predicate is invoked with three
+	 * arguments: (value, index|key, collection).
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.1.0
+	 * @category Collection
+	 * @param {Array|Object} collection The collection to inspect.
+	 * @param {Function} [predicate=_.identity] The function invoked per iteration.
+	 * @param {number} [fromIndex=0] The index to search from.
+	 * @returns {*} Returns the matched element, else `undefined`.
+	 * @example
+	 *
+	 * var users = [
+	 *   { 'user': 'barney',  'age': 36, 'active': true },
+	 *   { 'user': 'fred',    'age': 40, 'active': false },
+	 *   { 'user': 'pebbles', 'age': 1,  'active': true }
+	 * ];
+	 *
+	 * _.find(users, function(o) { return o.age < 40; });
+	 * // => object for 'barney'
+	 *
+	 * // The `_.matches` iteratee shorthand.
+	 * _.find(users, { 'age': 1, 'active': true });
+	 * // => object for 'pebbles'
+	 *
+	 * // The `_.matchesProperty` iteratee shorthand.
+	 * _.find(users, ['active', false]);
+	 * // => object for 'fred'
+	 *
+	 * // The `_.property` iteratee shorthand.
+	 * _.find(users, 'active');
+	 * // => object for 'barney'
+	 */
+	var find = createFind(findIndex);
+	
+	module.exports = find;
+
+
+/***/ },
+/* 542 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var baseIteratee = __webpack_require__(280),
+	    isArrayLike = __webpack_require__(276),
+	    keys = __webpack_require__(250);
+	
+	/**
+	 * Creates a `_.find` or `_.findLast` function.
+	 *
+	 * @private
+	 * @param {Function} findIndexFunc The function to find the collection index.
+	 * @returns {Function} Returns the new find function.
+	 */
+	function createFind(findIndexFunc) {
+	  return function(collection, predicate, fromIndex) {
+	    var iterable = Object(collection);
+	    if (!isArrayLike(collection)) {
+	      var iteratee = baseIteratee(predicate, 3);
+	      collection = keys(collection);
+	      predicate = function(key) { return iteratee(iterable[key], key, iterable); };
+	    }
+	    var index = findIndexFunc(collection, predicate, fromIndex);
+	    return index > -1 ? iterable[iteratee ? collection[index] : index] : undefined;
+	  };
+	}
+	
+	module.exports = createFind;
+
+
+/***/ },
+/* 543 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var baseFindIndex = __webpack_require__(544),
+	    baseIteratee = __webpack_require__(280),
+	    toInteger = __webpack_require__(545);
+	
+	/* Built-in method references for those with the same name as other `lodash` methods. */
+	var nativeMax = Math.max;
+	
+	/**
+	 * This method is like `_.find` except that it returns the index of the first
+	 * element `predicate` returns truthy for instead of the element itself.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 1.1.0
+	 * @category Array
+	 * @param {Array} array The array to inspect.
+	 * @param {Function} [predicate=_.identity] The function invoked per iteration.
+	 * @param {number} [fromIndex=0] The index to search from.
+	 * @returns {number} Returns the index of the found element, else `-1`.
+	 * @example
+	 *
+	 * var users = [
+	 *   { 'user': 'barney',  'active': false },
+	 *   { 'user': 'fred',    'active': false },
+	 *   { 'user': 'pebbles', 'active': true }
+	 * ];
+	 *
+	 * _.findIndex(users, function(o) { return o.user == 'barney'; });
+	 * // => 0
+	 *
+	 * // The `_.matches` iteratee shorthand.
+	 * _.findIndex(users, { 'user': 'fred', 'active': false });
+	 * // => 1
+	 *
+	 * // The `_.matchesProperty` iteratee shorthand.
+	 * _.findIndex(users, ['active', false]);
+	 * // => 0
+	 *
+	 * // The `_.property` iteratee shorthand.
+	 * _.findIndex(users, 'active');
+	 * // => 2
+	 */
+	function findIndex(array, predicate, fromIndex) {
+	  var length = array == null ? 0 : array.length;
+	  if (!length) {
+	    return -1;
+	  }
+	  var index = fromIndex == null ? 0 : toInteger(fromIndex);
+	  if (index < 0) {
+	    index = nativeMax(length + index, 0);
+	  }
+	  return baseFindIndex(array, baseIteratee(predicate, 3), index);
+	}
+	
+	module.exports = findIndex;
+
+
+/***/ },
+/* 544 */
+/***/ function(module, exports) {
+
+	/**
+	 * The base implementation of `_.findIndex` and `_.findLastIndex` without
+	 * support for iteratee shorthands.
+	 *
+	 * @private
+	 * @param {Array} array The array to inspect.
+	 * @param {Function} predicate The function invoked per iteration.
+	 * @param {number} fromIndex The index to search from.
+	 * @param {boolean} [fromRight] Specify iterating from right to left.
+	 * @returns {number} Returns the index of the matched value, else `-1`.
+	 */
+	function baseFindIndex(array, predicate, fromIndex, fromRight) {
+	  var length = array.length,
+	      index = fromIndex + (fromRight ? 1 : -1);
+	
+	  while ((fromRight ? index-- : ++index < length)) {
+	    if (predicate(array[index], index, array)) {
+	      return index;
+	    }
+	  }
+	  return -1;
+	}
+	
+	module.exports = baseFindIndex;
+
+
+/***/ },
+/* 545 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var toFinite = __webpack_require__(546);
+	
+	/**
+	 * Converts `value` to an integer.
+	 *
+	 * **Note:** This method is loosely based on
+	 * [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to convert.
+	 * @returns {number} Returns the converted integer.
+	 * @example
+	 *
+	 * _.toInteger(3.2);
+	 * // => 3
+	 *
+	 * _.toInteger(Number.MIN_VALUE);
+	 * // => 0
+	 *
+	 * _.toInteger(Infinity);
+	 * // => 1.7976931348623157e+308
+	 *
+	 * _.toInteger('3.2');
+	 * // => 3
+	 */
+	function toInteger(value) {
+	  var result = toFinite(value),
+	      remainder = result % 1;
+	
+	  return result === result ? (remainder ? result - remainder : result) : 0;
+	}
+	
+	module.exports = toInteger;
+
+
+/***/ },
+/* 546 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var toNumber = __webpack_require__(547);
+	
+	/** Used as references for various `Number` constants. */
+	var INFINITY = 1 / 0,
+	    MAX_INTEGER = 1.7976931348623157e+308;
+	
+	/**
+	 * Converts `value` to a finite number.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.12.0
+	 * @category Lang
+	 * @param {*} value The value to convert.
+	 * @returns {number} Returns the converted number.
+	 * @example
+	 *
+	 * _.toFinite(3.2);
+	 * // => 3.2
+	 *
+	 * _.toFinite(Number.MIN_VALUE);
+	 * // => 5e-324
+	 *
+	 * _.toFinite(Infinity);
+	 * // => 1.7976931348623157e+308
+	 *
+	 * _.toFinite('3.2');
+	 * // => 3.2
+	 */
+	function toFinite(value) {
+	  if (!value) {
+	    return value === 0 ? value : 0;
+	  }
+	  value = toNumber(value);
+	  if (value === INFINITY || value === -INFINITY) {
+	    var sign = (value < 0 ? -1 : 1);
+	    return sign * MAX_INTEGER;
+	  }
+	  return value === value ? value : 0;
+	}
+	
+	module.exports = toFinite;
+
+
+/***/ },
+/* 547 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var isObject = __webpack_require__(278),
+	    isSymbol = __webpack_require__(350);
+	
+	/** Used as references for various `Number` constants. */
+	var NAN = 0 / 0;
+	
+	/** Used to match leading and trailing whitespace. */
+	var reTrim = /^\s+|\s+$/g;
+	
+	/** Used to detect bad signed hexadecimal string values. */
+	var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+	
+	/** Used to detect binary string values. */
+	var reIsBinary = /^0b[01]+$/i;
+	
+	/** Used to detect octal string values. */
+	var reIsOctal = /^0o[0-7]+$/i;
+	
+	/** Built-in method references without a dependency on `root`. */
+	var freeParseInt = parseInt;
+	
+	/**
+	 * Converts `value` to a number.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to process.
+	 * @returns {number} Returns the number.
+	 * @example
+	 *
+	 * _.toNumber(3.2);
+	 * // => 3.2
+	 *
+	 * _.toNumber(Number.MIN_VALUE);
+	 * // => 5e-324
+	 *
+	 * _.toNumber(Infinity);
+	 * // => Infinity
+	 *
+	 * _.toNumber('3.2');
+	 * // => 3.2
+	 */
+	function toNumber(value) {
+	  if (typeof value == 'number') {
+	    return value;
+	  }
+	  if (isSymbol(value)) {
+	    return NAN;
+	  }
+	  if (isObject(value)) {
+	    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+	    value = isObject(other) ? (other + '') : other;
+	  }
+	  if (typeof value != 'string') {
+	    return value === 0 ? value : +value;
+	  }
+	  value = value.replace(reTrim, '');
+	  var isBinary = reIsBinary.test(value);
+	  return (isBinary || reIsOctal.test(value))
+	    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+	    : (reIsBadHex.test(value) ? NAN : +value);
+	}
+	
+	module.exports = toNumber;
+
 
 /***/ },
 /* 548 */
@@ -46467,13 +46463,13 @@
 /* 563 */
 /***/ function(module, exports) {
 
-	module.exports = {"title":"first post","date":"2017-05-11","path":"/first-post/","image":"https://akameco.github.io/blog/first-post/spring.gif","body":"<p>HMRがないと文章を書く気持ちになれないので、<a href=\"https://github.com/gatsbyjs/gatsby\">gatsbyjs</a>を試してみることにした。</p>\n<p><img src=\"./spring.gif\" alt=\"spring\"></p>\n<p>しかし、どうやら記事を消しても反映されない。\nどこかバグってるっぽい。</p>\n<p>はやくもやる気なくなってきた。</p>\n<p>TwitterCard対応、RSS対応、SEO。\n無限にやることある。</p>\n"}
+	module.exports = {"title":"first post","date":"2017-05-11","path":"/first-post/","image":"https://akameco.github.io/blog/first-post/spring.gif","readNext":"/gatsby1/","body":"<p>HMRがないと文章を書く気持ちになれないので、<a href=\"https://github.com/gatsbyjs/gatsby\">gatsbyjs</a>を試してみることにした。</p>\n<p><img src=\"./spring.gif\" alt=\"spring\"></p>\n<p>しかし、どうやら記事を消しても反映されない。\nどこかバグってるっぽい。</p>\n<p>はやくもやる気なくなってきた。</p>\n<p>TwitterCard対応、RSS対応、SEO。\n無限にやることある。</p>\n"}
 
 /***/ },
 /* 564 */
 /***/ function(module, exports) {
 
-	module.exports = {"title":"Blogの設定","date":"2017-05-12","path":"/gatsby1/","body":"<p>どうやらgatsbyが1.0に向けてものすごい感じで変わってるっぽい。\nちょっと色々設定をしようと思ったが、やめといた方が良さそう。\nよって、すぐに脱出できるように記事以外に力を入れないことにする。</p>\n"}
+	module.exports = {"title":"Blogの設定","date":"2017-05-12","path":"/gatsby1/","readNext":"/react-helmet/","body":"<p>どうやらgatsbyが1.0に向けてものすごい感じで変わってるっぽい。\nちょっと色々設定をしようと思ったが、やめといた方が良さそう。\nよって、すぐに脱出できるように記事以外に力を入れないことにする。</p>\n"}
 
 /***/ },
 /* 565 */
@@ -46539,7 +46535,7 @@
 	
 	var _config = __webpack_require__(384);
 	
-	var _include = __webpack_require__(488);
+	var _include = __webpack_require__(491);
 	
 	var _include2 = _interopRequireDefault(_include);
 	
@@ -46644,7 +46640,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Bio = __webpack_require__(546);
+	var _Bio = __webpack_require__(466);
 	
 	var _Bio2 = _interopRequireDefault(_Bio);
 	
