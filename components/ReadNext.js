@@ -20,25 +20,24 @@ export default class ReadNext extends React.Component {
       nextPost = find(pages, page => includes(page.path, readNext))
     }
     if (!nextPost) {
-      return React.createElement('noscript', null)
+      return null
     } else {
       nextPost = find(pages, page => includes(page.path, readNext.slice(1, -1)))
       // Create pruned version of the body.
       const html = nextPost.data.body
-      const body = prune(html.replace(/<[^>]*>/g, ''), 200)
+      const body = prune(html.replace(/<[^>]*>/g, ''), 150)
 
       return (
         <div>
           <h6
             style={{
-              ...scale(-0.5),
               margin: 0,
               letterSpacing: -0.25,
             }}
           >
-            READ THIS NEXT:
+            次の記事
           </h6>
-          <h3
+          <h4
             style={{
               marginTop: 0,
               marginBottom: rhythm(1 / 4),
@@ -54,7 +53,7 @@ export default class ReadNext extends React.Component {
             >
               {nextPost.data.title}
             </Link>
-          </h3>
+          </h4>
           <p>{body}</p>
           <hr />
         </div>

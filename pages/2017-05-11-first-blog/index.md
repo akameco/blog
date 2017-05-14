@@ -3,6 +3,7 @@ title: first post
 date: "2017-05-11"
 path: "/first-post/"
 image: https://akameco.github.io/blog/first-post/spring.gif
+readNext: "/gatsby1/"
 ---
 
 HMRがないと文章を書く気持ちになれないので、[gatsbyjs](https://github.com/gatsbyjs/gatsby)を試してみることにした。

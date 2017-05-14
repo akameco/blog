@@ -2,6 +2,7 @@
 title: Blogの設定
 date: "2017-05-12"
 path: "/gatsby1/"
+readNext: "/react-helmet/"
 ---
 
 どうやらgatsbyが1.0に向けてものすごい感じで変わってるっぽい。
