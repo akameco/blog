@@ -157,3 +157,12 @@ code {
 .youtube iframe {
   width: 100%;
 }
+
+html,
+body {
+  height: 100%;
+}
+
+#react-mount {
+  height: 100%;
+}

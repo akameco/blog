@@ -9,7 +9,7 @@ import { rhythm } from 'utils/typography'
 import Helmet from 'react-helmet'
 import { config } from 'config'
 import include from 'underscore.string/include'
-import Bio from 'components/Bio'
+import Footer from 'components/Footer'
 
 class BlogIndex extends React.Component {
   static propTypes = {
@@ -25,8 +25,18 @@ class BlogIndex extends React.Component {
         (get(page, 'file.ext') === 'md' && !include(page.path, '/404')) ||
         get(page, 'data.date')
     )
+
+    const footerHeight = 140
+
     return (
-      <div>
+      <div
+        style={{
+          width: '100%',
+          minHeight: '100%',
+          heght: 'auto',
+          position: 'relative',
+        }}
+      >
         <Helmet
           title={config.blogTitle}
           meta={[
@@ -42,22 +52,23 @@ class BlogIndex extends React.Component {
             { name: 'twitter:description', content: 'akameco blog' },
           ]}
         />
-        <ul>
-          {visiblePages.map(page => (
-            <li
-              key={page.path}
-              style={{
-                marginBottom: rhythm(1 / 4),
-              }}
-            >
-              <Link style={{ boxShadow: 'none' }} to={prefixLink(page.path)}>
-                {get(page, 'data.title', page.path)}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <hr />
-        <Bio />
+        <div style={{ paddingBottom: footerHeight }}>
+          <ul>
+            {visiblePages.map(page => (
+              <li
+                key={page.path}
+                style={{
+                  marginBottom: rhythm(1 / 4),
+                }}
+              >
+                <Link style={{ boxShadow: 'none' }} to={prefixLink(page.path)}>
+                  {get(page, 'data.title', page.path)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <Footer height={footerHeight} />
       </div>
     )
   }
