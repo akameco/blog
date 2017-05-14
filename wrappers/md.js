@@ -21,7 +21,7 @@ class MarkdownWrapper extends React.Component {
     const { route } = this.props
     const post = route.page.data
 
-    const title = `${post.title} | ${config.blogTitle}`
+    const title = `${post.title} - ${config.blogTitle}`
     const postUrl = url.resolve(config.siteUrl, route.path)
     const description =
       striptags(post.body).replace(/\r?\n/g, '').slice(0, 120) + '...'
