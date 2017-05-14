@@ -34618,7 +34618,7 @@
 	
 	      var post = route.page.data;
 	
-	      var title = post.title + ' | ' + _config.config.blogTitle;
+	      var title = post.title + ' - ' + _config.config.blogTitle;
 	      var postUrl = _url2.default.resolve(_config.config.siteUrl, route.path);
 	      var description = (0, _striptags2.default)(post.body).replace(/\r?\n/g, '').slice(0, 120) + '...';
 	
