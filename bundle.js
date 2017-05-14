@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[570, 7],
+[571, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5811,7 +5811,7 @@
 
 /***/ },
 /* 50 */
-[570, 35],
+[571, 35],
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31372,7 +31372,7 @@
 	        header = _react2.default.createElement(
 	          'h1',
 	          {
-	            style: _extends({}, (0, _typography.scale)(1.5), {
+	            style: _extends({}, (0, _typography.scale)(1.2), {
 	              marginBottom: (0, _typography.rhythm)(1.5),
 	              marginTop: 0
 	            })
@@ -31417,6 +31417,7 @@
 	        _reactResponsiveGrid.Container,
 	        {
 	          style: {
+	            height: '90%',
 	            maxWidth: (0, _typography.rhythm)(26),
 	            padding: (0, _typography.rhythm)(1.5) + ' ' + (0, _typography.rhythm)(3 / 4)
 	          }
@@ -44894,8 +44895,8 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'p',
-	        { style: { marginBottom: (0, _typography.rhythm)(2.5) } },
+	        'div',
+	        { style: { marginBottom: (0, _typography.rhythm)(2) } },
 	        _react2.default.createElement('img', {
 	          src: _avater2.default,
 	          alt: 'author ' + _config.config.authorName,
@@ -44908,24 +44909,31 @@
 	            height: (0, _typography.rhythm)(2)
 	          }
 	        }),
-	        'Written by',
-	        ' ',
 	        _react2.default.createElement(
-	          'strong',
+	          'p',
 	          null,
-	          _config.config.authorName
-	        ),
-	        ' ',
-	        _react2.default.createElement(
-	          'a',
-	          { href: 'https://twitter.com/akameco' },
-	          'Twitter'
-	        ),
-	        ' ',
-	        _react2.default.createElement(
-	          'a',
-	          { href: 'https://github.com/akameco' },
-	          'GitHub'
+	          'Written by',
+	          ' ',
+	          _react2.default.createElement(
+	            'strong',
+	            null,
+	            _config.config.authorName
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://twitter.com/akameco' },
+	              'Twitter'
+	            ),
+	            ' ',
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'https://github.com/akameco' },
+	              'GitHub'
+	            )
+	          )
 	        )
 	      );
 	    }
@@ -46535,9 +46543,9 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Bio = __webpack_require__(546);
+	var _Footer = __webpack_require__(570);
 	
-	var _Bio2 = _interopRequireDefault(_Bio);
+	var _Footer2 = _interopRequireDefault(_Footer);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -46565,35 +46573,48 @@
 	      var visiblePages = sortedPages.filter(function (page) {
 	        return (0, _get2.default)(page, 'file.ext') === 'md' && !(0, _include2.default)(page.path, '/404') || (0, _get2.default)(page, 'data.date');
 	      });
+	
+	      var footerHeight = 140;
+	
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        {
+	          style: {
+	            width: '100%',
+	            minHeight: '100%',
+	            heght: 'auto',
+	            position: 'relative'
+	          }
+	        },
 	        _react2.default.createElement(_reactHelmet2.default, {
 	          title: _config.config.blogTitle,
 	          meta: [{ name: 'description', content: 'akameco blog' }, { name: 'keywords', content: 'blog, articles' }, { property: 'og:site_name', content: _config.config.blogTitle }, { property: 'og:type', content: 'blog' }, { property: 'og:url', content: _config.config.siteUrl }, { property: 'og:image', content: _config.config.ogImage }, { name: 'twitter:card', content: 'summary' }, { name: 'twitter:site', content: '@akameco' }, { name: 'twitter:title', content: 'akameco blog' }, { name: 'twitter:description', content: 'akameco blog' }]
 	        }),
 	        _react2.default.createElement(
-	          'ul',
-	          null,
-	          visiblePages.map(function (page) {
-	            return _react2.default.createElement(
-	              'li',
-	              {
-	                key: page.path,
-	                style: {
-	                  marginBottom: (0, _typography.rhythm)(1 / 4)
-	                }
-	              },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { style: { boxShadow: 'none' }, to: (0, _gatsbyHelpers.prefixLink)(page.path) },
-	                (0, _get2.default)(page, 'data.title', page.path)
-	              )
-	            );
-	          })
+	          'div',
+	          { style: { paddingBottom: footerHeight } },
+	          _react2.default.createElement(
+	            'ul',
+	            null,
+	            visiblePages.map(function (page) {
+	              return _react2.default.createElement(
+	                'li',
+	                {
+	                  key: page.path,
+	                  style: {
+	                    marginBottom: (0, _typography.rhythm)(1 / 4)
+	                  }
+	                },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { style: { boxShadow: 'none' }, to: (0, _gatsbyHelpers.prefixLink)(page.path) },
+	                  (0, _get2.default)(page, 'data.title', page.path)
+	                )
+	              );
+	            })
+	          )
 	        ),
-	        _react2.default.createElement('hr', null),
-	        _react2.default.createElement(_Bio2.default, null)
+	        _react2.default.createElement(_Footer2.default, { height: footerHeight })
 	      );
 	    }
 	  }]);
@@ -46609,6 +46630,63 @@
 
 /***/ },
 /* 570 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(2);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Bio = __webpack_require__(546);
+	
+	var _Bio2 = _interopRequireDefault(_Bio);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Footer = function (_PureComponent) {
+	  _inherits(Footer, _PureComponent);
+	
+	  function Footer() {
+	    _classCallCheck(this, Footer);
+	
+	    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+	  }
+	
+	  _createClass(Footer, [{
+	    key: 'render',
+	    value: function render() {
+	      var height = this.props.height;
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { style: { height: height, position: 'absolute', bottom: 0, width: '80%' } },
+	        _react2.default.createElement('hr', null),
+	        _react2.default.createElement(_Bio2.default, null)
+	      );
+	    }
+	  }]);
+	
+	  return Footer;
+	}(_react.PureComponent);
+	
+	exports.default = Footer;
+	module.exports = exports['default'];
+
+/***/ },
+/* 571 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
