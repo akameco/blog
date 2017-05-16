@@ -29,7 +29,10 @@ copies of the Software, and to permit persons to whom the Software is
 
 そこで、touchの代わりに使えるtouch-altを作ってみた。
 
+[![touch-alt](https://github.com/akameco/touch-alt/raw/master/media/logo.png)](https://github.com/akameco/touch-alt)
+
 [akameco/touch-alt: Create from a template instead of a new file](https://github.com/akameco/touch-alt)
+
 
 ```sh
 $ npm install --global touch-alt
