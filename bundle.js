@@ -42883,6 +42883,47 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	var Item = function Item(_ref) {
+	  var header = _ref.header,
+	      title = _ref.title,
+	      path = _ref.path;
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'h6',
+	      {
+	        style: {
+	          margin: 0,
+	          letterSpacing: -0.25
+	        }
+	      },
+	      header
+	    ),
+	    _react2.default.createElement(
+	      'h4',
+	      {
+	        style: {
+	          marginTop: 0,
+	          marginBottom: (0, _typography.rhythm)(1 / 4)
+	        }
+	      },
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        {
+	          to: {
+	            pathname: (0, _gatsbyHelpers.prefixLink)(path),
+	            query: {
+	              readNext: true
+	            }
+	          }
+	        },
+	        title
+	      )
+	    )
+	  );
+	};
+	
 	var ReadNext = function (_React$Component) {
 	  _inherits(ReadNext, _React$Component);
 	
@@ -42898,66 +42939,37 @@
 	      var _props = this.props,
 	          pages = _props.pages,
 	          post = _props.post;
-	      var readNext = post.readNext;
 	
-	      var nextPost = void 0;
-	      if (readNext) {
-	        nextPost = (0, _find2.default)(pages, function (page) {
-	          return (0, _underscore.include)(page.path, readNext);
-	        });
-	      }
-	      if (!nextPost) {
-	        return null;
-	      } else {
-	        nextPost = (0, _find2.default)(pages, function (page) {
-	          return (0, _underscore.include)(page.path, readNext.slice(1, -1));
-	        });
-	        // Create pruned version of the body.
-	        var html = nextPost.data.body;
-	        var body = (0, _underscore.prune)(html.replace(/<[^>]*>/g, ''), 150);
+	      var currentIndex = pages.findIndex(function (page) {
+	        return page.path === post.path;
+	      });
 	
-	        return _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'h6',
-	            {
-	              style: {
-	                margin: 0,
-	                letterSpacing: -0.25
-	              }
-	            },
-	            '\u6B21\u306E\u8A18\u4E8B'
-	          ),
-	          _react2.default.createElement(
-	            'h4',
-	            {
-	              style: {
-	                marginTop: 0,
-	                marginBottom: (0, _typography.rhythm)(1 / 4)
-	              }
-	            },
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              {
-	                to: {
-	                  pathname: (0, _gatsbyHelpers.prefixLink)(nextPost.path),
-	                  query: {
-	                    readNext: true
-	                  }
-	                }
-	              },
-	              nextPost.data.title
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            body
-	          ),
-	          _react2.default.createElement('hr', null)
-	        );
+	      var beforePost = null;
+	      if (currentIndex > 0) {
+	        beforePost = pages[currentIndex - 1];
 	      }
+	
+	      var nextPost = null;
+	      // index, 404の分を除去するので -3
+	      if (currentIndex < pages.length - 3) {
+	        nextPost = pages[currentIndex + 1];
+	      }
+	
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        nextPost && _react2.default.createElement(Item, {
+	          header: '\u6B21\u306E\u8A18\u4E8B',
+	          title: nextPost.data.title,
+	          path: nextPost.path
+	        }),
+	        beforePost && _react2.default.createElement(Item, {
+	          header: '\u524D\u306E\u8A18\u4E8B',
+	          title: beforePost.data.title,
+	          path: beforePost.path
+	        }),
+	        _react2.default.createElement('hr', null)
+	      );
 	    }
 	  }]);
 	
@@ -46481,7 +46493,7 @@
 /* 566 */
 /***/ function(module, exports) {
 
-	module.exports = {"title":"touch時に空ファイルではなくテンプレートからファイルを作成する","date":"2017-05-13","path":"/touch-alt/","body":"<p>touchコマンドは基本的に新しいファイルを作成するときに使っている。\nとなると空ファイルが作られてしまうのはよろしくない。</p>\n<p>例えば、licenseファイルをプロジェクトに含め忘れたので後から追加したいとする。\nそのとき叩くのは、touch licenseもしくは、既存のプロジェクトからlicenseを探してcpをする。</p>\n<p>ここで思い至るのは、licenseファイルの内容はほぼ変わることがない。だいたい以下のような感じである。</p>\n<pre><code class=\"language-txt\">The MIT License (MIT)\n\nCopyright (c) akameco &lt;akameco.t@gmail.com&gt; (akameco.github.io)\n\nPermission is hereby granted, free <span class=\"hljs-keyword\">of</span> charge, <span class=\"hljs-built_in\">to</span> <span class=\"hljs-keyword\">any</span> person obtaining <span class=\"hljs-keyword\">a</span> copy\n<span class=\"hljs-keyword\">of</span> this software <span class=\"hljs-keyword\">and</span> associated documentation <span class=\"hljs-built_in\">files</span> (<span class=\"hljs-keyword\">the</span> <span class=\"hljs-string\">\"Software\"</span>), <span class=\"hljs-built_in\">to</span> deal\n<span class=\"hljs-keyword\">in</span> <span class=\"hljs-keyword\">the</span> Software <span class=\"hljs-keyword\">without</span> restriction, including <span class=\"hljs-keyword\">without</span> limitation <span class=\"hljs-keyword\">the</span> rights\n<span class=\"hljs-built_in\">to</span> use, copy, modify, <span class=\"hljs-built_in\">merge</span>, publish, distribute, sublicense, <span class=\"hljs-keyword\">and</span>/<span class=\"hljs-keyword\">or</span> sell\ncopies <span class=\"hljs-keyword\">of</span> <span class=\"hljs-keyword\">the</span> Software, <span class=\"hljs-keyword\">and</span> <span class=\"hljs-built_in\">to</span> permit persons <span class=\"hljs-built_in\">to</span> whom <span class=\"hljs-keyword\">the</span> Software is\n(略)\n</code></pre>\n<p>となると、これをテンプレートとしてtouchの代わりにこれを新しいファイルとして作成した方が良さそうだ。</p>\n<p>そこで、touchの代わりに使えるtouch-altを作ってみた。</p>\n<p><a href=\"https://github.com/akameco/touch-alt\">akameco/touch-alt: Create from a template instead of a new file</a></p>\n<pre><code class=\"language-sh\">$ npm install --global touch-alt\n</code></pre>\n<p>使い方はtouchと同じだが、touchの本来の機能であるタイムスタンプ更新の機能はない。\n自分はほぼ使わないのでalias touch=touch-altを.zshrcに追記した。</p>\n<p>さて、使い方はtouchと同じだ。\nだが、–addフラグで新しいテンプレートを追加できる。\n追加されたファイルは~/.touch-alt以下に保存される。</p>\n<pre><code class=\"language-sh\">$ touch-alt --add license\n</code></pre>\n<p>後は、touchの代わりにtouch-altでlicenseを作成するだけだ。</p>\n<pre><code class=\"language-sh\">$ touch license\n$ cat license\n\n$ rm license\n$ ls -la ~/.touch-alt\n.             ..            license\n$ touch-alt license\n$ cat license\nThe MIT License (MIT)\n\nCopyright (c) akameco &lt;akameco.t@gmail.com&gt; (akameco.github.io)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the <span class=\"hljs-string\">\"Software\"</span>), to deal\n(略)\n</code></pre>\n<p>もちろん、テンプレートがないファイルは空ファイルを作成する。</p>\n<h2>まとめ</h2>\n<p>自分はわりとyeomenでテンプレートを作成することが多いが、既存のプロジェクトにわりといつも使う設定を持ってきたいときに便利であると思う。\n例えば、.babelrcや.eslinrc、.editorconfigなどがそれだ。</p>\n<p>自分で使っててわりと便利なので、是非使ってくれると嬉しい。</p>\n<p><a href=\"https://github.com/akameco/touch-alt\">akameco/touch-alt: Create from a template instead of a new file</a></p>\n<p>実際のところ、すでにテンプレートが保存してあればそれをコピーしてくるだけのスクリプトだが、この手のスクリプトはどうやってもtestの方が行数が増えるのが面倒なところだった。</p>\n"}
+	module.exports = {"title":"touch時に空ファイルではなくテンプレートからファイルを作成する","date":"2017-05-13","path":"/touch-alt/","body":"<p>touchコマンドは基本的に新しいファイルを作成するときに使っている。\nとなると空ファイルが作られてしまうのはよろしくない。</p>\n<p>例えば、licenseファイルをプロジェクトに含め忘れたので後から追加したいとする。\nそのとき叩くのは、touch licenseもしくは、既存のプロジェクトからlicenseを探してcpをする。</p>\n<p>ここで思い至るのは、licenseファイルの内容はほぼ変わることがない。だいたい以下のような感じである。</p>\n<pre><code class=\"language-txt\">The MIT License (MIT)\n\nCopyright (c) akameco &lt;akameco.t@gmail.com&gt; (akameco.github.io)\n\nPermission is hereby granted, free <span class=\"hljs-keyword\">of</span> charge, <span class=\"hljs-built_in\">to</span> <span class=\"hljs-keyword\">any</span> person obtaining <span class=\"hljs-keyword\">a</span> copy\n<span class=\"hljs-keyword\">of</span> this software <span class=\"hljs-keyword\">and</span> associated documentation <span class=\"hljs-built_in\">files</span> (<span class=\"hljs-keyword\">the</span> <span class=\"hljs-string\">\"Software\"</span>), <span class=\"hljs-built_in\">to</span> deal\n<span class=\"hljs-keyword\">in</span> <span class=\"hljs-keyword\">the</span> Software <span class=\"hljs-keyword\">without</span> restriction, including <span class=\"hljs-keyword\">without</span> limitation <span class=\"hljs-keyword\">the</span> rights\n<span class=\"hljs-built_in\">to</span> use, copy, modify, <span class=\"hljs-built_in\">merge</span>, publish, distribute, sublicense, <span class=\"hljs-keyword\">and</span>/<span class=\"hljs-keyword\">or</span> sell\ncopies <span class=\"hljs-keyword\">of</span> <span class=\"hljs-keyword\">the</span> Software, <span class=\"hljs-keyword\">and</span> <span class=\"hljs-built_in\">to</span> permit persons <span class=\"hljs-built_in\">to</span> whom <span class=\"hljs-keyword\">the</span> Software is\n(略)\n</code></pre>\n<p>となると、これをテンプレートとしてtouchの代わりにこれを新しいファイルとして作成した方が良さそうだ。</p>\n<p>そこで、touchの代わりに使えるtouch-altを作ってみた。</p>\n<p><a href=\"https://github.com/akameco/touch-alt\"><img src=\"https://github.com/akameco/touch-alt/raw/master/media/logo.png\" alt=\"touch-alt\"></a></p>\n<p><a href=\"https://github.com/akameco/touch-alt\">akameco/touch-alt: Create from a template instead of a new file</a></p>\n<pre><code class=\"language-sh\">$ npm install --global touch-alt\n</code></pre>\n<p>使い方はtouchと同じだが、touchの本来の機能であるタイムスタンプ更新の機能はない。\n自分はほぼ使わないのでalias touch=touch-altを.zshrcに追記した。</p>\n<p>さて、使い方はtouchと同じだ。\nだが、–addフラグで新しいテンプレートを追加できる。\n追加されたファイルは~/.touch-alt以下に保存される。</p>\n<pre><code class=\"language-sh\">$ touch-alt --add license\n</code></pre>\n<p>後は、touchの代わりにtouch-altでlicenseを作成するだけだ。</p>\n<pre><code class=\"language-sh\">$ touch license\n$ cat license\n\n$ rm license\n$ ls -la ~/.touch-alt\n.             ..            license\n$ touch-alt license\n$ cat license\nThe MIT License (MIT)\n\nCopyright (c) akameco &lt;akameco.t@gmail.com&gt; (akameco.github.io)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the <span class=\"hljs-string\">\"Software\"</span>), to deal\n(略)\n</code></pre>\n<p>もちろん、テンプレートがないファイルは空ファイルを作成する。</p>\n<h2>まとめ</h2>\n<p>自分はわりとyeomenでテンプレートを作成することが多いが、既存のプロジェクトにわりといつも使う設定を持ってきたいときに便利であると思う。\n例えば、.babelrcや.eslinrc、.editorconfigなどがそれだ。</p>\n<p>自分で使っててわりと便利なので、是非使ってくれると嬉しい。</p>\n<p><a href=\"https://github.com/akameco/touch-alt\">akameco/touch-alt: Create from a template instead of a new file</a></p>\n<p>実際のところ、すでにテンプレートが保存してあればそれをコピーしてくるだけのスクリプトだが、この手のスクリプトはどうやってもtestの方が行数が増えるのが面倒なところだった。</p>\n"}
 
 /***/ },
 /* 567 */
