@@ -1,8 +1,9 @@
-# gatsby-starter-blog
-Gatsby starter for creating a blog
+# Akameco Blog
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
+[akameco Blog](https://akameco.github.io/blog/)
 
-## Running in development
-`gatsby develop`
+
+
+## License
+
+MIT © [akameco](http://akameco.github.io)
