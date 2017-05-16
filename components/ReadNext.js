@@ -6,6 +6,36 @@ import { prune, include as includes } from 'underscore.string'
 import find from 'lodash/find'
 import { rhythm, scale } from 'utils/typography'
 
+const Item = ({ header, title, path }) => (
+  <div>
+    <h6
+      style={{
+        margin: 0,
+        letterSpacing: -0.25,
+      }}
+    >
+      {header}
+    </h6>
+    <h4
+      style={{
+        marginTop: 0,
+        marginBottom: rhythm(1 / 4),
+      }}
+    >
+      <Link
+        to={{
+          pathname: prefixLink(path),
+          query: {
+            readNext: true,
+          },
+        }}
+      >
+        {title}
+      </Link>
+    </h4>
+  </div>
+)
+
 export default class ReadNext extends React.Component {
   static propTypes = {
     post: PropTypes.object.isRequired,
@@ -14,50 +44,37 @@ export default class ReadNext extends React.Component {
 
   render() {
     const { pages, post } = this.props
-    const { readNext } = post
-    let nextPost
-    if (readNext) {
-      nextPost = find(pages, page => includes(page.path, readNext))
-    }
-    if (!nextPost) {
-      return null
-    } else {
-      nextPost = find(pages, page => includes(page.path, readNext.slice(1, -1)))
-      // Create pruned version of the body.
-      const html = nextPost.data.body
-      const body = prune(html.replace(/<[^>]*>/g, ''), 150)
+    const currentIndex = pages.findIndex(page => page.path === post.path)
 
-      return (
-        <div>
-          <h6
-            style={{
-              margin: 0,
-              letterSpacing: -0.25,
-            }}
-          >
-            次の記事
-          </h6>
-          <h4
-            style={{
-              marginTop: 0,
-              marginBottom: rhythm(1 / 4),
-            }}
-          >
-            <Link
-              to={{
-                pathname: prefixLink(nextPost.path),
-                query: {
-                  readNext: true,
-                },
-              }}
-            >
-              {nextPost.data.title}
-            </Link>
-          </h4>
-          <p>{body}</p>
-          <hr />
-        </div>
-      )
+    let beforePost = null
+    if (currentIndex > 0) {
+      beforePost = pages[currentIndex - 1]
     }
+
+    let nextPost = null
+    // index, 404の分を除去するので -3
+    if (currentIndex < pages.length - 3) {
+      nextPost = pages[currentIndex + 1]
+    }
+
+    return (
+      <div>
+        {nextPost &&
+          <Item
+            header="次の記事"
+            title={nextPost.data.title}
+            path={nextPost.path}
+          />}
+
+        {beforePost &&
+          <Item
+            header="前の記事"
+            title={beforePost.data.title}
+            path={beforePost.path}
+          />}
+
+        <hr />
+      </div>
+    )
   }
 }
