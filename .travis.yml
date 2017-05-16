@@ -2,8 +2,9 @@ language: node_js
 sudo: false
 node_js:
   - '7'
-
 install: npm install
-
 script:
   - npm run deploy
+env:
+  global:
+    secure: Y+jWxBMoKyambvkTUArYT+OSn6GX1v+tDgclapDA8OfvJmILWyQtfbVHIDE3hsjogUyfiOlrAoxBsaDLTrHGuNRgCwQ0tHVNMhn+u1iUIDf/TiNb/IcPaYMzBE9Ssy5cl9LVkcq2l9KJHNnLlq395BvdTWScRGqvoMgMoTqMSfeQAK7bDwnMRBmxrw5elnNeCZ0Zy7baHnrRYb4BDMqSW1xpdTDzJA+7tx4B3mhPbXiqu09rUcoFYQGGRNnWWqpKLuzVfdttNVAxXnvAUYh2FAoel496oHm8MaCaz9iNO1CMkDfVeQjJtN69QhrFPARd0LMaj1kCRjl0/djERMYr3J6xKQKGvd/C/T2ncFC+9LQxP1DEodqj/YXzYoFZMmxZXckaGrXZlBVwiG9XoZC8NDYWekr0nrqixTbjjVK8RLnCyV/WydTB+0Gw+sItwRWER9baNycrxVJ8v0wxGzhStQ7WayEsXdOJO/Btp+JF2GZ20z378qNHkouEwDXMILgpfxhb+eXL8isYEaKaVUMKZbLw8WqO4LtxeWBZ54qb5AkzFHnhWx7wFr8Ky1Q9wcLjABXF2guiXpHmYpLpLcBLodC74y5tqNZmfXB7gqirFLw8jjz0W1XUbPanZDYERbr/CGphRgvnORV1oDN5N9nTal+Hog22FIZNWpeA/0lXaeQ=
