@@ -31147,8 +31147,7 @@
 					"title": "first post",
 					"date": "2017-05-11",
 					"path": "/first-post/",
-					"image": "https://akameco.github.io/blog/first-post/spring.gif",
-					"readNext": "/gatsby1/"
+					"image": "https://akameco.github.io/blog/first-post/spring.gif"
 				}
 			},
 			{
@@ -31169,8 +31168,7 @@
 				"data": {
 					"title": "Blogの設定",
 					"date": "2017-05-12",
-					"path": "/gatsby1/",
-					"readNext": "/react-helmet/"
+					"path": "/gatsby1/"
 				}
 			},
 			{
@@ -31213,7 +31211,8 @@
 				"data": {
 					"title": "touch時に空ファイルではなくテンプレートからファイルを作成する",
 					"date": "2017-05-13",
-					"path": "/touch-alt/"
+					"path": "/touch-alt/",
+					"image": "https://raw.githubusercontent.com/akameco/touch-alt/master/media/demo.gif"
 				}
 			},
 			{
@@ -46475,13 +46474,13 @@
 /* 563 */
 /***/ function(module, exports) {
 
-	module.exports = {"title":"first post","date":"2017-05-11","path":"/first-post/","image":"https://akameco.github.io/blog/first-post/spring.gif","readNext":"/gatsby1/","body":"<p>HMRがないと文章を書く気持ちになれないので、<a href=\"https://github.com/gatsbyjs/gatsby\">gatsbyjs</a>を試してみることにした。</p>\n<p><img src=\"./spring.gif\" alt=\"spring\"></p>\n<p>しかし、どうやら記事を消しても反映されない。\nどこかバグってるっぽい。</p>\n<p>はやくもやる気なくなってきた。</p>\n<p>TwitterCard対応、RSS対応、SEO。\n無限にやることある。</p>\n"}
+	module.exports = {"title":"first post","date":"2017-05-11","path":"/first-post/","image":"https://akameco.github.io/blog/first-post/spring.gif","body":"<p>HMRがないと文章を書く気持ちになれないので、<a href=\"https://github.com/gatsbyjs/gatsby\">gatsbyjs</a>を試してみることにした。</p>\n<p><img src=\"./spring.gif\" alt=\"spring\"></p>\n<p>しかし、どうやら記事を消しても反映されない。\nどこかバグってるっぽい。</p>\n<p>はやくもやる気なくなってきた。</p>\n<p>TwitterCard対応、RSS対応、SEO。\n無限にやることある。</p>\n"}
 
 /***/ },
 /* 564 */
 /***/ function(module, exports) {
 
-	module.exports = {"title":"Blogの設定","date":"2017-05-12","path":"/gatsby1/","readNext":"/react-helmet/","body":"<p>どうやらgatsbyが1.0に向けてものすごい感じで変わってるっぽい。\nちょっと色々設定をしようと思ったが、やめといた方が良さそう。\nよって、すぐに脱出できるように記事以外に力を入れないことにする。</p>\n"}
+	module.exports = {"title":"Blogの設定","date":"2017-05-12","path":"/gatsby1/","body":"<p>どうやらgatsbyが1.0に向けてものすごい感じで変わってるっぽい。\nちょっと色々設定をしようと思ったが、やめといた方が良さそう。\nよって、すぐに脱出できるように記事以外に力を入れないことにする。</p>\n"}
 
 /***/ },
 /* 565 */
@@ -46493,7 +46492,7 @@
 /* 566 */
 /***/ function(module, exports) {
 
-	module.exports = {"title":"touch時に空ファイルではなくテンプレートからファイルを作成する","date":"2017-05-13","path":"/touch-alt/","body":"<p>touchコマンドは基本的に新しいファイルを作成するときに使っている。\nとなると空ファイルが作られてしまうのはよろしくない。</p>\n<p>例えば、licenseファイルをプロジェクトに含め忘れたので後から追加したいとする。\nそのとき叩くのは、touch licenseもしくは、既存のプロジェクトからlicenseを探してcpをする。</p>\n<p>ここで思い至るのは、licenseファイルの内容はほぼ変わることがない。だいたい以下のような感じである。</p>\n<pre><code class=\"language-txt\">The MIT License (MIT)\n\nCopyright (c) akameco &lt;akameco.t@gmail.com&gt; (akameco.github.io)\n\nPermission is hereby granted, free <span class=\"hljs-keyword\">of</span> charge, <span class=\"hljs-built_in\">to</span> <span class=\"hljs-keyword\">any</span> person obtaining <span class=\"hljs-keyword\">a</span> copy\n<span class=\"hljs-keyword\">of</span> this software <span class=\"hljs-keyword\">and</span> associated documentation <span class=\"hljs-built_in\">files</span> (<span class=\"hljs-keyword\">the</span> <span class=\"hljs-string\">\"Software\"</span>), <span class=\"hljs-built_in\">to</span> deal\n<span class=\"hljs-keyword\">in</span> <span class=\"hljs-keyword\">the</span> Software <span class=\"hljs-keyword\">without</span> restriction, including <span class=\"hljs-keyword\">without</span> limitation <span class=\"hljs-keyword\">the</span> rights\n<span class=\"hljs-built_in\">to</span> use, copy, modify, <span class=\"hljs-built_in\">merge</span>, publish, distribute, sublicense, <span class=\"hljs-keyword\">and</span>/<span class=\"hljs-keyword\">or</span> sell\ncopies <span class=\"hljs-keyword\">of</span> <span class=\"hljs-keyword\">the</span> Software, <span class=\"hljs-keyword\">and</span> <span class=\"hljs-built_in\">to</span> permit persons <span class=\"hljs-built_in\">to</span> whom <span class=\"hljs-keyword\">the</span> Software is\n(略)\n</code></pre>\n<p>となると、これをテンプレートとしてtouchの代わりにこれを新しいファイルとして作成した方が良さそうだ。</p>\n<p>そこで、touchの代わりに使えるtouch-altを作ってみた。</p>\n<p><a href=\"https://github.com/akameco/touch-alt\"><img src=\"https://github.com/akameco/touch-alt/raw/master/media/logo.png\" alt=\"touch-alt\"></a></p>\n<p><a href=\"https://github.com/akameco/touch-alt\">akameco/touch-alt: Create from a template instead of a new file</a></p>\n<pre><code class=\"language-sh\">$ npm install --global touch-alt\n</code></pre>\n<p>使い方はtouchと同じだが、touchの本来の機能であるタイムスタンプ更新の機能はない。\n自分はほぼ使わないのでalias touch=touch-altを.zshrcに追記した。</p>\n<p>さて、使い方はtouchと同じだ。\nだが、–addフラグで新しいテンプレートを追加できる。\n追加されたファイルは~/.touch-alt以下に保存される。</p>\n<pre><code class=\"language-sh\">$ touch-alt --add license\n</code></pre>\n<p>後は、touchの代わりにtouch-altでlicenseを作成するだけだ。</p>\n<pre><code class=\"language-sh\">$ touch license\n$ cat license\n\n$ rm license\n$ ls -la ~/.touch-alt\n.             ..            license\n$ touch-alt license\n$ cat license\nThe MIT License (MIT)\n\nCopyright (c) akameco &lt;akameco.t@gmail.com&gt; (akameco.github.io)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the <span class=\"hljs-string\">\"Software\"</span>), to deal\n(略)\n</code></pre>\n<p>もちろん、テンプレートがないファイルは空ファイルを作成する。</p>\n<h2>まとめ</h2>\n<p>自分はわりとyeomenでテンプレートを作成することが多いが、既存のプロジェクトにわりといつも使う設定を持ってきたいときに便利であると思う。\n例えば、.babelrcや.eslinrc、.editorconfigなどがそれだ。</p>\n<p>自分で使っててわりと便利なので、是非使ってくれると嬉しい。</p>\n<p><a href=\"https://github.com/akameco/touch-alt\">akameco/touch-alt: Create from a template instead of a new file</a></p>\n<p>実際のところ、すでにテンプレートが保存してあればそれをコピーしてくるだけのスクリプトだが、この手のスクリプトはどうやってもtestの方が行数が増えるのが面倒なところだった。</p>\n"}
+	module.exports = {"title":"touch時に空ファイルではなくテンプレートからファイルを作成する","date":"2017-05-13","path":"/touch-alt/","image":"https://raw.githubusercontent.com/akameco/touch-alt/master/media/demo.gif","body":"<p>touchコマンドは基本的に新しいファイルを作成するときに使っている。\nとなると空ファイルが作られてしまうのはよろしくない。</p>\n<p>例えば、licenseファイルをプロジェクトに含め忘れたので後から追加したいとする。\nそのとき叩くのは、touch licenseもしくは、既存のプロジェクトからlicenseを探してcpをする。</p>\n<p>ここで思い至るのは、licenseファイルの内容はほぼ変わることがない。だいたい以下のような感じである。</p>\n<pre><code class=\"language-txt\">The MIT License (MIT)\n\nCopyright (c) akameco &lt;akameco.t@gmail.com&gt; (akameco.github.io)\n\nPermission is hereby granted, free <span class=\"hljs-keyword\">of</span> charge, <span class=\"hljs-built_in\">to</span> <span class=\"hljs-keyword\">any</span> person obtaining <span class=\"hljs-keyword\">a</span> copy\n<span class=\"hljs-keyword\">of</span> this software <span class=\"hljs-keyword\">and</span> associated documentation <span class=\"hljs-built_in\">files</span> (<span class=\"hljs-keyword\">the</span> <span class=\"hljs-string\">\"Software\"</span>), <span class=\"hljs-built_in\">to</span> deal\n<span class=\"hljs-keyword\">in</span> <span class=\"hljs-keyword\">the</span> Software <span class=\"hljs-keyword\">without</span> restriction, including <span class=\"hljs-keyword\">without</span> limitation <span class=\"hljs-keyword\">the</span> rights\n<span class=\"hljs-built_in\">to</span> use, copy, modify, <span class=\"hljs-built_in\">merge</span>, publish, distribute, sublicense, <span class=\"hljs-keyword\">and</span>/<span class=\"hljs-keyword\">or</span> sell\ncopies <span class=\"hljs-keyword\">of</span> <span class=\"hljs-keyword\">the</span> Software, <span class=\"hljs-keyword\">and</span> <span class=\"hljs-built_in\">to</span> permit persons <span class=\"hljs-built_in\">to</span> whom <span class=\"hljs-keyword\">the</span> Software is\n(略)\n</code></pre>\n<p>となると、これをテンプレートとしてtouchの代わりにこれを新しいファイルとして作成した方が良さそうだ。</p>\n<p>そこで、touchの代わりに使えるtouch-altを作ってみた。</p>\n<p><a href=\"https://github.com/akameco/touch-alt\"><img src=\"https://github.com/akameco/touch-alt/raw/master/media/logo.png\" alt=\"touch-alt\"></a></p>\n<p><a href=\"https://github.com/akameco/touch-alt\">akameco/touch-alt: Create from a template instead of a new file</a></p>\n<p><a href=\"https://github.com/akameco/touch-alt\"><img src=\"https://raw.githubusercontent.com/akameco/touch-alt/master/media/demo.gif\" alt=\"touch-alt\"></a></p>\n<pre><code class=\"language-sh\">$ npm install --global touch-alt\n</code></pre>\n<p>使い方はtouchと同じだが、touchの本来の機能であるタイムスタンプ更新の機能はない。\n自分はほぼ使わないのでalias touch=touch-altを.zshrcに追記した。</p>\n<p>さて、使い方はtouchと同じだ。\nだが、–addフラグで新しいテンプレートを追加できる。\n追加されたファイルは~/.touch-alt以下に保存される。</p>\n<pre><code class=\"language-sh\">$ touch-alt --add license\n</code></pre>\n<p>後は、touchの代わりにtouch-altでlicenseを作成するだけだ。</p>\n<pre><code class=\"language-sh\">$ touch license\n$ cat license\n\n$ rm license\n$ ls -la ~/.touch-alt\n.             ..            license\n$ touch-alt license\n$ cat license\nThe MIT License (MIT)\n\nCopyright (c) akameco &lt;akameco.t@gmail.com&gt; (akameco.github.io)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the <span class=\"hljs-string\">\"Software\"</span>), to deal\n(略)\n</code></pre>\n<p>もちろん、テンプレートがないファイルは空ファイルを作成する。</p>\n<h2>まとめ</h2>\n<p>自分はわりとyeomenでテンプレートを作成することが多いが、既存のプロジェクトにわりといつも使う設定を持ってきたいときに便利であると思う。\n例えば、.babelrcや.eslinrc、.editorconfigなどがそれだ。</p>\n<p>自分で使っててわりと便利なので、是非使ってくれると嬉しい。</p>\n<p><a href=\"https://github.com/akameco/touch-alt\">akameco/touch-alt: Create from a template instead of a new file</a></p>\n<p>実際のところ、すでにテンプレートが保存してあればそれをコピーしてくるだけのスクリプトだが、この手のスクリプトはどうやってもtestの方が行数が増えるのが面倒なところだった。</p>\n"}
 
 /***/ },
 /* 567 */
