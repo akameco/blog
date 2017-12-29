@@ -99,7 +99,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	/*  weak */
-	var loadContext = __webpack_require__(557);
+	var loadContext = __webpack_require__(548);
 	
 	function loadConfig(cb) {
 	  var stuff = __webpack_require__(385);
@@ -194,12 +194,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -426,12 +424,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -574,11 +570,9 @@
 
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -616,12 +610,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2015-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2015-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -715,12 +707,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2014-2015, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2014-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -787,11 +777,9 @@
 	
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -827,12 +815,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -858,11 +844,9 @@
 
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -882,11 +866,9 @@
 
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -941,12 +923,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2014-2015, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2014-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -1010,12 +990,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -1202,17 +1180,15 @@
 
 /***/ }),
 /* 15 */
-[567, 6],
+[558, 6],
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2014-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2014-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -1552,12 +1528,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -1585,12 +1559,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2014-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2014-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -1609,12 +1581,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -1789,12 +1759,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -1834,12 +1802,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -1897,12 +1863,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -2070,12 +2034,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -2093,12 +2055,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 */
 	
 	'use strict';
@@ -2120,12 +2080,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 */
 	
 	'use strict';
@@ -2133,6 +2091,7 @@
 	var emptyFunction = __webpack_require__(9);
 	var invariant = __webpack_require__(12);
 	var warning = __webpack_require__(8);
+	var assign = __webpack_require__(4);
 	
 	var ReactPropTypesSecret = __webpack_require__(26);
 	var checkPropTypes = __webpack_require__(27);
@@ -2231,7 +2190,8 @@
 	    objectOf: createObjectOfTypeChecker,
 	    oneOf: createEnumTypeChecker,
 	    oneOfType: createUnionTypeChecker,
-	    shape: createShapeTypeChecker
+	    shape: createShapeTypeChecker,
+	    exact: createStrictShapeTypeChecker,
 	  };
 	
 	  /**
@@ -2446,7 +2406,7 @@
 	      if (typeof checker !== 'function') {
 	        warning(
 	          false,
-	          'Invalid argument supplid to oneOfType. Expected an array of check functions, but ' +
+	          'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' +
 	          'received %s at index %s.',
 	          getPostfixForTypeWarning(checker),
 	          i
@@ -2497,6 +2457,36 @@
 	      }
 	      return null;
 	    }
+	    return createChainableTypeChecker(validate);
+	  }
+	
+	  function createStrictShapeTypeChecker(shapeTypes) {
+	    function validate(props, propName, componentName, location, propFullName) {
+	      var propValue = props[propName];
+	      var propType = getPropType(propValue);
+	      if (propType !== 'object') {
+	        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+	      }
+	      // We need to check all keys in case some are required but missing from
+	      // props.
+	      var allKeys = assign({}, props[propName], shapeTypes);
+	      for (var key in allKeys) {
+	        var checker = shapeTypes[key];
+	        if (!checker) {
+	          return new PropTypeError(
+	            'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
+	            '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
+	            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
+	          );
+	        }
+	        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+	        if (error) {
+	          return error;
+	        }
+	      }
+	      return null;
+	    }
+	
 	    return createChainableTypeChecker(validate);
 	  }
 	
@@ -2638,12 +2628,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 */
 	
 	'use strict';
@@ -2658,12 +2646,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 */
 	
 	'use strict';
@@ -2697,7 +2683,7 @@
 	        try {
 	          // This is intentionally an invariant that gets caught. It's the same
 	          // behavior as without this statement except with a better message.
-	          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'React.PropTypes.', componentName || 'React class', location, typeSpecName);
+	          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'the `prop-types` package, but received `%s`.', componentName || 'React class', location, typeSpecName, typeof typeSpecs[typeSpecName]);
 	          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
 	        } catch (ex) {
 	          error = ex;
@@ -2725,30 +2711,26 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
 	'use strict';
 	
-	module.exports = '15.6.1';
+	module.exports = '15.6.2';
 
 /***/ }),
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -2770,12 +2752,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -3648,12 +3628,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	'use strict';
@@ -3699,12 +3677,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -3814,12 +3790,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -4015,12 +3989,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -4228,12 +4200,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2015-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2015-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -4250,12 +4220,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -4340,12 +4308,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -4418,12 +4384,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -4806,12 +4770,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -4944,12 +4906,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -5222,12 +5182,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -5479,12 +5437,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -5709,12 +5665,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -5771,7 +5725,9 @@
 	  if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function' && typeof document !== 'undefined' && typeof document.createEvent === 'function') {
 	    var fakeNode = document.createElement('react');
 	    ReactErrorUtils.invokeGuardedCallback = function (name, func, a) {
-	      var boundFunc = func.bind(null, a);
+	      var boundFunc = function () {
+	        func(a);
+	      };
 	      var evtType = 'react-' + name;
 	      fakeNode.addEventListener(evtType, boundFunc, false);
 	      var evt = document.createEvent('Event');
@@ -5789,12 +5745,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2014-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2014-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -5851,12 +5805,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -5887,11 +5839,9 @@
 
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -5926,12 +5876,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -6022,17 +5970,15 @@
 
 /***/ }),
 /* 50 */
-[567, 35],
+[558, 35],
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -6064,12 +6010,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -6104,12 +6048,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -6285,6 +6227,33 @@
 	
 	SyntheticEvent.Interface = EventInterface;
 	
+	/**
+	 * Helper to reduce boilerplate when creating subclasses.
+	 *
+	 * @param {function} Class
+	 * @param {?object} Interface
+	 */
+	SyntheticEvent.augmentClass = function (Class, Interface) {
+	  var Super = this;
+	
+	  var E = function () {};
+	  E.prototype = Super.prototype;
+	  var prototype = new E();
+	
+	  _assign(prototype, Class.prototype);
+	  Class.prototype = prototype;
+	  Class.prototype.constructor = Class;
+	
+	  Class.Interface = _assign({}, Super.Interface, Interface);
+	  Class.augmentClass = Super.augmentClass;
+	
+	  PooledClass.addPoolingTo(Class, PooledClass.fourArgumentPooler);
+	};
+	
+	/** Proxying after everything set on SyntheticEvent
+	  * to resolve Proxy issue on some WebKit browsers
+	  * in which some Event properties are set to undefined (GH#10010)
+	  */
 	if (false) {
 	  if (isProxySupported) {
 	    /*eslint-disable no-func-assign */
@@ -6308,28 +6277,6 @@
 	    /*eslint-enable no-func-assign */
 	  }
 	}
-	/**
-	 * Helper to reduce boilerplate when creating subclasses.
-	 *
-	 * @param {function} Class
-	 * @param {?object} Interface
-	 */
-	SyntheticEvent.augmentClass = function (Class, Interface) {
-	  var Super = this;
-	
-	  var E = function () {};
-	  E.prototype = Super.prototype;
-	  var prototype = new E();
-	
-	  _assign(prototype, Class.prototype);
-	  Class.prototype = prototype;
-	  Class.prototype.constructor = Class;
-	
-	  Class.Interface = _assign({}, Super.Interface, Interface);
-	  Class.augmentClass = Super.augmentClass;
-	
-	  PooledClass.addPoolingTo(Class, PooledClass.fourArgumentPooler);
-	};
 	
 	PooledClass.addPoolingTo(SyntheticEvent, PooledClass.fourArgumentPooler);
 	
@@ -6374,12 +6321,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -6415,12 +6360,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -6545,7 +6488,7 @@
 	  // IE9 claims to support the input event but fails to trigger it when
 	  // deleting text, so we ignore its input events.
 	
-	  isInputEventSupported = isEventSupported('input') && (!('documentMode' in document) || document.documentMode > 9);
+	  isInputEventSupported = isEventSupported('input') && (!document.documentMode || document.documentMode > 9);
 	}
 	
 	/**
@@ -6731,12 +6674,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -6944,7 +6885,7 @@
 	 * if no updates are currently being performed.
 	 */
 	function asap(callback, context) {
-	  !batchingStrategy.isBatchingUpdates ?  false ? invariant(false, 'ReactUpdates.asap: Can\'t enqueue an asap callback in a context whereupdates are not being batched.') : _prodInvariant('125') : void 0;
+	  invariant(batchingStrategy.isBatchingUpdates, "ReactUpdates.asap: Can't enqueue an asap callback in a context where" + 'updates are not being batched.');
 	  asapCallbackQueue.enqueue(callback, context);
 	  asapEnqueued = true;
 	}
@@ -6986,12 +6927,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -7109,12 +7048,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -7135,12 +7072,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -7305,12 +7240,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -7398,12 +7331,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -7495,12 +7426,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2016-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2016-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -7523,12 +7452,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -7755,12 +7682,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -7783,7 +7708,7 @@
 	}
 	
 	function detachTracker(inst) {
-	  delete inst._wrapperState.valueTracker;
+	  inst._wrapperState.valueTracker = null;
 	}
 	
 	function getValueFromNode(node) {
@@ -7882,12 +7807,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -7921,12 +7844,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -7985,12 +7906,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -8040,12 +7959,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -8070,12 +7987,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -8172,12 +8087,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -8248,12 +8161,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -8311,12 +8222,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -8340,12 +8249,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -8387,12 +8294,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -8441,6 +8346,7 @@
 	    contentEditable: 0,
 	    contextMenu: 0,
 	    controls: HAS_BOOLEAN_VALUE,
+	    controlsList: 0,
 	    coords: 0,
 	    crossOrigin: 0,
 	    data: 0, // For `<object />` acts as `src`.
@@ -8627,12 +8533,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -8659,12 +8563,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -8889,12 +8791,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2015-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2015-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -9011,12 +8911,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -9035,12 +8933,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -9137,12 +9033,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -9173,12 +9067,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -9229,12 +9121,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2016-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2016-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * Based on the escape-html library, which is used under the MIT License below:
 	 *
@@ -9355,12 +9245,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -9408,11 +9296,9 @@
 	
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * @typechecks
 	 */
@@ -9496,11 +9382,9 @@
 	
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * @typechecks
 	 */
@@ -9627,11 +9511,9 @@
 	
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -9723,12 +9605,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -9760,12 +9640,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -10526,6 +10404,10 @@
 	        // happen after `_updateDOMProperties`. Otherwise HTML5 input validations
 	        // raise warnings and prevent the new value from being assigned.
 	        ReactDOMInput.updateWrapper(this);
+	
+	        // We also check that we haven't missed a value update, such as a
+	        // Radio group shifting the checked value to another named radio input.
+	        inputValueTracking.updateValueIfChanged(this);
 	        break;
 	      case 'textarea':
 	        ReactDOMTextarea.updateWrapper(this);
@@ -10774,12 +10656,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -10803,11 +10683,9 @@
 
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -10833,12 +10711,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -11052,12 +10928,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -11076,6 +10950,7 @@
 	  boxFlexGroup: true,
 	  boxOrdinalGroup: true,
 	  columnCount: true,
+	  columns: true,
 	  flex: true,
 	  flexGrow: true,
 	  flexPositive: true,
@@ -11211,11 +11086,9 @@
 
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * @typechecks
 	 */
@@ -11257,11 +11130,9 @@
 	
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * @typechecks
 	 */
@@ -11290,12 +11161,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -11374,11 +11243,9 @@
 
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * @typechecks
 	 */
@@ -11419,11 +11286,9 @@
 	
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * @typechecks
 	 */
@@ -11454,11 +11319,9 @@
 
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 * @typechecks static-only
@@ -11487,12 +11350,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -11726,12 +11587,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -11756,12 +11615,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -12084,12 +11941,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -12120,12 +11975,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -12225,12 +12078,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -12516,12 +12367,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -12658,12 +12507,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -12679,12 +12526,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -12805,12 +12650,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -13009,12 +12852,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -13173,12 +13014,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -13623,12 +13462,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2014-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2014-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -13671,12 +13508,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -13721,12 +13556,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2014-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2014-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -14069,12 +13902,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -14202,12 +14033,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -15106,12 +14935,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -15151,11 +14978,9 @@
 
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * @typechecks
 	 * 
@@ -15222,12 +15047,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -15268,12 +15091,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2014-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2014-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -15302,12 +15123,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2014-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2014-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -15374,12 +15193,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -15401,12 +15218,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -15585,12 +15400,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2016-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2016-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -15968,12 +15781,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -16049,12 +15860,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2014-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2014-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -16143,12 +15952,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2015-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2015-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -16286,12 +16093,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2015-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2015-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -16524,12 +16329,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2015-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2015-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -16899,12 +16702,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2014-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2014-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -16963,12 +16764,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2015-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2015-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -17103,12 +16902,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -17269,12 +17066,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -17341,12 +17136,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -17503,11 +17296,9 @@
 	
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * @typechecks
 	 */
@@ -17582,11 +17373,9 @@
 
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * @typechecks
 	 */
@@ -17624,12 +17413,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -17662,12 +17449,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -17844,12 +17629,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -17971,12 +17754,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -18187,12 +17968,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -18268,11 +18047,9 @@
 	
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -18312,11 +18089,9 @@
 	
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * @typechecks
 	 */
@@ -18341,11 +18116,9 @@
 	
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * @typechecks
 	 */
@@ -18370,11 +18143,9 @@
 	
 	/**
 	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * @typechecks
 	 */
@@ -18410,12 +18181,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -18716,12 +18485,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -18908,12 +18675,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -19138,12 +18903,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -19181,12 +18944,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -19223,12 +18984,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -19263,12 +19022,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -19351,12 +19108,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -19405,12 +19160,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -19521,12 +19274,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -19561,12 +19312,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -19610,12 +19359,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -19653,12 +19400,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -19708,12 +19453,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -20250,12 +19993,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -20287,12 +20028,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -20310,12 +20049,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -20364,12 +20101,10 @@
 /***/ (function(module, exports) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
@@ -20414,12 +20149,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -20478,12 +20211,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -20512,12 +20243,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 */
 	
@@ -31920,12 +31649,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 */
 	
 	if (false) {
@@ -31956,12 +31683,10 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 */
 	
 	'use strict';
@@ -32006,7 +31731,8 @@
 	    objectOf: getShim,
 	    oneOf: getShim,
 	    oneOfType: getShim,
-	    shape: getShim
+	    shape: getShim,
+	    exact: getShim
 	  };
 	
 	  ReactPropTypes.checkPropTypes = emptyFunction;
@@ -36622,8 +36348,8 @@
 /* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(module) {//! moment.js
-	//! version : 2.18.1
+	var require;/* WEBPACK VAR INJECTION */(function(module) {//! moment.js
+	//! version : 2.20.1
 	//! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 	//! license : MIT
 	//! momentjs.com
@@ -36657,12 +36383,17 @@
 	}
 	
 	function isObjectEmpty(obj) {
-	    var k;
-	    for (k in obj) {
-	        // even if its not own property I'd still call it non-empty
-	        return false;
+	    if (Object.getOwnPropertyNames) {
+	        return (Object.getOwnPropertyNames(obj).length === 0);
+	    } else {
+	        var k;
+	        for (k in obj) {
+	            if (obj.hasOwnProperty(k)) {
+	                return false;
+	            }
+	        }
+	        return true;
 	    }
-	    return true;
 	}
 	
 	function isUndefined(input) {
@@ -36756,12 +36487,10 @@
 	    };
 	}
 	
-	var some$1 = some;
-	
 	function isValid(m) {
 	    if (m._isValid == null) {
 	        var flags = getParsingFlags(m);
-	        var parsedParts = some$1.call(flags.parsedDateParts, function (i) {
+	        var parsedParts = some.call(flags.parsedDateParts, function (i) {
 	            return i != null;
 	        });
 	        var isNowValid = !isNaN(m._d.getTime()) &&
@@ -36769,6 +36498,7 @@
 	            !flags.empty &&
 	            !flags.invalidMonth &&
 	            !flags.invalidWeekday &&
+	            !flags.weekdayMismatch &&
 	            !flags.nullInput &&
 	            !flags.invalidFormat &&
 	            !flags.userInvalidated &&
@@ -37034,8 +36764,6 @@
 	    };
 	}
 	
-	var keys$1 = keys;
-	
 	var defaultCalendar = {
 	    sameDay : '[Today at] LT',
 	    nextDay : '[Tomorrow at] LT',
@@ -37161,56 +36889,6 @@
 	    return units;
 	}
 	
-	function makeGetSet (unit, keepTime) {
-	    return function (value) {
-	        if (value != null) {
-	            set$1(this, unit, value);
-	            hooks.updateOffset(this, keepTime);
-	            return this;
-	        } else {
-	            return get(this, unit);
-	        }
-	    };
-	}
-	
-	function get (mom, unit) {
-	    return mom.isValid() ?
-	        mom._d['get' + (mom._isUTC ? 'UTC' : '') + unit]() : NaN;
-	}
-	
-	function set$1 (mom, unit, value) {
-	    if (mom.isValid()) {
-	        mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value);
-	    }
-	}
-	
-	// MOMENTS
-	
-	function stringGet (units) {
-	    units = normalizeUnits(units);
-	    if (isFunction(this[units])) {
-	        return this[units]();
-	    }
-	    return this;
-	}
-	
-	
-	function stringSet (units, value) {
-	    if (typeof units === 'object') {
-	        units = normalizeObjectUnits(units);
-	        var prioritized = getPrioritizedUnits(units);
-	        for (var i = 0; i < prioritized.length; i++) {
-	            this[prioritized[i].unit](units[prioritized[i].unit]);
-	        }
-	    } else {
-	        units = normalizeUnits(units);
-	        if (isFunction(this[units])) {
-	            return this[units](value);
-	        }
-	    }
-	    return this;
-	}
-	
 	function zeroFill(number, targetLength, forceSign) {
 	    var absNumber = '' + Math.abs(number),
 	        zerosToFill = targetLength - absNumber.length,
@@ -37331,7 +37009,7 @@
 	
 	// any word (or two) characters or numbers including two/three word month in arabic.
 	// includes scottish gaelic two word and hyphenated months
-	var matchWord = /[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}/i;
+	var matchWord = /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i;
 	
 	
 	var regexes = {};
@@ -37401,6 +37079,131 @@
 	var WEEK = 7;
 	var WEEKDAY = 8;
 	
+	// FORMATTING
+	
+	addFormatToken('Y', 0, 0, function () {
+	    var y = this.year();
+	    return y <= 9999 ? '' + y : '+' + y;
+	});
+	
+	addFormatToken(0, ['YY', 2], 0, function () {
+	    return this.year() % 100;
+	});
+	
+	addFormatToken(0, ['YYYY',   4],       0, 'year');
+	addFormatToken(0, ['YYYYY',  5],       0, 'year');
+	addFormatToken(0, ['YYYYYY', 6, true], 0, 'year');
+	
+	// ALIASES
+	
+	addUnitAlias('year', 'y');
+	
+	// PRIORITIES
+	
+	addUnitPriority('year', 1);
+	
+	// PARSING
+	
+	addRegexToken('Y',      matchSigned);
+	addRegexToken('YY',     match1to2, match2);
+	addRegexToken('YYYY',   match1to4, match4);
+	addRegexToken('YYYYY',  match1to6, match6);
+	addRegexToken('YYYYYY', match1to6, match6);
+	
+	addParseToken(['YYYYY', 'YYYYYY'], YEAR);
+	addParseToken('YYYY', function (input, array) {
+	    array[YEAR] = input.length === 2 ? hooks.parseTwoDigitYear(input) : toInt(input);
+	});
+	addParseToken('YY', function (input, array) {
+	    array[YEAR] = hooks.parseTwoDigitYear(input);
+	});
+	addParseToken('Y', function (input, array) {
+	    array[YEAR] = parseInt(input, 10);
+	});
+	
+	// HELPERS
+	
+	function daysInYear(year) {
+	    return isLeapYear(year) ? 366 : 365;
+	}
+	
+	function isLeapYear(year) {
+	    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+	}
+	
+	// HOOKS
+	
+	hooks.parseTwoDigitYear = function (input) {
+	    return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
+	};
+	
+	// MOMENTS
+	
+	var getSetYear = makeGetSet('FullYear', true);
+	
+	function getIsLeapYear () {
+	    return isLeapYear(this.year());
+	}
+	
+	function makeGetSet (unit, keepTime) {
+	    return function (value) {
+	        if (value != null) {
+	            set$1(this, unit, value);
+	            hooks.updateOffset(this, keepTime);
+	            return this;
+	        } else {
+	            return get(this, unit);
+	        }
+	    };
+	}
+	
+	function get (mom, unit) {
+	    return mom.isValid() ?
+	        mom._d['get' + (mom._isUTC ? 'UTC' : '') + unit]() : NaN;
+	}
+	
+	function set$1 (mom, unit, value) {
+	    if (mom.isValid() && !isNaN(value)) {
+	        if (unit === 'FullYear' && isLeapYear(mom.year()) && mom.month() === 1 && mom.date() === 29) {
+	            mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value, mom.month(), daysInMonth(value, mom.month()));
+	        }
+	        else {
+	            mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value);
+	        }
+	    }
+	}
+	
+	// MOMENTS
+	
+	function stringGet (units) {
+	    units = normalizeUnits(units);
+	    if (isFunction(this[units])) {
+	        return this[units]();
+	    }
+	    return this;
+	}
+	
+	
+	function stringSet (units, value) {
+	    if (typeof units === 'object') {
+	        units = normalizeObjectUnits(units);
+	        var prioritized = getPrioritizedUnits(units);
+	        for (var i = 0; i < prioritized.length; i++) {
+	            this[prioritized[i].unit](units[prioritized[i].unit]);
+	        }
+	    } else {
+	        units = normalizeUnits(units);
+	        if (isFunction(this[units])) {
+	            return this[units](value);
+	        }
+	    }
+	    return this;
+	}
+	
+	function mod(n, x) {
+	    return ((n % x) + x) % x;
+	}
+	
 	var indexOf;
 	
 	if (Array.prototype.indexOf) {
@@ -37418,10 +37221,13 @@
 	    };
 	}
 	
-	var indexOf$1 = indexOf;
-	
 	function daysInMonth(year, month) {
-	    return new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
+	    if (isNaN(year) || isNaN(month)) {
+	        return NaN;
+	    }
+	    var modMonth = mod(month, 12);
+	    year += (month - modMonth) / 12;
+	    return modMonth === 1 ? (isLeapYear(year) ? 29 : 28) : (31 - modMonth % 7 % 2);
 	}
 	
 	// FORMATTING
@@ -37510,26 +37316,26 @@
 	
 	    if (strict) {
 	        if (format === 'MMM') {
-	            ii = indexOf$1.call(this._shortMonthsParse, llc);
+	            ii = indexOf.call(this._shortMonthsParse, llc);
 	            return ii !== -1 ? ii : null;
 	        } else {
-	            ii = indexOf$1.call(this._longMonthsParse, llc);
+	            ii = indexOf.call(this._longMonthsParse, llc);
 	            return ii !== -1 ? ii : null;
 	        }
 	    } else {
 	        if (format === 'MMM') {
-	            ii = indexOf$1.call(this._shortMonthsParse, llc);
+	            ii = indexOf.call(this._shortMonthsParse, llc);
 	            if (ii !== -1) {
 	                return ii;
 	            }
-	            ii = indexOf$1.call(this._longMonthsParse, llc);
+	            ii = indexOf.call(this._longMonthsParse, llc);
 	            return ii !== -1 ? ii : null;
 	        } else {
-	            ii = indexOf$1.call(this._longMonthsParse, llc);
+	            ii = indexOf.call(this._longMonthsParse, llc);
 	            if (ii !== -1) {
 	                return ii;
 	            }
-	            ii = indexOf$1.call(this._shortMonthsParse, llc);
+	            ii = indexOf.call(this._shortMonthsParse, llc);
 	            return ii !== -1 ? ii : null;
 	        }
 	    }
@@ -37686,72 +37492,6 @@
 	    this._monthsShortRegex = this._monthsRegex;
 	    this._monthsStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
 	    this._monthsShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
-	}
-	
-	// FORMATTING
-	
-	addFormatToken('Y', 0, 0, function () {
-	    var y = this.year();
-	    return y <= 9999 ? '' + y : '+' + y;
-	});
-	
-	addFormatToken(0, ['YY', 2], 0, function () {
-	    return this.year() % 100;
-	});
-	
-	addFormatToken(0, ['YYYY',   4],       0, 'year');
-	addFormatToken(0, ['YYYYY',  5],       0, 'year');
-	addFormatToken(0, ['YYYYYY', 6, true], 0, 'year');
-	
-	// ALIASES
-	
-	addUnitAlias('year', 'y');
-	
-	// PRIORITIES
-	
-	addUnitPriority('year', 1);
-	
-	// PARSING
-	
-	addRegexToken('Y',      matchSigned);
-	addRegexToken('YY',     match1to2, match2);
-	addRegexToken('YYYY',   match1to4, match4);
-	addRegexToken('YYYYY',  match1to6, match6);
-	addRegexToken('YYYYYY', match1to6, match6);
-	
-	addParseToken(['YYYYY', 'YYYYYY'], YEAR);
-	addParseToken('YYYY', function (input, array) {
-	    array[YEAR] = input.length === 2 ? hooks.parseTwoDigitYear(input) : toInt(input);
-	});
-	addParseToken('YY', function (input, array) {
-	    array[YEAR] = hooks.parseTwoDigitYear(input);
-	});
-	addParseToken('Y', function (input, array) {
-	    array[YEAR] = parseInt(input, 10);
-	});
-	
-	// HELPERS
-	
-	function daysInYear(year) {
-	    return isLeapYear(year) ? 366 : 365;
-	}
-	
-	function isLeapYear(year) {
-	    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-	}
-	
-	// HOOKS
-	
-	hooks.parseTwoDigitYear = function (input) {
-	    return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
-	};
-	
-	// MOMENTS
-	
-	var getSetYear = makeGetSet('FullYear', true);
-	
-	function getIsLeapYear () {
-	    return isLeapYear(this.year());
 	}
 	
 	function createDate (y, m, d, h, M, s, ms) {
@@ -38021,48 +37761,48 @@
 	
 	    if (strict) {
 	        if (format === 'dddd') {
-	            ii = indexOf$1.call(this._weekdaysParse, llc);
+	            ii = indexOf.call(this._weekdaysParse, llc);
 	            return ii !== -1 ? ii : null;
 	        } else if (format === 'ddd') {
-	            ii = indexOf$1.call(this._shortWeekdaysParse, llc);
+	            ii = indexOf.call(this._shortWeekdaysParse, llc);
 	            return ii !== -1 ? ii : null;
 	        } else {
-	            ii = indexOf$1.call(this._minWeekdaysParse, llc);
+	            ii = indexOf.call(this._minWeekdaysParse, llc);
 	            return ii !== -1 ? ii : null;
 	        }
 	    } else {
 	        if (format === 'dddd') {
-	            ii = indexOf$1.call(this._weekdaysParse, llc);
+	            ii = indexOf.call(this._weekdaysParse, llc);
 	            if (ii !== -1) {
 	                return ii;
 	            }
-	            ii = indexOf$1.call(this._shortWeekdaysParse, llc);
+	            ii = indexOf.call(this._shortWeekdaysParse, llc);
 	            if (ii !== -1) {
 	                return ii;
 	            }
-	            ii = indexOf$1.call(this._minWeekdaysParse, llc);
+	            ii = indexOf.call(this._minWeekdaysParse, llc);
 	            return ii !== -1 ? ii : null;
 	        } else if (format === 'ddd') {
-	            ii = indexOf$1.call(this._shortWeekdaysParse, llc);
+	            ii = indexOf.call(this._shortWeekdaysParse, llc);
 	            if (ii !== -1) {
 	                return ii;
 	            }
-	            ii = indexOf$1.call(this._weekdaysParse, llc);
+	            ii = indexOf.call(this._weekdaysParse, llc);
 	            if (ii !== -1) {
 	                return ii;
 	            }
-	            ii = indexOf$1.call(this._minWeekdaysParse, llc);
+	            ii = indexOf.call(this._minWeekdaysParse, llc);
 	            return ii !== -1 ? ii : null;
 	        } else {
-	            ii = indexOf$1.call(this._minWeekdaysParse, llc);
+	            ii = indexOf.call(this._minWeekdaysParse, llc);
 	            if (ii !== -1) {
 	                return ii;
 	            }
-	            ii = indexOf$1.call(this._weekdaysParse, llc);
+	            ii = indexOf.call(this._weekdaysParse, llc);
 	            if (ii !== -1) {
 	                return ii;
 	            }
-	            ii = indexOf$1.call(this._shortWeekdaysParse, llc);
+	            ii = indexOf.call(this._shortWeekdaysParse, llc);
 	            return ii !== -1 ? ii : null;
 	        }
 	    }
@@ -38451,11 +38191,10 @@
 	            module && module.exports) {
 	        try {
 	            oldLocale = globalLocale._abbr;
+	            var aliasedRequire = require;
 	            !(function webpackMissingModule() { var e = new Error("Cannot find module \"./locale\""); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-	            // because defineLocale currently also sets the global locale, we
-	            // want to undo that for lazy loaded locales
 	            getSetGlobalLocale(oldLocale);
-	        } catch (e) { }
+	        } catch (e) {}
 	    }
 	    return locales[name];
 	}
@@ -38531,10 +38270,11 @@
 	
 	function updateLocale(name, config) {
 	    if (config != null) {
-	        var locale, parentConfig = baseConfig;
+	        var locale, tmpLocale, parentConfig = baseConfig;
 	        // MERGE
-	        if (locales[name] != null) {
-	            parentConfig = locales[name]._config;
+	        tmpLocale = loadLocale(name);
+	        if (tmpLocale != null) {
+	            parentConfig = tmpLocale._config;
 	        }
 	        config = mergeConfigs(parentConfig, config);
 	        locale = new Locale(config);
@@ -38581,7 +38321,7 @@
 	}
 	
 	function listLocales() {
-	    return keys$1(locales);
+	    return keys(locales);
 	}
 	
 	function checkOverflow (m) {
@@ -38612,6 +38352,156 @@
 	    }
 	
 	    return m;
+	}
+	
+	// Pick the first defined of two or three arguments.
+	function defaults(a, b, c) {
+	    if (a != null) {
+	        return a;
+	    }
+	    if (b != null) {
+	        return b;
+	    }
+	    return c;
+	}
+	
+	function currentDateArray(config) {
+	    // hooks is actually the exported moment object
+	    var nowValue = new Date(hooks.now());
+	    if (config._useUTC) {
+	        return [nowValue.getUTCFullYear(), nowValue.getUTCMonth(), nowValue.getUTCDate()];
+	    }
+	    return [nowValue.getFullYear(), nowValue.getMonth(), nowValue.getDate()];
+	}
+	
+	// convert an array to a date.
+	// the array should mirror the parameters below
+	// note: all values past the year are optional and will default to the lowest possible value.
+	// [year, month, day , hour, minute, second, millisecond]
+	function configFromArray (config) {
+	    var i, date, input = [], currentDate, expectedWeekday, yearToUse;
+	
+	    if (config._d) {
+	        return;
+	    }
+	
+	    currentDate = currentDateArray(config);
+	
+	    //compute day of the year from weeks and weekdays
+	    if (config._w && config._a[DATE] == null && config._a[MONTH] == null) {
+	        dayOfYearFromWeekInfo(config);
+	    }
+	
+	    //if the day of the year is set, figure out what it is
+	    if (config._dayOfYear != null) {
+	        yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
+	
+	        if (config._dayOfYear > daysInYear(yearToUse) || config._dayOfYear === 0) {
+	            getParsingFlags(config)._overflowDayOfYear = true;
+	        }
+	
+	        date = createUTCDate(yearToUse, 0, config._dayOfYear);
+	        config._a[MONTH] = date.getUTCMonth();
+	        config._a[DATE] = date.getUTCDate();
+	    }
+	
+	    // Default to current date.
+	    // * if no year, month, day of month are given, default to today
+	    // * if day of month is given, default month and year
+	    // * if month is given, default only year
+	    // * if year is given, don't default anything
+	    for (i = 0; i < 3 && config._a[i] == null; ++i) {
+	        config._a[i] = input[i] = currentDate[i];
+	    }
+	
+	    // Zero out whatever was not defaulted, including time
+	    for (; i < 7; i++) {
+	        config._a[i] = input[i] = (config._a[i] == null) ? (i === 2 ? 1 : 0) : config._a[i];
+	    }
+	
+	    // Check for 24:00:00.000
+	    if (config._a[HOUR] === 24 &&
+	            config._a[MINUTE] === 0 &&
+	            config._a[SECOND] === 0 &&
+	            config._a[MILLISECOND] === 0) {
+	        config._nextDay = true;
+	        config._a[HOUR] = 0;
+	    }
+	
+	    config._d = (config._useUTC ? createUTCDate : createDate).apply(null, input);
+	    expectedWeekday = config._useUTC ? config._d.getUTCDay() : config._d.getDay();
+	
+	    // Apply timezone offset from input. The actual utcOffset can be changed
+	    // with parseZone.
+	    if (config._tzm != null) {
+	        config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
+	    }
+	
+	    if (config._nextDay) {
+	        config._a[HOUR] = 24;
+	    }
+	
+	    // check for mismatching day of week
+	    if (config._w && typeof config._w.d !== 'undefined' && config._w.d !== expectedWeekday) {
+	        getParsingFlags(config).weekdayMismatch = true;
+	    }
+	}
+	
+	function dayOfYearFromWeekInfo(config) {
+	    var w, weekYear, week, weekday, dow, doy, temp, weekdayOverflow;
+	
+	    w = config._w;
+	    if (w.GG != null || w.W != null || w.E != null) {
+	        dow = 1;
+	        doy = 4;
+	
+	        // TODO: We need to take the current isoWeekYear, but that depends on
+	        // how we interpret now (local, utc, fixed offset). So create
+	        // a now version of current config (take local/utc/offset flags, and
+	        // create now).
+	        weekYear = defaults(w.GG, config._a[YEAR], weekOfYear(createLocal(), 1, 4).year);
+	        week = defaults(w.W, 1);
+	        weekday = defaults(w.E, 1);
+	        if (weekday < 1 || weekday > 7) {
+	            weekdayOverflow = true;
+	        }
+	    } else {
+	        dow = config._locale._week.dow;
+	        doy = config._locale._week.doy;
+	
+	        var curWeek = weekOfYear(createLocal(), dow, doy);
+	
+	        weekYear = defaults(w.gg, config._a[YEAR], curWeek.year);
+	
+	        // Default to current week.
+	        week = defaults(w.w, curWeek.week);
+	
+	        if (w.d != null) {
+	            // weekday -- low day numbers are considered next week
+	            weekday = w.d;
+	            if (weekday < 0 || weekday > 6) {
+	                weekdayOverflow = true;
+	            }
+	        } else if (w.e != null) {
+	            // local weekday -- counting starts from begining of week
+	            weekday = w.e + dow;
+	            if (w.e < 0 || w.e > 6) {
+	                weekdayOverflow = true;
+	            }
+	        } else {
+	            // default to begining of week
+	            weekday = dow;
+	        }
+	    }
+	    if (week < 1 || week > weeksInYear(weekYear, dow, doy)) {
+	        getParsingFlags(config)._overflowWeeks = true;
+	    } else if (weekdayOverflow != null) {
+	        getParsingFlags(config)._overflowWeekday = true;
+	    } else {
+	        temp = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy);
+	        config._a[YEAR] = temp.year;
+	        config._dayOfYear = temp.dayOfYear;
+	    }
 	}
 	
 	// iso 8601 regex
@@ -38705,70 +38595,94 @@
 	}
 	
 	// RFC 2822 regex: For details see https://tools.ietf.org/html/rfc2822#section-3.3
-	var basicRfcRegex = /^((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d?\d\s(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(?:\d\d)?\d\d\s)(\d\d:\d\d)(\:\d\d)?(\s(?:UT|GMT|[ECMP][SD]T|[A-IK-Za-ik-z]|[+-]\d{4}))$/;
+	var rfc2822 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/;
+	
+	function extractFromRFC2822Strings(yearStr, monthStr, dayStr, hourStr, minuteStr, secondStr) {
+	    var result = [
+	        untruncateYear(yearStr),
+	        defaultLocaleMonthsShort.indexOf(monthStr),
+	        parseInt(dayStr, 10),
+	        parseInt(hourStr, 10),
+	        parseInt(minuteStr, 10)
+	    ];
+	
+	    if (secondStr) {
+	        result.push(parseInt(secondStr, 10));
+	    }
+	
+	    return result;
+	}
+	
+	function untruncateYear(yearStr) {
+	    var year = parseInt(yearStr, 10);
+	    if (year <= 49) {
+	        return 2000 + year;
+	    } else if (year <= 999) {
+	        return 1900 + year;
+	    }
+	    return year;
+	}
+	
+	function preprocessRFC2822(s) {
+	    // Remove comments and folding whitespace and replace multiple-spaces with a single space
+	    return s.replace(/\([^)]*\)|[\n\t]/g, ' ').replace(/(\s\s+)/g, ' ').trim();
+	}
+	
+	function checkWeekday(weekdayStr, parsedInput, config) {
+	    if (weekdayStr) {
+	        // TODO: Replace the vanilla JS Date object with an indepentent day-of-week check.
+	        var weekdayProvided = defaultLocaleWeekdaysShort.indexOf(weekdayStr),
+	            weekdayActual = new Date(parsedInput[0], parsedInput[1], parsedInput[2]).getDay();
+	        if (weekdayProvided !== weekdayActual) {
+	            getParsingFlags(config).weekdayMismatch = true;
+	            config._isValid = false;
+	            return false;
+	        }
+	    }
+	    return true;
+	}
+	
+	var obsOffsets = {
+	    UT: 0,
+	    GMT: 0,
+	    EDT: -4 * 60,
+	    EST: -5 * 60,
+	    CDT: -5 * 60,
+	    CST: -6 * 60,
+	    MDT: -6 * 60,
+	    MST: -7 * 60,
+	    PDT: -7 * 60,
+	    PST: -8 * 60
+	};
+	
+	function calculateOffset(obsOffset, militaryOffset, numOffset) {
+	    if (obsOffset) {
+	        return obsOffsets[obsOffset];
+	    } else if (militaryOffset) {
+	        // the only allowed military tz is Z
+	        return 0;
+	    } else {
+	        var hm = parseInt(numOffset, 10);
+	        var m = hm % 100, h = (hm - m) / 100;
+	        return h * 60 + m;
+	    }
+	}
 	
 	// date and time from ref 2822 format
 	function configFromRFC2822(config) {
-	    var string, match, dayFormat,
-	        dateFormat, timeFormat, tzFormat;
-	    var timezones = {
-	        ' GMT': ' +0000',
-	        ' EDT': ' -0400',
-	        ' EST': ' -0500',
-	        ' CDT': ' -0500',
-	        ' CST': ' -0600',
-	        ' MDT': ' -0600',
-	        ' MST': ' -0700',
-	        ' PDT': ' -0700',
-	        ' PST': ' -0800'
-	    };
-	    var military = 'YXWVUTSRQPONZABCDEFGHIKLM';
-	    var timezone, timezoneIndex;
-	
-	    string = config._i
-	        .replace(/\([^\)]*\)|[\n\t]/g, ' ') // Remove comments and folding whitespace
-	        .replace(/(\s\s+)/g, ' ') // Replace multiple-spaces with a single space
-	        .replace(/^\s|\s$/g, ''); // Remove leading and trailing spaces
-	    match = basicRfcRegex.exec(string);
-	
+	    var match = rfc2822.exec(preprocessRFC2822(config._i));
 	    if (match) {
-	        dayFormat = match[1] ? 'ddd' + ((match[1].length === 5) ? ', ' : ' ') : '';
-	        dateFormat = 'D MMM ' + ((match[2].length > 10) ? 'YYYY ' : 'YY ');
-	        timeFormat = 'HH:mm' + (match[4] ? ':ss' : '');
-	
-	        // TODO: Replace the vanilla JS Date object with an indepentent day-of-week check.
-	        if (match[1]) { // day of week given
-	            var momentDate = new Date(match[2]);
-	            var momentDay = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][momentDate.getDay()];
-	
-	            if (match[1].substr(0,3) !== momentDay) {
-	                getParsingFlags(config).weekdayMismatch = true;
-	                config._isValid = false;
-	                return;
-	            }
+	        var parsedArray = extractFromRFC2822Strings(match[4], match[3], match[2], match[5], match[6], match[7]);
+	        if (!checkWeekday(match[1], parsedArray, config)) {
+	            return;
 	        }
 	
-	        switch (match[5].length) {
-	            case 2: // military
-	                if (timezoneIndex === 0) {
-	                    timezone = ' +0000';
-	                } else {
-	                    timezoneIndex = military.indexOf(match[5][1].toUpperCase()) - 12;
-	                    timezone = ((timezoneIndex < 0) ? ' -' : ' +') +
-	                        (('' + timezoneIndex).replace(/^-?/, '0')).match(/..$/)[0] + '00';
-	                }
-	                break;
-	            case 4: // Zone
-	                timezone = timezones[match[5]];
-	                break;
-	            default: // UT or +/-9999
-	                timezone = timezones[' GMT'];
-	        }
-	        match[5] = timezone;
-	        config._i = match.splice(1).join('');
-	        tzFormat = ' ZZ';
-	        config._f = dayFormat + dateFormat + timeFormat + tzFormat;
-	        configFromStringAndFormat(config);
+	        config._a = parsedArray;
+	        config._tzm = calculateOffset(match[8], match[9], match[10]);
+	
+	        config._d = createUTCDate.apply(null, config._a);
+	        config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
+	
 	        getParsingFlags(config).rfc2822 = true;
 	    } else {
 	        config._isValid = false;
@@ -38811,149 +38725,6 @@
 	        config._d = new Date(config._i + (config._useUTC ? ' UTC' : ''));
 	    }
 	);
-	
-	// Pick the first defined of two or three arguments.
-	function defaults(a, b, c) {
-	    if (a != null) {
-	        return a;
-	    }
-	    if (b != null) {
-	        return b;
-	    }
-	    return c;
-	}
-	
-	function currentDateArray(config) {
-	    // hooks is actually the exported moment object
-	    var nowValue = new Date(hooks.now());
-	    if (config._useUTC) {
-	        return [nowValue.getUTCFullYear(), nowValue.getUTCMonth(), nowValue.getUTCDate()];
-	    }
-	    return [nowValue.getFullYear(), nowValue.getMonth(), nowValue.getDate()];
-	}
-	
-	// convert an array to a date.
-	// the array should mirror the parameters below
-	// note: all values past the year are optional and will default to the lowest possible value.
-	// [year, month, day , hour, minute, second, millisecond]
-	function configFromArray (config) {
-	    var i, date, input = [], currentDate, yearToUse;
-	
-	    if (config._d) {
-	        return;
-	    }
-	
-	    currentDate = currentDateArray(config);
-	
-	    //compute day of the year from weeks and weekdays
-	    if (config._w && config._a[DATE] == null && config._a[MONTH] == null) {
-	        dayOfYearFromWeekInfo(config);
-	    }
-	
-	    //if the day of the year is set, figure out what it is
-	    if (config._dayOfYear != null) {
-	        yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
-	
-	        if (config._dayOfYear > daysInYear(yearToUse) || config._dayOfYear === 0) {
-	            getParsingFlags(config)._overflowDayOfYear = true;
-	        }
-	
-	        date = createUTCDate(yearToUse, 0, config._dayOfYear);
-	        config._a[MONTH] = date.getUTCMonth();
-	        config._a[DATE] = date.getUTCDate();
-	    }
-	
-	    // Default to current date.
-	    // * if no year, month, day of month are given, default to today
-	    // * if day of month is given, default month and year
-	    // * if month is given, default only year
-	    // * if year is given, don't default anything
-	    for (i = 0; i < 3 && config._a[i] == null; ++i) {
-	        config._a[i] = input[i] = currentDate[i];
-	    }
-	
-	    // Zero out whatever was not defaulted, including time
-	    for (; i < 7; i++) {
-	        config._a[i] = input[i] = (config._a[i] == null) ? (i === 2 ? 1 : 0) : config._a[i];
-	    }
-	
-	    // Check for 24:00:00.000
-	    if (config._a[HOUR] === 24 &&
-	            config._a[MINUTE] === 0 &&
-	            config._a[SECOND] === 0 &&
-	            config._a[MILLISECOND] === 0) {
-	        config._nextDay = true;
-	        config._a[HOUR] = 0;
-	    }
-	
-	    config._d = (config._useUTC ? createUTCDate : createDate).apply(null, input);
-	    // Apply timezone offset from input. The actual utcOffset can be changed
-	    // with parseZone.
-	    if (config._tzm != null) {
-	        config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
-	    }
-	
-	    if (config._nextDay) {
-	        config._a[HOUR] = 24;
-	    }
-	}
-	
-	function dayOfYearFromWeekInfo(config) {
-	    var w, weekYear, week, weekday, dow, doy, temp, weekdayOverflow;
-	
-	    w = config._w;
-	    if (w.GG != null || w.W != null || w.E != null) {
-	        dow = 1;
-	        doy = 4;
-	
-	        // TODO: We need to take the current isoWeekYear, but that depends on
-	        // how we interpret now (local, utc, fixed offset). So create
-	        // a now version of current config (take local/utc/offset flags, and
-	        // create now).
-	        weekYear = defaults(w.GG, config._a[YEAR], weekOfYear(createLocal(), 1, 4).year);
-	        week = defaults(w.W, 1);
-	        weekday = defaults(w.E, 1);
-	        if (weekday < 1 || weekday > 7) {
-	            weekdayOverflow = true;
-	        }
-	    } else {
-	        dow = config._locale._week.dow;
-	        doy = config._locale._week.doy;
-	
-	        var curWeek = weekOfYear(createLocal(), dow, doy);
-	
-	        weekYear = defaults(w.gg, config._a[YEAR], curWeek.year);
-	
-	        // Default to current week.
-	        week = defaults(w.w, curWeek.week);
-	
-	        if (w.d != null) {
-	            // weekday -- low day numbers are considered next week
-	            weekday = w.d;
-	            if (weekday < 0 || weekday > 6) {
-	                weekdayOverflow = true;
-	            }
-	        } else if (w.e != null) {
-	            // local weekday -- counting starts from begining of week
-	            weekday = w.e + dow;
-	            if (w.e < 0 || w.e > 6) {
-	                weekdayOverflow = true;
-	            }
-	        } else {
-	            // default to begining of week
-	            weekday = dow;
-	        }
-	    }
-	    if (week < 1 || week > weeksInYear(weekYear, dow, doy)) {
-	        getParsingFlags(config)._overflowWeeks = true;
-	    } else if (weekdayOverflow != null) {
-	        getParsingFlags(config)._overflowWeekday = true;
-	    } else {
-	        temp = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy);
-	        config._a[YEAR] = temp.year;
-	        config._dayOfYear = temp.dayOfYear;
-	    }
-	}
 	
 	// constant that refers to the ISO standard
 	hooks.ISO_8601 = function () {};
@@ -39279,7 +39050,7 @@
 	
 	function isDurationValid(m) {
 	    for (var key in m) {
-	        if (!(ordering.indexOf(key) !== -1 && (m[key] == null || !isNaN(m[key])))) {
+	        if (!(indexOf.call(ordering, key) !== -1 && (m[key] == null || !isNaN(m[key])))) {
 	            return false;
 	        }
 	    }
@@ -39330,7 +39101,7 @@
 	    // day when working around DST, we need to store them separately
 	    this._days = +days +
 	        weeks * 7;
-	    // It is impossible translate months into days without knowing
+	    // It is impossible to translate months into days without knowing
 	    // which months you are are talking about, so we have to store
 	    // it separately.
 	    this._months = +months +
@@ -39577,12 +39348,12 @@
 	}
 	
 	// ASP.NET json date format regex
-	var aspNetRegex = /^(\-)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/;
+	var aspNetRegex = /^(\-|\+)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/;
 	
 	// from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html
 	// somewhat more in line with 4.4.3.2 2004 spec, but allows decimal anywhere
 	// and further modified to allow for strings containing both week and day
-	var isoRegex = /^(-)?P(?:(-?[0-9,.]*)Y)?(?:(-?[0-9,.]*)M)?(?:(-?[0-9,.]*)W)?(?:(-?[0-9,.]*)D)?(?:T(?:(-?[0-9,.]*)H)?(?:(-?[0-9,.]*)M)?(?:(-?[0-9,.]*)S)?)?$/;
+	var isoRegex = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
 	
 	function createDuration (input, key) {
 	    var duration = input,
@@ -39616,7 +39387,7 @@
 	            ms : toInt(absRound(match[MILLISECOND] * 1000)) * sign // the millisecond decimal point is included in the match
 	        };
 	    } else if (!!(match = isoRegex.exec(input))) {
-	        sign = (match[1] === '-') ? -1 : 1;
+	        sign = (match[1] === '-') ? -1 : (match[1] === '+') ? 1 : 1;
 	        duration = {
 	            y : parseIso(match[2], sign),
 	            M : parseIso(match[3], sign),
@@ -39719,14 +39490,14 @@
 	
 	    updateOffset = updateOffset == null ? true : updateOffset;
 	
-	    if (milliseconds) {
-	        mom._d.setTime(mom._d.valueOf() + milliseconds * isAdding);
+	    if (months) {
+	        setMonth(mom, get(mom, 'Month') + months * isAdding);
 	    }
 	    if (days) {
 	        set$1(mom, 'Date', get(mom, 'Date') + days * isAdding);
 	    }
-	    if (months) {
-	        setMonth(mom, get(mom, 'Month') + months * isAdding);
+	    if (milliseconds) {
+	        mom._d.setTime(mom._d.valueOf() + milliseconds * isAdding);
 	    }
 	    if (updateOffset) {
 	        hooks.updateOffset(mom, days || months);
@@ -39836,22 +39607,18 @@
 	
 	    units = normalizeUnits(units);
 	
-	    if (units === 'year' || units === 'month' || units === 'quarter') {
-	        output = monthDiff(this, that);
-	        if (units === 'quarter') {
-	            output = output / 3;
-	        } else if (units === 'year') {
-	            output = output / 12;
-	        }
-	    } else {
-	        delta = this - that;
-	        output = units === 'second' ? delta / 1e3 : // 1000
-	            units === 'minute' ? delta / 6e4 : // 1000 * 60
-	            units === 'hour' ? delta / 36e5 : // 1000 * 60 * 60
-	            units === 'day' ? (delta - zoneDelta) / 864e5 : // 1000 * 60 * 60 * 24, negate dst
-	            units === 'week' ? (delta - zoneDelta) / 6048e5 : // 1000 * 60 * 60 * 24 * 7, negate dst
-	            delta;
+	    switch (units) {
+	        case 'year': output = monthDiff(this, that) / 12; break;
+	        case 'month': output = monthDiff(this, that); break;
+	        case 'quarter': output = monthDiff(this, that) / 3; break;
+	        case 'second': output = (this - that) / 1e3; break; // 1000
+	        case 'minute': output = (this - that) / 6e4; break; // 1000 * 60
+	        case 'hour': output = (this - that) / 36e5; break; // 1000 * 60 * 60
+	        case 'day': output = (this - that - zoneDelta) / 864e5; break; // 1000 * 60 * 60 * 24, negate dst
+	        case 'week': output = (this - that - zoneDelta) / 6048e5; break; // 1000 * 60 * 60 * 24 * 7, negate dst
+	        default: output = this - that;
 	    }
+	
 	    return asFloat ? output : absFloor(output);
 	}
 	
@@ -39883,19 +39650,24 @@
 	    return this.clone().locale('en').format('ddd MMM DD YYYY HH:mm:ss [GMT]ZZ');
 	}
 	
-	function toISOString() {
+	function toISOString(keepOffset) {
 	    if (!this.isValid()) {
 	        return null;
 	    }
-	    var m = this.clone().utc();
+	    var utc = keepOffset !== true;
+	    var m = utc ? this.clone().utc() : this;
 	    if (m.year() < 0 || m.year() > 9999) {
-	        return formatMoment(m, 'YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]');
+	        return formatMoment(m, utc ? 'YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYYYY-MM-DD[T]HH:mm:ss.SSSZ');
 	    }
 	    if (isFunction(Date.prototype.toISOString)) {
 	        // native implementation is ~50x faster, use it when we can
-	        return this.toDate().toISOString();
+	        if (utc) {
+	            return this.toDate().toISOString();
+	        } else {
+	            return new Date(this._d.valueOf()).toISOString().replace('Z', formatMoment(m, 'Z'));
+	        }
 	    }
-	    return formatMoment(m, 'YYYY-MM-DD[T]HH:mm:ss.SSS[Z]');
+	    return formatMoment(m, utc ? 'YYYY-MM-DD[T]HH:mm:ss.SSS[Z]' : 'YYYY-MM-DD[T]HH:mm:ss.SSSZ');
 	}
 	
 	/**
@@ -40251,7 +40023,7 @@
 	
 	addParseToken(['D', 'DD'], DATE);
 	addParseToken('Do', function (input, array) {
-	    array[DATE] = toInt(input.match(match1to2)[0], 10);
+	    array[DATE] = toInt(input.match(match1to2)[0]);
 	});
 	
 	// MOMENTS
@@ -40829,6 +40601,10 @@
 	var asMonths       = makeAs('M');
 	var asYears        = makeAs('y');
 	
+	function clone$1 () {
+	    return createDuration(this);
+	}
+	
 	function get$2 (units) {
 	    units = normalizeUnits(units);
 	    return this.isValid() ? this[units + 's']() : NaN;
@@ -40938,6 +40714,10 @@
 	
 	var abs$1 = Math.abs;
 	
+	function sign(x) {
+	    return ((x > 0) - (x < 0)) || +x;
+	}
+	
 	function toISOString$1() {
 	    // for ISO strings we do not use the normal bubbling rules:
 	    //  * milliseconds bubble up until they become hours
@@ -40972,7 +40752,7 @@
 	    var D = days;
 	    var h = hours;
 	    var m = minutes;
-	    var s = seconds;
+	    var s = seconds ? seconds.toFixed(3).replace(/\.?0+$/, '') : '';
 	    var total = this.asSeconds();
 	
 	    if (!total) {
@@ -40981,15 +40761,19 @@
 	        return 'P0D';
 	    }
 	
-	    return (total < 0 ? '-' : '') +
-	        'P' +
-	        (Y ? Y + 'Y' : '') +
-	        (M ? M + 'M' : '') +
-	        (D ? D + 'D' : '') +
+	    var totalSign = total < 0 ? '-' : '';
+	    var ymSign = sign(this._months) !== sign(total) ? '-' : '';
+	    var daysSign = sign(this._days) !== sign(total) ? '-' : '';
+	    var hmsSign = sign(this._milliseconds) !== sign(total) ? '-' : '';
+	
+	    return totalSign + 'P' +
+	        (Y ? ymSign + Y + 'Y' : '') +
+	        (M ? ymSign + M + 'M' : '') +
+	        (D ? daysSign + D + 'D' : '') +
 	        ((h || m || s) ? 'T' : '') +
-	        (h ? h + 'H' : '') +
-	        (m ? m + 'M' : '') +
-	        (s ? s + 'S' : '');
+	        (h ? hmsSign + h + 'H' : '') +
+	        (m ? hmsSign + m + 'M' : '') +
+	        (s ? hmsSign + s + 'S' : '');
 	}
 	
 	var proto$2 = Duration.prototype;
@@ -41009,6 +40793,7 @@
 	proto$2.asYears        = asYears;
 	proto$2.valueOf        = valueOf$1;
 	proto$2._bubble        = bubble;
+	proto$2.clone          = clone$1;
 	proto$2.get            = get$2;
 	proto$2.milliseconds   = milliseconds;
 	proto$2.seconds        = seconds;
@@ -41050,7 +40835,7 @@
 	// Side effect imports
 	
 	
-	hooks.version = '2.18.1';
+	hooks.version = '2.20.1';
 	
 	setHookCallback(createLocal);
 	
@@ -41077,10 +40862,23 @@
 	hooks.locales               = listLocales;
 	hooks.weekdaysShort         = listWeekdaysShort;
 	hooks.normalizeUnits        = normalizeUnits;
-	hooks.relativeTimeRounding = getSetRelativeTimeRounding;
+	hooks.relativeTimeRounding  = getSetRelativeTimeRounding;
 	hooks.relativeTimeThreshold = getSetRelativeTimeThreshold;
 	hooks.calendarFormat        = getCalendarFormat;
 	hooks.prototype             = proto;
+	
+	// currently HTML5 input type only supports 24-hour formats
+	hooks.HTML5_FMT = {
+	    DATETIME_LOCAL: 'YYYY-MM-DDTHH:mm',             // <input type="datetime-local" />
+	    DATETIME_LOCAL_SECONDS: 'YYYY-MM-DDTHH:mm:ss',  // <input type="datetime-local" step="1" />
+	    DATETIME_LOCAL_MS: 'YYYY-MM-DDTHH:mm:ss.SSS',   // <input type="datetime-local" step="0.001" />
+	    DATE: 'YYYY-MM-DD',                             // <input type="date" />
+	    TIME: 'HH:mm',                                  // <input type="time" />
+	    TIME_SECONDS: 'HH:mm:ss',                       // <input type="time" step="1" />
+	    TIME_MS: 'HH:mm:ss.SSS',                        // <input type="time" step="0.001" />
+	    WEEK: 'YYYY-[W]WW',                             // <input type="week" />
+	    MONTH: 'YYYY-MM'                                // <input type="month" />
+	};
 	
 	return hooks;
 	
@@ -41308,21 +41106,22 @@
 	            // Don’t use it for anything other than testing.
 	
 	            /**
-	             * @param {Object} base: {"target": "_blank", "href": "http://mysite.com/"}
-	             * @param {Object} bodyAttributes: {"className": "root"}
-	             * @param {String} defaultTitle: "Default Title"
-	             * @param {Boolean} encodeSpecialCharacters: true
-	             * @param {Object} htmlAttributes: {"lang": "en", "amp": undefined}
-	             * @param {Array} link: [{"rel": "canonical", "href": "http://mysite.com/example"}]
-	             * @param {Array} meta: [{"name": "description", "content": "Test description"}]
-	             * @param {Array} noscript: [{"innerHTML": "<img src='http://mysite.com/js/test.js'"}]
-	             * @param {Function} onChangeClientState: "(newState) => console.log(newState)"
-	             * @param {Array} script: [{"type": "text/javascript", "src": "http://mysite.com/js/test.js"}]
-	             * @param {Array} style: [{"type": "text/css", "cssText": "div { display: block; color: blue; }"}]
-	             * @param {String} title: "Title"
-	             * @param {Object} titleAttributes: {"itemprop": "name"}
-	             * @param {String} titleTemplate: "MySite.com - %s"
-	             */
+	            * @param {Object} base: {"target": "_blank", "href": "http://mysite.com/"}
+	            * @param {Object} bodyAttributes: {"className": "root"}
+	            * @param {String} defaultTitle: "Default Title"
+	            * @param {Boolean} defer: true
+	            * @param {Boolean} encodeSpecialCharacters: true
+	            * @param {Object} htmlAttributes: {"lang": "en", "amp": undefined}
+	            * @param {Array} link: [{"rel": "canonical", "href": "http://mysite.com/example"}]
+	            * @param {Array} meta: [{"name": "description", "content": "Test description"}]
+	            * @param {Array} noscript: [{"innerHTML": "<img src='http://mysite.com/js/test.js'"}]
+	            * @param {Function} onChangeClientState: "(newState) => console.log(newState)"
+	            * @param {Array} script: [{"type": "text/javascript", "src": "http://mysite.com/js/test.js"}]
+	            * @param {Array} style: [{"type": "text/css", "cssText": "div { display: block; color: blue; }"}]
+	            * @param {String} title: "Title"
+	            * @param {Object} titleAttributes: {"itemprop": "name"}
+	            * @param {String} titleTemplate: "MySite.com - %s"
+	            */
 	            set: function set(canUseDOM) {
 	                Component.canUseDOM = canUseDOM;
 	            }
@@ -41334,6 +41133,7 @@
 	        bodyAttributes: _propTypes2.default.object,
 	        children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]),
 	        defaultTitle: _propTypes2.default.string,
+	        defer: _propTypes2.default.bool,
 	        encodeSpecialCharacters: _propTypes2.default.bool,
 	        htmlAttributes: _propTypes2.default.object,
 	        link: _propTypes2.default.arrayOf(_propTypes2.default.object),
@@ -41346,6 +41146,7 @@
 	        titleAttributes: _propTypes2.default.object,
 	        titleTemplate: _propTypes2.default.string
 	    }, _class.defaultProps = {
+	        defer: true,
 	        encodeSpecialCharacters: true
 	    }, _class.peek = Component.peek, _class.rewind = function () {
 	        var mappedState = Component.rewind();
@@ -41611,8 +41412,8 @@
 /* 460 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports.__esModule = true;
-	exports.warn = exports.requestIdleCallback = exports.reducePropsToState = exports.mapStateOnServer = exports.handleClientStateChange = exports.convertReactPropstoHtmlAttributes = undefined;
+	/* WEBPACK VAR INJECTION */(function(global) {exports.__esModule = true;
+	exports.warn = exports.requestAnimationFrame = exports.reducePropsToState = exports.mapStateOnServer = exports.handleClientStateChange = exports.convertReactPropstoHtmlAttributes = undefined;
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 	
@@ -41780,6 +41581,7 @@
 	    return {
 	        baseTag: getBaseTagFromPropsList([_HelmetConstants.TAG_PROPERTIES.HREF], propsList),
 	        bodyAttributes: getAttributesFromPropsList(_HelmetConstants.ATTRIBUTE_NAMES.BODY, propsList),
+	        defer: getInnermostProperty(propsList, _HelmetConstants.HELMET_PROPS.DEFER),
 	        encode: getInnermostProperty(propsList, _HelmetConstants.HELMET_PROPS.ENCODE_SPECIAL_CHARACTERS),
 	        htmlAttributes: getAttributesFromPropsList(_HelmetConstants.ATTRIBUTE_NAMES.HTML, propsList),
 	        linkTags: getTagsFromPropsList(_HelmetConstants.TAG_NAMES.LINK, [_HelmetConstants.TAG_PROPERTIES.REL, _HelmetConstants.TAG_PROPERTIES.HREF], propsList),
@@ -41793,41 +41595,55 @@
 	    };
 	};
 	
-	var requestIdleCallback = function () {
-	    if (typeof window !== "undefined" && typeof window.requestIdleCallback !== "undefined") {
-	        return window.requestIdleCallback;
-	    }
+	var rafPolyfill = function () {
+	    var clock = Date.now();
 	
-	    return function (cb) {
-	        var start = Date.now();
-	        return setTimeout(function () {
-	            cb({
-	                didTimeout: false,
-	                timeRemaining: function timeRemaining() {
-	                    return Math.max(0, 50 - (Date.now() - start));
-	                }
-	            });
-	        }, 1);
+	    return function (callback) {
+	        var currentTime = Date.now();
+	
+	        if (currentTime - clock > 16) {
+	            clock = currentTime;
+	            callback(currentTime);
+	        } else {
+	            setTimeout(function () {
+	                rafPolyfill(callback);
+	            }, 0);
+	        }
 	    };
 	}();
 	
-	var cancelIdleCallback = function () {
-	    if (typeof window !== "undefined" && typeof window.cancelIdleCallback !== "undefined") {
-	        return window.cancelIdleCallback;
-	    }
+	var cafPolyfill = function cafPolyfill(id) {
+	    return clearTimeout(id);
+	};
 	
-	    return function (id) {
-	        return clearTimeout(id);
-	    };
-	}();
+	var requestAnimationFrame = typeof window !== "undefined" ? window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || rafPolyfill : global.requestAnimationFrame || rafPolyfill;
+	
+	var cancelAnimationFrame = typeof window !== "undefined" ? window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.mozCancelAnimationFrame || cafPolyfill : global.cancelAnimationFrame || cafPolyfill;
 	
 	var warn = function warn(msg) {
 	    return console && typeof console.warn === "function" && console.warn(msg);
 	};
 	
-	var _helmetIdleCallback = null;
+	var _helmetCallback = null;
 	
 	var handleClientStateChange = function handleClientStateChange(newState) {
+	    if (_helmetCallback) {
+	        cancelAnimationFrame(_helmetCallback);
+	    }
+	
+	    if (newState.defer) {
+	        _helmetCallback = requestAnimationFrame(function () {
+	            commitTagChanges(newState, function () {
+	                _helmetCallback = null;
+	            });
+	        });
+	    } else {
+	        commitTagChanges(newState);
+	        _helmetCallback = null;
+	    }
+	};
+	
+	var commitTagChanges = function commitTagChanges(newState, cb) {
 	    var baseTag = newState.baseTag,
 	        bodyAttributes = newState.bodyAttributes,
 	        htmlAttributes = newState.htmlAttributes,
@@ -41840,51 +41656,49 @@
 	        title = newState.title,
 	        titleAttributes = newState.titleAttributes;
 	
+	    updateAttributes(_HelmetConstants.TAG_NAMES.BODY, bodyAttributes);
+	    updateAttributes(_HelmetConstants.TAG_NAMES.HTML, htmlAttributes);
 	
-	    if (_helmetIdleCallback) {
-	        cancelIdleCallback(_helmetIdleCallback);
-	    }
+	    updateTitle(title, titleAttributes);
 	
-	    _helmetIdleCallback = requestIdleCallback(function () {
-	        updateAttributes(_HelmetConstants.TAG_NAMES.BODY, bodyAttributes);
-	        updateAttributes(_HelmetConstants.TAG_NAMES.HTML, htmlAttributes);
+	    var tagUpdates = {
+	        baseTag: updateTags(_HelmetConstants.TAG_NAMES.BASE, baseTag),
+	        linkTags: updateTags(_HelmetConstants.TAG_NAMES.LINK, linkTags),
+	        metaTags: updateTags(_HelmetConstants.TAG_NAMES.META, metaTags),
+	        noscriptTags: updateTags(_HelmetConstants.TAG_NAMES.NOSCRIPT, noscriptTags),
+	        scriptTags: updateTags(_HelmetConstants.TAG_NAMES.SCRIPT, scriptTags),
+	        styleTags: updateTags(_HelmetConstants.TAG_NAMES.STYLE, styleTags)
+	    };
 	
-	        updateTitle(title, titleAttributes);
+	    var addedTags = {};
+	    var removedTags = {};
 	
-	        var tagUpdates = {
-	            baseTag: updateTags(_HelmetConstants.TAG_NAMES.BASE, baseTag),
-	            linkTags: updateTags(_HelmetConstants.TAG_NAMES.LINK, linkTags),
-	            metaTags: updateTags(_HelmetConstants.TAG_NAMES.META, metaTags),
-	            noscriptTags: updateTags(_HelmetConstants.TAG_NAMES.NOSCRIPT, noscriptTags),
-	            scriptTags: updateTags(_HelmetConstants.TAG_NAMES.SCRIPT, scriptTags),
-	            styleTags: updateTags(_HelmetConstants.TAG_NAMES.STYLE, styleTags)
-	        };
-	
-	        var addedTags = {};
-	        var removedTags = {};
-	
-	        Object.keys(tagUpdates).forEach(function (tagType) {
-	            var _tagUpdates$tagType = tagUpdates[tagType],
-	                newTags = _tagUpdates$tagType.newTags,
-	                oldTags = _tagUpdates$tagType.oldTags;
+	    Object.keys(tagUpdates).forEach(function (tagType) {
+	        var _tagUpdates$tagType = tagUpdates[tagType],
+	            newTags = _tagUpdates$tagType.newTags,
+	            oldTags = _tagUpdates$tagType.oldTags;
 	
 	
-	            if (newTags.length) {
-	                addedTags[tagType] = newTags;
-	            }
-	            if (oldTags.length) {
-	                removedTags[tagType] = tagUpdates[tagType].oldTags;
-	            }
-	        });
-	
-	        _helmetIdleCallback = null;
-	        onChangeClientState(newState, addedTags, removedTags);
+	        if (newTags.length) {
+	            addedTags[tagType] = newTags;
+	        }
+	        if (oldTags.length) {
+	            removedTags[tagType] = tagUpdates[tagType].oldTags;
+	        }
 	    });
+	
+	    cb && cb();
+	
+	    onChangeClientState(newState, addedTags, removedTags);
+	};
+	
+	var flattenArray = function flattenArray(possibleArray) {
+	    return Array.isArray(possibleArray) ? possibleArray.join("") : possibleArray;
 	};
 	
 	var updateTitle = function updateTitle(title, attributes) {
 	    if (typeof title !== "undefined" && document.title !== title) {
-	        document.title = Array.isArray(title) ? title.join("") : title;
+	        document.title = flattenArray(title);
 	    }
 	
 	    updateAttributes(_HelmetConstants.TAG_NAMES.TITLE, attributes);
@@ -41995,7 +41809,8 @@
 	
 	var generateTitleAsString = function generateTitleAsString(type, title, attributes, encode) {
 	    var attributeString = generateElementAttributesAsString(attributes);
-	    return attributeString ? "<" + type + " " + _HelmetConstants.HELMET_ATTRIBUTE + "=\"true\" " + attributeString + ">" + encodeSpecialCharacters(title, encode) + "</" + type + ">" : "<" + type + " " + _HelmetConstants.HELMET_ATTRIBUTE + "=\"true\">" + encodeSpecialCharacters(title, encode) + "</" + type + ">";
+	    var flattenedTitle = flattenArray(title);
+	    return attributeString ? "<" + type + " " + _HelmetConstants.HELMET_ATTRIBUTE + "=\"true\" " + attributeString + ">" + encodeSpecialCharacters(flattenedTitle, encode) + "</" + type + ">" : "<" + type + " " + _HelmetConstants.HELMET_ATTRIBUTE + "=\"true\">" + encodeSpecialCharacters(flattenedTitle, encode) + "</" + type + ">";
 	};
 	
 	var generateTagsAsString = function generateTagsAsString(type, tags, encode) {
@@ -42131,8 +41946,9 @@
 	exports.handleClientStateChange = handleClientStateChange;
 	exports.mapStateOnServer = mapStateOnServer;
 	exports.reducePropsToState = reducePropsToState;
-	exports.requestIdleCallback = requestIdleCallback;
+	exports.requestAnimationFrame = requestAnimationFrame;
 	exports.warn = warn;
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
 /* 461 */
@@ -42176,18 +41992,19 @@
 	};
 	
 	var REACT_TAG_MAP = exports.REACT_TAG_MAP = {
-	    "accesskey": "accessKey",
-	    "charset": "charSet",
-	    "class": "className",
-	    "contenteditable": "contentEditable",
-	    "contextmenu": "contextMenu",
+	    accesskey: "accessKey",
+	    charset: "charSet",
+	    class: "className",
+	    contenteditable: "contentEditable",
+	    contextmenu: "contextMenu",
 	    "http-equiv": "httpEquiv",
-	    "itemprop": "itemProp",
-	    "tabindex": "tabIndex"
+	    itemprop: "itemProp",
+	    tabindex: "tabIndex"
 	};
 	
 	var HELMET_PROPS = exports.HELMET_PROPS = {
 	    DEFAULT_TITLE: "defaultTitle",
+	    DEFER: "defer",
 	    ENCODE_SPECIAL_CHARACTERS: "encodeSpecialCharacters",
 	    ON_CHANGE_CLIENT_STATE: "onChangeClientState",
 	    TITLE_TEMPLATE: "titleTemplate"
@@ -42209,6 +42026,15 @@
 	var __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
 	
 	(function (global) {
+	
+	    // minimal symbol polyfill for IE11 and others
+	    if (typeof Symbol !== 'function') {
+	        var Symbol = function(name) {
+	            return name;
+	        }
+	
+	        Symbol.nonNative = true;
+	    }
 	
 	    const STATE_PLAINTEXT = Symbol('plaintext');
 	    const STATE_HTML      = Symbol('html');
@@ -42244,8 +42070,8 @@
 	        allowable_tags = parse_allowable_tags(allowable_tags);
 	
 	        return {
-	            allowable_tags,
-	            tag_replacement,
+	            allowable_tags : allowable_tags,
+	            tag_replacement: tag_replacement,
 	
 	            state         : STATE_PLAINTEXT,
 	            tag_buffer    : '',
@@ -42387,21 +42213,28 @@
 	    }
 	
 	    function parse_allowable_tags(allowable_tags) {
-	        let tags_array = [];
+	        let tag_set = new Set();
 	
 	        if (typeof allowable_tags === 'string') {
 	            let match;
 	
-	            while ((match = ALLOWED_TAGS_REGEX.exec(allowable_tags)) !== null) {
-	                tags_array.push(match[1]);
+	            while ((match = ALLOWED_TAGS_REGEX.exec(allowable_tags))) {
+	                tag_set.add(match[1]);
 	            }
 	        }
 	
-	        else if (typeof allowable_tags[Symbol.iterator] === 'function') {
-	            tags_array = allowable_tags;
+	        else if (!Symbol.nonNative &&
+	                 typeof allowable_tags[Symbol.iterator] === 'function') {
+	
+	            tag_set = new Set(allowable_tags);
 	        }
 	
-	        return new Set(tags_array);
+	        else if (typeof allowable_tags.forEach === 'function') {
+	            // IE11 compatible
+	            allowable_tags.forEach(tag_set.add, tag_set);
+	        }
+	
+	        return tag_set;
 	    }
 	
 	    function normalize_tag(tag_buffer) {
@@ -44672,566 +44505,817 @@
 /* 547 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/**
-	 * React Google Analytics Module
-	 *
-	 * @package react-ga
-	 * @author  Adam Lofting <adam@mozillafoundation.org>
-	 *          Atul Varma <atul@mozillafoundation.org>
-	 */
+	(function webpackUniversalModuleDefinition(root, factory) {
+		if(true)
+			module.exports = factory(__webpack_require__(2), __webpack_require__(388), __webpack_require__(4));
+		else if(typeof define === 'function' && define.amd)
+			define(["react", "prop-types", "object-assign"], factory);
+		else {
+			var a = typeof exports === 'object' ? factory(require("react"), require("prop-types"), require("object-assign")) : factory(root["react"], root["prop-types"], root["object-assign"]);
+			for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+		}
+	})(this, function(__WEBPACK_EXTERNAL_MODULE_10__, __WEBPACK_EXTERNAL_MODULE_11__, __WEBPACK_EXTERNAL_MODULE_12__) {
+	return /******/ (function(modules) { // webpackBootstrap
+	/******/ 	// The module cache
+	/******/ 	var installedModules = {};
+	/******/
+	/******/ 	// The require function
+	/******/ 	function __webpack_require__(moduleId) {
+	/******/
+	/******/ 		// Check if module is in cache
+	/******/ 		if(installedModules[moduleId]) {
+	/******/ 			return installedModules[moduleId].exports;
+	/******/ 		}
+	/******/ 		// Create a new module (and put it into the cache)
+	/******/ 		var module = installedModules[moduleId] = {
+	/******/ 			i: moduleId,
+	/******/ 			l: false,
+	/******/ 			exports: {}
+	/******/ 		};
+	/******/
+	/******/ 		// Execute the module function
+	/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+	/******/
+	/******/ 		// Flag the module as loaded
+	/******/ 		module.l = true;
+	/******/
+	/******/ 		// Return the exports of the module
+	/******/ 		return module.exports;
+	/******/ 	}
+	/******/
+	/******/
+	/******/ 	// expose the modules object (__webpack_modules__)
+	/******/ 	__webpack_require__.m = modules;
+	/******/
+	/******/ 	// expose the module cache
+	/******/ 	__webpack_require__.c = installedModules;
+	/******/
+	/******/ 	// define getter function for harmony exports
+	/******/ 	__webpack_require__.d = function(exports, name, getter) {
+	/******/ 		if(!__webpack_require__.o(exports, name)) {
+	/******/ 			Object.defineProperty(exports, name, {
+	/******/ 				configurable: false,
+	/******/ 				enumerable: true,
+	/******/ 				get: getter
+	/******/ 			});
+	/******/ 		}
+	/******/ 	};
+	/******/
+	/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+	/******/ 	__webpack_require__.n = function(module) {
+	/******/ 		var getter = module && module.__esModule ?
+	/******/ 			function getDefault() { return module['default']; } :
+	/******/ 			function getModuleExports() { return module; };
+	/******/ 		__webpack_require__.d(getter, 'a', getter);
+	/******/ 		return getter;
+	/******/ 	};
+	/******/
+	/******/ 	// Object.prototype.hasOwnProperty.call
+	/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+	/******/
+	/******/ 	// __webpack_public_path__
+	/******/ 	__webpack_require__.p = "";
+	/******/
+	/******/ 	// Load entry module and return exports
+	/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+	/******/ })
+	/************************************************************************/
+	/******/ ([
+	/* 0 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = warn;
+	function warn(s) {
+	  console.warn('[react-ga]', s);
+	}
+	
+	/***/ }),
+	/* 1 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = trim;
+	// GA strings need to have leading/trailing whitespace trimmed, and not all
+	// browsers have String.prototoype.trim().
+	
+	function trim(s) {
+	  return s.replace(/^\s+|\s+$/g, '');
+	}
+	
+	/***/ }),
+	/* 2 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.OutboundLink = exports.plugin = undefined;
+	
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	
+	exports.initialize = initialize;
+	exports.ga = ga;
+	exports.set = set;
+	exports.send = send;
+	exports.pageview = pageview;
+	exports.modalview = modalview;
+	exports.timing = timing;
+	exports.event = event;
+	exports.exception = exception;
+	exports.outboundLink = outboundLink;
+	
+	var _format2 = __webpack_require__(3);
+	
+	var _format3 = _interopRequireDefault(_format2);
+	
+	var _removeLeadingSlash = __webpack_require__(6);
+	
+	var _removeLeadingSlash2 = _interopRequireDefault(_removeLeadingSlash);
+	
+	var _trim = __webpack_require__(1);
+	
+	var _trim2 = _interopRequireDefault(_trim);
+	
+	var _loadGA = __webpack_require__(7);
+	
+	var _loadGA2 = _interopRequireDefault(_loadGA);
+	
+	var _warn = __webpack_require__(0);
+	
+	var _warn2 = _interopRequireDefault(_warn);
+	
+	var _log = __webpack_require__(8);
+	
+	var _log2 = _interopRequireDefault(_log);
+	
+	var _OutboundLink = __webpack_require__(9);
+	
+	var _OutboundLink2 = _interopRequireDefault(_OutboundLink);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } /**
+	                                                                                                                                                                                                     * React Google Analytics Module
+	                                                                                                                                                                                                     *
+	                                                                                                                                                                                                     * @package react-ga
+	                                                                                                                                                                                                     * @author  Adam Lofting <adam@mozillafoundation.org>
+	                                                                                                                                                                                                     *          Atul Varma <atul@mozillafoundation.org>
+	                                                                                                                                                                                                     */
 	
 	/**
 	 * Utilities
 	 */
-	var format = __webpack_require__(548);
-	var removeLeadingSlash = __webpack_require__(553);
-	var trim = __webpack_require__(551);
 	
-	var warn = __webpack_require__(552);
-	var log = __webpack_require__(554);
 	
 	var _debug = false;
 	var _titleCase = true;
 	
-	var _format = function (s) {
-	  return format(s, _titleCase);
+	var internalGa = function internalGa() {
+	  (0, _warn2.default)('ReactGA.initialize must be called first');
 	};
 	
-	var ReactGA = {
-	  initialize: function (gaTrackingID, options) {
-	    if (!gaTrackingID) {
-	      warn('gaTrackingID is required in initialize()');
+	function _format(s) {
+	  return (0, _format3.default)(s, _titleCase);
+	}
+	
+	function _gaCommand(trackerNames) {
+	  for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+	    args[_key - 1] = arguments[_key];
+	  }
+	
+	  var command = args[0];
+	  if (typeof internalGa === 'function') {
+	    if (typeof command !== 'string') {
+	      (0, _warn2.default)('ga command must be a string');
 	      return;
 	    }
 	
-	    if (options) {
-	      if (options.debug && options.debug === true) {
-	        _debug = true;
-	      }
+	    internalGa.apply(undefined, args);
+	    if (Array.isArray(trackerNames)) {
+	      trackerNames.forEach(function (name) {
+	        internalGa.apply(undefined, _toConsumableArray([name + '.' + command].concat(args.slice(1))));
+	      });
+	    }
+	  }
+	}
 	
-	      if (options.titleCase === false) {
-	        _titleCase = false;
-	      }
+	function _initialize(gaTrackingID, options) {
+	  if (!gaTrackingID) {
+	    (0, _warn2.default)('gaTrackingID is required in initialize()');
+	    return;
+	  }
+	
+	  if (options) {
+	    if (options.debug && options.debug === true) {
+	      _debug = true;
 	    }
 	
-	    // https://developers.google.com/analytics/devguides/collection/analyticsjs/
-	    // jscs:disable
-	    (function (i, s, o, g, r, a, m) {
-	      i['GoogleAnalyticsObject'] = r;
-	      i[r] = i[r] || function () {
-	        (i[r].q = i[r].q || []).push(arguments);
-	      }, i[r].l = 1 * new Date();
-	      a = s.createElement(o),
-	          m = s.getElementsByTagName(o)[0];
-	      a.async = 1;
-	      a.src = g;
-	      m.parentNode.insertBefore(a, m);
-	    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-	    // jscs:enable
-	
-	    if (options && options.gaOptions) {
-	      ga('create', gaTrackingID, options.gaOptions);
-	    } else {
-	      ga('create', gaTrackingID, 'auto');
+	    if (options.titleCase === false) {
+	      _titleCase = false;
 	    }
-	  },
+	  }
 	
-	  /**
-	   * ga:
-	   * Returns the original GA object.
-	   */
-	  ga: function () {
-	    if (arguments.length > 0) {
-	      ga.apply(this, arguments);
-	      if (_debug) {
-	        log('called ga(\'arguments\');');
-	        log('with arguments: ' + JSON.stringify([].slice.apply(arguments)));
-	      }
+	  if (options && options.gaOptions) {
+	    internalGa('create', gaTrackingID, options.gaOptions);
+	  } else {
+	    internalGa('create', gaTrackingID, 'auto');
+	  }
+	}
 	
-	      return;
-	    }
+	function initialize(configs, options) {
+	  if (typeof window === 'undefined') {
+	    return false;
+	  }
 	
-	    return ga;
-	  },
+	  (0, _loadGA2.default)();
+	  internalGa = function internalGa() {
+	    var _window;
 	
-	  /**
-	   * set:
-	   * GA tracker set method
-	   * @param {Object} fieldsObject - a field/value pair or a group of field/value pairs on the tracker
-	   */
-	  set: function (fieldsObject) {
-	    if (typeof ga === 'function') {
-	      if (!fieldsObject) {
-	        warn('`fieldsObject` is required in .set()');
+	    return (_window = window).ga.apply(_window, arguments);
+	  };
+	
+	  if (Array.isArray(configs)) {
+	    configs.forEach(function (config) {
+	      if ((typeof config === 'undefined' ? 'undefined' : _typeof(config)) !== 'object') {
+	        (0, _warn2.default)('All configs must be an object');
 	        return;
 	      }
+	      _initialize(config.trackingId, config);
+	    });
+	  } else {
+	    _initialize(configs, options);
+	  }
+	  return true;
+	}
 	
-	      if (typeof fieldsObject !== 'object') {
-	        warn('Expected `fieldsObject` arg to be an Object');
-	        return;
-	      }
+	/**
+	 * ga:
+	 * Returns the original GA object.
+	 */
+	function ga() {
+	  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+	    args[_key2] = arguments[_key2];
+	  }
 	
-	      if (Object.keys(fieldsObject).length === 0) {
-	        warn('empty `fieldsObject` given to .set()');
-	      }
-	
-	      ga('set', fieldsObject);
-	
-	      if (_debug) {
-	        log('called ga(\'set\', fieldsObject);');
-	        log('with fieldsObject: ' + JSON.stringify(fieldsObject));
-	      }
+	  if (args.length > 0) {
+	    internalGa.apply(undefined, args);
+	    if (_debug) {
+	      (0, _log2.default)('called ga(\'arguments\');');
+	      (0, _log2.default)('with arguments: ' + JSON.stringify(args));
 	    }
-	  },
+	  }
 	
-	  /**
-	   * send:
-	   * Clone of the low level `ga.send` method
-	   * WARNING: No validations will be applied to this
-	   * @param  {Object} fieldObject - field object for tracking different analytics
-	   */
-	  send: function (fieldObject) {
-	    if (typeof ga === 'function') {
-	      ga('send', fieldObject);
+	  return window.ga;
+	}
 	
-	      if (_debug) {
-	        log('called ga(\'send\', fieldObject);');
-	        log('with fieldObject: ' + JSON.stringify(fieldObject));
-	      }
+	/**
+	 * set:
+	 * GA tracker set method
+	 * @param {Object} fieldsObject - a field/value pair or a group of field/value pairs on the tracker
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 */
+	function set(fieldsObject, trackerNames) {
+	  if (!fieldsObject) {
+	    (0, _warn2.default)('`fieldsObject` is required in .set()');
+	    return;
+	  }
+	
+	  if ((typeof fieldsObject === 'undefined' ? 'undefined' : _typeof(fieldsObject)) !== 'object') {
+	    (0, _warn2.default)('Expected `fieldsObject` arg to be an Object');
+	    return;
+	  }
+	
+	  if (Object.keys(fieldsObject).length === 0) {
+	    (0, _warn2.default)('empty `fieldsObject` given to .set()');
+	  }
+	
+	  _gaCommand(trackerNames, 'set', fieldsObject);
+	
+	  if (_debug) {
+	    (0, _log2.default)('called ga(\'set\', fieldsObject);');
+	    (0, _log2.default)('with fieldsObject: ' + JSON.stringify(fieldsObject));
+	  }
+	}
+	
+	/**
+	 * send:
+	 * Clone of the low level `ga.send` method
+	 * WARNING: No validations will be applied to this
+	 * @param  {Object} fieldObject - field object for tracking different analytics
+	 * @param  {Array} trackerNames - trackers to send the command to
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 */
+	function send(fieldObject, trackerNames) {
+	  _gaCommand(trackerNames, 'send', fieldObject);
+	  if (_debug) {
+	    (0, _log2.default)('called ga(\'send\', fieldObject);');
+	    (0, _log2.default)('with fieldObject: ' + JSON.stringify(fieldObject));
+	    (0, _log2.default)('with trackers: ' + JSON.stringify(trackerNames));
+	  }
+	}
+	
+	/**
+	 * pageview:
+	 * Basic GA pageview tracking
+	 * @param  {String} path - the current page page e.g. '/about'
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 */
+	function pageview(rawPath, trackerNames) {
+	  if (!rawPath) {
+	    (0, _warn2.default)('path is required in .pageview()');
+	    return;
+	  }
+	
+	  var path = (0, _trim2.default)(rawPath);
+	  if (path === '') {
+	    (0, _warn2.default)('path cannot be an empty string in .pageview()');
+	    return;
+	  }
+	
+	  if (typeof ga === 'function') {
+	    _gaCommand(trackerNames, 'send', 'pageview', path);
+	
+	    if (_debug) {
+	      (0, _log2.default)('called ga(\'send\', \'pageview\', path);');
+	      (0, _log2.default)('with path: ' + path);
 	    }
-	  },
+	  }
+	}
 	
-	  /**
-	   * pageview:
-	   * Basic GA pageview tracking
-	   * @param  {String} path - the current page page e.g. '/about'
-	   */
-	  pageview: function (path) {
-	    if (!path) {
-	      warn('path is required in .pageview()');
+	/**
+	 * modalview:
+	 * a proxy to basic GA pageview tracking to consistently track
+	 * modal views that are an equivalent UX to a traditional pageview
+	 * @param  {String} modalName e.g. 'add-or-edit-club'
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 */
+	function modalview(rawModalName, trackerNames) {
+	  if (!rawModalName) {
+	    (0, _warn2.default)('modalName is required in .modalview(modalName)');
+	    return;
+	  }
+	
+	  var modalName = (0, _removeLeadingSlash2.default)((0, _trim2.default)(rawModalName));
+	
+	  if (modalName === '') {
+	    (0, _warn2.default)('modalName cannot be an empty string or a single / in .modalview()');
+	    return;
+	  }
+	
+	  if (typeof ga === 'function') {
+	    var path = '/modal/' + modalName;
+	    _gaCommand(trackerNames, 'send', 'pageview', path);
+	
+	    if (_debug) {
+	      (0, _log2.default)('called ga(\'send\', \'pageview\', path);');
+	      (0, _log2.default)('with path: ' + path);
+	    }
+	  }
+	}
+	
+	/**
+	 * timing:
+	 * GA timing
+	 * @param args.category {String} required
+	 * @param args.variable {String} required
+	 * @param args.value  {Int}  required
+	 * @param args.label  {String} required
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 */
+	function timing() {
+	  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+	      category = _ref.category,
+	      variable = _ref.variable,
+	      value = _ref.value,
+	      label = _ref.label;
+	
+	  var trackerNames = arguments[1];
+	
+	  if (typeof ga === 'function') {
+	    if (!category || !variable || !value || typeof value !== 'number') {
+	      (0, _warn2.default)('args.category, args.variable ' + 'AND args.value are required in timing() ' + 'AND args.value has to be a number');
 	      return;
 	    }
 	
-	    path = trim(path);
-	    if (path === '') {
-	      warn('path cannot be an empty string in .pageview()');
+	    // Required Fields
+	    var fieldObject = {
+	      hitType: 'timing',
+	      timingCategory: _format(category),
+	      timingVar: _format(variable),
+	      timingValue: value
+	    };
+	
+	    if (label) {
+	      fieldObject.timingLabel = _format(label);
+	    }
+	
+	    send(fieldObject, trackerNames);
+	  }
+	}
+	
+	/**
+	 * event:
+	 * GA event tracking
+	 * @param args.category {String} required
+	 * @param args.action {String} required
+	 * @param args.label {String} optional
+	 * @param args.value {Int} optional
+	 * @param args.nonInteraction {boolean} optional
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 */
+	function event() {
+	  var _ref2 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+	
+	  var trackerNames = arguments[1];
+	
+	  var category = _ref2.category,
+	      action = _ref2.action,
+	      label = _ref2.label,
+	      value = _ref2.value,
+	      nonInteraction = _ref2.nonInteraction,
+	      transport = _ref2.transport,
+	      args = _objectWithoutProperties(_ref2, ['category', 'action', 'label', 'value', 'nonInteraction', 'transport']);
+	
+	  if (typeof ga === 'function') {
+	    // Simple Validation
+	    if (!category || !action) {
+	      (0, _warn2.default)('args.category AND args.action are required in event()');
 	      return;
 	    }
 	
-	    if (typeof ga === 'function') {
-	      ga('send', 'pageview', path);
+	    // Required Fields
+	    var fieldObject = {
+	      hitType: 'event',
+	      eventCategory: _format(category),
+	      eventAction: _format(action)
+	    };
 	
-	      if (_debug) {
-	        log('called ga(\'send\', \'pageview\', path);');
-	        log('with path: ' + path);
-	      }
-	    }
-	  },
-	
-	  /**
-	   * modalview:
-	   * a proxy to basic GA pageview tracking to consistently track
-	   * modal views that are an equivalent UX to a traditional pageview
-	   * @param  {String} modalName e.g. 'add-or-edit-club'
-	   */
-	  modalview: function (modalName) {
-	    if (!modalName) {
-	      warn('modalName is required in .modalview(modalName)');
-	      return;
+	    // Optional Fields
+	    if (label) {
+	      fieldObject.eventLabel = _format(label);
 	    }
 	
-	    modalName = trim(modalName);
-	    modalName = removeLeadingSlash(modalName);
-	
-	    if (modalName === '') {
-	      warn('modalName cannot be an empty string or a single / in .modalview()');
-	      return;
-	    }
-	
-	    if (typeof ga === 'function') {
-	      modalName = trim(modalName);
-	      var path = '/modal/' + modalName;
-	      ga('send', 'pageview', path);
-	
-	      if (_debug) {
-	        log('called ga(\'send\', \'pageview\', path);');
-	        log('with path: ' + path);
-	      }
-	    }
-	  },
-	
-	  /**
-	   * timing:
-	   * GA timing
-	   * @param args.category {String} required
-	   * @param args.variable {String} required
-	   * @param args.value  {Int}  required
-	   * @param args.label  {String} required
-	   */
-	  timing: function (args) {
-	    if (typeof ga === 'function') {
-	      if (!args || !args.category || !args.variable
-	          || !args.value || typeof args.value !== 'number') {
-	        warn('args.category, args.variable ' +
-	              'AND args.value are required in timing() ' +
-	              'AND args.value has to be a number');
-	        return;
-	      }
-	
-	      //Required Fields
-	      var fieldObject = {
-	        hitType: 'timing',
-	        timingCategory: _format(args.category),
-	        timingVar: _format(args.variable),
-	        timingValue: args.value
-	      };
-	
-	      if (args.label) {
-	        fieldObject.timingLabel = _format(args.label);
-	      }
-	
-	      this.send(fieldObject);
-	    }
-	  },
-	
-	  /**
-	   * event:
-	   * GA event tracking
-	   * @param args.category {String} required
-	   * @param args.action {String} required
-	   * @param args.label {String} optional
-	   * @param args.value {Int} optional
-	   * @param args.nonInteraction {boolean} optional
-	   */
-	  event: function (args) {
-	    if (typeof ga === 'function') {
-	
-	      // Simple Validation
-	      if (!args || !args.category || !args.action) {
-	        warn('args.category AND args.action are required in event()');
-	        return;
-	      }
-	
-	      // Required Fields
-	      var fieldObject = {
-	        hitType: 'event',
-	        eventCategory: _format(args.category),
-	        eventAction: _format(args.action)
-	      };
-	
-	      // Optional Fields
-	      if (args.label) {
-	        fieldObject.eventLabel = _format(args.label);
-	      }
-	
-	      if (args.hasOwnProperty('value')) {
-	        if (typeof args.value !== 'number') {
-	          warn('Expected `args.value` arg to be a Number.');
-	        } else {
-	          fieldObject.eventValue = args.value;
-	        }
-	      }
-	
-	      if (args.nonInteraction) {
-	        if (typeof args.nonInteraction !== 'boolean') {
-	          warn('`args.nonInteraction` must be a boolean.');
-	        } else {
-	          fieldObject.nonInteraction = args.nonInteraction;
-	        }
-	      }
-	
-	      if (args.transport) {
-	        if (typeof args.transport !== 'string') {
-	          warn('`args.transport` must be a string.');
-	        } else {
-	          if (['beacon', 'xhr', 'image'].indexOf(args.transport) === -1) {
-	            warn('`args.transport` must be either one of these values: `beacon`, `xhr` or `image`');
-	          }
-	
-	          fieldObject.transport = args.transport;
-	        }
-	      }
-	
-	      // Send to GA
-	      this.send(fieldObject);
-	    }
-	  },
-	
-	  /**
-	   * exception:
-	   * GA exception tracking
-	   * @param args.description {String} optional
-	   * @param args.fatal {boolean} optional
-	   */
-	  exception: function (args) {
-	    if (typeof ga === 'function') {
-	
-	      // Required Fields
-	      var fieldObject = {
-	        hitType: 'exception'
-	      };
-	
-	      // Optional Fields
-	      if (args.description) {
-	        fieldObject.exDescription = _format(args.description);
-	      }
-	
-	      if (typeof args.fatal !== 'undefined') {
-	        if (typeof args.fatal !== 'boolean') {
-	          warn('`args.fatal` must be a boolean.');
-	        } else {
-	          fieldObject.exFatal = args.fatal;
-	        }
-	      }
-	
-	      // Send to GA
-	      this.send(fieldObject);
-	    }
-	  },
-	
-	  plugin: {
-	    /**
-	     * require:
-	     * GA requires a plugin
-	     * @param name {String} e.g. 'ecommerce' or 'myplugin'
-	     * @param options {Object} optional e.g {path: '/log', debug: true}
-	     */
-	    require: function (name, options) {
-	      if (typeof ga === 'function') {
-	
-	        // Required Fields
-	        if (!name) {
-	          warn('`name` is required in .require()');
-	          return;
-	        }
-	
-	        name = trim(name);
-	        if (name === '') {
-	          warn('`name` cannot be an empty string in .require()');
-	          return;
-	        }
-	
-	        // Optional Fields
-	        if (options) {
-	          if (typeof options !== 'object') {
-	            warn('Expected `options` arg to be an Object');
-	            return;
-	          }
-	
-	          if (Object.keys(options).length === 0) {
-	            warn('Empty `options` given to .require()');
-	          }
-	
-	          ga('require', name, options);
-	
-	          if (_debug) {
-	            log('called ga(\'require\', \'' + name + '\', ' + JSON.stringify(options) + ');');
-	          }
-	
-	          return;
-	        } else {
-	          ga('require', name);
-	
-	          if (_debug) {
-	            log('called ga(\'require\', \'' + name + '\');');
-	          }
-	
-	          return;
-	        }
-	      }
-	    },
-	
-	    /**
-	     * execute:
-	     * GA execute action for plugin
-	     * Takes variable number of arguments
-	     * @param pluginName {String} e.g. 'ecommerce' or 'myplugin'
-	     * @param action {String} e.g. 'addItem' or 'myCustomAction'
-	     * @param actionType {String} optional e.g. 'detail'
-	     * @param payload {Object} optional e.g { id: '1x5e', name : 'My product to track' }
-	     */
-	    execute: function () {
-	      var args = Array.prototype.slice.call(arguments);
-	
-	      var pluginName = args[0];
-	      var action = args[1];
-	      var payload;
-	      var actionType;
-	
-	      if (args.length === 3) {
-	        payload = args[2];
+	    if (typeof value !== 'undefined') {
+	      if (typeof value !== 'number') {
+	        (0, _warn2.default)('Expected `args.value` arg to be a Number.');
 	      } else {
-	        actionType = args[2];
-	        payload = args[3];
+	        fieldObject.eventValue = value;
+	      }
+	    }
+	
+	    if (typeof nonInteraction !== 'undefined') {
+	      if (typeof nonInteraction !== 'boolean') {
+	        (0, _warn2.default)('`args.nonInteraction` must be a boolean.');
+	      } else {
+	        fieldObject.nonInteraction = nonInteraction;
+	      }
+	    }
+	
+	    if (typeof transport !== 'undefined') {
+	      if (typeof transport !== 'string') {
+	        (0, _warn2.default)('`args.transport` must be a string.');
+	      } else {
+	        if (['beacon', 'xhr', 'image'].indexOf(transport) === -1) {
+	          (0, _warn2.default)('`args.transport` must be either one of these values: `beacon`, `xhr` or `image`');
+	        }
+	
+	        fieldObject.transport = transport;
+	      }
+	    }
+	
+	    Object.keys(args).filter(function (key) {
+	      return key.substr(0, 'dimension'.length) === 'dimension';
+	    }).forEach(function (key) {
+	      fieldObject[key] = args[key];
+	    });
+	
+	    Object.keys(args).filter(function (key) {
+	      return key.substr(0, 'metric'.length) === 'metric';
+	    }).forEach(function (key) {
+	      fieldObject[key] = args[key];
+	    });
+	
+	    // Send to GA
+	    send(fieldObject, trackerNames);
+	  }
+	}
+	
+	/**
+	 * exception:
+	 * GA exception tracking
+	 * @param args.description {String} optional
+	 * @param args.fatal {boolean} optional
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 */
+	function exception(_ref3, trackerNames) {
+	  var description = _ref3.description,
+	      fatal = _ref3.fatal;
+	
+	  if (typeof ga === 'function') {
+	    // Required Fields
+	    var fieldObject = {
+	      hitType: 'exception'
+	    };
+	
+	    // Optional Fields
+	    if (description) {
+	      fieldObject.exDescription = _format(description);
+	    }
+	
+	    if (typeof fatal !== 'undefined') {
+	      if (typeof fatal !== 'boolean') {
+	        (0, _warn2.default)('`args.fatal` must be a boolean.');
+	      } else {
+	        fieldObject.exFatal = fatal;
+	      }
+	    }
+	
+	    // Send to GA
+	    send(fieldObject, trackerNames);
+	  }
+	}
+	
+	var plugin = exports.plugin = {
+	  /**
+	   * require:
+	   * GA requires a plugin
+	   * @param name {String} e.g. 'ecommerce' or 'myplugin'
+	   * @param options {Object} optional e.g {path: '/log', debug: true}
+	   */
+	  require: function require(rawName, options) {
+	    if (typeof ga === 'function') {
+	      // Required Fields
+	      if (!rawName) {
+	        (0, _warn2.default)('`name` is required in .require()');
+	        return;
 	      }
 	
-	      if (typeof ga === 'function') {
-	        if (typeof pluginName !== 'string') {
-	          warn('Expected `pluginName` arg to be a String.');
-	        } else if (typeof action !== 'string') {
-	          warn('Expected `action` arg to be a String.');
-	        } else {
-	          var command = pluginName + ':' + action;
-	          payload = payload || null;
-	          if (actionType && payload) {
-	            ga(command, actionType, payload);
-	            if (_debug) {
-	              log('called ga(\'' + command + '\');');
-	              log('actionType: "' + actionType + '" with payload: ' + JSON.stringify(payload));
-	            }
-	          } else if (payload) {
-	            ga(command, payload);
-	            if (_debug) {
-	              log('called ga(\'' + command + '\');');
-	              log('with payload: ' + JSON.stringify(payload));
-	            }
-	          } else {
-	            ga(command);
-	            if (_debug) {
-	              log('called ga(\'' + command + '\');');
-	            }
+	      var name = (0, _trim2.default)(rawName);
+	      if (name === '') {
+	        (0, _warn2.default)('`name` cannot be an empty string in .require()');
+	        return;
+	      }
 	
-	          }
+	      // Optional Fields
+	      if (options) {
+	        if ((typeof options === 'undefined' ? 'undefined' : _typeof(options)) !== 'object') {
+	          (0, _warn2.default)('Expected `options` arg to be an Object');
+	          return;
+	        }
+	
+	        if (Object.keys(options).length === 0) {
+	          (0, _warn2.default)('Empty `options` given to .require()');
+	        }
+	
+	        ga('require', name, options);
+	
+	        if (_debug) {
+	          (0, _log2.default)('called ga(\'require\', \'' + name + '\', ' + JSON.stringify(options));
+	        }
+	      } else {
+	        ga('require', name);
+	
+	        if (_debug) {
+	          (0, _log2.default)('called ga(\'require\', \'' + name + '\');');
 	        }
 	      }
 	    }
 	  },
 	
 	  /**
-	   * outboundLink:
-	   * GA outboundLink tracking
-	   * @param args.label {String} e.g. url, or 'Create an Account'
-	   * @param {function} hitCallback - Called after processing a hit.
+	   * execute:
+	   * GA execute action for plugin
+	   * Takes variable number of arguments
+	   * @param pluginName {String} e.g. 'ecommerce' or 'myplugin'
+	   * @param action {String} e.g. 'addItem' or 'myCustomAction'
+	   * @param actionType {String} optional e.g. 'detail'
+	   * @param payload {Object} optional e.g { id: '1x5e', name : 'My product to track' }
 	   */
-	  outboundLink: function (args, hitCallback) {
-	    if (typeof hitCallback !== 'function') {
-	      warn('hitCallback function is required');
-	      return;
+	  execute: function execute(pluginName, action) {
+	    var payload = void 0;
+	    var actionType = void 0;
+	
+	    if ((arguments.length <= 2 ? 0 : arguments.length - 2) === 1) {
+	      payload = arguments.length <= 2 ? undefined : arguments[2];
+	    } else {
+	      actionType = arguments.length <= 2 ? undefined : arguments[2];
+	      payload = arguments.length <= 3 ? undefined : arguments[3];
 	    }
 	
 	    if (typeof ga === 'function') {
-	
-	      // Simple Validation
-	      if (!args || !args.label) {
-	        warn('args.label is required in outboundLink()');
-	        return;
-	      }
-	
-	      // Required Fields
-	      var fieldObject = {
-	        hitType: 'event',
-	        eventCategory: 'Outbound',
-	        eventAction: 'Click',
-	        eventLabel: _format(args.label)
-	      };
-	
-	      var safetyCallbackCalled = false;
-	      var safetyCallback = function () {
-	
-	        // This prevents a delayed response from GA
-	        // causing hitCallback from being fired twice
-	        safetyCallbackCalled = true;
-	
-	        hitCallback();
-	      };
-	
-	      // Using a timeout to ensure the execution of critical application code
-	      // in the case when the GA server might be down
-	      // or an ad blocker prevents sending the data
-	
-	      // register safety net timeout:
-	      var t = setTimeout(safetyCallback, 250);
-	
-	      var clearableCallbackForGA = function () {
-	        clearTimeout(t);
-	        if (!safetyCallbackCalled) {
-	          hitCallback();
+	      if (typeof pluginName !== 'string') {
+	        (0, _warn2.default)('Expected `pluginName` arg to be a String.');
+	      } else if (typeof action !== 'string') {
+	        (0, _warn2.default)('Expected `action` arg to be a String.');
+	      } else {
+	        var command = pluginName + ':' + action;
+	        payload = payload || null;
+	        if (actionType && payload) {
+	          ga(command, actionType, payload);
+	          if (_debug) {
+	            (0, _log2.default)('called ga(\'' + command + '\');');
+	            (0, _log2.default)('actionType: "' + actionType + '" with payload: ' + JSON.stringify(payload));
+	          }
+	        } else if (payload) {
+	          ga(command, payload);
+	          if (_debug) {
+	            (0, _log2.default)('called ga(\'' + command + '\');');
+	            (0, _log2.default)('with payload: ' + JSON.stringify(payload));
+	          }
+	        } else {
+	          ga(command);
+	          if (_debug) {
+	            (0, _log2.default)('called ga(\'' + command + '\');');
+	          }
 	        }
-	      };
-	
-	      fieldObject.hitCallback = clearableCallbackForGA;
-	
-	      // Send to GA
-	      this.send(fieldObject);
-	    } else {
-	      // if ga is not defined, return the callback so the application
-	      // continues to work as expected
-	      setTimeout(hitCallback, 0);
+	      }
 	    }
 	  }
 	};
 	
-	var OutboundLink = __webpack_require__(555);
-	OutboundLink.origTrackLink = OutboundLink.trackLink;
-	OutboundLink.trackLink = ReactGA.outboundLink.bind(ReactGA);
-	ReactGA.OutboundLink = OutboundLink;
+	/**
+	 * outboundLink:
+	 * GA outboundLink tracking
+	 * @param args.label {String} e.g. url, or 'Create an Account'
+	 * @param {function} hitCallback - Called after processing a hit.
+	 */
+	function outboundLink(args, hitCallback, trackerNames) {
+	  if (typeof hitCallback !== 'function') {
+	    (0, _warn2.default)('hitCallback function is required');
+	    return;
+	  }
 	
-	module.exports = ReactGA;
-
-
-/***/ }),
-/* 548 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var mightBeEmail = __webpack_require__(549);
-	var toTitleCase = __webpack_require__(550);
-	var warn = __webpack_require__(552);
+	  if (typeof ga === 'function') {
+	    // Simple Validation
+	    if (!args || !args.label) {
+	      (0, _warn2.default)('args.label is required in outboundLink()');
+	      return;
+	    }
 	
-	var _redacted = 'REDACTED (Potential Email Address)';
+	    // Required Fields
+	    var fieldObject = {
+	      hitType: 'event',
+	      eventCategory: 'Outbound',
+	      eventAction: 'Click',
+	      eventLabel: _format(args.label)
+	    };
+	
+	    var safetyCallbackCalled = false;
+	    var safetyCallback = function safetyCallback() {
+	      // This prevents a delayed response from GA
+	      // causing hitCallback from being fired twice
+	      safetyCallbackCalled = true;
+	
+	      hitCallback();
+	    };
+	
+	    // Using a timeout to ensure the execution of critical application code
+	    // in the case when the GA server might be down
+	    // or an ad blocker prevents sending the data
+	
+	    // register safety net timeout:
+	    var t = setTimeout(safetyCallback, 250);
+	
+	    var clearableCallbackForGA = function clearableCallbackForGA() {
+	      clearTimeout(t);
+	      if (!safetyCallbackCalled) {
+	        hitCallback();
+	      }
+	    };
+	
+	    fieldObject.hitCallback = clearableCallbackForGA;
+	
+	    // Send to GA
+	    send(fieldObject, trackerNames);
+	  } else {
+	    // if ga is not defined, return the callback so the application
+	    // continues to work as expected
+	    setTimeout(hitCallback, 0);
+	  }
+	}
+	
+	_OutboundLink2.default.origTrackLink = _OutboundLink2.default.trackLink;
+	_OutboundLink2.default.trackLink = outboundLink;
+	var OutboundLink = exports.OutboundLink = _OutboundLink2.default;
+	
+	exports.default = {
+	  initialize: initialize,
+	  ga: ga,
+	  set: set,
+	  send: send,
+	  pageview: pageview,
+	  modalview: modalview,
+	  timing: timing,
+	  event: event,
+	  exception: exception,
+	  plugin: plugin,
+	  outboundLink: outboundLink,
+	  OutboundLink: OutboundLink
+	};
+	
+	/***/ }),
+	/* 3 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = format;
+	
+	var _mightBeEmail = __webpack_require__(4);
+	
+	var _mightBeEmail2 = _interopRequireDefault(_mightBeEmail);
+	
+	var _toTitleCase = __webpack_require__(5);
+	
+	var _toTitleCase2 = _interopRequireDefault(_toTitleCase);
+	
+	var _warn = __webpack_require__(0);
+	
+	var _warn2 = _interopRequireDefault(_warn);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var redacted = 'REDACTED (Potential Email Address)';
 	
 	function format(s, titleCase) {
-	  if (mightBeEmail(s)) {
-	    warn('This arg looks like an email address, redacting.');
-	    return _redacted;
+	  if ((0, _mightBeEmail2.default)(s)) {
+	    (0, _warn2.default)('This arg looks like an email address, redacting.');
+	    return redacted;
 	  }
 	
 	  if (titleCase) {
-	    return toTitleCase(s);
+	    return (0, _toTitleCase2.default)(s);
 	  }
 	
 	  return s;
 	}
 	
-	module.exports = format;
-
-
-/***/ }),
-/* 549 */
-/***/ (function(module, exports) {
-
+	/***/ }),
+	/* 4 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = mightBeEmail;
 	// See if s could be an email address. We don't want to send personal data like email.
 	// https://support.google.com/analytics/answer/2795983?hl=en
 	function mightBeEmail(s) {
 	  // There's no point trying to validate rfc822 fully, just look for ...@...
-	  return (/[^@]+@[^@]+/).test(s);
+	  return (/[^@]+@[^@]+/.test(s)
+	  );
 	}
 	
-	module.exports = mightBeEmail;
-
-
-/***/ }),
-/* 550 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/**
-	 * To Title Case 2.1 - http://individed.com/code/to-title-case/
-	 * Copyright 2008-2013 David Gouch. Licensed under the MIT License.
-	 * https://github.com/gouch/to-title-case
-	 */
+	/***/ }),
+	/* 5 */
+	/***/ (function(module, exports, __webpack_require__) {
 	
-	var trim = __webpack_require__(551);
+	"use strict";
 	
-	function toTitleCase(s) {
-	  var smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
-	  s = trim(s);
 	
-	  return s.replace(/[A-Za-z0-9\u00C0-\u00FF]+[^\s-]*/g, function (match, index, title) {
-	    if (index > 0 &&
-	        index + match.length !== title.length &&
-	        match.search(smallWords) > -1 &&
-	        title.charAt(index - 2) !== ':' &&
-	        (title.charAt(index + match.length) !== '-' || title.charAt(index - 1) === '-') &&
-	        title.charAt(index - 1).search(/[^\s-]/) < 0) {
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = toTitleCase;
+	
+	var _trim = __webpack_require__(1);
+	
+	var _trim2 = _interopRequireDefault(_trim);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i; /**
+	                                                                                                * To Title Case 2.1 - http://individed.com/code/to-title-case/
+	                                                                                                * Copyright 2008-2013 David Gouch. Licensed under the MIT License.
+	                                                                                                * https://github.com/gouch/to-title-case
+	                                                                                                */
+	
+	function toTitleCase(string) {
+	  return (0, _trim2.default)(string).replace(/[A-Za-z0-9\u00C0-\u00FF]+[^\s-]*/g, function (match, index, title) {
+	    if (index > 0 && index + match.length !== title.length && match.search(smallWords) > -1 && title.charAt(index - 2) !== ':' && (title.charAt(index + match.length) !== '-' || title.charAt(index - 1) === '-') && title.charAt(index - 1).search(/[^\s-]/) < 0) {
 	      return match.toLowerCase();
 	    }
 	
@@ -45243,149 +45327,204 @@
 	  });
 	}
 	
-	module.exports = toTitleCase;
-
-
-/***/ }),
-/* 551 */
-/***/ (function(module, exports) {
-
-	// GA strings need to have leading/trailing whitespace trimmed, and not all
-	// browsers have String.prototoype.trim().
+	/***/ }),
+	/* 6 */
+	/***/ (function(module, exports, __webpack_require__) {
 	
-	function trim(s) {
-	  return s.replace(/^\s+|\s+$/g, '');
-	}
+	"use strict";
 	
-	module.exports = trim;
-
-
-/***/ }),
-/* 552 */
-/***/ (function(module, exports) {
-
-	function warn(s) {
-	  console.warn('[react-ga]', s);
-	}
 	
-	module.exports = warn;
-
-
-/***/ }),
-/* 553 */
-/***/ (function(module, exports) {
-
-	function removeLeadingSlash(s) {
-	  if (s.substring(0, 1) === '/') {
-	    s = s.substring(1);
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = removeLeadingSlash;
+	function removeLeadingSlash(string) {
+	  if (string.substring(0, 1) === '/') {
+	    return string.substring(1);
 	  }
 	
-	  return s;
+	  return string;
 	}
 	
-	module.exports = removeLeadingSlash;
-
-
-/***/ }),
-/* 554 */
-/***/ (function(module, exports) {
-
+	/***/ }),
+	/* 7 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	exports.default = function () {
+	  // https://developers.google.com/analytics/devguides/collection/analyticsjs/
+	  /* eslint-disable */
+	  (function (i, s, o, g, r, a, m) {
+	    i['GoogleAnalyticsObject'] = r;
+	    i[r] = i[r] || function () {
+	      (i[r].q = i[r].q || []).push(arguments);
+	    }, i[r].l = 1 * new Date();
+	    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+	    a.async = 1;
+	    a.src = g;
+	    m.parentNode.insertBefore(a, m);
+	  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+	  /* eslint-enable */
+	};
+	
+	/***/ }),
+	/* 8 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = log;
 	function log(s) {
 	  console.info('[react-ga]', s);
 	}
 	
-	module.exports = log;
-
-
-/***/ }),
-/* 555 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(2);
-	var CreateReactClass = __webpack_require__(556);
-	var PropTypes = __webpack_require__(388);
-	var assign = __webpack_require__(4);
+	/***/ }),
+	/* 9 */
+	/***/ (function(module, exports, __webpack_require__) {
 	
-	var NEWTAB = '_blank';
+	"use strict";
 	
-	var OutboundLink = CreateReactClass({
-	  displayName: 'OutboundLink',
-	  propTypes: {
-	    eventLabel: PropTypes.string.isRequired
-	  },
-	  statics: {
-	    trackLink: function () {
-	      console.warn('ga tracking not enabled');
-	    }
-	  },
-	  handleClick: function (e) {
-	    e.preventDefault();
-	    var props = this.props;
-	    var eventMeta = { label: props.eventLabel };
-	    OutboundLink.trackLink(eventMeta, function () {
-	      if (props.target === NEWTAB) {
-	        window.open(props.to, NEWTAB);
-	      } else {
-	        window.location.href = props.to;
-	      }
-	    });
 	
-	    if (props.onClick) {
-	      props.onClick(e);
-	    }
-	  },
-	
-	  render: function () {
-	    var props = assign({}, this.props, {
-	      href: this.props.to,
-	      onClick: this.handleClick
-	    });
-	    delete props.eventLabel;
-	    return React.createElement('a', props);
-	  }
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
 	});
 	
-	module.exports = OutboundLink;
-
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(10);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _propTypes = __webpack_require__(11);
+	
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+	
+	var _objectAssign = __webpack_require__(12);
+	
+	var _objectAssign2 = _interopRequireDefault(_objectAssign);
+	
+	var _warn = __webpack_require__(0);
+	
+	var _warn2 = _interopRequireDefault(_warn);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var NEWTAB = '_blank';
+	var MIDDLECLICK = 1;
+	
+	var OutboundLink = function (_Component) {
+	  _inherits(OutboundLink, _Component);
+	
+	  function OutboundLink() {
+	    var _ref;
+	
+	    var _temp, _this, _ret;
+	
+	    _classCallCheck(this, OutboundLink);
+	
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+	
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OutboundLink.__proto__ || Object.getPrototypeOf(OutboundLink)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function (event) {
+	      var _this$props = _this.props,
+	          target = _this$props.target,
+	          eventLabel = _this$props.eventLabel,
+	          to = _this$props.to,
+	          onClick = _this$props.onClick;
+	
+	      var eventMeta = { label: eventLabel };
+	      var sameTarget = target !== NEWTAB;
+	      var normalClick = !(event.ctrlKey || event.shiftKey || event.metaKey || event.button === MIDDLECLICK);
+	
+	      if (sameTarget && normalClick) {
+	        event.preventDefault();
+	        OutboundLink.trackLink(eventMeta, function () {
+	          window.location.href = to;
+	        });
+	      } else {
+	        OutboundLink.trackLink(eventMeta, function () {});
+	      }
+	
+	      if (onClick) {
+	        onClick(event);
+	      }
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
+	  }
+	
+	  _createClass(OutboundLink, [{
+	    key: 'render',
+	    value: function render() {
+	      var props = (0, _objectAssign2.default)({}, this.props, {
+	        href: this.props.to,
+	        onClick: this.handleClick
+	      });
+	      delete props.eventLabel;
+	      return _react2.default.createElement('a', props);
+	    }
+	  }]);
+	
+	  return OutboundLink;
+	}(_react.Component);
+	
+	OutboundLink.propTypes = {
+	  eventLabel: _propTypes2.default.string.isRequired,
+	  target: _propTypes2.default.string,
+	  to: _propTypes2.default.string,
+	  onClick: _propTypes2.default.func
+	};
+	OutboundLink.defaultProps = {
+	  target: null,
+	  to: null,
+	  onClick: null
+	};
+	
+	OutboundLink.trackLink = function () {
+	  (0, _warn2.default)('ga tracking not enabled');
+	};
+	
+	exports.default = OutboundLink;
+	
+	/***/ }),
+	/* 10 */
+	/***/ (function(module, exports) {
+	
+	module.exports = __WEBPACK_EXTERNAL_MODULE_10__;
+	
+	/***/ }),
+	/* 11 */
+	/***/ (function(module, exports) {
+	
+	module.exports = __WEBPACK_EXTERNAL_MODULE_11__;
+	
+	/***/ }),
+	/* 12 */
+	/***/ (function(module, exports) {
+	
+	module.exports = __WEBPACK_EXTERNAL_MODULE_12__;
+	
+	/***/ })
+	/******/ ]);
+	});
 
 /***/ }),
-/* 556 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 */
-	
-	'use strict';
-	
-	var React = __webpack_require__(2);
-	var factory = __webpack_require__(30);
-	
-	if (typeof React === 'undefined') {
-	  throw Error(
-	    'create-react-class could not find the React object. If you are using script tags, ' +
-	      'make sure that React is being loaded before create-react-class.'
-	  );
-	}
-	
-	// Hack to grab NoopUpdateQueue from isomorphic React
-	var ReactNoopUpdateQueue = new React.Component().updater;
-	
-	module.exports = factory(
-	  React.Component,
-	  React.isValidElement,
-	  ReactNoopUpdateQueue
-	);
-
-
-/***/ }),
-/* 557 */
+/* 548 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45395,7 +45534,7 @@
 	// files from your pages directory.
 	
 	module.exports = function (callback) {
-	  var context = __webpack_require__(558);if (false) {
+	  var context = __webpack_require__(549);if (false) {
 	    module.hot.accept(context.id, function () {
 	      context = require.context('./pages', true, /(coffee|cjsx|ts|tsx|jsx|js|md|rmd|mkdn?|mdwn|mdown|markdown|litcoffee|ipynb|html|json|yaml|toml)$/ // eslint-disable-line
 	      );return callback(context);
@@ -45405,18 +45544,18 @@
 	};
 
 /***/ }),
-/* 558 */
+/* 549 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./2017-05-11-first-blog/index.md": 559,
-		"./2017-05-12-gatsby-1/index.md": 560,
-		"./2017-05-12-styled-spinkit/index.md": 561,
-		"./2017-05-13-touch-alt/index.md": 562,
-		"./2017-05-14-react-helmet/index.md": 563,
-		"./404.md": 564,
+		"./2017-05-11-first-blog/index.md": 550,
+		"./2017-05-12-gatsby-1/index.md": 551,
+		"./2017-05-12-styled-spinkit/index.md": 552,
+		"./2017-05-13-touch-alt/index.md": 553,
+		"./2017-05-14-react-helmet/index.md": 554,
+		"./404.md": 555,
 		"./_template.js": 387,
-		"./index.js": 565
+		"./index.js": 556
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -45429,47 +45568,47 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 558;
+	webpackContext.id = 549;
 
 
 /***/ }),
-/* 559 */
+/* 550 */
 /***/ (function(module, exports) {
 
 	module.exports = {"title":"first post","date":"2017-05-11","path":"/first-post/","image":"https://akameco.github.io/blog/first-post/spring.gif","readNext":"/gatsby1/","body":"<p>HMRがないと文章を書く気持ちになれないので、<a href=\"https://github.com/gatsbyjs/gatsby\">gatsbyjs</a>を試してみることにした。</p>\n<p><img src=\"./spring.gif\" alt=\"spring\"></p>\n<p>しかし、どうやら記事を消しても反映されない。\nどこかバグってるっぽい。</p>\n<p>はやくもやる気なくなってきた。</p>\n<p>TwitterCard対応、RSS対応、SEO。\n無限にやることある。</p>\n"}
 
 /***/ }),
-/* 560 */
+/* 551 */
 /***/ (function(module, exports) {
 
 	module.exports = {"title":"Blogの設定","date":"2017-05-12","path":"/gatsby1/","readNext":"/react-helmet/","body":"<p>どうやらgatsbyが1.0に向けてものすごい感じで変わってるっぽい。\nちょっと色々設定をしようと思ったが、やめといた方が良さそう。\nよって、すぐに脱出できるように記事以外に力を入れないことにする。</p>\n"}
 
 /***/ }),
-/* 561 */
+/* 552 */
 /***/ (function(module, exports) {
 
 	module.exports = {"title":"ローディングコンポーネント(styled-spinkit)の作成 および styled-componentsとreact-storybook雑感","date":"2017-05-12","path":"/styled-spinkit/","image":"https://camo.githubusercontent.com/ef4b8106220d7a2b7fef3d2e1c6f300f54deb299/68747470733a2f2f692e6779617a6f2e636f6d2f39666466313063373365646431363439356138353462313939653866396565302e676966","body":"<p><img src=\"https://camo.githubusercontent.com/ef4b8106220d7a2b7fef3d2e1c6f300f54deb299/68747470733a2f2f692e6779617a6f2e636f6d2f39666466313063373365646431363439356138353462313939653866396565302e676966\" alt=\"gif\"></p>\n<p><a href=\"https://github.com/akameco/styled-spinkit\">akameco/styled-spinkit: Spinner Loading components</a></p>\n<p>シンプルなローディングコンポーネントがほしくてつくった。\n基本的には、<a href=\"https://github.com/tobiasahlin/SpinKit\">SpinKit</a>をそのままコンポーネント化した。</p>\n<p>Propsやコンポーネントは以下の通り。</p>\n<table>\n<thead>\n<tr>\n<th>Prop</th>\n<th>Type</th>\n<th>Default</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>color</td>\n<td>string</td>\n<td>#333</td>\n</tr>\n<tr>\n<td>size</td>\n<td>number</td>\n<td>40</td>\n</tr>\n</tbody>\n</table>\n<pre><code><span class=\"hljs-section\">&lt;ChasingDots/&gt;</span>\n<span class=\"hljs-section\">&lt;Circle/&gt;</span>\n<span class=\"hljs-section\">&lt;CubeGrid/&gt;</span>\n<span class=\"hljs-section\">&lt;Pulse/&gt;</span>\n<span class=\"hljs-section\">&lt;FadingCircle/&gt;</span>\n<span class=\"hljs-section\">&lt;ThreeBounce/&gt;</span>\n<span class=\"hljs-section\">&lt;FoldingCube/&gt;</span>\n<span class=\"hljs-section\">&lt;WanderingCubes/&gt;</span>\n<span class=\"hljs-section\">&lt;WaveLoading/&gt;</span>\n<span class=\"hljs-section\">&lt;DoubleDounceLoading/&gt;</span>\n<span class=\"hljs-section\">&lt;RotaingPlaneLoading/&gt;</span>\n</code></pre>\n<h2>react-storybook</h2>\n<p>React StoryBookを使って開発してみたが、非常によかった。\n以下がその操作画面だ。\npropsの変更や背景を変えてコンポーネントを確認できる。\nstyled-spinkitでは、colorとsizeが変更可能だ。</p>\n<div class=\"youtube\">\n  <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/SafaQIPjVkA\" frameborder=\"0\" allowfullscreen></iframe>\n</div>\n<p>そのままgithub-pagesを使ってデモにしたので、実際にpropsや背景をいじってみるのとその良さを一部体験できる。</p>\n<p><a href=\"https://akameco.github.io/styled-spinkit/?knob-color=%23333&amp;knob-number=40&amp;selectedKind=ChangeDots&amp;selectedStory=render&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-actions%2Factions-panel\">DEMO: React Storybook</a></p>\n<p>すぐにpropsに変更によってどう変わるのかが確認できるのは非常にメリットだ。</p>\n<p>また、Addonの追加により色々可能になって便利だった。\nknobsはpropsを変更可能にするアドオン。\nbackgroundsはその名の通り背景を変更するアドオンだ。</p>\n<ul>\n<li>@kadira/storybook-addon-knobs</li>\n<li>react-storybook-addon-backgrounds</li>\n</ul>\n<p>今回はclickなどのアクションがないので、その威力を十二分には発揮してないが、HMRによってストレスなく開発でき、Reactを使うなら必須だろうと思う。</p>\n<p>Storybookについてはまた記事にしたいと思う。</p>\n<h2>styled-components</h2>\n<p>さて、今回はsytle属性をそのまま扱わずCSSinJSの中でも飛び抜けて素晴らしいと思っているstyled-componentsを利用した。</p>\n<p><a href=\"https://github.com/styled-components/styled-components\">styled-components/styled-components: Visual primitives for the component age 💅</a></p>\n<p>いくつかその利点を述べたい。</p>\n<p>が、使い方はREADMEが詳しいので一切書かないので、各々上記のリンクからREADMEを読んでほしい。</p>\n<p>さて、最も大きく、そして最大の利点はstyle属性へ付加するのではなく、headにcssを出力する点にある。\nstyled-componentsはstyleのhashを計算それをclassNameとし、styleタグにcssを出力する。</p>\n<p>これは、つまり変更が容易であるということだ。</p>\n<p>既存のライブラリを活用して新しくコンポーネントをつくるとき、問題となるのはstyle属性でスタイリングされていて、上書きには、propsでstyleを渡す必要がある場合だ。\nこれは、Objectでstyleを定義するのを強制される。</p>\n<pre><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> sytle = {\n  <span class=\"hljs-attr\">width</span>: <span class=\"hljs-string\">'200px'</span>,\n  <span class=\"hljs-attr\">height</span>: <span class=\"hljs-string\">'200px'</span>,\n}\n</code></pre>\n<p>しかし、あなたのプロジェクトでは、css-loaderで読み込んでいるかもしれないし、css-moduleを使っているかもしれない、もしくは他のCSSinJSのライブラリを使っているかもしれない。<br>\nいずれにせよ、せっかくのcssをよりベストな方法で書いているにも関わらず、オブジェクトでのスタイリングを強制されるのだ。\nああ、なんて最悪だ。\nそう、<a href=\"https://github.com/callemall/material-ui\">material-ui</a>。お前だよお前。</p>\n<p>しかしながら、cssをjsとは別で配布するのはよろしい判断だとは思わない。\nなぜなら、プロジェクトに不必要なcssに同時に依存することになるからだ。</p>\n<p>jsのコンポーネントだけならwebpack2のtree shakingを用いて使われていないコンポーネントをそのまま除去できる。\nしかし、cssでは？</p>\n<p>本ライブラリはtree shakingが可能なようにcjs向けとes向けに両方ビルドしてある。\nビルドにはrollupを使った。\npackage.jsonにes向けにビルドしたライブラリは、<code>module</code>と<code>jsnext:main</code>で指定する。\nそうするとwebpackやrollupがそちらを優先して読むようになる。\nこうすることで、tree shakingが効果を発揮し、使わないコンポーネントはビルドから外すことが可能だ。</p>\n<h3>styled-components v2</h3>\n<p>ちなみに、ある理由から安定版である1.4.5ではなく、v2を使っている。</p>\n<p>そのある理由とは、ネストした子コンポーネントへのスタイリングだ。\nこれは親へのスタイリングのためのpropsを子へ流すのに便利だ。\n例えば、子コンポーネントが同じbackground-colorを必要とするとき、全ての子コンポーネントにpropsで渡さずに親に渡してやるだけで済む。</p>\n<p>Before:</p>\n<pre><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> Child = styled.div<span class=\"hljs-string\">`\n  width: 20px;\n  background-color: <span class=\"hljs-subst\">${p =&gt; p.color}</span>;\n`</span>\n\n<span class=\"hljs-keyword\">const</span> Parent = styled.div<span class=\"hljs-string\">`\n`</span>\n\n<span class=\"hljs-keyword\">const</span> App = <span class=\"hljs-function\"><span class=\"hljs-params\">()</span> =&gt;</span> (\n  &lt;Parent&gt;\n    &lt;Child color=\"red\"/&gt;\n    &lt;Child color=\"red\"/&gt;\n    &lt;Child color=\"red\"/&gt;\n  &lt;/Parent&gt;\n)\n</code></pre>\n<p>After:</p>\n<pre><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> Child = styled.div<span class=\"hljs-string\">`\n  width: 20px;\n`</span>\n\n<span class=\"hljs-keyword\">const</span> Parent = styled.div<span class=\"hljs-string\">`\n  &gt; <span class=\"hljs-subst\">${Child}</span> {\n    background-color: <span class=\"hljs-subst\">${p =&gt; p.color}</span>;\n  }\n`</span>\n\n<span class=\"hljs-keyword\">const</span> App = <span class=\"hljs-function\"><span class=\"hljs-params\">()</span> =&gt;</span> (\n  <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Parent</span> <span class=\"hljs-attr\">color</span>=<span class=\"hljs-string\">\"red\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Child</span>/&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Child</span>/&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Child</span>/&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">Parent</span>&gt;</span></span>\n)\n</code></pre>\n<p>この機能がv2からの対応でv1では使えない。\nそのため2.0.0-17を指定して使っている。(その分、バグる可能性大だ。これは大きなデメリットである)</p>\n<h3>デメリット</h3>\n<p>さて、デメリットを述べないのはフェアじゃない。\n僕は狂信者ではないので、いくつかデメリットも書こうと思う。</p>\n<ol>\n<li>v2は壊れる。</li>\n</ol>\n<p>styled-componentsのv2はいわゆるベータ版だ。\nv2をプロジェクトに導入するには早すぎる。\nSSR対応など目玉機能もあるとはいえ、悪いことは言わないので大人しくv1を使った方がいい。</p>\n<ol start=\"2\">\n<li>拡張性</li>\n</ol>\n<p>先程、styled-componentsはカスタマイズし易いと言ったな。\nあれは一部は嘘だ。</p>\n<p><a href=\"https://github.com/styled-components/styled-components/blob/master/docs/existing-css.md\">styled-components/existing-css.md at master · styled-components/styled-components</a></p>\n<p>上記のリンクに書いてある通り、classNameをオーバーライドしたところで、style-loaderはcssの挿入順序を制御できない。\nつまり、cssは後に書かれた方が優先されるため、styled-componentsによるstyleの挿入が後になると自分がオーバーライドしたつもりでオーバーライドされる。\nこれを回避するためにcssの優先度を上げるハックをする必要がある。\nつまり、同じ名前のクラスを2つ繋げる。</p>\n<pre><code class=\"language-css\"><span class=\"hljs-comment\">/* my-component.css */</span>\n<span class=\"hljs-selector-class\">.red-bg</span><span class=\"hljs-selector-class\">.red-bg</span> {\n  <span class=\"hljs-attribute\">background-color</span>: red;\n}\n</code></pre>\n<p>うーん。これはひどいな。\nしかしstyleを渡せばそれが優先されるし、styled-componentsを使っていればstyledでラップするだけなので個人的にはstyled-componentsで書かれているのは選択肢が増えていいのだけれど。</p>\n<h2>まとめ</h2>\n<p>StoryBook: めっちゃ便利だ。今すぐ使った方がいい。<br>\nsytled-components: v2はまだはやい。が、CSSinJSの中でもずば抜けてる。今すぐ使った方がいい。<br>\nstyled-spinkit: つくった。別に使わなくていい。</p>\n<ul>\n<li>\n<p><a href=\"https://github.com/storybooks/storybook\">storybooks/storybook: 📚 UI Component Dev Environment for React</a></p>\n</li>\n<li>\n<p><a href=\"https://github.com/styled-components/styled-components\">styled-components/styled-components: Visual primitives for the component age 💅</a></p>\n</li>\n<li>\n<p><a href=\"https://github.com/akameco/styled-spinkit\">akameco/styled-spinkit: Spinner Loading components</a></p>\n</li>\n</ul>\n"}
 
 /***/ }),
-/* 562 */
+/* 553 */
 /***/ (function(module, exports) {
 
 	module.exports = {"title":"touch時に空ファイルではなくテンプレートからファイルを作成する","date":"2017-05-13","path":"/touch-alt/","body":"<p>touchコマンドは基本的に新しいファイルを作成するときに使っている。\nとなると空ファイルが作られてしまうのはよろしくない。</p>\n<p>例えば、licenseファイルをプロジェクトに含め忘れたので後から追加したいとする。\nそのとき叩くのは、touch licenseもしくは、既存のプロジェクトからlicenseを探してcpをする。</p>\n<p>ここで思い至るのは、licenseファイルの内容はほぼ変わることがない。だいたい以下のような感じである。</p>\n<pre><code class=\"language-txt\">The MIT License (MIT)\n\nCopyright (c) akameco &lt;akameco.t@gmail.com&gt; (akameco.github.io)\n\nPermission is hereby granted, free <span class=\"hljs-keyword\">of</span> charge, <span class=\"hljs-built_in\">to</span> <span class=\"hljs-keyword\">any</span> person obtaining <span class=\"hljs-keyword\">a</span> copy\n<span class=\"hljs-keyword\">of</span> this software <span class=\"hljs-keyword\">and</span> associated documentation <span class=\"hljs-built_in\">files</span> (<span class=\"hljs-keyword\">the</span> <span class=\"hljs-string\">\"Software\"</span>), <span class=\"hljs-built_in\">to</span> deal\n<span class=\"hljs-keyword\">in</span> <span class=\"hljs-keyword\">the</span> Software <span class=\"hljs-keyword\">without</span> restriction, including <span class=\"hljs-keyword\">without</span> limitation <span class=\"hljs-keyword\">the</span> rights\n<span class=\"hljs-built_in\">to</span> use, copy, modify, <span class=\"hljs-built_in\">merge</span>, publish, distribute, sublicense, <span class=\"hljs-keyword\">and</span>/<span class=\"hljs-keyword\">or</span> sell\ncopies <span class=\"hljs-keyword\">of</span> <span class=\"hljs-keyword\">the</span> Software, <span class=\"hljs-keyword\">and</span> <span class=\"hljs-built_in\">to</span> permit persons <span class=\"hljs-built_in\">to</span> whom <span class=\"hljs-keyword\">the</span> Software is\n(略)\n</code></pre>\n<p>となると、これをテンプレートとしてtouchの代わりにこれを新しいファイルとして作成した方が良さそうだ。</p>\n<p>そこで、touchの代わりに使えるtouch-altを作ってみた。</p>\n<p><a href=\"https://github.com/akameco/touch-alt\"><img src=\"https://github.com/akameco/touch-alt/raw/master/media/logo.png\" alt=\"touch-alt\"></a></p>\n<p><a href=\"https://github.com/akameco/touch-alt\">akameco/touch-alt: Create from a template instead of a new file</a></p>\n<pre><code class=\"language-sh\">$ npm install --global touch-alt\n</code></pre>\n<p>使い方はtouchと同じだが、touchの本来の機能であるタイムスタンプ更新の機能はない。\n自分はほぼ使わないのでalias touch=touch-altを.zshrcに追記した。</p>\n<p>さて、使い方はtouchと同じだ。\nだが、–addフラグで新しいテンプレートを追加できる。\n追加されたファイルは~/.touch-alt以下に保存される。</p>\n<pre><code class=\"language-sh\">$ touch-alt --add license\n</code></pre>\n<p>後は、touchの代わりにtouch-altでlicenseを作成するだけだ。</p>\n<pre><code class=\"language-sh\">$ touch license\n$ cat license\n\n$ rm license\n$ ls -la ~/.touch-alt\n.             ..            license\n$ touch-alt license\n$ cat license\nThe MIT License (MIT)\n\nCopyright (c) akameco &lt;akameco.t@gmail.com&gt; (akameco.github.io)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the <span class=\"hljs-string\">\"Software\"</span>), to deal\n(略)\n</code></pre>\n<p>もちろん、テンプレートがないファイルは空ファイルを作成する。</p>\n<h2>まとめ</h2>\n<p>自分はわりとyeomenでテンプレートを作成することが多いが、既存のプロジェクトにわりといつも使う設定を持ってきたいときに便利であると思う。\n例えば、.babelrcや.eslinrc、.editorconfigなどがそれだ。</p>\n<p>自分で使っててわりと便利なので、是非使ってくれると嬉しい。</p>\n<p><a href=\"https://github.com/akameco/touch-alt\">akameco/touch-alt: Create from a template instead of a new file</a></p>\n<p>実際のところ、すでにテンプレートが保存してあればそれをコピーしてくるだけのスクリプトだが、この手のスクリプトはどうやってもtestの方が行数が増えるのが面倒なところだった。</p>\n"}
 
 /***/ }),
-/* 563 */
+/* 554 */
 /***/ (function(module, exports) {
 
 	module.exports = {"title":"React Helmetを使ってOGP対応した","date":"2017-05-14","path":"/react-helmet/","image":"https://akameco.github.io/blog/react-helmet/ogp.png","body":"<p>Reaact Helmetを使ってこのブログのOGP対応した。</p>\n<p><a href=\"https://github.com/nfl/react-helmet\">nfl/react-helmet: A document head manager for React</a></p>\n<p>OGP対応するとtwitterとかfacebookとかslackとかでいい感じに展開してくれて、イケてる感じになる。\nまあwebで記事を書くなら必須だろう。</p>\n<p><img src=\"./ogp.png\" alt=\"opg\"></p>\n<p>このブログはReactを使って書かれているのでOGP対応がちょいめんどい。\nしかし、React Helmetを使って簡単に可能できた。</p>\n<p>gatsby.jsだとwrappers/md.jsに以下を追記した。</p>\n<pre><code class=\"language-js\">&lt;Helmet\n\ttitle={title}\n\tmeta={[\n\t\t{ <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">'description'</span>, <span class=\"hljs-attr\">content</span>: description },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:title'</span>, <span class=\"hljs-attr\">content</span>: post.title },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:type'</span>, <span class=\"hljs-attr\">content</span>: <span class=\"hljs-string\">'blog'</span> },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:url'</span>, <span class=\"hljs-attr\">content</span>: postUrl },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:image'</span>, <span class=\"hljs-attr\">content</span>: post.image || config.ogImage },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:description'</span>, <span class=\"hljs-attr\">content</span>: description },\n\t\t{ <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">'twitter:card'</span>, <span class=\"hljs-attr\">content</span>: <span class=\"hljs-string\">'summary'</span> },\n\t\t{ <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">'twitter:site'</span>, <span class=\"hljs-attr\">content</span>: <span class=\"hljs-string\">'@akameco'</span> },\n\t]}\n/&gt;\n</code></pre>\n<p>OGPについては以下のサイトが参考になった。</p>\n<p><a href=\"https://ferret-plus.com/610\">Facebook・TwitterのOGP設定方法まとめ｜ferret [フェレット]</a></p>\n<p>また、上記のdescriptionだけど、文字数制限があるので雑に以下のようにした。</p>\n<pre><code class=\"language-js\">    <span class=\"hljs-keyword\">const</span> description =\n      striptags(post.body).replace(<span class=\"hljs-regexp\">/\\r?\\n/g</span>, <span class=\"hljs-string\">''</span>).slice(<span class=\"hljs-number\">0</span>, <span class=\"hljs-number\">120</span>) + <span class=\"hljs-string\">'...'</span>\n</code></pre>\n<p><a href=\"https://github.com/ericnorris/striptags\">striptags</a>を使ってpost.bodyとして渡ってきたjsxをパースして文字列に変換して最後に…を追加してる。\nこの辺は文字数オーバーしてると自動で付けてくれるっぽいので必要ないかもしれない。</p>\n"}
 
 /***/ }),
-/* 564 */
+/* 555 */
 /***/ (function(module, exports) {
 
 	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
 
 /***/ }),
-/* 565 */
+/* 556 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45512,7 +45651,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(566);
+	var _Footer = __webpack_require__(557);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -45598,7 +45737,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 566 */
+/* 557 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45655,16 +45794,14 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 567 */
+/* 558 */
 /***/ (function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) 2013-present, Facebook, Inc.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
 	 * 
 	 */
