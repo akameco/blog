@@ -10,7 +10,7 @@
   "dependencies": {
     "gatsby": "^0.12.46",
     "lodash": "^4.17.2",
-    "moment": "^2.18.1",
+    "moment": "^2.20.1",
     "react-addons-shallow-compare": "^15.5.2",
     "react-ga": "^2.2.0",
     "react-helmet": "^5.0.3",
@@ -22,20 +22,23 @@
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {
+    "ejs": "^2.5.7",
     "flow-bin": "^0.46.0",
-    "gh-pages": "^1.0.0"
+    "gh-pages": "^1.0.0",
+    "meow": "^4.0.0",
+    "shelljs": "^0.7.8"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/akameco/blog.git"
   },
   "scripts": {
+    "add-page": "node ./scripts/index.js",
+    "nippo": "node ./scripts/nippo.js",
     "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "gatsby develop",
     "build": "gatsby build",
