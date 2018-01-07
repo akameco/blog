@@ -42941,8 +42941,7 @@
 	        _react2.default.createElement(
 	          'p',
 	          null,
-	          'Written by',
-	          ' ',
+	          'Written by ',
 	          _react2.default.createElement(
 	            'strong',
 	            null,
