@@ -1,5 +1,5 @@
 ---
-title: "value-commit"
+title: "意味のあるコミット"
 date: "2018-01-08"
 path: "/2018-01-08-value-commit/"
 ---
