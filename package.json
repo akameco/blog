@@ -45,6 +45,6 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "gh-pages": "gh-pages -d public -x",
-    "deploy": "gatsby build --prefix-links && ./deploy.sh"
+    "deploy": "gatsby build --prefix-links && ./scripts/deploy.sh"
   }
 }
