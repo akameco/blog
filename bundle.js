@@ -44507,14 +44507,14 @@
 
 	(function webpackUniversalModuleDefinition(root, factory) {
 		if(true)
-			module.exports = factory(__webpack_require__(2), __webpack_require__(388), __webpack_require__(4));
+			module.exports = factory(__webpack_require__(2), __webpack_require__(388));
 		else if(typeof define === 'function' && define.amd)
-			define(["react", "prop-types", "object-assign"], factory);
+			define(["react", "prop-types"], factory);
 		else {
-			var a = typeof exports === 'object' ? factory(require("react"), require("prop-types"), require("object-assign")) : factory(root["react"], root["prop-types"], root["object-assign"]);
+			var a = typeof exports === 'object' ? factory(require("react"), require("prop-types")) : factory(root["react"], root["prop-types"]);
 			for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 		}
-	})(this, function(__WEBPACK_EXTERNAL_MODULE_10__, __WEBPACK_EXTERNAL_MODULE_11__, __WEBPACK_EXTERNAL_MODULE_12__) {
+	})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_11__, __WEBPACK_EXTERNAL_MODULE_12__) {
 	return /******/ (function(modules) { // webpackBootstrap
 	/******/ 	// The module cache
 	/******/ 	var installedModules = {};
@@ -44623,7 +44623,9 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.OutboundLink = exports.plugin = undefined;
+	exports.testModeAPI = exports.OutboundLink = exports.plugin = undefined;
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 	
@@ -44662,7 +44664,11 @@
 	
 	var _log2 = _interopRequireDefault(_log);
 	
-	var _OutboundLink = __webpack_require__(9);
+	var _testModeAPI = __webpack_require__(9);
+	
+	var _testModeAPI2 = _interopRequireDefault(_testModeAPI);
+	
+	var _OutboundLink = __webpack_require__(10);
 	
 	var _OutboundLink2 = _interopRequireDefault(_OutboundLink);
 	
@@ -44685,9 +44691,14 @@
 	
 	var _debug = false;
 	var _titleCase = true;
+	var _testMode = false;
 	
 	var internalGa = function internalGa() {
-	  (0, _warn2.default)('ReactGA.initialize must be called first');
+	  var _window;
+	
+	  if (_testMode) return _testModeAPI2.default.ga.apply(_testModeAPI2.default, arguments);
+	  if (!window.ga) return (0, _warn2.default)('ReactGA.initialize must be called first or GoogleAnalytics should be loaded manually');
+	  return (_window = window).ga.apply(_window, arguments);
 	};
 	
 	function _format(s) {
@@ -44738,20 +44749,19 @@
 	  }
 	}
 	
-	function initialize(configs, options) {
-	  if (typeof window === 'undefined') {
-	    return false;
+	function initialize(configsOrTrackingId, options) {
+	  if (options && options.testMode === true) {
+	    _testMode = true;
+	  } else {
+	    if (typeof window === 'undefined') {
+	      return false;
+	    }
+	
+	    (0, _loadGA2.default)(options);
 	  }
 	
-	  (0, _loadGA2.default)();
-	  internalGa = function internalGa() {
-	    var _window;
-	
-	    return (_window = window).ga.apply(_window, arguments);
-	  };
-	
-	  if (Array.isArray(configs)) {
-	    configs.forEach(function (config) {
+	  if (Array.isArray(configsOrTrackingId)) {
+	    configsOrTrackingId.forEach(function (config) {
 	      if ((typeof config === 'undefined' ? 'undefined' : _typeof(config)) !== 'object') {
 	        (0, _warn2.default)('All configs must be an object');
 	        return;
@@ -44759,7 +44769,7 @@
 	      _initialize(config.trackingId, config);
 	    });
 	  } else {
-	    _initialize(configs, options);
+	    _initialize(configsOrTrackingId, options);
 	  }
 	  return true;
 	}
@@ -44835,8 +44845,9 @@
 	 * Basic GA pageview tracking
 	 * @param  {String} path - the current page page e.g. '/about'
 	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 * @param {String} title - (optional) the page title e. g. 'My Website'
 	 */
-	function pageview(rawPath, trackerNames) {
+	function pageview(rawPath, trackerNames, title) {
 	  if (!rawPath) {
 	    (0, _warn2.default)('path is required in .pageview()');
 	    return;
@@ -44848,12 +44859,24 @@
 	    return;
 	  }
 	
+	  var extraFields = {};
+	  if (title) {
+	    extraFields.title = title;
+	  }
+	
 	  if (typeof ga === 'function') {
-	    _gaCommand(trackerNames, 'send', 'pageview', path);
+	    _gaCommand(trackerNames, 'send', _extends({
+	      hitType: 'pageview',
+	      page: path
+	    }, extraFields));
 	
 	    if (_debug) {
 	      (0, _log2.default)('called ga(\'send\', \'pageview\', path);');
-	      (0, _log2.default)('with path: ' + path);
+	      var extraLog = '';
+	      if (title) {
+	        extraLog = ' and title: ' + title;
+	      }
+	      (0, _log2.default)('with path: ' + path + extraLog);
 	    }
 	  }
 	}
@@ -45213,6 +45236,7 @@
 	_OutboundLink2.default.origTrackLink = _OutboundLink2.default.trackLink;
 	_OutboundLink2.default.trackLink = outboundLink;
 	var OutboundLink = exports.OutboundLink = _OutboundLink2.default;
+	var testModeAPI = exports.testModeAPI = _testModeAPI2.default;
 	
 	exports.default = {
 	  initialize: initialize,
@@ -45226,7 +45250,8 @@
 	  exception: exception,
 	  plugin: plugin,
 	  outboundLink: outboundLink,
-	  OutboundLink: OutboundLink
+	  OutboundLink: OutboundLink,
+	  testModeAPI: _testModeAPI2.default
 	};
 	
 	/***/ }),
@@ -45357,7 +45382,7 @@
 	  value: true
 	});
 	
-	exports.default = function () {
+	exports.default = function (options) {
 	  // https://developers.google.com/analytics/devguides/collection/analyticsjs/
 	  /* eslint-disable */
 	  (function (i, s, o, g, r, a, m) {
@@ -45369,7 +45394,7 @@
 	    a.async = 1;
 	    a.src = g;
 	    m.parentNode.insertBefore(a, m);
-	  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+	  })(window, document, 'script', options && options.gaAddress ? options.gaAddress : 'https://www.google-analytics.com/analytics.js', 'ga');
 	  /* eslint-enable */
 	};
 	
@@ -45398,20 +45423,41 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	var gaCalls = exports.gaCalls = [];
+	
+	exports.default = {
+	  calls: gaCalls,
+	  ga: function ga() {
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+	
+	    gaCalls.push([].concat(args));
+	  }
+	};
+	
+	/***/ }),
+	/* 10 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _react = __webpack_require__(10);
+	var _react = __webpack_require__(11);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _propTypes = __webpack_require__(11);
+	var _propTypes = __webpack_require__(12);
 	
 	var _propTypes2 = _interopRequireDefault(_propTypes);
-	
-	var _objectAssign = __webpack_require__(12);
-	
-	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
 	var _warn = __webpack_require__(0);
 	
@@ -45471,7 +45517,7 @@
 	  _createClass(OutboundLink, [{
 	    key: 'render',
 	    value: function render() {
-	      var props = (0, _objectAssign2.default)({}, this.props, {
+	      var props = _extends({}, this.props, {
 	        href: this.props.to,
 	        onClick: this.handleClick
 	      });
@@ -45500,12 +45546,6 @@
 	};
 	
 	exports.default = OutboundLink;
-	
-	/***/ }),
-	/* 10 */
-	/***/ (function(module, exports) {
-	
-	module.exports = __WEBPACK_EXTERNAL_MODULE_10__;
 	
 	/***/ }),
 	/* 11 */
