@@ -21,12 +21,9 @@ class Bio extends React.PureComponent {
           }}
         />
         <p>
-          Written by
-          {' '}
-          <strong>{config.authorName}</strong>
+          Written by <strong>{config.authorName}</strong>
           <div>
-            <a href="https://twitter.com/akameco">Twitter</a>
-            {' '}
+            <a href="https://twitter.com/akameco">Twitter</a>{' '}
             <a href="https://github.com/akameco">GitHub</a>
           </div>
         </p>

@@ -21,5 +21,5 @@ ejs.renderFile(
   { title: dateStr, date: dateStr, path: `/${dateStr}/` },
   (err, output) => {
     fs.writeFileSync(outputPath, output)
-  }
+  },
 )

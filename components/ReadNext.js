@@ -59,19 +59,21 @@ export default class ReadNext extends React.Component {
 
     return (
       <div>
-        {nextPost &&
+        {nextPost && (
           <Item
             header="次の記事"
             title={nextPost.data.title}
             path={nextPost.path}
-          />}
+          />
+        )}
 
-        {beforePost &&
+        {beforePost && (
           <Item
             header="前の記事"
             title={beforePost.data.title}
             path={beforePost.path}
-          />}
+          />
+        )}
 
         <hr />
       </div>

@@ -30,5 +30,5 @@ ejs.renderFile(
   { title, date: dateStr, path: `/${titleWithDate}/` },
   (err, output) => {
     fs.writeFileSync(outputPath, output)
-  }
+  },
 )

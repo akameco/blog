@@ -23,7 +23,7 @@ class BlogIndex extends React.Component {
     const visiblePages = sortedPages.filter(
       page =>
         (get(page, 'file.ext') === 'md' && !include(page.path, '/404')) ||
-        get(page, 'data.date')
+        get(page, 'data.date'),
     )
 
     const footerHeight = 140
