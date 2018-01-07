@@ -37,7 +37,7 @@
   },
   "scripts": {
     "fmt": "prettier --write \"**/*.{js,json}\"",
-    "add-page": "node ./scripts/index.js | xargs -o vim",
+    "add-page": "./scripts/add-page.sh",
     "nippo": "node ./scripts/nippo.js | xargs -o vim",
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
