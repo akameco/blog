@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[562, 7],
+[564, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5811,7 +5811,7 @@
 
 /***/ },
 /* 50 */
-[562, 35],
+[564, 35],
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31262,6 +31262,48 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2018-01-08-value-commit",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-08-value-commit",
+					"stem": "index",
+					"path": "2018-01-08-value-commit/index.md"
+				},
+				"requirePath": "2018-01-08-value-commit/index.md",
+				"path": "/2018-01-08-value-commit/",
+				"data": {
+					"title": "value-commit",
+					"date": "2018-01-08",
+					"path": "/2018-01-08-value-commit/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
+					"dir": "2018-01-08",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-08",
+					"stem": "index",
+					"path": "2018-01-08/index.md"
+				},
+				"requirePath": "2018-01-08/index.md",
+				"path": "/2018-01-08/",
+				"data": {
+					"title": "2018-01-08",
+					"date": "2018-01-08",
+					"path": "/2018-01-08/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "",
 					"base": "404.md",
 					"ext": "md",
@@ -46213,9 +46255,11 @@
 		"./2017-05-13-touch-alt/index.md": 556,
 		"./2017-05-14-react-helmet/index.md": 557,
 		"./2018-01-07/index.md": 558,
-		"./404.md": 559,
+		"./2018-01-08-value-commit/index.md": 559,
+		"./2018-01-08/index.md": 560,
+		"./404.md": 561,
 		"./_template.js": 386,
-		"./index.js": 560
+		"./index.js": 562
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46271,10 +46315,22 @@
 /* 559 */
 /***/ function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"value-commit","date":"2018-01-08","path":"/2018-01-08-value-commit/","body":"<p>意味のあるコミット\n10月あたりから意味のあるコミットが出来てない。\n単なる作業を繰り返してる気がする。</p>\n<p>おそらくアウトプットの時期じゃないのだろうと納得して、インプットに専念することにしようと思う。</p>\n<p>そう言えば、去年は意識的に本を読む数を減らしていた。\n年間で10冊も読んでない。\nあとでその理由も書き出しておこう。</p>\n<p>今月はその逆に、意識的に読書する時間を作ろうと思う。</p>\n"}
 
 /***/ },
 /* 560 */
+/***/ function(module, exports) {
+
+	module.exports = {"title":"2018-01-08","date":"2018-01-08","path":"/2018-01-08/","body":""}
+
+/***/ },
+/* 561 */
+/***/ function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ },
+/* 562 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46317,7 +46373,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(561);
+	var _Footer = __webpack_require__(563);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -46403,7 +46459,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 561 */
+/* 563 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46460,7 +46516,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 562 */
+/* 564 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
