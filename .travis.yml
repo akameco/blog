@@ -2,9 +2,18 @@ language: node_js
 sudo: false
 node_js:
   - '8'
-install: npm install
 script:
-  - npm run deploy
+  - yarn run deploy
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH="$HOME/.yarn/bin:$PATH"
+cache:
+  yarn: true
+  directories:
+    - ".eslintcache"
+    - "node_modules"
+notifications:
+  email: false
 env:
   global:
   - secure: VPfZX/w00acDgwJo3wB7YGOj0Be0aWJnky3x/ygid68vCzIRomVymh8kYziIA+6u+kRkU7PwTFzjJ7Ei3V6Yv5o6hQB7+t1DIWAm3J/4UOnkX1bxqCqkgmeJd/oKiNQY+NO88NCIYPpFsMgha7nOX54x4arwNJj+KCjfaHjqdxGniRVH1DY9ld0I5DUxHq3O0nDgGagDsT+x6a59FHA8qfM5z7mtl+LFzkdyUgLD7JY/704ntP8eePU4kdWlCglVCzZWEIiokfMJjOdNy7J2WJ1ZxHCbKdgWickUcvx8jgXfjQ2dSHTqN5h6pmpYIMYObWc4M8l3IgYjpxHUJQWkOHEvyqzVm/58m3ojlWdvrgix8JNjvMXnmlMsh8n7VR2QSQbS1YHQDvKR+wfAilI2BBhcrLq3MUUiVmkHljUrES5ME47A6abby5KyNn46knZOHxSZfSZgC4W2Sx5ORfk9aVhT1uDaA3Kf+KfY5PB4ryFkEjMcs6Y00jRf93N8+zFfMgZVCJ+uRRVTfVTqyNOjKMuWmGOmEXFpg0Xj1rEpa6WZ6Pnkusy4MMXUxAYYtV0zcoDqFSeku/ZAvXNUu20ivhj68kFLv65QotkVFcYza0pVgQZU6grwnGccNXO8KjZuLnwVg2mhiHmkNXFAIXSw120qjGm6kSv/f/3ILc+Pyds=
