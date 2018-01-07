@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[564, 7],
+[565, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5811,7 +5811,7 @@
 
 /***/ },
 /* 50 */
-[564, 35],
+[565, 35],
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31262,6 +31262,27 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2018-01-08-hulu",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-08-hulu",
+					"stem": "index",
+					"path": "2018-01-08-hulu/index.md"
+				},
+				"requirePath": "2018-01-08-hulu/index.md",
+				"path": "/2018-01-08-hulu/",
+				"data": {
+					"title": "huluのディスプレイ認識がひどい",
+					"date": "2018-01-08",
+					"path": "/2018-01-08-hulu/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "2018-01-08-value-commit",
 					"base": "index.md",
 					"ext": "md",
@@ -46255,11 +46276,12 @@
 		"./2017-05-13-touch-alt/index.md": 556,
 		"./2017-05-14-react-helmet/index.md": 557,
 		"./2018-01-07/index.md": 558,
-		"./2018-01-08-value-commit/index.md": 559,
-		"./2018-01-08/index.md": 560,
-		"./404.md": 561,
+		"./2018-01-08-hulu/index.md": 559,
+		"./2018-01-08-value-commit/index.md": 560,
+		"./2018-01-08/index.md": 561,
+		"./404.md": 562,
 		"./_template.js": 386,
-		"./index.js": 562
+		"./index.js": 563
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46315,22 +46337,28 @@
 /* 559 */
 /***/ function(module, exports) {
 
-	module.exports = {"title":"value-commit","date":"2018-01-08","path":"/2018-01-08-value-commit/","body":"<p>意味のあるコミット\n10月あたりから意味のあるコミットが出来てない。\n単なる作業を繰り返してる気がする。</p>\n<p>おそらくアウトプットの時期じゃないのだろうと納得して、インプットに専念することにしようと思う。</p>\n<p>そう言えば、去年は意識的に本を読む数を減らしていた。\n年間で10冊も読んでない。\nあとでその理由も書き出しておこう。</p>\n<p>今月はその逆に、意識的に読書する時間を作ろうと思う。</p>\n"}
+	module.exports = {"title":"huluのディスプレイ認識がひどい","date":"2018-01-08","path":"/2018-01-08-hulu/","body":"<p>huluを見ているが、ディスプレイにHDMIに繋いでも動画が再生されない。\nどうやら、ディスプレイによって見れないものがある模様。</p>\n<blockquote>\n<p>HDCP対応機器であっても、ハードウェアの組み合わせや、インストールされているソフトウェアの組み合わせなどにより、HDCP未対応・アナログ出力と判断され視聴ができない場合があります。- <a href=\"https://help.happyon.jp/faq/show/3104?site_domain=jp\">https://help.happyon.jp/faq/show/3104?site_domain=jp</a></p>\n</blockquote>\n<p>仕方なくMBPの画面で見てるけど、ディスプレイに繋いだ瞬間MBPの画面でも見れなくなる。\nあまりに使えなさ過ぎる。\nnetflixもamazon prime videoも、もちろんyoutubeもそんなことないのでhuluがアレな感じ。\n普通に無料期間が過ぎたら解約しようと思う。</p>\n"}
 
 /***/ },
 /* 560 */
 /***/ function(module, exports) {
 
-	module.exports = {"title":"2018-01-08","date":"2018-01-08","path":"/2018-01-08/","body":""}
+	module.exports = {"title":"value-commit","date":"2018-01-08","path":"/2018-01-08-value-commit/","body":"<p>意味のあるコミット\n10月あたりから意味のあるコミットが出来てない。\n単なる作業を繰り返してる気がする。</p>\n<p>おそらくアウトプットの時期じゃないのだろうと納得して、インプットに専念することにしようと思う。</p>\n<p>そう言えば、去年は意識的に本を読む数を減らしていた。\n年間で10冊も読んでない。\nあとでその理由も書き出しておこう。</p>\n<p>今月はその逆に、意識的に読書する時間を作ろうと思う。</p>\n"}
 
 /***/ },
 /* 561 */
 /***/ function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"2018-01-08","date":"2018-01-08","path":"/2018-01-08/","body":""}
 
 /***/ },
 /* 562 */
+/***/ function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ },
+/* 563 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46373,7 +46401,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(563);
+	var _Footer = __webpack_require__(564);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -46459,7 +46487,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 563 */
+/* 564 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46516,7 +46544,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 564 */
+/* 565 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
