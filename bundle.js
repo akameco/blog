@@ -99,7 +99,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	/*  weak */
-	var loadContext = __webpack_require__(561);
+	var loadContext = __webpack_require__(551);
 	
 	function loadConfig(cb) {
 	  var stuff = __webpack_require__(384);
@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[572, 7],
+[562, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5811,7 +5811,7 @@
 
 /***/ },
 /* 50 */
-[572, 35],
+[562, 35],
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -32371,7 +32371,8 @@
 	var typography = function typography(opts) {
 	  var defaults = {
 	    baseFontSize: '16px',
-	    baseLineHeight: 1.5,
+	    baseLineHeight: 1.45,
+	    headerLineHeight: 1.1,
 	    scaleRatio: 2,
 	    googleFonts: [],
 	    headerFontFamily: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'sans-serif'],
@@ -32396,7 +32397,7 @@
 	    // This doesn't pick the right scale ratio if a theme has more than one ratio.
 	    // Perhaps add optional parameter for a width and it'll get the ratio
 	    // for this width. Tricky part is maxWidth could be set in non-pixels.
-	    var baseFont = options.baseFontSize.slice(0, -2);
+	    var baseFont = parseInt(options.baseFontSize, 10);
 	    var newFontSize = (0, _modularscale2.default)(value, options.scaleRatio) * baseFont + 'px';
 	    return vr.adjustFontSizeTo(newFontSize);
 	  };
@@ -32832,7 +32833,7 @@
 /* 409 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
@@ -32887,10 +32888,17 @@
 	  }
 	  (0, _forEach2.default)(elements, function (element) {
 	    (0, _forEach2.default)(rules, function (value, prop) {
-	      (0, _set2.default)(styles, element + '.' + prop, value);
+	      (0, _set2.default)(styles, element + "." + prop, value);
 	    });
 	  });
 	  return styles;
+	};
+	
+	// Wrap font names in quotes, unless the font name is actually a keyword.
+	// See https://stackoverflow.com/a/13752149 and https://www.w3.org/TR/CSS2/fonts.html#font-family-prop
+	var genericFontFamilies = ['inherit', 'default', 'serif', 'sans-serif', 'monospace', 'fantasy', 'cursive', '-apple-system'];
+	var wrapFontFamily = function wrapFontFamily(fontFamily) {
+	  return genericFontFamilies.indexOf(fontFamily) !== -1 ? fontFamily : "'" + fontFamily + "'";
 	};
 	
 	module.exports = function (vr, options) {
@@ -32903,24 +32911,24 @@
 	  // Base HTML styles.
 	
 	
-	  styles = setStyles(styles, 'html', {
-	    font: fontSize + '/' + lineHeight + ' ' + options.bodyFontFamily.join(','),
-	    boxSizing: 'border-box',
-	    overflowY: 'scroll'
+	  styles = setStyles(styles, "html", {
+	    font: fontSize + "/" + lineHeight + " " + options.bodyFontFamily.map(wrapFontFamily).join(","),
+	    boxSizing: "border-box",
+	    overflowY: "scroll"
 	  });
 	
 	  // box-sizing reset.
-	  styles = setStyles(styles, ['*', '*:before', '*:after'], {
-	    boxSizing: 'inherit'
+	  styles = setStyles(styles, ["*", "*:before", "*:after"], {
+	    boxSizing: "inherit"
 	  });
 	
 	  // Base body styles.
-	  styles = setStyles(styles, 'body', {
+	  styles = setStyles(styles, "body", {
 	    color: options.bodyColor,
-	    fontFamily: options.bodyFontFamily.join(','),
+	    fontFamily: options.bodyFontFamily.map(wrapFontFamily).join(","),
 	    fontWeight: options.bodyWeight,
-	    wordWrap: 'break-word',
-	    fontKerning: 'normal',
+	    wordWrap: "break-word",
+	    fontKerning: "normal",
 	    MozFontFeatureSettings: '"kern", "liga", "clig", "calt"',
 	    msFontFeatureSettings: '"kern", "liga", "clig", "calt"',
 	    WebkitFontFeatureSettings: '"kern", "liga", "clig", "calt"',
@@ -32928,13 +32936,13 @@
 	  });
 	
 	  // Make images responsive.
-	  styles = setStyles(styles, 'img', {
-	    maxWidth: '100%'
+	  styles = setStyles(styles, "img", {
+	    maxWidth: "100%"
 	  });
 	
 	  // All block elements get one rhythm of bottom margin by default
 	  // or whatever is passed in as option.
-	  var blockMarginBottom = '';
+	  var blockMarginBottom = "";
 	  if ((0, _isNumber2.default)(options.blockMarginBottom)) {
 	    blockMarginBottom = vr.rhythm(options.blockMarginBottom);
 	  } else if ((0, _isString2.default)(options.blockMarginBottom)) {
@@ -32942,8 +32950,7 @@
 	  } else {
 	    blockMarginBottom = vr.rhythm(1);
 	  }
-	  styles = setStyles(styles, ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'hgroup', 'ul', 'ol', 'dl', 'dd', 'p', 'figure', 'pre', 'table', 'fieldset', 'blockquote', 'form', 'noscript', 'iframe', 'img', 'hr', 'address'], {
-	
+	  styles = setStyles(styles, ["h1", "h2", "h3", "h4", "h5", "h6", "hgroup", "ul", "ol", "dl", "dd", "p", "figure", "pre", "table", "fieldset", "blockquote", "form", "noscript", "iframe", "img", "hr", "address"], {
 	    // Reset margin/padding to 0.
 	    marginLeft: 0,
 	    marginRight: 0,
@@ -32956,86 +32963,86 @@
 	  });
 	
 	  // Basic blockquote styles.
-	  styles = setStyles(styles, 'blockquote', {
+	  styles = setStyles(styles, "blockquote", {
 	    marginRight: vr.rhythm(1),
 	    marginBottom: blockMarginBottom,
 	    marginLeft: vr.rhythm(1)
 	  });
 	
 	  // b, strong.
-	  styles = setStyles(styles, ['b', 'strong', 'dt', 'th'], {
+	  styles = setStyles(styles, ["b", "strong", "dt", "th"], {
 	    fontWeight: options.boldWeight
 	  });
 	
 	  // hr.
-	  styles = setStyles(styles, 'hr', {
+	  styles = setStyles(styles, "hr", {
 	    background: (0, _grayPercentage2.default)(80),
-	    border: 'none',
-	    height: '1px',
-	    marginBottom: 'calc(' + blockMarginBottom + ' - 1px)'
+	    border: "none",
+	    height: "1px",
+	    marginBottom: "calc(" + blockMarginBottom + " - 1px)"
 	  });
 	
 	  // ol, ul.
-	  styles = setStyles(styles, ['ol', 'ul'], {
-	    listStylePosition: 'outside',
-	    listStyleImage: 'none',
+	  styles = setStyles(styles, ["ol", "ul"], {
+	    listStylePosition: "outside",
+	    listStyleImage: "none",
 	    marginLeft: vr.rhythm(1)
 	  });
 	
 	  // li.
-	  styles = setStyles(styles, 'li', {
-	    marginBottom: 'calc(' + blockMarginBottom + ' / 2)'
+	  styles = setStyles(styles, "li", {
+	    marginBottom: "calc(" + blockMarginBottom + " / 2)"
 	  });
 	
 	  // Remove default padding on list items.
-	  styles = setStyles(styles, ['ol li', 'ul li'], {
+	  styles = setStyles(styles, ["ol li", "ul li"], {
 	    paddingLeft: 0
 	  });
 	
 	  // children ol, ul.
-	  styles = setStyles(styles, ['li > ol', 'li > ul'], {
+	  styles = setStyles(styles, ["li > ol", "li > ul"], {
 	    marginLeft: vr.rhythm(1),
-	    marginBottom: 'calc(' + blockMarginBottom + ' / 2)',
-	    marginTop: 'calc(' + blockMarginBottom + ' / 2)'
+	    marginBottom: "calc(" + blockMarginBottom + " / 2)",
+	    marginTop: "calc(" + blockMarginBottom + " / 2)"
 	  });
 	
 	  // Remove margin-bottom on the last-child of a few block elements
 	  // The worst offender of this seems to be markdown => html compilers
 	  // as they put paragraphs within LIs amoung other oddities.
-	  styles = setStyles(styles, ['blockquote *:last-child', 'li *:last-child', 'p *:last-child'], {
+	  styles = setStyles(styles, ["blockquote *:last-child", "li *:last-child", "p *:last-child"], {
 	    marginBottom: 0
 	  });
 	
 	  // Ensure li > p is 1/2 margin — this is another markdown => compiler oddity.
-	  styles = setStyles(styles, ['li > p'], {
-	    marginBottom: 'calc(' + blockMarginBottom + ' / 2)'
+	  styles = setStyles(styles, ["li > p"], {
+	    marginBottom: "calc(" + blockMarginBottom + " / 2)"
 	  });
 	
 	  // Make generally smaller elements, smaller.
-	  styles = setStyles(styles, ['code', 'kbd', 'pre', 'samp'], _extends({}, vr.adjustFontSizeTo('85%')));
+	  styles = setStyles(styles, ["code", "kbd", "pre", "samp"], _extends({}, vr.adjustFontSizeTo("85%")));
 	
 	  // Abbr, Acronym.
-	  styles = setStyles(styles, ['abbr', 'acronym'], {
-	    borderBottom: '1px dotted ' + (0, _grayPercentage2.default)(50),
-	    cursor: 'help'
+	  styles = setStyles(styles, ["abbr", "acronym"], {
+	    borderBottom: "1px dotted " + (0, _grayPercentage2.default)(50),
+	    cursor: "help"
 	  });
-	  styles['abbr[title]'] = {
-	    borderBottom: '1px dotted ' + (0, _grayPercentage2.default)(50),
-	    cursor: 'help',
-	    textDecoration: 'none'
+	  styles["abbr[title]"] = {
+	    borderBottom: "1px dotted " + (0, _grayPercentage2.default)(50),
+	    cursor: "help",
+	    textDecoration: "none"
 	  };
 	
 	  // Table styles.
-	  styles = setStyles(styles, ['table'], _extends({}, vr.adjustFontSizeTo(options.baseFontSize), {
-	    borderCollapse: 'collapse',
-	    width: '100%'
+	  styles = setStyles(styles, ["table"], _extends({}, vr.adjustFontSizeTo(options.baseFontSize), {
+	    borderCollapse: "collapse",
+	    width: "100%"
 	  }));
-	  styles = setStyles(styles, ['thead'], {
-	    textAlign: 'left'
+	  styles = setStyles(styles, ["thead"], {
+	    textAlign: "left"
 	  });
-	  styles = setStyles(styles, ['td,th'], {
-	    textAlign: 'left',
-	    borderBottom: '1px solid ' + (0, _grayPercentage2.default)(88),
+	  styles = setStyles(styles, ["td,th"], {
+	    textAlign: "left",
+	    borderBottom: "1px solid " + (0, _grayPercentage2.default)(88),
 	    fontFeatureSettings: '"tnum"',
 	    MozFontFeatureSettings: '"tnum"',
 	    msFontFeatureSettings: '"tnum"',
@@ -33043,21 +33050,21 @@
 	    paddingLeft: vr.rhythm(2 / 3),
 	    paddingRight: vr.rhythm(2 / 3),
 	    paddingTop: vr.rhythm(1 / 2),
-	    paddingBottom: 'calc(' + vr.rhythm(1 / 2) + ' - 1px)'
+	    paddingBottom: "calc(" + vr.rhythm(1 / 2) + " - 1px)"
 	  });
-	  styles = setStyles(styles, 'th:first-child,td:first-child', {
+	  styles = setStyles(styles, "th:first-child,td:first-child", {
 	    paddingLeft: 0
 	  });
-	  styles = setStyles(styles, 'th:last-child,td:last-child', {
+	  styles = setStyles(styles, "th:last-child,td:last-child", {
 	    paddingRight: 0
 	  });
 	
 	  // Create styles for headers.
-	  styles = setStyles(styles, ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'], {
+	  styles = setStyles(styles, ["h1", "h2", "h3", "h4", "h5", "h6"], {
 	    color: options.headerColor,
-	    fontFamily: options.headerFontFamily.join(','),
+	    fontFamily: options.headerFontFamily.map(wrapFontFamily).join(","),
 	    fontWeight: options.headerWeight,
-	    textRendering: 'optimizeLegibility'
+	    textRendering: "optimizeLegibility"
 	  });
 	
 	  // Set header sizes.
@@ -33069,8 +33076,8 @@
 	  var h6 = vr.scale(-1.5 / 5);
 	
 	  (0, _forEach2.default)([h1, h2, h3, h4, h5, h6], function (header, i) {
-	    styles = (0, _set2.default)(styles, 'h' + (i + 1) + '.fontSize', header.fontSize);
-	    styles = (0, _set2.default)(styles, 'h' + (i + 1) + '.lineHeight', header.lineHeight);
+	    styles = (0, _set2.default)(styles, "h" + (i + 1) + ".fontSize", header.fontSize);
+	    styles = (0, _set2.default)(styles, "h" + (i + 1) + ".lineHeight", options.headerLineHeight);
 	  });
 	
 	  // TODO add support for Breakpoints here.
@@ -40828,7 +40835,9 @@
 	                    return (0, _HelmetUtils.warn)("Only elements types " + _HelmetConstants.VALID_TAG_NAMES.join(", ") + " are allowed. Helmet does not support rendering <" + child.type + "> elements. Refer to our API for more information.");
 	                }
 	
-	                if (nestedChildren && typeof nestedChildren !== "string") {
+	                if (nestedChildren && typeof nestedChildren !== "string" && (!Array.isArray(nestedChildren) || nestedChildren.some(function (nestedChild) {
+	                    return typeof nestedChild !== "string";
+	                }))) {
 	                    throw new Error("Helmet expects a string as a child of <" + child.type + ">. Did you forget to wrap your children in braces? ( <" + child.type + ">{``}</" + child.type + "> ) Refer to our API for more information.");
 	                }
 	            }
@@ -40907,21 +40916,22 @@
 	            // Don’t use it for anything other than testing.
 	
 	            /**
-	             * @param {Object} base: {"target": "_blank", "href": "http://mysite.com/"}
-	             * @param {Object} bodyAttributes: {"className": "root"}
-	             * @param {String} defaultTitle: "Default Title"
-	             * @param {Boolean} encodeSpecialCharacters: true
-	             * @param {Object} htmlAttributes: {"lang": "en", "amp": undefined}
-	             * @param {Array} link: [{"rel": "canonical", "href": "http://mysite.com/example"}]
-	             * @param {Array} meta: [{"name": "description", "content": "Test description"}]
-	             * @param {Array} noscript: [{"innerHTML": "<img src='http://mysite.com/js/test.js'"}]
-	             * @param {Function} onChangeClientState: "(newState) => console.log(newState)"
-	             * @param {Array} script: [{"type": "text/javascript", "src": "http://mysite.com/js/test.js"}]
-	             * @param {Array} style: [{"type": "text/css", "cssText": "div { display: block; color: blue; }"}]
-	             * @param {String} title: "Title"
-	             * @param {Object} titleAttributes: {"itemprop": "name"}
-	             * @param {String} titleTemplate: "MySite.com - %s"
-	             */
+	            * @param {Object} base: {"target": "_blank", "href": "http://mysite.com/"}
+	            * @param {Object} bodyAttributes: {"className": "root"}
+	            * @param {String} defaultTitle: "Default Title"
+	            * @param {Boolean} defer: true
+	            * @param {Boolean} encodeSpecialCharacters: true
+	            * @param {Object} htmlAttributes: {"lang": "en", "amp": undefined}
+	            * @param {Array} link: [{"rel": "canonical", "href": "http://mysite.com/example"}]
+	            * @param {Array} meta: [{"name": "description", "content": "Test description"}]
+	            * @param {Array} noscript: [{"innerHTML": "<img src='http://mysite.com/js/test.js'"}]
+	            * @param {Function} onChangeClientState: "(newState) => console.log(newState)"
+	            * @param {Array} script: [{"type": "text/javascript", "src": "http://mysite.com/js/test.js"}]
+	            * @param {Array} style: [{"type": "text/css", "cssText": "div { display: block; color: blue; }"}]
+	            * @param {String} title: "Title"
+	            * @param {Object} titleAttributes: {"itemprop": "name"}
+	            * @param {String} titleTemplate: "MySite.com - %s"
+	            */
 	            set: function set(canUseDOM) {
 	                Component.canUseDOM = canUseDOM;
 	            }
@@ -40933,6 +40943,7 @@
 	        bodyAttributes: _propTypes2.default.object,
 	        children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]),
 	        defaultTitle: _propTypes2.default.string,
+	        defer: _propTypes2.default.bool,
 	        encodeSpecialCharacters: _propTypes2.default.bool,
 	        htmlAttributes: _propTypes2.default.object,
 	        link: _propTypes2.default.arrayOf(_propTypes2.default.object),
@@ -40945,6 +40956,7 @@
 	        titleAttributes: _propTypes2.default.object,
 	        titleTemplate: _propTypes2.default.string
 	    }, _class.defaultProps = {
+	        defer: true,
 	        encodeSpecialCharacters: true
 	    }, _class.peek = Component.peek, _class.rewind = function () {
 	        var mappedState = Component.rewind();
@@ -42019,8 +42031,8 @@
 /* 463 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports.__esModule = true;
-	exports.warn = exports.requestIdleCallback = exports.reducePropsToState = exports.mapStateOnServer = exports.handleClientStateChange = exports.convertReactPropstoHtmlAttributes = undefined;
+	/* WEBPACK VAR INJECTION */(function(global) {exports.__esModule = true;
+	exports.warn = exports.requestAnimationFrame = exports.reducePropsToState = exports.mapStateOnServer = exports.handleClientStateChange = exports.convertReactPropstoHtmlAttributes = undefined;
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 	
@@ -42188,6 +42200,7 @@
 	    return {
 	        baseTag: getBaseTagFromPropsList([_HelmetConstants.TAG_PROPERTIES.HREF], propsList),
 	        bodyAttributes: getAttributesFromPropsList(_HelmetConstants.ATTRIBUTE_NAMES.BODY, propsList),
+	        defer: getInnermostProperty(propsList, _HelmetConstants.HELMET_PROPS.DEFER),
 	        encode: getInnermostProperty(propsList, _HelmetConstants.HELMET_PROPS.ENCODE_SPECIAL_CHARACTERS),
 	        htmlAttributes: getAttributesFromPropsList(_HelmetConstants.ATTRIBUTE_NAMES.HTML, propsList),
 	        linkTags: getTagsFromPropsList(_HelmetConstants.TAG_NAMES.LINK, [_HelmetConstants.TAG_PROPERTIES.REL, _HelmetConstants.TAG_PROPERTIES.HREF], propsList),
@@ -42201,41 +42214,55 @@
 	    };
 	};
 	
-	var requestIdleCallback = function () {
-	    if (typeof window !== "undefined" && typeof window.requestIdleCallback !== "undefined") {
-	        return window.requestIdleCallback;
-	    }
+	var rafPolyfill = function () {
+	    var clock = Date.now();
 	
-	    return function (cb) {
-	        var start = Date.now();
-	        return setTimeout(function () {
-	            cb({
-	                didTimeout: false,
-	                timeRemaining: function timeRemaining() {
-	                    return Math.max(0, 50 - (Date.now() - start));
-	                }
-	            });
-	        }, 1);
+	    return function (callback) {
+	        var currentTime = Date.now();
+	
+	        if (currentTime - clock > 16) {
+	            clock = currentTime;
+	            callback(currentTime);
+	        } else {
+	            setTimeout(function () {
+	                rafPolyfill(callback);
+	            }, 0);
+	        }
 	    };
 	}();
 	
-	var cancelIdleCallback = function () {
-	    if (typeof window !== "undefined" && typeof window.cancelIdleCallback !== "undefined") {
-	        return window.cancelIdleCallback;
-	    }
+	var cafPolyfill = function cafPolyfill(id) {
+	    return clearTimeout(id);
+	};
 	
-	    return function (id) {
-	        return clearTimeout(id);
-	    };
-	}();
+	var requestAnimationFrame = typeof window !== "undefined" ? window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || rafPolyfill : global.requestAnimationFrame || rafPolyfill;
+	
+	var cancelAnimationFrame = typeof window !== "undefined" ? window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.mozCancelAnimationFrame || cafPolyfill : global.cancelAnimationFrame || cafPolyfill;
 	
 	var warn = function warn(msg) {
 	    return console && typeof console.warn === "function" && console.warn(msg);
 	};
 	
-	var _helmetIdleCallback = null;
+	var _helmetCallback = null;
 	
 	var handleClientStateChange = function handleClientStateChange(newState) {
+	    if (_helmetCallback) {
+	        cancelAnimationFrame(_helmetCallback);
+	    }
+	
+	    if (newState.defer) {
+	        _helmetCallback = requestAnimationFrame(function () {
+	            commitTagChanges(newState, function () {
+	                _helmetCallback = null;
+	            });
+	        });
+	    } else {
+	        commitTagChanges(newState);
+	        _helmetCallback = null;
+	    }
+	};
+	
+	var commitTagChanges = function commitTagChanges(newState, cb) {
 	    var baseTag = newState.baseTag,
 	        bodyAttributes = newState.bodyAttributes,
 	        htmlAttributes = newState.htmlAttributes,
@@ -42248,51 +42275,49 @@
 	        title = newState.title,
 	        titleAttributes = newState.titleAttributes;
 	
+	    updateAttributes(_HelmetConstants.TAG_NAMES.BODY, bodyAttributes);
+	    updateAttributes(_HelmetConstants.TAG_NAMES.HTML, htmlAttributes);
 	
-	    if (_helmetIdleCallback) {
-	        cancelIdleCallback(_helmetIdleCallback);
-	    }
+	    updateTitle(title, titleAttributes);
 	
-	    _helmetIdleCallback = requestIdleCallback(function () {
-	        updateAttributes(_HelmetConstants.TAG_NAMES.BODY, bodyAttributes);
-	        updateAttributes(_HelmetConstants.TAG_NAMES.HTML, htmlAttributes);
+	    var tagUpdates = {
+	        baseTag: updateTags(_HelmetConstants.TAG_NAMES.BASE, baseTag),
+	        linkTags: updateTags(_HelmetConstants.TAG_NAMES.LINK, linkTags),
+	        metaTags: updateTags(_HelmetConstants.TAG_NAMES.META, metaTags),
+	        noscriptTags: updateTags(_HelmetConstants.TAG_NAMES.NOSCRIPT, noscriptTags),
+	        scriptTags: updateTags(_HelmetConstants.TAG_NAMES.SCRIPT, scriptTags),
+	        styleTags: updateTags(_HelmetConstants.TAG_NAMES.STYLE, styleTags)
+	    };
 	
-	        updateTitle(title, titleAttributes);
+	    var addedTags = {};
+	    var removedTags = {};
 	
-	        var tagUpdates = {
-	            baseTag: updateTags(_HelmetConstants.TAG_NAMES.BASE, baseTag),
-	            linkTags: updateTags(_HelmetConstants.TAG_NAMES.LINK, linkTags),
-	            metaTags: updateTags(_HelmetConstants.TAG_NAMES.META, metaTags),
-	            noscriptTags: updateTags(_HelmetConstants.TAG_NAMES.NOSCRIPT, noscriptTags),
-	            scriptTags: updateTags(_HelmetConstants.TAG_NAMES.SCRIPT, scriptTags),
-	            styleTags: updateTags(_HelmetConstants.TAG_NAMES.STYLE, styleTags)
-	        };
-	
-	        var addedTags = {};
-	        var removedTags = {};
-	
-	        Object.keys(tagUpdates).forEach(function (tagType) {
-	            var _tagUpdates$tagType = tagUpdates[tagType],
-	                newTags = _tagUpdates$tagType.newTags,
-	                oldTags = _tagUpdates$tagType.oldTags;
+	    Object.keys(tagUpdates).forEach(function (tagType) {
+	        var _tagUpdates$tagType = tagUpdates[tagType],
+	            newTags = _tagUpdates$tagType.newTags,
+	            oldTags = _tagUpdates$tagType.oldTags;
 	
 	
-	            if (newTags.length) {
-	                addedTags[tagType] = newTags;
-	            }
-	            if (oldTags.length) {
-	                removedTags[tagType] = tagUpdates[tagType].oldTags;
-	            }
-	        });
-	
-	        _helmetIdleCallback = null;
-	        onChangeClientState(newState, addedTags, removedTags);
+	        if (newTags.length) {
+	            addedTags[tagType] = newTags;
+	        }
+	        if (oldTags.length) {
+	            removedTags[tagType] = tagUpdates[tagType].oldTags;
+	        }
 	    });
+	
+	    cb && cb();
+	
+	    onChangeClientState(newState, addedTags, removedTags);
+	};
+	
+	var flattenArray = function flattenArray(possibleArray) {
+	    return Array.isArray(possibleArray) ? possibleArray.join("") : possibleArray;
 	};
 	
 	var updateTitle = function updateTitle(title, attributes) {
-	    if (typeof title === "string" && document.title !== title) {
-	        document.title = title;
+	    if (typeof title !== "undefined" && document.title !== title) {
+	        document.title = flattenArray(title);
 	    }
 	
 	    updateAttributes(_HelmetConstants.TAG_NAMES.TITLE, attributes);
@@ -42403,7 +42428,8 @@
 	
 	var generateTitleAsString = function generateTitleAsString(type, title, attributes, encode) {
 	    var attributeString = generateElementAttributesAsString(attributes);
-	    return attributeString ? "<" + type + " " + _HelmetConstants.HELMET_ATTRIBUTE + "=\"true\" " + attributeString + ">" + encodeSpecialCharacters(title, encode) + "</" + type + ">" : "<" + type + " " + _HelmetConstants.HELMET_ATTRIBUTE + "=\"true\">" + encodeSpecialCharacters(title, encode) + "</" + type + ">";
+	    var flattenedTitle = flattenArray(title);
+	    return attributeString ? "<" + type + " " + _HelmetConstants.HELMET_ATTRIBUTE + "=\"true\" " + attributeString + ">" + encodeSpecialCharacters(flattenedTitle, encode) + "</" + type + ">" : "<" + type + " " + _HelmetConstants.HELMET_ATTRIBUTE + "=\"true\">" + encodeSpecialCharacters(flattenedTitle, encode) + "</" + type + ">";
 	};
 	
 	var generateTagsAsString = function generateTagsAsString(type, tags, encode) {
@@ -42539,8 +42565,9 @@
 	exports.handleClientStateChange = handleClientStateChange;
 	exports.mapStateOnServer = mapStateOnServer;
 	exports.reducePropsToState = reducePropsToState;
-	exports.requestIdleCallback = requestIdleCallback;
+	exports.requestAnimationFrame = requestAnimationFrame;
 	exports.warn = warn;
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 /* 464 */
@@ -42584,18 +42611,19 @@
 	};
 	
 	var REACT_TAG_MAP = exports.REACT_TAG_MAP = {
-	    "accesskey": "accessKey",
-	    "charset": "charSet",
-	    "class": "className",
-	    "contenteditable": "contentEditable",
-	    "contextmenu": "contextMenu",
+	    accesskey: "accessKey",
+	    charset: "charSet",
+	    class: "className",
+	    contenteditable: "contentEditable",
+	    contextmenu: "contextMenu",
 	    "http-equiv": "httpEquiv",
-	    "itemprop": "itemProp",
-	    "tabindex": "tabIndex"
+	    itemprop: "itemProp",
+	    tabindex: "tabIndex"
 	};
 	
 	var HELMET_PROPS = exports.HELMET_PROPS = {
 	    DEFAULT_TITLE: "defaultTitle",
+	    DEFER: "defer",
 	    ENCODE_SPECIAL_CHARACTERS: "encodeSpecialCharacters",
 	    ON_CHANGE_CLIENT_STATE: "onChangeClientState",
 	    TITLE_TEMPLATE: "titleTemplate"
@@ -42617,6 +42645,15 @@
 	var __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
 	
 	(function (global) {
+	
+	    // minimal symbol polyfill for IE11 and others
+	    if (typeof Symbol !== 'function') {
+	        var Symbol = function(name) {
+	            return name;
+	        }
+	
+	        Symbol.nonNative = true;
+	    }
 	
 	    const STATE_PLAINTEXT = Symbol('plaintext');
 	    const STATE_HTML      = Symbol('html');
@@ -42652,8 +42689,8 @@
 	        allowable_tags = parse_allowable_tags(allowable_tags);
 	
 	        return {
-	            allowable_tags,
-	            tag_replacement,
+	            allowable_tags : allowable_tags,
+	            tag_replacement: tag_replacement,
 	
 	            state         : STATE_PLAINTEXT,
 	            tag_buffer    : '',
@@ -42795,21 +42832,28 @@
 	    }
 	
 	    function parse_allowable_tags(allowable_tags) {
-	        let tags_array = [];
+	        let tag_set = new Set();
 	
 	        if (typeof allowable_tags === 'string') {
 	            let match;
 	
-	            while ((match = ALLOWED_TAGS_REGEX.exec(allowable_tags)) !== null) {
-	                tags_array.push(match[1]);
+	            while ((match = ALLOWED_TAGS_REGEX.exec(allowable_tags))) {
+	                tag_set.add(match[1]);
 	            }
 	        }
 	
-	        else if (typeof allowable_tags[Symbol.iterator] === 'function') {
-	            tags_array = allowable_tags;
+	        else if (!Symbol.nonNative &&
+	                 typeof allowable_tags[Symbol.iterator] === 'function') {
+	
+	            tag_set = new Set(allowable_tags);
 	        }
 	
-	        return new Set(tags_array);
+	        else if (typeof allowable_tags.forEach === 'function') {
+	            // IE11 compatible
+	            allowable_tags.forEach(tag_set.add, tag_set);
+	        }
+	
+	        return tag_set;
 	    }
 	
 	    function normalize_tag(tag_buffer) {
@@ -45080,566 +45124,842 @@
 /* 550 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * React Google Analytics Module
-	 *
-	 * @package react-ga
-	 * @author  Adam Lofting <adam@mozillafoundation.org>
-	 *          Atul Varma <atul@mozillafoundation.org>
-	 */
+	(function webpackUniversalModuleDefinition(root, factory) {
+		if(true)
+			module.exports = factory(__webpack_require__(2), __webpack_require__(387));
+		else if(typeof define === 'function' && define.amd)
+			define(["react", "prop-types"], factory);
+		else {
+			var a = typeof exports === 'object' ? factory(require("react"), require("prop-types")) : factory(root["react"], root["prop-types"]);
+			for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+		}
+	})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_11__, __WEBPACK_EXTERNAL_MODULE_12__) {
+	return /******/ (function(modules) { // webpackBootstrap
+	/******/ 	// The module cache
+	/******/ 	var installedModules = {};
+	/******/
+	/******/ 	// The require function
+	/******/ 	function __webpack_require__(moduleId) {
+	/******/
+	/******/ 		// Check if module is in cache
+	/******/ 		if(installedModules[moduleId]) {
+	/******/ 			return installedModules[moduleId].exports;
+	/******/ 		}
+	/******/ 		// Create a new module (and put it into the cache)
+	/******/ 		var module = installedModules[moduleId] = {
+	/******/ 			i: moduleId,
+	/******/ 			l: false,
+	/******/ 			exports: {}
+	/******/ 		};
+	/******/
+	/******/ 		// Execute the module function
+	/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+	/******/
+	/******/ 		// Flag the module as loaded
+	/******/ 		module.l = true;
+	/******/
+	/******/ 		// Return the exports of the module
+	/******/ 		return module.exports;
+	/******/ 	}
+	/******/
+	/******/
+	/******/ 	// expose the modules object (__webpack_modules__)
+	/******/ 	__webpack_require__.m = modules;
+	/******/
+	/******/ 	// expose the module cache
+	/******/ 	__webpack_require__.c = installedModules;
+	/******/
+	/******/ 	// define getter function for harmony exports
+	/******/ 	__webpack_require__.d = function(exports, name, getter) {
+	/******/ 		if(!__webpack_require__.o(exports, name)) {
+	/******/ 			Object.defineProperty(exports, name, {
+	/******/ 				configurable: false,
+	/******/ 				enumerable: true,
+	/******/ 				get: getter
+	/******/ 			});
+	/******/ 		}
+	/******/ 	};
+	/******/
+	/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+	/******/ 	__webpack_require__.n = function(module) {
+	/******/ 		var getter = module && module.__esModule ?
+	/******/ 			function getDefault() { return module['default']; } :
+	/******/ 			function getModuleExports() { return module; };
+	/******/ 		__webpack_require__.d(getter, 'a', getter);
+	/******/ 		return getter;
+	/******/ 	};
+	/******/
+	/******/ 	// Object.prototype.hasOwnProperty.call
+	/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+	/******/
+	/******/ 	// __webpack_public_path__
+	/******/ 	__webpack_require__.p = "";
+	/******/
+	/******/ 	// Load entry module and return exports
+	/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+	/******/ })
+	/************************************************************************/
+	/******/ ([
+	/* 0 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = warn;
+	function warn(s) {
+	  console.warn('[react-ga]', s);
+	}
+	
+	/***/ }),
+	/* 1 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = trim;
+	// GA strings need to have leading/trailing whitespace trimmed, and not all
+	// browsers have String.prototoype.trim().
+	
+	function trim(s) {
+	  return s.replace(/^\s+|\s+$/g, '');
+	}
+	
+	/***/ }),
+	/* 2 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.testModeAPI = exports.OutboundLink = exports.plugin = undefined;
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	
+	exports.initialize = initialize;
+	exports.ga = ga;
+	exports.set = set;
+	exports.send = send;
+	exports.pageview = pageview;
+	exports.modalview = modalview;
+	exports.timing = timing;
+	exports.event = event;
+	exports.exception = exception;
+	exports.outboundLink = outboundLink;
+	
+	var _format2 = __webpack_require__(3);
+	
+	var _format3 = _interopRequireDefault(_format2);
+	
+	var _removeLeadingSlash = __webpack_require__(6);
+	
+	var _removeLeadingSlash2 = _interopRequireDefault(_removeLeadingSlash);
+	
+	var _trim = __webpack_require__(1);
+	
+	var _trim2 = _interopRequireDefault(_trim);
+	
+	var _loadGA = __webpack_require__(7);
+	
+	var _loadGA2 = _interopRequireDefault(_loadGA);
+	
+	var _warn = __webpack_require__(0);
+	
+	var _warn2 = _interopRequireDefault(_warn);
+	
+	var _log = __webpack_require__(8);
+	
+	var _log2 = _interopRequireDefault(_log);
+	
+	var _testModeAPI = __webpack_require__(9);
+	
+	var _testModeAPI2 = _interopRequireDefault(_testModeAPI);
+	
+	var _OutboundLink = __webpack_require__(10);
+	
+	var _OutboundLink2 = _interopRequireDefault(_OutboundLink);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } /**
+	                                                                                                                                                                                                     * React Google Analytics Module
+	                                                                                                                                                                                                     *
+	                                                                                                                                                                                                     * @package react-ga
+	                                                                                                                                                                                                     * @author  Adam Lofting <adam@mozillafoundation.org>
+	                                                                                                                                                                                                     *          Atul Varma <atul@mozillafoundation.org>
+	                                                                                                                                                                                                     */
 	
 	/**
 	 * Utilities
 	 */
-	var format = __webpack_require__(551);
-	var removeLeadingSlash = __webpack_require__(556);
-	var trim = __webpack_require__(554);
 	
-	var warn = __webpack_require__(555);
-	var log = __webpack_require__(557);
 	
 	var _debug = false;
 	var _titleCase = true;
+	var _testMode = false;
 	
-	var _format = function (s) {
-	  return format(s, _titleCase);
+	var internalGa = function internalGa() {
+	  var _window;
+	
+	  if (_testMode) return _testModeAPI2.default.ga.apply(_testModeAPI2.default, arguments);
+	  if (!window.ga) return (0, _warn2.default)('ReactGA.initialize must be called first or GoogleAnalytics should be loaded manually');
+	  return (_window = window).ga.apply(_window, arguments);
 	};
 	
-	var ReactGA = {
-	  initialize: function (gaTrackingID, options) {
-	    if (!gaTrackingID) {
-	      warn('gaTrackingID is required in initialize()');
+	function _format(s) {
+	  return (0, _format3.default)(s, _titleCase);
+	}
+	
+	function _gaCommand(trackerNames) {
+	  for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+	    args[_key - 1] = arguments[_key];
+	  }
+	
+	  var command = args[0];
+	  if (typeof internalGa === 'function') {
+	    if (typeof command !== 'string') {
+	      (0, _warn2.default)('ga command must be a string');
 	      return;
 	    }
 	
-	    if (options) {
-	      if (options.debug && options.debug === true) {
-	        _debug = true;
-	      }
+	    internalGa.apply(undefined, args);
+	    if (Array.isArray(trackerNames)) {
+	      trackerNames.forEach(function (name) {
+	        internalGa.apply(undefined, _toConsumableArray([name + '.' + command].concat(args.slice(1))));
+	      });
+	    }
+	  }
+	}
 	
-	      if (options.titleCase === false) {
-	        _titleCase = false;
-	      }
+	function _initialize(gaTrackingID, options) {
+	  if (!gaTrackingID) {
+	    (0, _warn2.default)('gaTrackingID is required in initialize()');
+	    return;
+	  }
+	
+	  if (options) {
+	    if (options.debug && options.debug === true) {
+	      _debug = true;
 	    }
 	
-	    // https://developers.google.com/analytics/devguides/collection/analyticsjs/
-	    // jscs:disable
-	    (function (i, s, o, g, r, a, m) {
-	      i['GoogleAnalyticsObject'] = r;
-	      i[r] = i[r] || function () {
-	        (i[r].q = i[r].q || []).push(arguments);
-	      }, i[r].l = 1 * new Date();
-	      a = s.createElement(o),
-	          m = s.getElementsByTagName(o)[0];
-	      a.async = 1;
-	      a.src = g;
-	      m.parentNode.insertBefore(a, m);
-	    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-	    // jscs:enable
-	
-	    if (options && options.gaOptions) {
-	      ga('create', gaTrackingID, options.gaOptions);
-	    } else {
-	      ga('create', gaTrackingID, 'auto');
+	    if (options.titleCase === false) {
+	      _titleCase = false;
 	    }
-	  },
+	  }
 	
-	  /**
-	   * ga:
-	   * Returns the original GA object.
-	   */
-	  ga: function () {
-	    if (arguments.length > 0) {
-	      ga.apply(this, arguments);
-	      if (_debug) {
-	        log('called ga(\'arguments\');');
-	        log('with arguments: ' + JSON.stringify([].slice.apply(arguments)));
-	      }
+	  if (options && options.gaOptions) {
+	    internalGa('create', gaTrackingID, options.gaOptions);
+	  } else {
+	    internalGa('create', gaTrackingID, 'auto');
+	  }
+	}
 	
-	      return;
+	function initialize(configsOrTrackingId, options) {
+	  if (options && options.testMode === true) {
+	    _testMode = true;
+	  } else {
+	    if (typeof window === 'undefined') {
+	      return false;
 	    }
 	
-	    return ga;
-	  },
+	    (0, _loadGA2.default)(options);
+	  }
 	
-	  /**
-	   * set:
-	   * GA tracker set method
-	   * @param {Object} fieldsObject - a field/value pair or a group of field/value pairs on the tracker
-	   */
-	  set: function (fieldsObject) {
-	    if (typeof ga === 'function') {
-	      if (!fieldsObject) {
-	        warn('`fieldsObject` is required in .set()');
+	  if (Array.isArray(configsOrTrackingId)) {
+	    configsOrTrackingId.forEach(function (config) {
+	      if ((typeof config === 'undefined' ? 'undefined' : _typeof(config)) !== 'object') {
+	        (0, _warn2.default)('All configs must be an object');
 	        return;
 	      }
+	      _initialize(config.trackingId, config);
+	    });
+	  } else {
+	    _initialize(configsOrTrackingId, options);
+	  }
+	  return true;
+	}
 	
-	      if (typeof fieldsObject !== 'object') {
-	        warn('Expected `fieldsObject` arg to be an Object');
-	        return;
-	      }
+	/**
+	 * ga:
+	 * Returns the original GA object.
+	 */
+	function ga() {
+	  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+	    args[_key2] = arguments[_key2];
+	  }
 	
-	      if (Object.keys(fieldsObject).length === 0) {
-	        warn('empty `fieldsObject` given to .set()');
-	      }
-	
-	      ga('set', fieldsObject);
-	
-	      if (_debug) {
-	        log('called ga(\'set\', fieldsObject);');
-	        log('with fieldsObject: ' + JSON.stringify(fieldsObject));
-	      }
+	  if (args.length > 0) {
+	    internalGa.apply(undefined, args);
+	    if (_debug) {
+	      (0, _log2.default)('called ga(\'arguments\');');
+	      (0, _log2.default)('with arguments: ' + JSON.stringify(args));
 	    }
-	  },
+	  }
 	
-	  /**
-	   * send:
-	   * Clone of the low level `ga.send` method
-	   * WARNING: No validations will be applied to this
-	   * @param  {Object} fieldObject - field object for tracking different analytics
-	   */
-	  send: function (fieldObject) {
-	    if (typeof ga === 'function') {
-	      ga('send', fieldObject);
+	  return window.ga;
+	}
 	
-	      if (_debug) {
-	        log('called ga(\'send\', fieldObject);');
-	        log('with fieldObject: ' + JSON.stringify(fieldObject));
+	/**
+	 * set:
+	 * GA tracker set method
+	 * @param {Object} fieldsObject - a field/value pair or a group of field/value pairs on the tracker
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 */
+	function set(fieldsObject, trackerNames) {
+	  if (!fieldsObject) {
+	    (0, _warn2.default)('`fieldsObject` is required in .set()');
+	    return;
+	  }
+	
+	  if ((typeof fieldsObject === 'undefined' ? 'undefined' : _typeof(fieldsObject)) !== 'object') {
+	    (0, _warn2.default)('Expected `fieldsObject` arg to be an Object');
+	    return;
+	  }
+	
+	  if (Object.keys(fieldsObject).length === 0) {
+	    (0, _warn2.default)('empty `fieldsObject` given to .set()');
+	  }
+	
+	  _gaCommand(trackerNames, 'set', fieldsObject);
+	
+	  if (_debug) {
+	    (0, _log2.default)('called ga(\'set\', fieldsObject);');
+	    (0, _log2.default)('with fieldsObject: ' + JSON.stringify(fieldsObject));
+	  }
+	}
+	
+	/**
+	 * send:
+	 * Clone of the low level `ga.send` method
+	 * WARNING: No validations will be applied to this
+	 * @param  {Object} fieldObject - field object for tracking different analytics
+	 * @param  {Array} trackerNames - trackers to send the command to
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 */
+	function send(fieldObject, trackerNames) {
+	  _gaCommand(trackerNames, 'send', fieldObject);
+	  if (_debug) {
+	    (0, _log2.default)('called ga(\'send\', fieldObject);');
+	    (0, _log2.default)('with fieldObject: ' + JSON.stringify(fieldObject));
+	    (0, _log2.default)('with trackers: ' + JSON.stringify(trackerNames));
+	  }
+	}
+	
+	/**
+	 * pageview:
+	 * Basic GA pageview tracking
+	 * @param  {String} path - the current page page e.g. '/about'
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 * @param {String} title - (optional) the page title e. g. 'My Website'
+	 */
+	function pageview(rawPath, trackerNames, title) {
+	  if (!rawPath) {
+	    (0, _warn2.default)('path is required in .pageview()');
+	    return;
+	  }
+	
+	  var path = (0, _trim2.default)(rawPath);
+	  if (path === '') {
+	    (0, _warn2.default)('path cannot be an empty string in .pageview()');
+	    return;
+	  }
+	
+	  var extraFields = {};
+	  if (title) {
+	    extraFields.title = title;
+	  }
+	
+	  if (typeof ga === 'function') {
+	    _gaCommand(trackerNames, 'send', _extends({
+	      hitType: 'pageview',
+	      page: path
+	    }, extraFields));
+	
+	    if (_debug) {
+	      (0, _log2.default)('called ga(\'send\', \'pageview\', path);');
+	      var extraLog = '';
+	      if (title) {
+	        extraLog = ' and title: ' + title;
 	      }
+	      (0, _log2.default)('with path: ' + path + extraLog);
 	    }
-	  },
+	  }
+	}
 	
-	  /**
-	   * pageview:
-	   * Basic GA pageview tracking
-	   * @param  {String} path - the current page page e.g. '/about'
-	   */
-	  pageview: function (path) {
-	    if (!path) {
-	      warn('path is required in .pageview()');
+	/**
+	 * modalview:
+	 * a proxy to basic GA pageview tracking to consistently track
+	 * modal views that are an equivalent UX to a traditional pageview
+	 * @param  {String} modalName e.g. 'add-or-edit-club'
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 */
+	function modalview(rawModalName, trackerNames) {
+	  if (!rawModalName) {
+	    (0, _warn2.default)('modalName is required in .modalview(modalName)');
+	    return;
+	  }
+	
+	  var modalName = (0, _removeLeadingSlash2.default)((0, _trim2.default)(rawModalName));
+	
+	  if (modalName === '') {
+	    (0, _warn2.default)('modalName cannot be an empty string or a single / in .modalview()');
+	    return;
+	  }
+	
+	  if (typeof ga === 'function') {
+	    var path = '/modal/' + modalName;
+	    _gaCommand(trackerNames, 'send', 'pageview', path);
+	
+	    if (_debug) {
+	      (0, _log2.default)('called ga(\'send\', \'pageview\', path);');
+	      (0, _log2.default)('with path: ' + path);
+	    }
+	  }
+	}
+	
+	/**
+	 * timing:
+	 * GA timing
+	 * @param args.category {String} required
+	 * @param args.variable {String} required
+	 * @param args.value  {Int}  required
+	 * @param args.label  {String} required
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 */
+	function timing() {
+	  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+	      category = _ref.category,
+	      variable = _ref.variable,
+	      value = _ref.value,
+	      label = _ref.label;
+	
+	  var trackerNames = arguments[1];
+	
+	  if (typeof ga === 'function') {
+	    if (!category || !variable || !value || typeof value !== 'number') {
+	      (0, _warn2.default)('args.category, args.variable ' + 'AND args.value are required in timing() ' + 'AND args.value has to be a number');
 	      return;
 	    }
 	
-	    path = trim(path);
-	    if (path === '') {
-	      warn('path cannot be an empty string in .pageview()');
+	    // Required Fields
+	    var fieldObject = {
+	      hitType: 'timing',
+	      timingCategory: _format(category),
+	      timingVar: _format(variable),
+	      timingValue: value
+	    };
+	
+	    if (label) {
+	      fieldObject.timingLabel = _format(label);
+	    }
+	
+	    send(fieldObject, trackerNames);
+	  }
+	}
+	
+	/**
+	 * event:
+	 * GA event tracking
+	 * @param args.category {String} required
+	 * @param args.action {String} required
+	 * @param args.label {String} optional
+	 * @param args.value {Int} optional
+	 * @param args.nonInteraction {boolean} optional
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 */
+	function event() {
+	  var _ref2 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+	
+	  var trackerNames = arguments[1];
+	
+	  var category = _ref2.category,
+	      action = _ref2.action,
+	      label = _ref2.label,
+	      value = _ref2.value,
+	      nonInteraction = _ref2.nonInteraction,
+	      transport = _ref2.transport,
+	      args = _objectWithoutProperties(_ref2, ['category', 'action', 'label', 'value', 'nonInteraction', 'transport']);
+	
+	  if (typeof ga === 'function') {
+	    // Simple Validation
+	    if (!category || !action) {
+	      (0, _warn2.default)('args.category AND args.action are required in event()');
 	      return;
 	    }
 	
-	    if (typeof ga === 'function') {
-	      ga('send', 'pageview', path);
+	    // Required Fields
+	    var fieldObject = {
+	      hitType: 'event',
+	      eventCategory: _format(category),
+	      eventAction: _format(action)
+	    };
 	
-	      if (_debug) {
-	        log('called ga(\'send\', \'pageview\', path);');
-	        log('with path: ' + path);
-	      }
-	    }
-	  },
-	
-	  /**
-	   * modalview:
-	   * a proxy to basic GA pageview tracking to consistently track
-	   * modal views that are an equivalent UX to a traditional pageview
-	   * @param  {String} modalName e.g. 'add-or-edit-club'
-	   */
-	  modalview: function (modalName) {
-	    if (!modalName) {
-	      warn('modalName is required in .modalview(modalName)');
-	      return;
+	    // Optional Fields
+	    if (label) {
+	      fieldObject.eventLabel = _format(label);
 	    }
 	
-	    modalName = trim(modalName);
-	    modalName = removeLeadingSlash(modalName);
-	
-	    if (modalName === '') {
-	      warn('modalName cannot be an empty string or a single / in .modalview()');
-	      return;
-	    }
-	
-	    if (typeof ga === 'function') {
-	      modalName = trim(modalName);
-	      var path = '/modal/' + modalName;
-	      ga('send', 'pageview', path);
-	
-	      if (_debug) {
-	        log('called ga(\'send\', \'pageview\', path);');
-	        log('with path: ' + path);
-	      }
-	    }
-	  },
-	
-	  /**
-	   * timing:
-	   * GA timing
-	   * @param args.category {String} required
-	   * @param args.variable {String} required
-	   * @param args.value  {Int}  required
-	   * @param args.label  {String} required
-	   */
-	  timing: function (args) {
-	    if (typeof ga === 'function') {
-	      if (!args || !args.category || !args.variable
-	          || !args.value || typeof args.value !== 'number') {
-	        warn('args.category, args.variable ' +
-	              'AND args.value are required in timing() ' +
-	              'AND args.value has to be a number');
-	        return;
-	      }
-	
-	      //Required Fields
-	      var fieldObject = {
-	        hitType: 'timing',
-	        timingCategory: _format(args.category),
-	        timingVar: _format(args.variable),
-	        timingValue: args.value
-	      };
-	
-	      if (args.label) {
-	        fieldObject.timingLabel = _format(args.label);
-	      }
-	
-	      this.send(fieldObject);
-	    }
-	  },
-	
-	  /**
-	   * event:
-	   * GA event tracking
-	   * @param args.category {String} required
-	   * @param args.action {String} required
-	   * @param args.label {String} optional
-	   * @param args.value {Int} optional
-	   * @param args.nonInteraction {boolean} optional
-	   */
-	  event: function (args) {
-	    if (typeof ga === 'function') {
-	
-	      // Simple Validation
-	      if (!args || !args.category || !args.action) {
-	        warn('args.category AND args.action are required in event()');
-	        return;
-	      }
-	
-	      // Required Fields
-	      var fieldObject = {
-	        hitType: 'event',
-	        eventCategory: _format(args.category),
-	        eventAction: _format(args.action)
-	      };
-	
-	      // Optional Fields
-	      if (args.label) {
-	        fieldObject.eventLabel = _format(args.label);
-	      }
-	
-	      if (args.hasOwnProperty('value')) {
-	        if (typeof args.value !== 'number') {
-	          warn('Expected `args.value` arg to be a Number.');
-	        } else {
-	          fieldObject.eventValue = args.value;
-	        }
-	      }
-	
-	      if (args.nonInteraction) {
-	        if (typeof args.nonInteraction !== 'boolean') {
-	          warn('`args.nonInteraction` must be a boolean.');
-	        } else {
-	          fieldObject.nonInteraction = args.nonInteraction;
-	        }
-	      }
-	
-	      if (args.transport) {
-	        if (typeof args.transport !== 'string') {
-	          warn('`args.transport` must be a string.');
-	        } else {
-	          if (['beacon', 'xhr', 'image'].indexOf(args.transport) === -1) {
-	            warn('`args.transport` must be either one of these values: `beacon`, `xhr` or `image`');
-	          }
-	
-	          fieldObject.transport = args.transport;
-	        }
-	      }
-	
-	      // Send to GA
-	      this.send(fieldObject);
-	    }
-	  },
-	
-	  /**
-	   * exception:
-	   * GA exception tracking
-	   * @param args.description {String} optional
-	   * @param args.fatal {boolean} optional
-	   */
-	  exception: function (args) {
-	    if (typeof ga === 'function') {
-	
-	      // Required Fields
-	      var fieldObject = {
-	        hitType: 'exception'
-	      };
-	
-	      // Optional Fields
-	      if (args.description) {
-	        fieldObject.exDescription = _format(args.description);
-	      }
-	
-	      if (typeof args.fatal !== 'undefined') {
-	        if (typeof args.fatal !== 'boolean') {
-	          warn('`args.fatal` must be a boolean.');
-	        } else {
-	          fieldObject.exFatal = args.fatal;
-	        }
-	      }
-	
-	      // Send to GA
-	      this.send(fieldObject);
-	    }
-	  },
-	
-	  plugin: {
-	    /**
-	     * require:
-	     * GA requires a plugin
-	     * @param name {String} e.g. 'ecommerce' or 'myplugin'
-	     * @param options {Object} optional e.g {path: '/log', debug: true}
-	     */
-	    require: function (name, options) {
-	      if (typeof ga === 'function') {
-	
-	        // Required Fields
-	        if (!name) {
-	          warn('`name` is required in .require()');
-	          return;
-	        }
-	
-	        name = trim(name);
-	        if (name === '') {
-	          warn('`name` cannot be an empty string in .require()');
-	          return;
-	        }
-	
-	        // Optional Fields
-	        if (options) {
-	          if (typeof options !== 'object') {
-	            warn('Expected `options` arg to be an Object');
-	            return;
-	          }
-	
-	          if (Object.keys(options).length === 0) {
-	            warn('Empty `options` given to .require()');
-	          }
-	
-	          ga('require', name, options);
-	
-	          if (_debug) {
-	            log('called ga(\'require\', \'' + name + '\', ' + JSON.stringify(options) + ');');
-	          }
-	
-	          return;
-	        } else {
-	          ga('require', name);
-	
-	          if (_debug) {
-	            log('called ga(\'require\', \'' + name + '\');');
-	          }
-	
-	          return;
-	        }
-	      }
-	    },
-	
-	    /**
-	     * execute:
-	     * GA execute action for plugin
-	     * Takes variable number of arguments
-	     * @param pluginName {String} e.g. 'ecommerce' or 'myplugin'
-	     * @param action {String} e.g. 'addItem' or 'myCustomAction'
-	     * @param actionType {String} optional e.g. 'detail'
-	     * @param payload {Object} optional e.g { id: '1x5e', name : 'My product to track' }
-	     */
-	    execute: function () {
-	      var args = Array.prototype.slice.call(arguments);
-	
-	      var pluginName = args[0];
-	      var action = args[1];
-	      var payload;
-	      var actionType;
-	
-	      if (args.length === 3) {
-	        payload = args[2];
+	    if (typeof value !== 'undefined') {
+	      if (typeof value !== 'number') {
+	        (0, _warn2.default)('Expected `args.value` arg to be a Number.');
 	      } else {
-	        actionType = args[2];
-	        payload = args[3];
+	        fieldObject.eventValue = value;
+	      }
+	    }
+	
+	    if (typeof nonInteraction !== 'undefined') {
+	      if (typeof nonInteraction !== 'boolean') {
+	        (0, _warn2.default)('`args.nonInteraction` must be a boolean.');
+	      } else {
+	        fieldObject.nonInteraction = nonInteraction;
+	      }
+	    }
+	
+	    if (typeof transport !== 'undefined') {
+	      if (typeof transport !== 'string') {
+	        (0, _warn2.default)('`args.transport` must be a string.');
+	      } else {
+	        if (['beacon', 'xhr', 'image'].indexOf(transport) === -1) {
+	          (0, _warn2.default)('`args.transport` must be either one of these values: `beacon`, `xhr` or `image`');
+	        }
+	
+	        fieldObject.transport = transport;
+	      }
+	    }
+	
+	    Object.keys(args).filter(function (key) {
+	      return key.substr(0, 'dimension'.length) === 'dimension';
+	    }).forEach(function (key) {
+	      fieldObject[key] = args[key];
+	    });
+	
+	    Object.keys(args).filter(function (key) {
+	      return key.substr(0, 'metric'.length) === 'metric';
+	    }).forEach(function (key) {
+	      fieldObject[key] = args[key];
+	    });
+	
+	    // Send to GA
+	    send(fieldObject, trackerNames);
+	  }
+	}
+	
+	/**
+	 * exception:
+	 * GA exception tracking
+	 * @param args.description {String} optional
+	 * @param args.fatal {boolean} optional
+	 * @param {Array} trackerNames - (optional) a list of extra trackers to run the command on
+	 */
+	function exception(_ref3, trackerNames) {
+	  var description = _ref3.description,
+	      fatal = _ref3.fatal;
+	
+	  if (typeof ga === 'function') {
+	    // Required Fields
+	    var fieldObject = {
+	      hitType: 'exception'
+	    };
+	
+	    // Optional Fields
+	    if (description) {
+	      fieldObject.exDescription = _format(description);
+	    }
+	
+	    if (typeof fatal !== 'undefined') {
+	      if (typeof fatal !== 'boolean') {
+	        (0, _warn2.default)('`args.fatal` must be a boolean.');
+	      } else {
+	        fieldObject.exFatal = fatal;
+	      }
+	    }
+	
+	    // Send to GA
+	    send(fieldObject, trackerNames);
+	  }
+	}
+	
+	var plugin = exports.plugin = {
+	  /**
+	   * require:
+	   * GA requires a plugin
+	   * @param name {String} e.g. 'ecommerce' or 'myplugin'
+	   * @param options {Object} optional e.g {path: '/log', debug: true}
+	   */
+	  require: function require(rawName, options) {
+	    if (typeof ga === 'function') {
+	      // Required Fields
+	      if (!rawName) {
+	        (0, _warn2.default)('`name` is required in .require()');
+	        return;
 	      }
 	
-	      if (typeof ga === 'function') {
-	        if (typeof pluginName !== 'string') {
-	          warn('Expected `pluginName` arg to be a String.');
-	        } else if (typeof action !== 'string') {
-	          warn('Expected `action` arg to be a String.');
-	        } else {
-	          var command = pluginName + ':' + action;
-	          payload = payload || null;
-	          if (actionType && payload) {
-	            ga(command, actionType, payload);
-	            if (_debug) {
-	              log('called ga(\'' + command + '\');');
-	              log('actionType: "' + actionType + '" with payload: ' + JSON.stringify(payload));
-	            }
-	          } else if (payload) {
-	            ga(command, payload);
-	            if (_debug) {
-	              log('called ga(\'' + command + '\');');
-	              log('with payload: ' + JSON.stringify(payload));
-	            }
-	          } else {
-	            ga(command);
-	            if (_debug) {
-	              log('called ga(\'' + command + '\');');
-	            }
+	      var name = (0, _trim2.default)(rawName);
+	      if (name === '') {
+	        (0, _warn2.default)('`name` cannot be an empty string in .require()');
+	        return;
+	      }
 	
-	          }
+	      // Optional Fields
+	      if (options) {
+	        if ((typeof options === 'undefined' ? 'undefined' : _typeof(options)) !== 'object') {
+	          (0, _warn2.default)('Expected `options` arg to be an Object');
+	          return;
+	        }
+	
+	        if (Object.keys(options).length === 0) {
+	          (0, _warn2.default)('Empty `options` given to .require()');
+	        }
+	
+	        ga('require', name, options);
+	
+	        if (_debug) {
+	          (0, _log2.default)('called ga(\'require\', \'' + name + '\', ' + JSON.stringify(options));
+	        }
+	      } else {
+	        ga('require', name);
+	
+	        if (_debug) {
+	          (0, _log2.default)('called ga(\'require\', \'' + name + '\');');
 	        }
 	      }
 	    }
 	  },
 	
 	  /**
-	   * outboundLink:
-	   * GA outboundLink tracking
-	   * @param args.label {String} e.g. url, or 'Create an Account'
-	   * @param {function} hitCallback - Called after processing a hit.
+	   * execute:
+	   * GA execute action for plugin
+	   * Takes variable number of arguments
+	   * @param pluginName {String} e.g. 'ecommerce' or 'myplugin'
+	   * @param action {String} e.g. 'addItem' or 'myCustomAction'
+	   * @param actionType {String} optional e.g. 'detail'
+	   * @param payload {Object} optional e.g { id: '1x5e', name : 'My product to track' }
 	   */
-	  outboundLink: function (args, hitCallback) {
-	    if (typeof hitCallback !== 'function') {
-	      warn('hitCallback function is required');
-	      return;
+	  execute: function execute(pluginName, action) {
+	    var payload = void 0;
+	    var actionType = void 0;
+	
+	    if ((arguments.length <= 2 ? 0 : arguments.length - 2) === 1) {
+	      payload = arguments.length <= 2 ? undefined : arguments[2];
+	    } else {
+	      actionType = arguments.length <= 2 ? undefined : arguments[2];
+	      payload = arguments.length <= 3 ? undefined : arguments[3];
 	    }
 	
 	    if (typeof ga === 'function') {
-	
-	      // Simple Validation
-	      if (!args || !args.label) {
-	        warn('args.label is required in outboundLink()');
-	        return;
-	      }
-	
-	      // Required Fields
-	      var fieldObject = {
-	        hitType: 'event',
-	        eventCategory: 'Outbound',
-	        eventAction: 'Click',
-	        eventLabel: _format(args.label)
-	      };
-	
-	      var safetyCallbackCalled = false;
-	      var safetyCallback = function () {
-	
-	        // This prevents a delayed response from GA
-	        // causing hitCallback from being fired twice
-	        safetyCallbackCalled = true;
-	
-	        hitCallback();
-	      };
-	
-	      // Using a timeout to ensure the execution of critical application code
-	      // in the case when the GA server might be down
-	      // or an ad blocker prevents sending the data
-	
-	      // register safety net timeout:
-	      var t = setTimeout(safetyCallback, 250);
-	
-	      var clearableCallbackForGA = function () {
-	        clearTimeout(t);
-	        if (!safetyCallbackCalled) {
-	          hitCallback();
+	      if (typeof pluginName !== 'string') {
+	        (0, _warn2.default)('Expected `pluginName` arg to be a String.');
+	      } else if (typeof action !== 'string') {
+	        (0, _warn2.default)('Expected `action` arg to be a String.');
+	      } else {
+	        var command = pluginName + ':' + action;
+	        payload = payload || null;
+	        if (actionType && payload) {
+	          ga(command, actionType, payload);
+	          if (_debug) {
+	            (0, _log2.default)('called ga(\'' + command + '\');');
+	            (0, _log2.default)('actionType: "' + actionType + '" with payload: ' + JSON.stringify(payload));
+	          }
+	        } else if (payload) {
+	          ga(command, payload);
+	          if (_debug) {
+	            (0, _log2.default)('called ga(\'' + command + '\');');
+	            (0, _log2.default)('with payload: ' + JSON.stringify(payload));
+	          }
+	        } else {
+	          ga(command);
+	          if (_debug) {
+	            (0, _log2.default)('called ga(\'' + command + '\');');
+	          }
 	        }
-	      };
-	
-	      fieldObject.hitCallback = clearableCallbackForGA;
-	
-	      // Send to GA
-	      this.send(fieldObject);
-	    } else {
-	      // if ga is not defined, return the callback so the application
-	      // continues to work as expected
-	      setTimeout(hitCallback, 0);
+	      }
 	    }
 	  }
 	};
 	
-	var OutboundLink = __webpack_require__(558);
-	OutboundLink.origTrackLink = OutboundLink.trackLink;
-	OutboundLink.trackLink = ReactGA.outboundLink.bind(ReactGA);
-	ReactGA.OutboundLink = OutboundLink;
+	/**
+	 * outboundLink:
+	 * GA outboundLink tracking
+	 * @param args.label {String} e.g. url, or 'Create an Account'
+	 * @param {function} hitCallback - Called after processing a hit.
+	 */
+	function outboundLink(args, hitCallback, trackerNames) {
+	  if (typeof hitCallback !== 'function') {
+	    (0, _warn2.default)('hitCallback function is required');
+	    return;
+	  }
 	
-	module.exports = ReactGA;
-
-
-/***/ },
-/* 551 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var mightBeEmail = __webpack_require__(552);
-	var toTitleCase = __webpack_require__(553);
-	var warn = __webpack_require__(555);
+	  if (typeof ga === 'function') {
+	    // Simple Validation
+	    if (!args || !args.label) {
+	      (0, _warn2.default)('args.label is required in outboundLink()');
+	      return;
+	    }
 	
-	var _redacted = 'REDACTED (Potential Email Address)';
+	    // Required Fields
+	    var fieldObject = {
+	      hitType: 'event',
+	      eventCategory: 'Outbound',
+	      eventAction: 'Click',
+	      eventLabel: _format(args.label)
+	    };
+	
+	    var safetyCallbackCalled = false;
+	    var safetyCallback = function safetyCallback() {
+	      // This prevents a delayed response from GA
+	      // causing hitCallback from being fired twice
+	      safetyCallbackCalled = true;
+	
+	      hitCallback();
+	    };
+	
+	    // Using a timeout to ensure the execution of critical application code
+	    // in the case when the GA server might be down
+	    // or an ad blocker prevents sending the data
+	
+	    // register safety net timeout:
+	    var t = setTimeout(safetyCallback, 250);
+	
+	    var clearableCallbackForGA = function clearableCallbackForGA() {
+	      clearTimeout(t);
+	      if (!safetyCallbackCalled) {
+	        hitCallback();
+	      }
+	    };
+	
+	    fieldObject.hitCallback = clearableCallbackForGA;
+	
+	    // Send to GA
+	    send(fieldObject, trackerNames);
+	  } else {
+	    // if ga is not defined, return the callback so the application
+	    // continues to work as expected
+	    setTimeout(hitCallback, 0);
+	  }
+	}
+	
+	_OutboundLink2.default.origTrackLink = _OutboundLink2.default.trackLink;
+	_OutboundLink2.default.trackLink = outboundLink;
+	var OutboundLink = exports.OutboundLink = _OutboundLink2.default;
+	var testModeAPI = exports.testModeAPI = _testModeAPI2.default;
+	
+	exports.default = {
+	  initialize: initialize,
+	  ga: ga,
+	  set: set,
+	  send: send,
+	  pageview: pageview,
+	  modalview: modalview,
+	  timing: timing,
+	  event: event,
+	  exception: exception,
+	  plugin: plugin,
+	  outboundLink: outboundLink,
+	  OutboundLink: OutboundLink,
+	  testModeAPI: _testModeAPI2.default
+	};
+	
+	/***/ }),
+	/* 3 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = format;
+	
+	var _mightBeEmail = __webpack_require__(4);
+	
+	var _mightBeEmail2 = _interopRequireDefault(_mightBeEmail);
+	
+	var _toTitleCase = __webpack_require__(5);
+	
+	var _toTitleCase2 = _interopRequireDefault(_toTitleCase);
+	
+	var _warn = __webpack_require__(0);
+	
+	var _warn2 = _interopRequireDefault(_warn);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var redacted = 'REDACTED (Potential Email Address)';
 	
 	function format(s, titleCase) {
-	  if (mightBeEmail(s)) {
-	    warn('This arg looks like an email address, redacting.');
-	    return _redacted;
+	  if ((0, _mightBeEmail2.default)(s)) {
+	    (0, _warn2.default)('This arg looks like an email address, redacting.');
+	    return redacted;
 	  }
 	
 	  if (titleCase) {
-	    return toTitleCase(s);
+	    return (0, _toTitleCase2.default)(s);
 	  }
 	
 	  return s;
 	}
 	
-	module.exports = format;
-
-
-/***/ },
-/* 552 */
-/***/ function(module, exports) {
-
+	/***/ }),
+	/* 4 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = mightBeEmail;
 	// See if s could be an email address. We don't want to send personal data like email.
 	// https://support.google.com/analytics/answer/2795983?hl=en
 	function mightBeEmail(s) {
 	  // There's no point trying to validate rfc822 fully, just look for ...@...
-	  return (/[^@]+@[^@]+/).test(s);
+	  return (/[^@]+@[^@]+/.test(s)
+	  );
 	}
 	
-	module.exports = mightBeEmail;
-
-
-/***/ },
-/* 553 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * To Title Case 2.1 - http://individed.com/code/to-title-case/
-	 * Copyright 2008-2013 David Gouch. Licensed under the MIT License.
-	 * https://github.com/gouch/to-title-case
-	 */
+	/***/ }),
+	/* 5 */
+	/***/ (function(module, exports, __webpack_require__) {
 	
-	var trim = __webpack_require__(554);
+	"use strict";
 	
-	function toTitleCase(s) {
-	  var smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
-	  s = trim(s);
 	
-	  return s.replace(/[A-Za-z0-9\u00C0-\u00FF]+[^\s-]*/g, function (match, index, title) {
-	    if (index > 0 &&
-	        index + match.length !== title.length &&
-	        match.search(smallWords) > -1 &&
-	        title.charAt(index - 2) !== ':' &&
-	        (title.charAt(index + match.length) !== '-' || title.charAt(index - 1) === '-') &&
-	        title.charAt(index - 1).search(/[^\s-]/) < 0) {
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = toTitleCase;
+	
+	var _trim = __webpack_require__(1);
+	
+	var _trim2 = _interopRequireDefault(_trim);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var smallWords = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i; /**
+	                                                                                                * To Title Case 2.1 - http://individed.com/code/to-title-case/
+	                                                                                                * Copyright 2008-2013 David Gouch. Licensed under the MIT License.
+	                                                                                                * https://github.com/gouch/to-title-case
+	                                                                                                */
+	
+	function toTitleCase(string) {
+	  return (0, _trim2.default)(string).replace(/[A-Za-z0-9\u00C0-\u00FF]+[^\s-]*/g, function (match, index, title) {
+	    if (index > 0 && index + match.length !== title.length && match.search(smallWords) > -1 && title.charAt(index - 2) !== ':' && (title.charAt(index + match.length) !== '-' || title.charAt(index - 1) === '-') && title.charAt(index - 1).search(/[^\s-]/) < 0) {
 	      return match.toLowerCase();
 	    }
 	
@@ -45651,872 +45971,219 @@
 	  });
 	}
 	
-	module.exports = toTitleCase;
-
-
-/***/ },
-/* 554 */
-/***/ function(module, exports) {
-
-	// GA strings need to have leading/trailing whitespace trimmed, and not all
-	// browsers have String.prototoype.trim().
+	/***/ }),
+	/* 6 */
+	/***/ (function(module, exports, __webpack_require__) {
 	
-	function trim(s) {
-	  return s.replace(/^\s+|\s+$/g, '');
-	}
+	"use strict";
 	
-	module.exports = trim;
-
-
-/***/ },
-/* 555 */
-/***/ function(module, exports) {
-
-	function warn(s) {
-	  console.warn('[react-ga]', s);
-	}
 	
-	module.exports = warn;
-
-
-/***/ },
-/* 556 */
-/***/ function(module, exports) {
-
-	function removeLeadingSlash(s) {
-	  if (s.substring(0, 1) === '/') {
-	    s = s.substring(1);
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = removeLeadingSlash;
+	function removeLeadingSlash(string) {
+	  if (string.substring(0, 1) === '/') {
+	    return string.substring(1);
 	  }
 	
-	  return s;
+	  return string;
 	}
 	
-	module.exports = removeLeadingSlash;
-
-
-/***/ },
-/* 557 */
-/***/ function(module, exports) {
-
+	/***/ }),
+	/* 7 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	exports.default = function (options) {
+	  // https://developers.google.com/analytics/devguides/collection/analyticsjs/
+	  /* eslint-disable */
+	  (function (i, s, o, g, r, a, m) {
+	    i['GoogleAnalyticsObject'] = r;
+	    i[r] = i[r] || function () {
+	      (i[r].q = i[r].q || []).push(arguments);
+	    }, i[r].l = 1 * new Date();
+	    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+	    a.async = 1;
+	    a.src = g;
+	    m.parentNode.insertBefore(a, m);
+	  })(window, document, 'script', options && options.gaAddress ? options.gaAddress : 'https://www.google-analytics.com/analytics.js', 'ga');
+	  /* eslint-enable */
+	};
+	
+	/***/ }),
+	/* 8 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = log;
 	function log(s) {
 	  console.info('[react-ga]', s);
 	}
 	
-	module.exports = log;
-
-
-/***/ },
-/* 558 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(2);
-	var CreateReactClass = __webpack_require__(559);
-	var PropTypes = __webpack_require__(387);
-	var assign = __webpack_require__(4);
+	/***/ }),
+	/* 9 */
+	/***/ (function(module, exports, __webpack_require__) {
 	
-	var NEWTAB = '_blank';
+	"use strict";
 	
-	var OutboundLink = CreateReactClass({
-	  displayName: 'OutboundLink',
-	  propTypes: {
-	    eventLabel: PropTypes.string.isRequired
-	  },
-	  statics: {
-	    trackLink: function () {
-	      console.warn('ga tracking not enabled');
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var gaCalls = exports.gaCalls = [];
+	
+	exports.default = {
+	  calls: gaCalls,
+	  ga: function ga() {
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
 	    }
-	  },
-	  handleClick: function (e) {
-	    e.preventDefault();
-	    var props = this.props;
-	    var eventMeta = { label: props.eventLabel };
-	    OutboundLink.trackLink(eventMeta, function () {
-	      if (props.target === NEWTAB) {
-	        window.open(props.to, NEWTAB);
-	      } else {
-	        window.location.href = props.to;
-	      }
-	    });
 	
-	    if (props.onClick) {
-	      props.onClick(e);
-	    }
-	  },
-	
-	  render: function () {
-	    var props = assign({}, this.props, {
-	      href: this.props.to,
-	      onClick: this.handleClick
-	    });
-	    delete props.eventLabel;
-	    return React.createElement('a', props);
+	    gaCalls.push([].concat(args));
 	  }
+	};
+	
+	/***/ }),
+	/* 10 */
+	/***/ (function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
 	});
 	
-	module.exports = OutboundLink;
-
-
-/***/ },
-/* 559 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 */
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	'use strict';
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var React = __webpack_require__(2);
-	var factory = __webpack_require__(560);
+	var _react = __webpack_require__(11);
 	
-	// Hack to grab NoopUpdateQueue from isomorphic React
-	var ReactNoopUpdateQueue = new React.Component().updater;
+	var _react2 = _interopRequireDefault(_react);
 	
-	module.exports = factory(
-	  React.Component,
-	  React.isValidElement,
-	  ReactNoopUpdateQueue
-	);
-
-
-/***/ },
-/* 560 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 */
+	var _propTypes = __webpack_require__(12);
 	
-	'use strict';
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
-	var _assign = __webpack_require__(4);
+	var _warn = __webpack_require__(0);
 	
-	var emptyObject = __webpack_require__(20);
-	var _invariant = __webpack_require__(8);
+	var _warn2 = _interopRequireDefault(_warn);
 	
-	if (false) {
-	  var warning = require('fbjs/lib/warning');
-	}
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var MIXINS_KEY = 'mixins';
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	// Helper function to allow the creation of anonymous functions which do not
-	// have .name set to the name of the variable being assigned to.
-	function identity(fn) {
-	  return fn;
-	}
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	var ReactPropTypeLocationNames;
-	if (false) {
-	  ReactPropTypeLocationNames = {
-	    prop: 'prop',
-	    context: 'context',
-	    childContext: 'child context',
-	  };
-	} else {
-	  ReactPropTypeLocationNames = {};
-	}
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
-	  /**
-	   * Policies that describe methods in `ReactClassInterface`.
-	   */
+	var NEWTAB = '_blank';
+	var MIDDLECLICK = 1;
 	
+	var OutboundLink = function (_Component) {
+	  _inherits(OutboundLink, _Component);
 	
-	  var injectedMixins = [];
+	  function OutboundLink() {
+	    var _ref;
 	
-	  /**
-	   * Composite components are higher-level components that compose other composite
-	   * or host components.
-	   *
-	   * To create a new type of `ReactClass`, pass a specification of
-	   * your new class to `React.createClass`. The only requirement of your class
-	   * specification is that you implement a `render` method.
-	   *
-	   *   var MyComponent = React.createClass({
-	   *     render: function() {
-	   *       return <div>Hello World</div>;
-	   *     }
-	   *   });
-	   *
-	   * The class specification supports a specific protocol of methods that have
-	   * special meaning (e.g. `render`). See `ReactClassInterface` for
-	   * more the comprehensive protocol. Any other properties and methods in the
-	   * class specification will be available on the prototype.
-	   *
-	   * @interface ReactClassInterface
-	   * @internal
-	   */
-	  var ReactClassInterface = {
+	    var _temp, _this, _ret;
 	
-	    /**
-	     * An array of Mixin objects to include when defining your component.
-	     *
-	     * @type {array}
-	     * @optional
-	     */
-	    mixins: 'DEFINE_MANY',
+	    _classCallCheck(this, OutboundLink);
 	
-	    /**
-	     * An object containing properties and methods that should be defined on
-	     * the component's constructor instead of its prototype (static methods).
-	     *
-	     * @type {object}
-	     * @optional
-	     */
-	    statics: 'DEFINE_MANY',
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
 	
-	    /**
-	     * Definition of prop types for this component.
-	     *
-	     * @type {object}
-	     * @optional
-	     */
-	    propTypes: 'DEFINE_MANY',
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OutboundLink.__proto__ || Object.getPrototypeOf(OutboundLink)).call.apply(_ref, [this].concat(args))), _this), _this.handleClick = function (event) {
+	      var _this$props = _this.props,
+	          target = _this$props.target,
+	          eventLabel = _this$props.eventLabel,
+	          to = _this$props.to,
+	          onClick = _this$props.onClick;
 	
-	    /**
-	     * Definition of context types for this component.
-	     *
-	     * @type {object}
-	     * @optional
-	     */
-	    contextTypes: 'DEFINE_MANY',
+	      var eventMeta = { label: eventLabel };
+	      var sameTarget = target !== NEWTAB;
+	      var normalClick = !(event.ctrlKey || event.shiftKey || event.metaKey || event.button === MIDDLECLICK);
 	
-	    /**
-	     * Definition of context types this component sets for its children.
-	     *
-	     * @type {object}
-	     * @optional
-	     */
-	    childContextTypes: 'DEFINE_MANY',
-	
-	    // ==== Definition methods ====
-	
-	    /**
-	     * Invoked when the component is mounted. Values in the mapping will be set on
-	     * `this.props` if that prop is not specified (i.e. using an `in` check).
-	     *
-	     * This method is invoked before `getInitialState` and therefore cannot rely
-	     * on `this.state` or use `this.setState`.
-	     *
-	     * @return {object}
-	     * @optional
-	     */
-	    getDefaultProps: 'DEFINE_MANY_MERGED',
-	
-	    /**
-	     * Invoked once before the component is mounted. The return value will be used
-	     * as the initial value of `this.state`.
-	     *
-	     *   getInitialState: function() {
-	     *     return {
-	     *       isOn: false,
-	     *       fooBaz: new BazFoo()
-	     *     }
-	     *   }
-	     *
-	     * @return {object}
-	     * @optional
-	     */
-	    getInitialState: 'DEFINE_MANY_MERGED',
-	
-	    /**
-	     * @return {object}
-	     * @optional
-	     */
-	    getChildContext: 'DEFINE_MANY_MERGED',
-	
-	    /**
-	     * Uses props from `this.props` and state from `this.state` to render the
-	     * structure of the component.
-	     *
-	     * No guarantees are made about when or how often this method is invoked, so
-	     * it must not have side effects.
-	     *
-	     *   render: function() {
-	     *     var name = this.props.name;
-	     *     return <div>Hello, {name}!</div>;
-	     *   }
-	     *
-	     * @return {ReactComponent}
-	     * @nosideeffects
-	     * @required
-	     */
-	    render: 'DEFINE_ONCE',
-	
-	    // ==== Delegate methods ====
-	
-	    /**
-	     * Invoked when the component is initially created and about to be mounted.
-	     * This may have side effects, but any external subscriptions or data created
-	     * by this method must be cleaned up in `componentWillUnmount`.
-	     *
-	     * @optional
-	     */
-	    componentWillMount: 'DEFINE_MANY',
-	
-	    /**
-	     * Invoked when the component has been mounted and has a DOM representation.
-	     * However, there is no guarantee that the DOM node is in the document.
-	     *
-	     * Use this as an opportunity to operate on the DOM when the component has
-	     * been mounted (initialized and rendered) for the first time.
-	     *
-	     * @param {DOMElement} rootNode DOM element representing the component.
-	     * @optional
-	     */
-	    componentDidMount: 'DEFINE_MANY',
-	
-	    /**
-	     * Invoked before the component receives new props.
-	     *
-	     * Use this as an opportunity to react to a prop transition by updating the
-	     * state using `this.setState`. Current props are accessed via `this.props`.
-	     *
-	     *   componentWillReceiveProps: function(nextProps, nextContext) {
-	     *     this.setState({
-	     *       likesIncreasing: nextProps.likeCount > this.props.likeCount
-	     *     });
-	     *   }
-	     *
-	     * NOTE: There is no equivalent `componentWillReceiveState`. An incoming prop
-	     * transition may cause a state change, but the opposite is not true. If you
-	     * need it, you are probably looking for `componentWillUpdate`.
-	     *
-	     * @param {object} nextProps
-	     * @optional
-	     */
-	    componentWillReceiveProps: 'DEFINE_MANY',
-	
-	    /**
-	     * Invoked while deciding if the component should be updated as a result of
-	     * receiving new props, state and/or context.
-	     *
-	     * Use this as an opportunity to `return false` when you're certain that the
-	     * transition to the new props/state/context will not require a component
-	     * update.
-	     *
-	     *   shouldComponentUpdate: function(nextProps, nextState, nextContext) {
-	     *     return !equal(nextProps, this.props) ||
-	     *       !equal(nextState, this.state) ||
-	     *       !equal(nextContext, this.context);
-	     *   }
-	     *
-	     * @param {object} nextProps
-	     * @param {?object} nextState
-	     * @param {?object} nextContext
-	     * @return {boolean} True if the component should update.
-	     * @optional
-	     */
-	    shouldComponentUpdate: 'DEFINE_ONCE',
-	
-	    /**
-	     * Invoked when the component is about to update due to a transition from
-	     * `this.props`, `this.state` and `this.context` to `nextProps`, `nextState`
-	     * and `nextContext`.
-	     *
-	     * Use this as an opportunity to perform preparation before an update occurs.
-	     *
-	     * NOTE: You **cannot** use `this.setState()` in this method.
-	     *
-	     * @param {object} nextProps
-	     * @param {?object} nextState
-	     * @param {?object} nextContext
-	     * @param {ReactReconcileTransaction} transaction
-	     * @optional
-	     */
-	    componentWillUpdate: 'DEFINE_MANY',
-	
-	    /**
-	     * Invoked when the component's DOM representation has been updated.
-	     *
-	     * Use this as an opportunity to operate on the DOM when the component has
-	     * been updated.
-	     *
-	     * @param {object} prevProps
-	     * @param {?object} prevState
-	     * @param {?object} prevContext
-	     * @param {DOMElement} rootNode DOM element representing the component.
-	     * @optional
-	     */
-	    componentDidUpdate: 'DEFINE_MANY',
-	
-	    /**
-	     * Invoked when the component is about to be removed from its parent and have
-	     * its DOM representation destroyed.
-	     *
-	     * Use this as an opportunity to deallocate any external resources.
-	     *
-	     * NOTE: There is no `componentDidUnmount` since your component will have been
-	     * destroyed by that point.
-	     *
-	     * @optional
-	     */
-	    componentWillUnmount: 'DEFINE_MANY',
-	
-	    // ==== Advanced methods ====
-	
-	    /**
-	     * Updates the component's currently mounted DOM representation.
-	     *
-	     * By default, this implements React's rendering and reconciliation algorithm.
-	     * Sophisticated clients may wish to override this.
-	     *
-	     * @param {ReactReconcileTransaction} transaction
-	     * @internal
-	     * @overridable
-	     */
-	    updateComponent: 'OVERRIDE_BASE'
-	
-	  };
-	
-	  /**
-	   * Mapping from class specification keys to special processing functions.
-	   *
-	   * Although these are declared like instance properties in the specification
-	   * when defining classes using `React.createClass`, they are actually static
-	   * and are accessible on the constructor instead of the prototype. Despite
-	   * being static, they must be defined outside of the "statics" key under
-	   * which all other static methods are defined.
-	   */
-	  var RESERVED_SPEC_KEYS = {
-	    displayName: function (Constructor, displayName) {
-	      Constructor.displayName = displayName;
-	    },
-	    mixins: function (Constructor, mixins) {
-	      if (mixins) {
-	        for (var i = 0; i < mixins.length; i++) {
-	          mixSpecIntoComponent(Constructor, mixins[i]);
-	        }
-	      }
-	    },
-	    childContextTypes: function (Constructor, childContextTypes) {
-	      if (false) {
-	        validateTypeDef(Constructor, childContextTypes, 'childContext');
-	      }
-	      Constructor.childContextTypes = _assign({}, Constructor.childContextTypes, childContextTypes);
-	    },
-	    contextTypes: function (Constructor, contextTypes) {
-	      if (false) {
-	        validateTypeDef(Constructor, contextTypes, 'context');
-	      }
-	      Constructor.contextTypes = _assign({}, Constructor.contextTypes, contextTypes);
-	    },
-	    /**
-	     * Special case getDefaultProps which should move into statics but requires
-	     * automatic merging.
-	     */
-	    getDefaultProps: function (Constructor, getDefaultProps) {
-	      if (Constructor.getDefaultProps) {
-	        Constructor.getDefaultProps = createMergedResultFunction(Constructor.getDefaultProps, getDefaultProps);
+	      if (sameTarget && normalClick) {
+	        event.preventDefault();
+	        OutboundLink.trackLink(eventMeta, function () {
+	          window.location.href = to;
+	        });
 	      } else {
-	        Constructor.getDefaultProps = getDefaultProps;
+	        OutboundLink.trackLink(eventMeta, function () {});
 	      }
-	    },
-	    propTypes: function (Constructor, propTypes) {
-	      if (false) {
-	        validateTypeDef(Constructor, propTypes, 'prop');
-	      }
-	      Constructor.propTypes = _assign({}, Constructor.propTypes, propTypes);
-	    },
-	    statics: function (Constructor, statics) {
-	      mixStaticSpecIntoComponent(Constructor, statics);
-	    },
-	    autobind: function () {} };
 	
-	  function validateTypeDef(Constructor, typeDef, location) {
-	    for (var propName in typeDef) {
-	      if (typeDef.hasOwnProperty(propName)) {
-	        // use a warning instead of an _invariant so components
-	        // don't show up in prod but only in __DEV__
-	         false ? warning(typeof typeDef[propName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'React.PropTypes.', Constructor.displayName || 'ReactClass', ReactPropTypeLocationNames[location], propName) : void 0;
+	      if (onClick) {
+	        onClick(event);
 	      }
-	    }
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 	
-	  function validateMethodOverride(isAlreadyDefined, name) {
-	    var specPolicy = ReactClassInterface.hasOwnProperty(name) ? ReactClassInterface[name] : null;
-	
-	    // Disallow overriding of base class methods unless explicitly allowed.
-	    if (ReactClassMixin.hasOwnProperty(name)) {
-	      _invariant(specPolicy === 'OVERRIDE_BASE', 'ReactClassInterface: You are attempting to override ' + '`%s` from your class specification. Ensure that your method names ' + 'do not overlap with React methods.', name);
+	  _createClass(OutboundLink, [{
+	    key: 'render',
+	    value: function render() {
+	      var props = _extends({}, this.props, {
+	        href: this.props.to,
+	        onClick: this.handleClick
+	      });
+	      delete props.eventLabel;
+	      return _react2.default.createElement('a', props);
 	    }
+	  }]);
 	
-	    // Disallow defining methods more than once unless explicitly allowed.
-	    if (isAlreadyDefined) {
-	      _invariant(specPolicy === 'DEFINE_MANY' || specPolicy === 'DEFINE_MANY_MERGED', 'ReactClassInterface: You are attempting to define ' + '`%s` on your component more than once. This conflict may be due ' + 'to a mixin.', name);
-	    }
-	  }
+	  return OutboundLink;
+	}(_react.Component);
 	
-	  /**
-	   * Mixin helper which handles policy validation and reserved
-	   * specification keys when building React classes.
-	   */
-	  function mixSpecIntoComponent(Constructor, spec) {
-	    if (!spec) {
-	      if (false) {
-	        var typeofSpec = typeof spec;
-	        var isMixinValid = typeofSpec === 'object' && spec !== null;
+	OutboundLink.propTypes = {
+	  eventLabel: _propTypes2.default.string.isRequired,
+	  target: _propTypes2.default.string,
+	  to: _propTypes2.default.string,
+	  onClick: _propTypes2.default.func
+	};
+	OutboundLink.defaultProps = {
+	  target: null,
+	  to: null,
+	  onClick: null
+	};
 	
-	        process.env.NODE_ENV !== 'production' ? warning(isMixinValid, '%s: You\'re attempting to include a mixin that is either null ' + 'or not an object. Check the mixins included by the component, ' + 'as well as any mixins they include themselves. ' + 'Expected object but got %s.', Constructor.displayName || 'ReactClass', spec === null ? null : typeofSpec) : void 0;
-	      }
+	OutboundLink.trackLink = function () {
+	  (0, _warn2.default)('ga tracking not enabled');
+	};
 	
-	      return;
-	    }
+	exports.default = OutboundLink;
 	
-	    _invariant(typeof spec !== 'function', 'ReactClass: You\'re attempting to ' + 'use a component class or function as a mixin. Instead, just use a ' + 'regular object.');
-	    _invariant(!isValidElement(spec), 'ReactClass: You\'re attempting to ' + 'use a component as a mixin. Instead, just use a regular object.');
+	/***/ }),
+	/* 11 */
+	/***/ (function(module, exports) {
 	
-	    var proto = Constructor.prototype;
-	    var autoBindPairs = proto.__reactAutoBindPairs;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_11__;
 	
-	    // By handling mixins before any other properties, we ensure the same
-	    // chaining order is applied to methods with DEFINE_MANY policy, whether
-	    // mixins are listed before or after these methods in the spec.
-	    if (spec.hasOwnProperty(MIXINS_KEY)) {
-	      RESERVED_SPEC_KEYS.mixins(Constructor, spec.mixins);
-	    }
+	/***/ }),
+	/* 12 */
+	/***/ (function(module, exports) {
 	
-	    for (var name in spec) {
-	      if (!spec.hasOwnProperty(name)) {
-	        continue;
-	      }
+	module.exports = __WEBPACK_EXTERNAL_MODULE_12__;
 	
-	      if (name === MIXINS_KEY) {
-	        // We have already handled mixins in a special case above.
-	        continue;
-	      }
-	
-	      var property = spec[name];
-	      var isAlreadyDefined = proto.hasOwnProperty(name);
-	      validateMethodOverride(isAlreadyDefined, name);
-	
-	      if (RESERVED_SPEC_KEYS.hasOwnProperty(name)) {
-	        RESERVED_SPEC_KEYS[name](Constructor, property);
-	      } else {
-	        // Setup methods on prototype:
-	        // The following member methods should not be automatically bound:
-	        // 1. Expected ReactClass methods (in the "interface").
-	        // 2. Overridden methods (that were mixed in).
-	        var isReactClassMethod = ReactClassInterface.hasOwnProperty(name);
-	        var isFunction = typeof property === 'function';
-	        var shouldAutoBind = isFunction && !isReactClassMethod && !isAlreadyDefined && spec.autobind !== false;
-	
-	        if (shouldAutoBind) {
-	          autoBindPairs.push(name, property);
-	          proto[name] = property;
-	        } else {
-	          if (isAlreadyDefined) {
-	            var specPolicy = ReactClassInterface[name];
-	
-	            // These cases should already be caught by validateMethodOverride.
-	            _invariant(isReactClassMethod && (specPolicy === 'DEFINE_MANY_MERGED' || specPolicy === 'DEFINE_MANY'), 'ReactClass: Unexpected spec policy %s for key %s ' + 'when mixing in component specs.', specPolicy, name);
-	
-	            // For methods which are defined more than once, call the existing
-	            // methods before calling the new property, merging if appropriate.
-	            if (specPolicy === 'DEFINE_MANY_MERGED') {
-	              proto[name] = createMergedResultFunction(proto[name], property);
-	            } else if (specPolicy === 'DEFINE_MANY') {
-	              proto[name] = createChainedFunction(proto[name], property);
-	            }
-	          } else {
-	            proto[name] = property;
-	            if (false) {
-	              // Add verbose displayName to the function, which helps when looking
-	              // at profiling tools.
-	              if (typeof property === 'function' && spec.displayName) {
-	                proto[name].displayName = spec.displayName + '_' + name;
-	              }
-	            }
-	          }
-	        }
-	      }
-	    }
-	  }
-	
-	  function mixStaticSpecIntoComponent(Constructor, statics) {
-	    if (!statics) {
-	      return;
-	    }
-	    for (var name in statics) {
-	      var property = statics[name];
-	      if (!statics.hasOwnProperty(name)) {
-	        continue;
-	      }
-	
-	      var isReserved = name in RESERVED_SPEC_KEYS;
-	      _invariant(!isReserved, 'ReactClass: You are attempting to define a reserved ' + 'property, `%s`, that shouldn\'t be on the "statics" key. Define it ' + 'as an instance property instead; it will still be accessible on the ' + 'constructor.', name);
-	
-	      var isInherited = name in Constructor;
-	      _invariant(!isInherited, 'ReactClass: You are attempting to define ' + '`%s` on your component more than once. This conflict may be ' + 'due to a mixin.', name);
-	      Constructor[name] = property;
-	    }
-	  }
-	
-	  /**
-	   * Merge two objects, but throw if both contain the same key.
-	   *
-	   * @param {object} one The first object, which is mutated.
-	   * @param {object} two The second object
-	   * @return {object} one after it has been mutated to contain everything in two.
-	   */
-	  function mergeIntoWithNoDuplicateKeys(one, two) {
-	    _invariant(one && two && typeof one === 'object' && typeof two === 'object', 'mergeIntoWithNoDuplicateKeys(): Cannot merge non-objects.');
-	
-	    for (var key in two) {
-	      if (two.hasOwnProperty(key)) {
-	        _invariant(one[key] === undefined, 'mergeIntoWithNoDuplicateKeys(): ' + 'Tried to merge two objects with the same key: `%s`. This conflict ' + 'may be due to a mixin; in particular, this may be caused by two ' + 'getInitialState() or getDefaultProps() methods returning objects ' + 'with clashing keys.', key);
-	        one[key] = two[key];
-	      }
-	    }
-	    return one;
-	  }
-	
-	  /**
-	   * Creates a function that invokes two functions and merges their return values.
-	   *
-	   * @param {function} one Function to invoke first.
-	   * @param {function} two Function to invoke second.
-	   * @return {function} Function that invokes the two argument functions.
-	   * @private
-	   */
-	  function createMergedResultFunction(one, two) {
-	    return function mergedResult() {
-	      var a = one.apply(this, arguments);
-	      var b = two.apply(this, arguments);
-	      if (a == null) {
-	        return b;
-	      } else if (b == null) {
-	        return a;
-	      }
-	      var c = {};
-	      mergeIntoWithNoDuplicateKeys(c, a);
-	      mergeIntoWithNoDuplicateKeys(c, b);
-	      return c;
-	    };
-	  }
-	
-	  /**
-	   * Creates a function that invokes two functions and ignores their return vales.
-	   *
-	   * @param {function} one Function to invoke first.
-	   * @param {function} two Function to invoke second.
-	   * @return {function} Function that invokes the two argument functions.
-	   * @private
-	   */
-	  function createChainedFunction(one, two) {
-	    return function chainedFunction() {
-	      one.apply(this, arguments);
-	      two.apply(this, arguments);
-	    };
-	  }
-	
-	  /**
-	   * Binds a method to the component.
-	   *
-	   * @param {object} component Component whose method is going to be bound.
-	   * @param {function} method Method to be bound.
-	   * @return {function} The bound method.
-	   */
-	  function bindAutoBindMethod(component, method) {
-	    var boundMethod = method.bind(component);
-	    if (false) {
-	      boundMethod.__reactBoundContext = component;
-	      boundMethod.__reactBoundMethod = method;
-	      boundMethod.__reactBoundArguments = null;
-	      var componentName = component.constructor.displayName;
-	      var _bind = boundMethod.bind;
-	      boundMethod.bind = function (newThis) {
-	        for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-	          args[_key - 1] = arguments[_key];
-	        }
-	
-	        // User is trying to bind() an autobound method; we effectively will
-	        // ignore the value of "this" that the user is trying to use, so
-	        // let's warn.
-	        if (newThis !== component && newThis !== null) {
-	          process.env.NODE_ENV !== 'production' ? warning(false, 'bind(): React component methods may only be bound to the ' + 'component instance. See %s', componentName) : void 0;
-	        } else if (!args.length) {
-	          process.env.NODE_ENV !== 'production' ? warning(false, 'bind(): You are binding a component method to the component. ' + 'React does this for you automatically in a high-performance ' + 'way, so you can safely remove this call. See %s', componentName) : void 0;
-	          return boundMethod;
-	        }
-	        var reboundMethod = _bind.apply(boundMethod, arguments);
-	        reboundMethod.__reactBoundContext = component;
-	        reboundMethod.__reactBoundMethod = method;
-	        reboundMethod.__reactBoundArguments = args;
-	        return reboundMethod;
-	      };
-	    }
-	    return boundMethod;
-	  }
-	
-	  /**
-	   * Binds all auto-bound methods in a component.
-	   *
-	   * @param {object} component Component whose method is going to be bound.
-	   */
-	  function bindAutoBindMethods(component) {
-	    var pairs = component.__reactAutoBindPairs;
-	    for (var i = 0; i < pairs.length; i += 2) {
-	      var autoBindKey = pairs[i];
-	      var method = pairs[i + 1];
-	      component[autoBindKey] = bindAutoBindMethod(component, method);
-	    }
-	  }
-	
-	  var IsMountedMixin = {
-	    componentDidMount: function () {
-	      this.__isMounted = true;
-	    },
-	    componentWillUnmount: function () {
-	      this.__isMounted = false;
-	    }
-	  };
-	
-	  /**
-	   * Add more to the ReactClass base class. These are all legacy features and
-	   * therefore not already part of the modern ReactComponent.
-	   */
-	  var ReactClassMixin = {
-	
-	    /**
-	     * TODO: This will be deprecated because state should always keep a consistent
-	     * type signature and the only use case for this, is to avoid that.
-	     */
-	    replaceState: function (newState, callback) {
-	      this.updater.enqueueReplaceState(this, newState, callback);
-	    },
-	
-	    /**
-	     * Checks whether or not this composite component is mounted.
-	     * @return {boolean} True if mounted, false otherwise.
-	     * @protected
-	     * @final
-	     */
-	    isMounted: function () {
-	      if (false) {
-	        process.env.NODE_ENV !== 'production' ? warning(this.__didWarnIsMounted, '%s: isMounted is deprecated. Instead, make sure to clean up ' + 'subscriptions and pending requests in componentWillUnmount to ' + 'prevent memory leaks.', this.constructor && this.constructor.displayName || this.name || 'Component') : void 0;
-	        this.__didWarnIsMounted = true;
-	      }
-	      return !!this.__isMounted;
-	    }
-	  };
-	
-	  var ReactClassComponent = function () {};
-	  _assign(ReactClassComponent.prototype, ReactComponent.prototype, ReactClassMixin);
-	
-	  /**
-	   * Creates a composite component class given a class specification.
-	   * See https://facebook.github.io/react/docs/top-level-api.html#react.createclass
-	   *
-	   * @param {object} spec Class specification (which must define `render`).
-	   * @return {function} Component constructor function.
-	   * @public
-	   */
-	  function createClass(spec) {
-	    // To keep our warnings more understandable, we'll use a little hack here to
-	    // ensure that Constructor.name !== 'Constructor'. This makes sure we don't
-	    // unnecessarily identify a class without displayName as 'Constructor'.
-	    var Constructor = identity(function (props, context, updater) {
-	      // This constructor gets overridden by mocks. The argument is used
-	      // by mocks to assert on what gets mounted.
-	
-	      if (false) {
-	        process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
-	      }
-	
-	      // Wire up auto-binding
-	      if (this.__reactAutoBindPairs.length) {
-	        bindAutoBindMethods(this);
-	      }
-	
-	      this.props = props;
-	      this.context = context;
-	      this.refs = emptyObject;
-	      this.updater = updater || ReactNoopUpdateQueue;
-	
-	      this.state = null;
-	
-	      // ReactClasses doesn't have constructors. Instead, they use the
-	      // getInitialState and componentWillMount methods for initialization.
-	
-	      var initialState = this.getInitialState ? this.getInitialState() : null;
-	      if (false) {
-	        // We allow auto-mocks to proceed as if they're returning null.
-	        if (initialState === undefined && this.getInitialState._isMockFunction) {
-	          // This is probably bad practice. Consider warning here and
-	          // deprecating this convenience.
-	          initialState = null;
-	        }
-	      }
-	      _invariant(typeof initialState === 'object' && !Array.isArray(initialState), '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent');
-	
-	      this.state = initialState;
-	    });
-	    Constructor.prototype = new ReactClassComponent();
-	    Constructor.prototype.constructor = Constructor;
-	    Constructor.prototype.__reactAutoBindPairs = [];
-	
-	    injectedMixins.forEach(mixSpecIntoComponent.bind(null, Constructor));
-	
-	    mixSpecIntoComponent(Constructor, IsMountedMixin);
-	    mixSpecIntoComponent(Constructor, spec);
-	
-	    // Initialize the defaultProps property after all mixins have been merged.
-	    if (Constructor.getDefaultProps) {
-	      Constructor.defaultProps = Constructor.getDefaultProps();
-	    }
-	
-	    if (false) {
-	      // This is a tag to indicate that the use of these method names is ok,
-	      // since it's used with createClass. If it's not, then it's likely a
-	      // mistake so we'll warn you to use the static property, property
-	      // initializer or constructor respectively.
-	      if (Constructor.getDefaultProps) {
-	        Constructor.getDefaultProps.isReactClassApproved = {};
-	      }
-	      if (Constructor.prototype.getInitialState) {
-	        Constructor.prototype.getInitialState.isReactClassApproved = {};
-	      }
-	    }
-	
-	    _invariant(Constructor.prototype.render, 'createClass(...): Class specification must implement a `render` method.');
-	
-	    if (false) {
-	      process.env.NODE_ENV !== 'production' ? warning(!Constructor.prototype.componentShouldUpdate, '%s has a method called ' + 'componentShouldUpdate(). Did you mean shouldComponentUpdate()? ' + 'The name is phrased as a question because the function is ' + 'expected to return a value.', spec.displayName || 'A component') : void 0;
-	      process.env.NODE_ENV !== 'production' ? warning(!Constructor.prototype.componentWillRecieveProps, '%s has a method called ' + 'componentWillRecieveProps(). Did you mean componentWillReceiveProps()?', spec.displayName || 'A component') : void 0;
-	    }
-	
-	    // Reduce time spent doing lookups by setting these on the prototype.
-	    for (var methodName in ReactClassInterface) {
-	      if (!Constructor.prototype[methodName]) {
-	        Constructor.prototype[methodName] = null;
-	      }
-	    }
-	
-	    return Constructor;
-	  }
-	
-	  return createClass;
-	}
-	
-	module.exports = factory;
-
+	/***/ })
+	/******/ ]);
+	});
 
 /***/ },
-/* 561 */
+/* 551 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46526,7 +46193,7 @@
 	// files from your pages directory.
 	
 	module.exports = function (callback) {
-	  var context = __webpack_require__(562); // eslint-disable-line
+	  var context = __webpack_require__(552); // eslint-disable-line
 	  if (false) {
 	    module.hot.accept(context.id, function () {
 	      context = require.context('./pages', true, /(coffee|cjsx|ts|tsx|jsx|js|md|rmd|mkdn?|mdwn|mdown|markdown|litcoffee|ipynb|html|json|yaml|toml)$/); // eslint-disable-line
@@ -46537,19 +46204,19 @@
 	};
 
 /***/ },
-/* 562 */
+/* 552 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./2017-05-11-first-blog/index.md": 563,
-		"./2017-05-12-gatsby-1/index.md": 564,
-		"./2017-05-12-styled-spinkit/index.md": 565,
-		"./2017-05-13-touch-alt/index.md": 566,
-		"./2017-05-14-react-helmet/index.md": 567,
-		"./2018-01-07/index.md": 568,
-		"./404.md": 569,
+		"./2017-05-11-first-blog/index.md": 553,
+		"./2017-05-12-gatsby-1/index.md": 554,
+		"./2017-05-12-styled-spinkit/index.md": 555,
+		"./2017-05-13-touch-alt/index.md": 556,
+		"./2017-05-14-react-helmet/index.md": 557,
+		"./2018-01-07/index.md": 558,
+		"./404.md": 559,
 		"./_template.js": 386,
-		"./index.js": 570
+		"./index.js": 560
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46562,53 +46229,53 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 562;
+	webpackContext.id = 552;
 
 
 /***/ },
-/* 563 */
+/* 553 */
 /***/ function(module, exports) {
 
 	module.exports = {"title":"first post","date":"2017-05-11","path":"/first-post/","image":"https://akameco.github.io/blog/first-post/spring.gif","readNext":"/gatsby1/","body":"<p>HMRがないと文章を書く気持ちになれないので、<a href=\"https://github.com/gatsbyjs/gatsby\">gatsbyjs</a>を試してみることにした。</p>\n<p><img src=\"./spring.gif\" alt=\"spring\"></p>\n<p>しかし、どうやら記事を消しても反映されない。\nどこかバグってるっぽい。</p>\n<p>はやくもやる気なくなってきた。</p>\n<p>TwitterCard対応、RSS対応、SEO。\n無限にやることある。</p>\n"}
 
 /***/ },
-/* 564 */
+/* 554 */
 /***/ function(module, exports) {
 
 	module.exports = {"title":"Blogの設定","date":"2017-05-12","path":"/gatsby1/","readNext":"/react-helmet/","body":"<p>どうやらgatsbyが1.0に向けてものすごい感じで変わってるっぽい。\nちょっと色々設定をしようと思ったが、やめといた方が良さそう。\nよって、すぐに脱出できるように記事以外に力を入れないことにする。</p>\n"}
 
 /***/ },
-/* 565 */
+/* 555 */
 /***/ function(module, exports) {
 
 	module.exports = {"title":"ローディングコンポーネント(styled-spinkit)の作成 および styled-componentsとreact-storybook雑感","date":"2017-05-12","path":"/styled-spinkit/","image":"https://camo.githubusercontent.com/ef4b8106220d7a2b7fef3d2e1c6f300f54deb299/68747470733a2f2f692e6779617a6f2e636f6d2f39666466313063373365646431363439356138353462313939653866396565302e676966","body":"<p><img src=\"https://camo.githubusercontent.com/ef4b8106220d7a2b7fef3d2e1c6f300f54deb299/68747470733a2f2f692e6779617a6f2e636f6d2f39666466313063373365646431363439356138353462313939653866396565302e676966\" alt=\"gif\"></p>\n<p><a href=\"https://github.com/akameco/styled-spinkit\">akameco/styled-spinkit: Spinner Loading components</a></p>\n<p>シンプルなローディングコンポーネントがほしくてつくった。\n基本的には、<a href=\"https://github.com/tobiasahlin/SpinKit\">SpinKit</a>をそのままコンポーネント化した。</p>\n<p>Propsやコンポーネントは以下の通り。</p>\n<table>\n<thead>\n<tr>\n<th>Prop</th>\n<th>Type</th>\n<th>Default</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>color</td>\n<td>string</td>\n<td>#333</td>\n</tr>\n<tr>\n<td>size</td>\n<td>number</td>\n<td>40</td>\n</tr>\n</tbody>\n</table>\n<pre><code><span class=\"hljs-section\">&lt;ChasingDots/&gt;</span>\n<span class=\"hljs-section\">&lt;Circle/&gt;</span>\n<span class=\"hljs-section\">&lt;CubeGrid/&gt;</span>\n<span class=\"hljs-section\">&lt;Pulse/&gt;</span>\n<span class=\"hljs-section\">&lt;FadingCircle/&gt;</span>\n<span class=\"hljs-section\">&lt;ThreeBounce/&gt;</span>\n<span class=\"hljs-section\">&lt;FoldingCube/&gt;</span>\n<span class=\"hljs-section\">&lt;WanderingCubes/&gt;</span>\n<span class=\"hljs-section\">&lt;WaveLoading/&gt;</span>\n<span class=\"hljs-section\">&lt;DoubleDounceLoading/&gt;</span>\n<span class=\"hljs-section\">&lt;RotaingPlaneLoading/&gt;</span>\n</code></pre>\n<h2>react-storybook</h2>\n<p>React StoryBookを使って開発してみたが、非常によかった。\n以下がその操作画面だ。\npropsの変更や背景を変えてコンポーネントを確認できる。\nstyled-spinkitでは、colorとsizeが変更可能だ。</p>\n<div class=\"youtube\">\n  <iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/SafaQIPjVkA\" frameborder=\"0\" allowfullscreen></iframe>\n</div>\n<p>そのままgithub-pagesを使ってデモにしたので、実際にpropsや背景をいじってみるのとその良さを一部体験できる。</p>\n<p><a href=\"https://akameco.github.io/styled-spinkit/?knob-color=%23333&amp;knob-number=40&amp;selectedKind=ChangeDots&amp;selectedStory=render&amp;full=0&amp;down=1&amp;left=1&amp;panelRight=0&amp;downPanel=kadirahq%2Fstorybook-addon-actions%2Factions-panel\">DEMO: React Storybook</a></p>\n<p>すぐにpropsに変更によってどう変わるのかが確認できるのは非常にメリットだ。</p>\n<p>また、Addonの追加により色々可能になって便利だった。\nknobsはpropsを変更可能にするアドオン。\nbackgroundsはその名の通り背景を変更するアドオンだ。</p>\n<ul>\n<li>@kadira/storybook-addon-knobs</li>\n<li>react-storybook-addon-backgrounds</li>\n</ul>\n<p>今回はclickなどのアクションがないので、その威力を十二分には発揮してないが、HMRによってストレスなく開発でき、Reactを使うなら必須だろうと思う。</p>\n<p>Storybookについてはまた記事にしたいと思う。</p>\n<h2>styled-components</h2>\n<p>さて、今回はsytle属性をそのまま扱わずCSSinJSの中でも飛び抜けて素晴らしいと思っているstyled-componentsを利用した。</p>\n<p><a href=\"https://github.com/styled-components/styled-components\">styled-components/styled-components: Visual primitives for the component age 💅</a></p>\n<p>いくつかその利点を述べたい。</p>\n<p>が、使い方はREADMEが詳しいので一切書かないので、各々上記のリンクからREADMEを読んでほしい。</p>\n<p>さて、最も大きく、そして最大の利点はstyle属性へ付加するのではなく、headにcssを出力する点にある。\nstyled-componentsはstyleのhashを計算それをclassNameとし、styleタグにcssを出力する。</p>\n<p>これは、つまり変更が容易であるということだ。</p>\n<p>既存のライブラリを活用して新しくコンポーネントをつくるとき、問題となるのはstyle属性でスタイリングされていて、上書きには、propsでstyleを渡す必要がある場合だ。\nこれは、Objectでstyleを定義するのを強制される。</p>\n<pre><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> sytle = {\n  <span class=\"hljs-attr\">width</span>: <span class=\"hljs-string\">'200px'</span>,\n  <span class=\"hljs-attr\">height</span>: <span class=\"hljs-string\">'200px'</span>,\n}\n</code></pre>\n<p>しかし、あなたのプロジェクトでは、css-loaderで読み込んでいるかもしれないし、css-moduleを使っているかもしれない、もしくは他のCSSinJSのライブラリを使っているかもしれない。<br>\nいずれにせよ、せっかくのcssをよりベストな方法で書いているにも関わらず、オブジェクトでのスタイリングを強制されるのだ。\nああ、なんて最悪だ。\nそう、<a href=\"https://github.com/callemall/material-ui\">material-ui</a>。お前だよお前。</p>\n<p>しかしながら、cssをjsとは別で配布するのはよろしい判断だとは思わない。\nなぜなら、プロジェクトに不必要なcssに同時に依存することになるからだ。</p>\n<p>jsのコンポーネントだけならwebpack2のtree shakingを用いて使われていないコンポーネントをそのまま除去できる。\nしかし、cssでは？</p>\n<p>本ライブラリはtree shakingが可能なようにcjs向けとes向けに両方ビルドしてある。\nビルドにはrollupを使った。\npackage.jsonにes向けにビルドしたライブラリは、<code>module</code>と<code>jsnext:main</code>で指定する。\nそうするとwebpackやrollupがそちらを優先して読むようになる。\nこうすることで、tree shakingが効果を発揮し、使わないコンポーネントはビルドから外すことが可能だ。</p>\n<h3>styled-components v2</h3>\n<p>ちなみに、ある理由から安定版である1.4.5ではなく、v2を使っている。</p>\n<p>そのある理由とは、ネストした子コンポーネントへのスタイリングだ。\nこれは親へのスタイリングのためのpropsを子へ流すのに便利だ。\n例えば、子コンポーネントが同じbackground-colorを必要とするとき、全ての子コンポーネントにpropsで渡さずに親に渡してやるだけで済む。</p>\n<p>Before:</p>\n<pre><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> Child = styled.div<span class=\"hljs-string\">`\n  width: 20px;\n  background-color: <span class=\"hljs-subst\">${p =&gt; p.color}</span>;\n`</span>\n\n<span class=\"hljs-keyword\">const</span> Parent = styled.div<span class=\"hljs-string\">`\n`</span>\n\n<span class=\"hljs-keyword\">const</span> App = <span class=\"hljs-function\"><span class=\"hljs-params\">()</span> =&gt;</span> (\n  &lt;Parent&gt;\n    &lt;Child color=\"red\"/&gt;\n    &lt;Child color=\"red\"/&gt;\n    &lt;Child color=\"red\"/&gt;\n  &lt;/Parent&gt;\n)\n</code></pre>\n<p>After:</p>\n<pre><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> Child = styled.div<span class=\"hljs-string\">`\n  width: 20px;\n`</span>\n\n<span class=\"hljs-keyword\">const</span> Parent = styled.div<span class=\"hljs-string\">`\n  &gt; <span class=\"hljs-subst\">${Child}</span> {\n    background-color: <span class=\"hljs-subst\">${p =&gt; p.color}</span>;\n  }\n`</span>\n\n<span class=\"hljs-keyword\">const</span> App = <span class=\"hljs-function\"><span class=\"hljs-params\">()</span> =&gt;</span> (\n  <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Parent</span> <span class=\"hljs-attr\">color</span>=<span class=\"hljs-string\">\"red\"</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Child</span>/&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Child</span>/&gt;</span>\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Child</span>/&gt;</span>\n  <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">Parent</span>&gt;</span></span>\n)\n</code></pre>\n<p>この機能がv2からの対応でv1では使えない。\nそのため2.0.0-17を指定して使っている。(その分、バグる可能性大だ。これは大きなデメリットである)</p>\n<h3>デメリット</h3>\n<p>さて、デメリットを述べないのはフェアじゃない。\n僕は狂信者ではないので、いくつかデメリットも書こうと思う。</p>\n<ol>\n<li>v2は壊れる。</li>\n</ol>\n<p>styled-componentsのv2はいわゆるベータ版だ。\nv2をプロジェクトに導入するには早すぎる。\nSSR対応など目玉機能もあるとはいえ、悪いことは言わないので大人しくv1を使った方がいい。</p>\n<ol start=\"2\">\n<li>拡張性</li>\n</ol>\n<p>先程、styled-componentsはカスタマイズし易いと言ったな。\nあれは一部は嘘だ。</p>\n<p><a href=\"https://github.com/styled-components/styled-components/blob/master/docs/existing-css.md\">styled-components/existing-css.md at master · styled-components/styled-components</a></p>\n<p>上記のリンクに書いてある通り、classNameをオーバーライドしたところで、style-loaderはcssの挿入順序を制御できない。\nつまり、cssは後に書かれた方が優先されるため、styled-componentsによるstyleの挿入が後になると自分がオーバーライドしたつもりでオーバーライドされる。\nこれを回避するためにcssの優先度を上げるハックをする必要がある。\nつまり、同じ名前のクラスを2つ繋げる。</p>\n<pre><code class=\"language-css\"><span class=\"hljs-comment\">/* my-component.css */</span>\n<span class=\"hljs-selector-class\">.red-bg</span><span class=\"hljs-selector-class\">.red-bg</span> {\n  <span class=\"hljs-attribute\">background-color</span>: red;\n}\n</code></pre>\n<p>うーん。これはひどいな。\nしかしstyleを渡せばそれが優先されるし、styled-componentsを使っていればstyledでラップするだけなので個人的にはstyled-componentsで書かれているのは選択肢が増えていいのだけれど。</p>\n<h2>まとめ</h2>\n<p>StoryBook: めっちゃ便利だ。今すぐ使った方がいい。<br>\nsytled-components: v2はまだはやい。が、CSSinJSの中でもずば抜けてる。今すぐ使った方がいい。<br>\nstyled-spinkit: つくった。別に使わなくていい。</p>\n<ul>\n<li>\n<p><a href=\"https://github.com/storybooks/storybook\">storybooks/storybook: 📚 UI Component Dev Environment for React</a></p>\n</li>\n<li>\n<p><a href=\"https://github.com/styled-components/styled-components\">styled-components/styled-components: Visual primitives for the component age 💅</a></p>\n</li>\n<li>\n<p><a href=\"https://github.com/akameco/styled-spinkit\">akameco/styled-spinkit: Spinner Loading components</a></p>\n</li>\n</ul>\n"}
 
 /***/ },
-/* 566 */
+/* 556 */
 /***/ function(module, exports) {
 
 	module.exports = {"title":"touch時に空ファイルではなくテンプレートからファイルを作成する","date":"2017-05-13","path":"/touch-alt/","body":"<p>touchコマンドは基本的に新しいファイルを作成するときに使っている。\nとなると空ファイルが作られてしまうのはよろしくない。</p>\n<p>例えば、licenseファイルをプロジェクトに含め忘れたので後から追加したいとする。\nそのとき叩くのは、touch licenseもしくは、既存のプロジェクトからlicenseを探してcpをする。</p>\n<p>ここで思い至るのは、licenseファイルの内容はほぼ変わることがない。だいたい以下のような感じである。</p>\n<pre><code class=\"language-txt\">The MIT License (MIT)\n\nCopyright (c) akameco &lt;akameco.t@gmail.com&gt; (akameco.github.io)\n\nPermission is hereby granted, free <span class=\"hljs-keyword\">of</span> charge, <span class=\"hljs-built_in\">to</span> <span class=\"hljs-keyword\">any</span> person obtaining <span class=\"hljs-keyword\">a</span> copy\n<span class=\"hljs-keyword\">of</span> this software <span class=\"hljs-keyword\">and</span> associated documentation <span class=\"hljs-built_in\">files</span> (<span class=\"hljs-keyword\">the</span> <span class=\"hljs-string\">\"Software\"</span>), <span class=\"hljs-built_in\">to</span> deal\n<span class=\"hljs-keyword\">in</span> <span class=\"hljs-keyword\">the</span> Software <span class=\"hljs-keyword\">without</span> restriction, including <span class=\"hljs-keyword\">without</span> limitation <span class=\"hljs-keyword\">the</span> rights\n<span class=\"hljs-built_in\">to</span> use, copy, modify, <span class=\"hljs-built_in\">merge</span>, publish, distribute, sublicense, <span class=\"hljs-keyword\">and</span>/<span class=\"hljs-keyword\">or</span> sell\ncopies <span class=\"hljs-keyword\">of</span> <span class=\"hljs-keyword\">the</span> Software, <span class=\"hljs-keyword\">and</span> <span class=\"hljs-built_in\">to</span> permit persons <span class=\"hljs-built_in\">to</span> whom <span class=\"hljs-keyword\">the</span> Software is\n(略)\n</code></pre>\n<p>となると、これをテンプレートとしてtouchの代わりにこれを新しいファイルとして作成した方が良さそうだ。</p>\n<p>そこで、touchの代わりに使えるtouch-altを作ってみた。</p>\n<p><a href=\"https://github.com/akameco/touch-alt\"><img src=\"https://github.com/akameco/touch-alt/raw/master/media/logo.png\" alt=\"touch-alt\"></a></p>\n<p><a href=\"https://github.com/akameco/touch-alt\">akameco/touch-alt: Create from a template instead of a new file</a></p>\n<pre><code class=\"language-sh\">$ npm install --global touch-alt\n</code></pre>\n<p>使い方はtouchと同じだが、touchの本来の機能であるタイムスタンプ更新の機能はない。\n自分はほぼ使わないのでalias touch=touch-altを.zshrcに追記した。</p>\n<p>さて、使い方はtouchと同じだ。\nだが、–addフラグで新しいテンプレートを追加できる。\n追加されたファイルは~/.touch-alt以下に保存される。</p>\n<pre><code class=\"language-sh\">$ touch-alt --add license\n</code></pre>\n<p>後は、touchの代わりにtouch-altでlicenseを作成するだけだ。</p>\n<pre><code class=\"language-sh\">$ touch license\n$ cat license\n\n$ rm license\n$ ls -la ~/.touch-alt\n.             ..            license\n$ touch-alt license\n$ cat license\nThe MIT License (MIT)\n\nCopyright (c) akameco &lt;akameco.t@gmail.com&gt; (akameco.github.io)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the <span class=\"hljs-string\">\"Software\"</span>), to deal\n(略)\n</code></pre>\n<p>もちろん、テンプレートがないファイルは空ファイルを作成する。</p>\n<h2>まとめ</h2>\n<p>自分はわりとyeomenでテンプレートを作成することが多いが、既存のプロジェクトにわりといつも使う設定を持ってきたいときに便利であると思う。\n例えば、.babelrcや.eslinrc、.editorconfigなどがそれだ。</p>\n<p>自分で使っててわりと便利なので、是非使ってくれると嬉しい。</p>\n<p><a href=\"https://github.com/akameco/touch-alt\">akameco/touch-alt: Create from a template instead of a new file</a></p>\n<p>実際のところ、すでにテンプレートが保存してあればそれをコピーしてくるだけのスクリプトだが、この手のスクリプトはどうやってもtestの方が行数が増えるのが面倒なところだった。</p>\n"}
 
 /***/ },
-/* 567 */
+/* 557 */
 /***/ function(module, exports) {
 
 	module.exports = {"title":"React Helmetを使ってOGP対応した","date":"2017-05-14","path":"/react-helmet/","image":"https://akameco.github.io/blog/react-helmet/ogp.png","body":"<p>Reaact Helmetを使ってこのブログのOGP対応した。</p>\n<p><a href=\"https://github.com/nfl/react-helmet\">nfl/react-helmet: A document head manager for React</a></p>\n<p>OGP対応するとtwitterとかfacebookとかslackとかでいい感じに展開してくれて、イケてる感じになる。\nまあwebで記事を書くなら必須だろう。</p>\n<p><img src=\"./ogp.png\" alt=\"opg\"></p>\n<p>このブログはReactを使って書かれているのでOGP対応がちょいめんどい。\nしかし、React Helmetを使って簡単に可能できた。</p>\n<p>gatsby.jsだとwrappers/md.jsに以下を追記した。</p>\n<pre><code class=\"language-js\">&lt;Helmet\n\ttitle={title}\n\tmeta={[\n\t\t{ <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">'description'</span>, <span class=\"hljs-attr\">content</span>: description },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:title'</span>, <span class=\"hljs-attr\">content</span>: post.title },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:type'</span>, <span class=\"hljs-attr\">content</span>: <span class=\"hljs-string\">'blog'</span> },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:url'</span>, <span class=\"hljs-attr\">content</span>: postUrl },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:image'</span>, <span class=\"hljs-attr\">content</span>: post.image || config.ogImage },\n\t\t{ <span class=\"hljs-attr\">property</span>: <span class=\"hljs-string\">'og:description'</span>, <span class=\"hljs-attr\">content</span>: description },\n\t\t{ <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">'twitter:card'</span>, <span class=\"hljs-attr\">content</span>: <span class=\"hljs-string\">'summary'</span> },\n\t\t{ <span class=\"hljs-attr\">name</span>: <span class=\"hljs-string\">'twitter:site'</span>, <span class=\"hljs-attr\">content</span>: <span class=\"hljs-string\">'@akameco'</span> },\n\t]}\n/&gt;\n</code></pre>\n<p>OGPについては以下のサイトが参考になった。</p>\n<p><a href=\"https://ferret-plus.com/610\">Facebook・TwitterのOGP設定方法まとめ｜ferret [フェレット]</a></p>\n<p>また、上記のdescriptionだけど、文字数制限があるので雑に以下のようにした。</p>\n<pre><code class=\"language-js\">    <span class=\"hljs-keyword\">const</span> description =\n      striptags(post.body).replace(<span class=\"hljs-regexp\">/\\r?\\n/g</span>, <span class=\"hljs-string\">''</span>).slice(<span class=\"hljs-number\">0</span>, <span class=\"hljs-number\">120</span>) + <span class=\"hljs-string\">'...'</span>\n</code></pre>\n<p><a href=\"https://github.com/ericnorris/striptags\">striptags</a>を使ってpost.bodyとして渡ってきたjsxをパースして文字列に変換して最後に…を追加してる。\nこの辺は文字数オーバーしてると自動で付けてくれるっぽいので必要ないかもしれない。</p>\n"}
 
 /***/ },
-/* 568 */
+/* 558 */
 /***/ function(module, exports) {
 
 	module.exports = {"title":"2018-01-07","date":"2018-01-07","path":"/2018-01-07/","body":"<p>hulu が無料期間なので、ヒューマンズを見始めた。シンスと呼ばれるアンドロイドが日常にいる世界。今 3 話まで見たけどめちゃめちゃ面白い。人間より何でも出来るアンドロイドが身近にいたらどうなるか。感情を持ったシンスがある一家にくることで物語が進んでいく。続きが楽しみ。</p>\n<h3>自炊</h3>\n<p>ウイルス性胃腸炎になってから自炊する元気が出なかったけど、実家から返ってきてからいつも鍋を食べている。ボトルの鍋の汁を使っていたけど、鍋キューブがものすごい簡単ですごい。</p>\n<p>RSS Feed に <code>steps to phantasien</code> の記事が一斉にきていたので、流しつつ全部読んだ。</p>\n"}
 
 /***/ },
-/* 569 */
+/* 559 */
 /***/ function(module, exports) {
 
 	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
 
 /***/ },
-/* 570 */
+/* 560 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46651,7 +46318,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(571);
+	var _Footer = __webpack_require__(561);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -46737,7 +46404,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 571 */
+/* 561 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46794,7 +46461,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 572 */
+/* 562 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
