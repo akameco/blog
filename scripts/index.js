@@ -13,17 +13,23 @@ const cli = meow(`
 
 const { input } = cli
 const title = input[0]
+
+if (!title) {
+  console.error('required input')
+  process.exit(1)
+}
+
 const dateStr = moment().format('YYYY-MM-DD')
 const titleWithDate = `${dateStr}-${title}`
 const outputDirPath = `pages/${titleWithDate}`
 const outputPath = path.join(outputDirPath, 'index.md')
 
-shell.mkdir(outputDirPath)
-
 if (fs.existsSync(outputPath)) {
-  console.log(`${outputPath} is already exist`)
+  console.log(outputPath)
   process.exit(0)
 }
+
+shell.mkdir(outputDirPath)
 
 ejs.renderFile(
   path.resolve(__dirname, './template/index.md.ejs'),
@@ -32,3 +38,5 @@ ejs.renderFile(
     fs.writeFileSync(outputPath, output)
   },
 )
+
+console.log(outputPath)

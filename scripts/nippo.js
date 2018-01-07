@@ -9,13 +9,15 @@ const dateStr = moment().format('YYYY-MM-DD')
 const outputDirPath = `pages/${dateStr}`
 const outputPath = path.join(outputDirPath, 'index.md')
 
-shell.mkdir(outputDirPath)
-
 if (fs.existsSync(outputPath)) {
-  console.log(`${outputPath} is already exist`)
+  console.log(outputPath)
   process.exit(0)
 }
 
+// ディレクトリの作成
+shell.mkdir(outputDirPath)
+
+// テンプレートの作成
 ejs.renderFile(
   path.resolve(__dirname, './template/index.md.ejs'),
   { title: dateStr, date: dateStr, path: `/${dateStr}/` },
@@ -23,3 +25,5 @@ ejs.renderFile(
     fs.writeFileSync(outputPath, output)
   },
 )
+
+console.log(outputPath)

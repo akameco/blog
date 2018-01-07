@@ -37,8 +37,8 @@
   },
   "scripts": {
     "fmt": "prettier --write \"**/*.{js,json}\"",
-    "add-page": "node ./scripts/index.js",
-    "nippo": "node ./scripts/nippo.js",
+    "add-page": "node ./scripts/index.js | xargs -o vim",
+    "nippo": "node ./scripts/nippo.js | xargs -o vim",
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
