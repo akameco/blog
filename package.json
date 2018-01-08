@@ -1,11 +1,31 @@
 {
   "name": "@akameco/blog",
-  "description": "Blog",
   "version": "1.0.0",
+  "description": "Blog",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "author": {
     "name": "akameco",
     "email": "akameco.t@gmail.com",
     "url": "akameco.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akameco/blog.git"
+  },
+  "scripts": {
+    "add-page": "./scripts/add-page.sh",
+    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-links && ./scripts/deploy.sh",
+    "dev": "gatsby develop",
+    "develop": "gatsby develop",
+    "fmt": "prettier --write \"**/*.{js,json}\"",
+    "gh-pages": "gh-pages -d public -x",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "nippo": "node ./scripts/nippo.js | xargs -o vim",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "gatsby": "^0.12.46",
@@ -28,23 +48,5 @@
     "meow": "^4.0.0",
     "prettier": "^1.9.2",
     "shelljs": "^0.7.8"
-  },
-  "keywords": ["gatsby"],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/akameco/blog.git"
-  },
-  "scripts": {
-    "fmt": "prettier --write \"**/*.{js,json}\"",
-    "add-page": "./scripts/add-page.sh",
-    "nippo": "node ./scripts/nippo.js | xargs -o vim",
-    "dev": "gatsby develop",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "gatsby develop",
-    "build": "gatsby build",
-    "gh-pages": "gh-pages -d public -x",
-    "deploy": "gatsby build --prefix-links && ./scripts/deploy.sh"
   }
 }
