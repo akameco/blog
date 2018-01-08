@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[566, 7],
+[567, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5811,7 +5811,7 @@
 
 /***/ },
 /* 50 */
-[566, 35],
+[567, 35],
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31283,6 +31283,27 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2018-01-08-mx4d",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-08-mx4d",
+					"stem": "index",
+					"path": "2018-01-08-mx4d/index.md"
+				},
+				"requirePath": "2018-01-08-mx4d/index.md",
+				"path": "/2018-01-08-mx4d/",
+				"data": {
+					"title": "MX4Dでキングスマンを見た",
+					"date": "2018-01-08",
+					"path": "/2018-01-08-mx4d/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "2018-01-08-nippo-cmd",
 					"base": "index.md",
 					"ext": "md",
@@ -46298,12 +46319,13 @@
 		"./2017-05-14-react-helmet/index.md": 557,
 		"./2018-01-07/index.md": 558,
 		"./2018-01-08-hulu/index.md": 559,
-		"./2018-01-08-nippo-cmd/index.md": 560,
-		"./2018-01-08-value-commit/index.md": 561,
-		"./2018-01-08/index.md": 562,
-		"./404.md": 563,
+		"./2018-01-08-mx4d/index.md": 560,
+		"./2018-01-08-nippo-cmd/index.md": 561,
+		"./2018-01-08-value-commit/index.md": 562,
+		"./2018-01-08/index.md": 563,
+		"./404.md": 564,
 		"./_template.js": 386,
-		"./index.js": 564
+		"./index.js": 565
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46365,28 +46387,34 @@
 /* 560 */
 /***/ function(module, exports) {
 
-	module.exports = {"title":"高速で日報を作成","date":"2018-01-08","path":"/2018-01-08-nippo-cmd/","body":"<h2>高速でnippoを開けるようにした。</h2>\n<p>以下のようなスクリプトを用意する。\n普通ならshellscirptの書くのだろうけどjsで書く方が高速に書けるのでいつもjsで書いてしまう。</p>\n<pre><code class=\"language-js\"><span class=\"hljs-meta\">'use strict'</span>\n<span class=\"hljs-keyword\">const</span> fs = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'fs'</span>)\n<span class=\"hljs-keyword\">const</span> path = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'path'</span>)\n<span class=\"hljs-keyword\">const</span> shell = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'shelljs'</span>)\n<span class=\"hljs-keyword\">const</span> moment = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'moment'</span>)\n<span class=\"hljs-keyword\">const</span> ejs = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'ejs'</span>)\n\n<span class=\"hljs-keyword\">const</span> dateStr = moment().format(<span class=\"hljs-string\">'YYYY-MM-DD'</span>)\n<span class=\"hljs-keyword\">const</span> outputDirPath = <span class=\"hljs-string\">`pages/<span class=\"hljs-subst\">${dateStr}</span>`</span>\n<span class=\"hljs-keyword\">const</span> outputPath = path.join(outputDirPath, <span class=\"hljs-string\">'index.md'</span>)\n\n<span class=\"hljs-keyword\">if</span> (fs.existsSync(outputPath)) {\n  <span class=\"hljs-built_in\">console</span>.log(outputPath)\n  process.exit(<span class=\"hljs-number\">0</span>)\n}\n\nshell.mkdir(outputDirPath)\n\nejs.renderFile(\n  path.resolve(__dirname, <span class=\"hljs-string\">'./template/index.md.ejs'</span>),\n  { <span class=\"hljs-attr\">title</span>: dateStr, <span class=\"hljs-attr\">date</span>: dateStr, <span class=\"hljs-attr\">path</span>: <span class=\"hljs-string\">`/<span class=\"hljs-subst\">${dateStr}</span>/`</span> },\n  (err, output) =&gt; {\n    fs.writeFileSync(outputPath, output)\n  },\n)\n\n<span class=\"hljs-built_in\">console</span>.log(outputPath)\n</code></pre>\n<p>shelljsがが便利</p>\n<p>package.jsonのscirptsフィールドに以下を追記。\n<code>xargs -o</code>を使って<code>vim</code>を開く。</p>\n<pre><code class=\"language-package.json\">  <span class=\"hljs-string\">\"nippo\"</span>: <span class=\"hljs-string\">\"node ./scripts/nippo.js | xargs -o vim\"</span>,\n</code></pre>\n<p>さらに<code>.zshrc</code>に以下の関数を定義すればどこからでも日報が開ける。</p>\n<pre><code class=\"language-sh\">GHQ=`ghq root`/github.com\n\n<span class=\"hljs-function\"><span class=\"hljs-title\">nippo</span></span>() {\n\t<span class=\"hljs-built_in\">cd</span> <span class=\"hljs-variable\">$GHQ</span>/akameco/blog\n\tyarn run nippo\n}\n</code></pre>\n<p>書いてすぐ公開とはいかないのが不便だけど、適当にマークダウンで書けるのが便利なので、とりあえず続けてみる。</p>\n"}
+	module.exports = {"title":"MX4Dでキングスマンを見た","date":"2018-01-08","path":"/2018-01-08-mx4d/","body":"<p>キングスマンの内容自体はまあアクション映画としてよかった。\nアクションのために人が死ぬみたいな感じなので、フラグを立てたそばから死ぬ。\nまあ期待以上でも期待以下でもない内容だった。</p>\n<h2>MX4d</h2>\n<p>とくかく<strong>水がうざい</strong>。\nものすごいうざい。\nプシューと来るのが嫌だった。\n途中から水がかかりそうなシーンでこれを身構えてしまって集中力が途切れる。\n体験としては最悪だった。\n逆に事前情報を聞いた限りだと匂いは最悪だと聞いていたので身構えていたけど、お酒の匂いはまあリアルで驚いた。\nただ、回数が多くてちょっともういいかなと途中から思った。</p>\n<p>揺れたり振動があるのは、まあよかった。\n思ったより激しくて楽しい。\n年齢制限があるのも納得。\nとゆうか、蹴られるみたいな振動のがマッサージっぽくてよかった。\n映画見ながらマッサージされたい。</p>\n<h3>結論</h3>\n<p>マッサージチェアに座りながら映画見たい。</p>\n"}
 
 /***/ },
 /* 561 */
 /***/ function(module, exports) {
 
-	module.exports = {"title":"意味のあるコミット","date":"2018-01-08","path":"/2018-01-08-value-commit/","body":"<p>意味のあるコミット\n10月あたりから意味のあるコミットが出来てない。\n単なる作業を繰り返してる気がする。</p>\n<p>おそらくアウトプットの時期じゃないのだろうと納得して、インプットに専念することにしようと思う。</p>\n<p>そう言えば、去年は意識的に本を読む数を減らしていた。\n年間で10冊も読んでない。\nあとでその理由も書き出しておこう。</p>\n<p>今月はその逆に、意識的に読書する時間を作ろうと思う。</p>\n"}
+	module.exports = {"title":"高速で日報を作成","date":"2018-01-08","path":"/2018-01-08-nippo-cmd/","body":"<h2>高速でnippoを開けるようにした。</h2>\n<p>以下のようなスクリプトを用意する。\n普通ならshellscirptの書くのだろうけどjsで書く方が高速に書けるのでいつもjsで書いてしまう。</p>\n<pre><code class=\"language-js\"><span class=\"hljs-meta\">'use strict'</span>\n<span class=\"hljs-keyword\">const</span> fs = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'fs'</span>)\n<span class=\"hljs-keyword\">const</span> path = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'path'</span>)\n<span class=\"hljs-keyword\">const</span> shell = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'shelljs'</span>)\n<span class=\"hljs-keyword\">const</span> moment = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'moment'</span>)\n<span class=\"hljs-keyword\">const</span> ejs = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'ejs'</span>)\n\n<span class=\"hljs-keyword\">const</span> dateStr = moment().format(<span class=\"hljs-string\">'YYYY-MM-DD'</span>)\n<span class=\"hljs-keyword\">const</span> outputDirPath = <span class=\"hljs-string\">`pages/<span class=\"hljs-subst\">${dateStr}</span>`</span>\n<span class=\"hljs-keyword\">const</span> outputPath = path.join(outputDirPath, <span class=\"hljs-string\">'index.md'</span>)\n\n<span class=\"hljs-keyword\">if</span> (fs.existsSync(outputPath)) {\n  <span class=\"hljs-built_in\">console</span>.log(outputPath)\n  process.exit(<span class=\"hljs-number\">0</span>)\n}\n\nshell.mkdir(outputDirPath)\n\nejs.renderFile(\n  path.resolve(__dirname, <span class=\"hljs-string\">'./template/index.md.ejs'</span>),\n  { <span class=\"hljs-attr\">title</span>: dateStr, <span class=\"hljs-attr\">date</span>: dateStr, <span class=\"hljs-attr\">path</span>: <span class=\"hljs-string\">`/<span class=\"hljs-subst\">${dateStr}</span>/`</span> },\n  (err, output) =&gt; {\n    fs.writeFileSync(outputPath, output)\n  },\n)\n\n<span class=\"hljs-built_in\">console</span>.log(outputPath)\n</code></pre>\n<p>shelljsがが便利</p>\n<p>package.jsonのscirptsフィールドに以下を追記。\n<code>xargs -o</code>を使って<code>vim</code>を開く。</p>\n<pre><code class=\"language-package.json\">  <span class=\"hljs-string\">\"nippo\"</span>: <span class=\"hljs-string\">\"node ./scripts/nippo.js | xargs -o vim\"</span>,\n</code></pre>\n<p>さらに<code>.zshrc</code>に以下の関数を定義すればどこからでも日報が開ける。</p>\n<pre><code class=\"language-sh\">GHQ=`ghq root`/github.com\n\n<span class=\"hljs-function\"><span class=\"hljs-title\">nippo</span></span>() {\n\t<span class=\"hljs-built_in\">cd</span> <span class=\"hljs-variable\">$GHQ</span>/akameco/blog\n\tyarn run nippo\n}\n</code></pre>\n<p>書いてすぐ公開とはいかないのが不便だけど、適当にマークダウンで書けるのが便利なので、とりあえず続けてみる。</p>\n"}
 
 /***/ },
 /* 562 */
 /***/ function(module, exports) {
 
-	module.exports = {"title":"2018-01-08","date":"2018-01-08","path":"/2018-01-08/","body":""}
+	module.exports = {"title":"意味のあるコミット","date":"2018-01-08","path":"/2018-01-08-value-commit/","body":"<p>意味のあるコミット\n10月あたりから意味のあるコミットが出来てない。\n単なる作業を繰り返してる気がする。</p>\n<p>おそらくアウトプットの時期じゃないのだろうと納得して、インプットに専念することにしようと思う。</p>\n<p>そう言えば、去年は意識的に本を読む数を減らしていた。\n年間で10冊も読んでない。\nあとでその理由も書き出しておこう。</p>\n<p>今月はその逆に、意識的に読書する時間を作ろうと思う。</p>\n"}
 
 /***/ },
 /* 563 */
 /***/ function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"2018-01-08","date":"2018-01-08","path":"/2018-01-08/","body":""}
 
 /***/ },
 /* 564 */
+/***/ function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ },
+/* 565 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46429,7 +46457,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(565);
+	var _Footer = __webpack_require__(566);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -46515,7 +46543,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 565 */
+/* 566 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46572,7 +46600,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 566 */
+/* 567 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
