@@ -11,6 +11,11 @@ path: "/2018-01-08/"
 babel/babelをgit cloneしようと`ghq get -p babel/babel`したら時間かかりすぎて崩壊した。
 `ghq get -p --shallow babel/babel`と`--shallow`を付けて解決。
 
+Issue対応
+[What is the purpose of the `--default-locale` option? · Issue #9 · akameco/extract-react-intl-messages](https://github.com/akameco/extract-react-intl-messages/issues/9)
+
+I use `ここに自分のライブラリの名前`.という構文がめちゃ嬉しかった :)
+
 ## 読書
 [Amazon.co.jp： 未来の年表　人口減少日本でこれから起きること (講談社現代新書) eBook: 河合雅司: Kindleストア](https://www.amazon.co.jp/gp/product/B071WR8G74/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1)を読み始めた。
 
