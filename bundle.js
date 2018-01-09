@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[568, 7],
+[569, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5811,7 +5811,7 @@
 
 /***/ },
 /* 50 */
-[568, 35],
+[569, 35],
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31388,6 +31388,27 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2018-01-09",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-09",
+					"stem": "index",
+					"path": "2018-01-09/index.md"
+				},
+				"requirePath": "2018-01-09/index.md",
+				"path": "/2018-01-09/",
+				"data": {
+					"title": "2018-01-09",
+					"date": "2018-01-09",
+					"path": "/2018-01-09/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "",
 					"base": "404.md",
 					"ext": "md",
@@ -46345,9 +46366,10 @@
 		"./2018-01-08-nippo-cmd/index.md": 562,
 		"./2018-01-08-value-commit/index.md": 563,
 		"./2018-01-08/index.md": 564,
-		"./404.md": 565,
+		"./2018-01-09/index.md": 565,
+		"./404.md": 566,
 		"./_template.js": 386,
-		"./index.js": 566
+		"./index.js": 567
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46439,10 +46461,16 @@
 /* 565 */
 /***/ function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"2018-01-09","date":"2018-01-09","path":"/2018-01-09/","body":"<p>自分のライブラリがフォークされているのを見つけた\n<a href=\"https://www.npmjs.com/package/@digidem/extract-react-intl-messages\">https://www.npmjs.com/package/@digidem/extract-react-intl-messages</a></p>\n<p>機能を追加されてる。自分のライブラリにも反映するか悩む。</p>\n<p>Qiita に Flow 関連で記事を書いた。\n<a href=\"https://qiita.com/akameco/items/7f60aae6001877ce633f\">flow 0.63 で setTimeout と setInterval でエラーが起きる場合 - Qiita</a></p>\n<h2>jest22</h2>\n<p>jest22 にしたところ snapshot の差分がたくさん出た。これは少し厳しい。いい感じにマイグレーションしたい。</p>\n<h2>住民票</h2>\n<p>住民票が必要なので市役所まで行ってきた。片道徒歩 20 分。普通に遠い。行って帰って 2 時間かかった。久々に 1 万歩達成してしまった。帰りにニトリを見つけたので買わないけど色々物色してきた。収納とかソファとか色々ほしい。収納に関しては買ってしまっていいかと思ったが、通帳の中身がやばい。</p>\n<h2>自炊</h2>\n<p>ポトフをつくった。鍋キューブ万能すぎて怖い。野菜切って、鍋キューブ入れて、煮ればポトフの完成。</p>\n<h2>気持ち</h2>\n<p>価値のあるアウトプット出来てないくて焦る。</p>\n<h2>Links</h2>\n<p><a href=\"https://github.com/mweststrate/immer\">mweststrate/immer: Create the next immutable state by mutating the current one</a>\n<a href=\"https://github.com/jest-community/vscode-jest\">jest-community/vscode-jest: The optimal flow for Jest based testing in VS Code</a>\n<a href=\"https://github.com/jest-community/vscode-jest\">jest-community/vscode-jest: The optimal flow for Jest based testing in VS Code</a></p>\n<p><a href=\"http://elzup.hatenablog.com/entry/2018/01/09/135019\">ACM-ICPC 0 完でも競技プログラミングがしたい！ - 燃えるざっぷ</a></p>\n<p>ツイッターで言及した。\n<a href=\"https://twitter.com/akameco/status/950645442890510336\">https://twitter.com/akameco/status/950645442890510336</a></p>\n"}
 
 /***/ },
 /* 566 */
+/***/ function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ },
+/* 567 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46485,7 +46513,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(567);
+	var _Footer = __webpack_require__(568);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -46571,7 +46599,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 567 */
+/* 568 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46628,7 +46656,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 568 */
+/* 569 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
