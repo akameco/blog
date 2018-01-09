@@ -38,3 +38,5 @@ jest22 にしたところ snapshot の差分がたくさん出た。これは少
 
 ツイッターで言及した。
 https://twitter.com/akameco/status/950645442890510336
+
+[ミニマリスト宣言: 37signals 「失敗から学べ」は過大評価されている](http://ikebomb.blogspot.jp/2009/02/37signals_04.html)
