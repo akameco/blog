@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[570, 7],
+[571, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5811,7 +5811,7 @@
 
 /***/ },
 /* 50 */
-[570, 35],
+[571, 35],
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31430,6 +31430,27 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2018-01-11",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-11",
+					"stem": "index",
+					"path": "2018-01-11/index.md"
+				},
+				"requirePath": "2018-01-11/index.md",
+				"path": "/2018-01-11/",
+				"data": {
+					"title": "2018-01-11",
+					"date": "2018-01-11",
+					"path": "/2018-01-11/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "",
 					"base": "404.md",
 					"ext": "md",
@@ -46389,9 +46410,10 @@
 		"./2018-01-08/index.md": 564,
 		"./2018-01-09/index.md": 565,
 		"./2018-01-10/index.md": 566,
-		"./404.md": 567,
+		"./2018-01-11/index.md": 567,
+		"./404.md": 568,
 		"./_template.js": 386,
-		"./index.js": 568
+		"./index.js": 569
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46495,10 +46517,16 @@
 /* 567 */
 /***/ function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"2018-01-11","date":"2018-01-11","path":"/2018-01-11/","body":"<p>4時睡眠\n12時30起床</p>\n<h2>コーディング</h2>\n<p><a href=\"https://github.com/akameco/styled-spinkit\">akameco/styled-spinkit: Spinner Loading components</a>を更新した。以下作業ログ。</p>\n<ul>\n<li>styled-spinkitのアップデート\n<ul>\n<li>x flowの更新</li>\n<li>x reactのアダプターの追加</li>\n<li>x コンポーネントのrename</li>\n<li>x rollupのバージョンアップ 1p</li>\n<li>x all-comtributors-cliの追加</li>\n<li>x readmeの整備</li>\n<li>x storybookの動作確認</li>\n<li>x testの更新</li>\n<li>x lintの更新</li>\n<li>babel-macroを使って事前計算</li>\n</ul>\n</li>\n</ul>\n<p>1p flowの更新\n2p rollupのバージョンアップ\n3p rollupのバージョンアップ\n4p コンポーネントのrename\n5p lintの更新\n6p publish done</p>\n<p>3時間もかかった。かかりすぎ</p>\n<h2>NetflixでAlphaGoを見た</h2>\n<p>海外ドキュメンタリー。\n非常に感動的。\nAIの裏側にそれを作った人間のドラマがあるのが面白かった。\n方向性を与えるのは人間なんだなと感じた。</p>\n<h2>Links</h2>\n<p><a href=\"https://employment.en-japan.com/engineerhub/entry/2018/01/11/110000\">HashDoS脆弱性との戦い！ Rubyコミッター・卜部昌平が明かすプログラム堅牢化のノウハウ - エンジニアHub｜若手Webエンジニアのキャリアを考える！</a></p>\n<blockquote>\n<p>問題を正しく理解することの方が、問題を正しく修正するより何倍も難しいからだ。</p>\n</blockquote>\n<p>こういうのを読むと、&quot;正しく&quot;学んでおけばよかったという後悔の気持ちも少しある。</p>\n<p><a href=\"http://malloc.hatenablog.jp/entry/2018/01/10/225003\">さよなら。はてブITカテゴリ。 ~ SNSで拡散される2次情報は意図的にシャットアウトしてコア概念の学習に集中した方がバリュー高いと思うぞー／(^o^)＼ ~ - まろっくのJavaScript日記</a></p>\n<p>SNSは無視した方がいいという話。\nある程度は同意だけど、海外のトップエンジニアなど知己に富んだポストをすることが多いので見たいときもある。SNSじゃなくてTwitterをRSSでほしい笑</p>\n"}
 
 /***/ },
 /* 568 */
+/***/ function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ },
+/* 569 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46541,7 +46569,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(569);
+	var _Footer = __webpack_require__(570);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -46627,7 +46655,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 569 */
+/* 570 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46684,7 +46712,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 570 */
+/* 571 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
