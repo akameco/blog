@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[571, 7],
+[572, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5811,7 +5811,7 @@
 
 /***/ },
 /* 50 */
-[571, 35],
+[572, 35],
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31451,6 +31451,27 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2018-01-12",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-12",
+					"stem": "index",
+					"path": "2018-01-12/index.md"
+				},
+				"requirePath": "2018-01-12/index.md",
+				"path": "/2018-01-12/",
+				"data": {
+					"title": "2018-01-12",
+					"date": "2018-01-12",
+					"path": "/2018-01-12/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "",
 					"base": "404.md",
 					"ext": "md",
@@ -46411,9 +46432,10 @@
 		"./2018-01-09/index.md": 565,
 		"./2018-01-10/index.md": 566,
 		"./2018-01-11/index.md": 567,
-		"./404.md": 568,
+		"./2018-01-12/index.md": 568,
+		"./404.md": 569,
 		"./_template.js": 386,
-		"./index.js": 569
+		"./index.js": 570
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46523,10 +46545,16 @@
 /* 568 */
 /***/ function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"2018-01-12","date":"2018-01-12","path":"/2018-01-12/","body":"<h2>Tips</h2>\n<p><code>zshrc</code>に<code>alias cra=create-react-app</code>を追加した</p>\n<h2>Firebase + s2s + React + Redux</h2>\n<p>この構成でTodosアプリを書き始めた。\nしかし、まだまだFirebaseとの連携すら出来てないけど、全然コーディングが進まない。\nしかしFirebaseの抽象が難しい気がする。</p>\n<p>とりあえず以下のプロジェクトをそのまま参考にしてる。</p>\n<p><a href=\"https://github.com/r-park/todo-react-redux\">r-park/todo-react-redux: Todo app with Create-React-App • React-Redux • Firebase • OAuth</a></p>\n<h2>大学</h2>\n<p>久々に大学に行った。ミーティングに出席。起きたらすでに終わりの時間だった。今年の目標は、朝起きて会社に行くことですと答えて新年一笑い。わりとまじで朝起きられるかが心配。</p>\n<h2>Netflix</h2>\n<p>ブラックミラーの3-4を見た。死ぬ代わりにマトリックスのような世界にいける。男女の問題や人種の問題について、またそれぞれの人にそれぞれ異なった事情があって、それぞれの人生があること。じゃあ自分は永遠に生きたいのかと問われるとよくわからない。さらに、年老いたときにどういう選択をするのかっていうのは実感もないし、さらによくわからない話である。しかし、それでも死後の世界が明確にあるっていうようなものだし、選択肢としての死という問題はとてもおもしろいと思った。</p>\n<h2>Links</h2>\n<p><a href=\"https://egghead.io/lessons/redux-simplify-creating-immutable-data-trees-with-immer\">Simplify Creating Immutable Data Trees With Immer from @mweststrate on @eggheadio</a></p>\n<p>Immerについて。ProxyAPIについて学ばんとなという気持ち。</p>\n"}
 
 /***/ },
 /* 569 */
+/***/ function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ },
+/* 570 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46569,7 +46597,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(570);
+	var _Footer = __webpack_require__(571);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -46655,7 +46683,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 570 */
+/* 571 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46712,7 +46740,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 571 */
+/* 572 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
