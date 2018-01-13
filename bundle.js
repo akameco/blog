@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[572, 7],
+[573, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5811,7 +5811,7 @@
 
 /***/ },
 /* 50 */
-[572, 35],
+[573, 35],
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31472,6 +31472,27 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2018-01-13",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-13",
+					"stem": "index",
+					"path": "2018-01-13/index.md"
+				},
+				"requirePath": "2018-01-13/index.md",
+				"path": "/2018-01-13/",
+				"data": {
+					"title": "2018-01-13",
+					"date": "2018-01-13",
+					"path": "/2018-01-13/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "",
 					"base": "404.md",
 					"ext": "md",
@@ -46433,9 +46454,10 @@
 		"./2018-01-10/index.md": 566,
 		"./2018-01-11/index.md": 567,
 		"./2018-01-12/index.md": 568,
-		"./404.md": 569,
+		"./2018-01-13/index.md": 569,
+		"./404.md": 570,
 		"./_template.js": 386,
-		"./index.js": 570
+		"./index.js": 571
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46551,10 +46573,16 @@
 /* 569 */
 /***/ function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"2018-01-13","date":"2018-01-13","path":"/2018-01-13/","body":"<h2>Works</h2>\n<p>@akameco/generator-nmの更新\n<a href=\"https://qiita.com/akameco/items/7d31f3c878382b95295b\">npmライブラリを書くときのtravisの設定 - Qiita</a> <code>before_install</code>についての記事の修正</p>\n<p>firebaseをどうReactに組み合わせるか考えてた。いつものごとくTodoアプリを作ってる。悲しいことに1日で出来なかった。衰えを感じる。</p>\n<h2>シビル・ウォー</h2>\n<p>シビル・ウォー見た。や、キャプテン・アメリカが報連相出来てないのが悪い。もっとコミュニケーションを取ればだいたい危機が回避出来たので、個としての群じゃなくて、優秀なマネージャーが入ればよさそう。とゆうか実質キャプテン・アメリカが好き勝手したいチームを作った話じゃん。君がチームを割ったみたいなことをアイアンマンに言ってたけどそれお前からやからなとツッコミを入れようかと思った。ただ、意思決定を自分たちが出来ないのはやはり個の能力が高いチームでは機能しないというのは攻殻機動隊で知ってるので、キャプテンの行動には理解出来ないが、主張はキャプテン・アメリカより。あと、今回のスパイダーマン今までで一番好き。</p>\n<h2>生活</h2>\n<p>ランニングをした。寒い。鍋を作った。最近は特に何も見ずに出汁から高速に作れるようになってきた。</p>\n<h2>Links</h2>\n<ul>\n<li><a href=\"https://gist.github.com/akameco/1ab65189a2426c6c92c596496477fb96\">やる気が出ないときにやることリスト(やらなくてもいいリスト)</a></li>\n</ul>\n<p><a href=\"https://medium.com/@erukiti/%E8%AA%BF%E5%AD%90%E6%82%AA%E3%81%84%E6%99%82%E3%81%A7%E3%82%82%E3%81%A7%E3%81%8D%E3%81%9D%E3%81%86%E3%81%AA%E3%81%93%E3%81%A8%E3%83%AA%E3%82%B9%E3%83%88%E4%BD%9C%E3%82%8A%E3%82%92%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%BF%E3%81%9F-b7c9bb84d2bd\">調子悪い時でもできそうなことリスト作りをはじめてみた – erukiti – Medium</a>にインスパイアされ書いた。やる気が出ないときに消化するかみたいな気持ちになるリスト。</p>\n"}
 
 /***/ },
 /* 570 */
+/***/ function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ },
+/* 571 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46597,7 +46625,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(571);
+	var _Footer = __webpack_require__(572);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -46683,7 +46711,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 571 */
+/* 572 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46740,7 +46768,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 572 */
+/* 573 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
