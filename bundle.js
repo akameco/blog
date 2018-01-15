@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[573, 7],
+[575, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5811,7 +5811,7 @@
 
 /***/ },
 /* 50 */
-[573, 35],
+[575, 35],
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31493,6 +31493,48 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2018-01-14",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-14",
+					"stem": "index",
+					"path": "2018-01-14/index.md"
+				},
+				"requirePath": "2018-01-14/index.md",
+				"path": "/2018-01-14/",
+				"data": {
+					"title": "2018-01-14",
+					"date": "2018-01-14",
+					"path": "/2018-01-14/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
+					"dir": "2018-01-15",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-15",
+					"stem": "index",
+					"path": "2018-01-15/index.md"
+				},
+				"requirePath": "2018-01-15/index.md",
+				"path": "/2018-01-15/",
+				"data": {
+					"title": "2018-01-15",
+					"date": "2018-01-15",
+					"path": "/2018-01-15/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "",
 					"base": "404.md",
 					"ext": "md",
@@ -46455,9 +46497,11 @@
 		"./2018-01-11/index.md": 567,
 		"./2018-01-12/index.md": 568,
 		"./2018-01-13/index.md": 569,
-		"./404.md": 570,
+		"./2018-01-14/index.md": 570,
+		"./2018-01-15/index.md": 571,
+		"./404.md": 572,
 		"./_template.js": 386,
-		"./index.js": 571
+		"./index.js": 573
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46579,10 +46623,22 @@
 /* 570 */
 /***/ function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"2018-01-14","date":"2018-01-14","path":"/2018-01-14/","body":"<h2>s2s</h2>\n<p>s2sをreduxで使っていたら、致命的なバグを見つけた。やはり自分が使わないとバグを発見出来ないなという気持ち。明日の朝対処する。\nあと、テンプレートを毎回コピーするのがダル過ぎるのでどうにかしたい。</p>\n<p>とりあえずIssueに追加した。</p>\n"}
 
 /***/ },
 /* 571 */
+/***/ function(module, exports) {
+
+	module.exports = {"title":"2018-01-15","date":"2018-01-15","path":"/2018-01-15/","body":"<p>なぜか知らないけど、完全に昼夜逆転して18時に起きてる。\nそして明日から仕事。\n朝起きて仕事に行くことと今年の目標として言ったけど、初日にして失敗しそうだ。</p>\n<blockquote class=\"twitter-tweet\" data-partner=\"tweetdeck\"><p lang=\"ja\" dir=\"ltr\">基本的にwebの記事は音声で聞いてるんだけど、一番音声で聞きたいkindleはその機能がなくてつらい</p>&mdash; あかめ@無職.js (@akameco) <a href=\"https://twitter.com/akameco/status/952860727525568512?ref_src=twsrc%5Etfw\">January 15, 2018</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n<h2>Links</h2>\n<ul>\n<li><a href=\"http://this.aereal.org/entry/2018/01/15/120000\">日記を書くWebアプリケーションを書いている - Sexually Knowing</a></li>\n</ul>\n<p>面白い。自分もこんな規模のアプリを書いて練習したい。</p>\n<ul>\n<li><a href=\"https://bookmeter.com/books/11961390\">未来の年表 人口減少日本でこれから起きること 感想 河合 雅司 - 読書メーター</a></li>\n</ul>\n<p>未来の年表を読んだ。</p>\n<h3>感想</h3>\n<p>日本の人口が減るのはわかっている。では、具体的には何が起きるかを年表にした本。 恐ろしい未来が綴られている。 そして、恐ろしいのはその解決策がないことだ。 筆者のいう10の処方箋も解決策としては弱く非現実的である。 また長期的なスパンで見ないとその成果が見えてこない問題であり、どのような対策を打ち出すにしても、あまりに時間が足りない。 そういえば、24H営業の廃止。確かにこれは最近目立ってきたと思った。</p>\n"}
+
+/***/ },
+/* 572 */
+/***/ function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ },
+/* 573 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46625,7 +46681,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(572);
+	var _Footer = __webpack_require__(574);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -46711,7 +46767,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 572 */
+/* 574 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46768,7 +46824,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 573 */
+/* 575 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
