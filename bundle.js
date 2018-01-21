@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[577, 7],
+[581, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5811,7 +5811,7 @@
 
 /***/ },
 /* 50 */
-[577, 35],
+[581, 35],
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31577,6 +31577,90 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2018-01-18",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-18",
+					"stem": "index",
+					"path": "2018-01-18/index.md"
+				},
+				"requirePath": "2018-01-18/index.md",
+				"path": "/2018-01-18/",
+				"data": {
+					"title": "2018-01-18",
+					"date": "2018-01-18",
+					"path": "/2018-01-18/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
+					"dir": "2018-01-19",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-19",
+					"stem": "index",
+					"path": "2018-01-19/index.md"
+				},
+				"requirePath": "2018-01-19/index.md",
+				"path": "/2018-01-19/",
+				"data": {
+					"title": "2018-01-19",
+					"date": "2018-01-19",
+					"path": "/2018-01-19/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
+					"dir": "2018-01-20",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-20",
+					"stem": "index",
+					"path": "2018-01-20/index.md"
+				},
+				"requirePath": "2018-01-20/index.md",
+				"path": "/2018-01-20/",
+				"data": {
+					"title": "2018-01-20",
+					"date": "2018-01-20",
+					"path": "/2018-01-20/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
+					"dir": "2018-01-21",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-21",
+					"stem": "index",
+					"path": "2018-01-21/index.md"
+				},
+				"requirePath": "2018-01-21/index.md",
+				"path": "/2018-01-21/",
+				"data": {
+					"title": "2018-01-21",
+					"date": "2018-01-21",
+					"path": "/2018-01-21/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "",
 					"base": "404.md",
 					"ext": "md",
@@ -46543,9 +46627,13 @@
 		"./2018-01-15/index.md": 571,
 		"./2018-01-16/index.md": 572,
 		"./2018-01-17/index.md": 573,
-		"./404.md": 574,
+		"./2018-01-18/index.md": 574,
+		"./2018-01-19/index.md": 575,
+		"./2018-01-20/index.md": 576,
+		"./2018-01-21/index.md": 577,
+		"./404.md": 578,
 		"./_template.js": 386,
-		"./index.js": 575
+		"./index.js": 579
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46691,10 +46779,34 @@
 /* 574 */
 /***/ function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"2018-01-18","date":"2018-01-18","path":"/2018-01-18/","body":"<h2>エウレカ社の新オフィスの見学に行った</h2>\n<p>猿山があるのだが、猿山と呼ぶと怒られるらしい。正式名称を5回ぐらい聞いたけど覚えてない。\nキレイなオフィスだった。</p>\n<p>久々にboxpに会って、会社の人たちと飲み行った。\n◯◯.js、何でもオチになってしまいよろしくない。</p>\n<p>激辛を食べてしまったので(2日ぶり2回目)、明日の朝がつらそう。</p>\n<h2>読書</h2>\n<p>エストニアの本を読み終わった。\n後で感想を書く。\n一言言うと、日本では当分そこにたどり着くのは無理そうだという結論。</p>\n"}
 
 /***/ },
 /* 575 */
+/***/ function(module, exports) {
+
+	module.exports = {"title":"2018-01-19","date":"2018-01-19","path":"/2018-01-19/","body":"<p>規定の勤務時間を過ぎてしまうので17時前に退社。\n休憩なし6時間勤務して11時出社で17時退社するのわりとよさがあるのでは。</p>\n<h2>仕事</h2>\n<p>今日はPR出来なかった。\nうーむ。すでに実装はある程度終わっていたが、もうちょっとキレイに書けるのではと思ってリファクタリングしたのがまずかった。とりあえず雑に書いてテスト書いてリファクタリングして残り6時間ぐらいあればPR出来るかな。</p>\n<h2>本</h2>\n<p>お金2.0 を読み始めた。</p>\n"}
+
+/***/ },
+/* 576 */
+/***/ function(module, exports) {
+
+	module.exports = {"title":"2018-01-20","date":"2018-01-20","path":"/2018-01-20/","body":"<h2>Qiita</h2>\n<blockquote class=\"twitter-tweet\" data-partner=\"tweetdeck\"><p lang=\"ja\" dir=\"ltr\">eslint-find-rulesを使いESlintの全ての項目を設定する<a href=\"https://t.co/Aph4CIt9ft\">https://t.co/Aph4CIt9ft</a> 書いた。暇を持て余した無職の時間潰しと言われれば...Yes😎</p>&mdash; あかめ@アルバイト.js (@akameco) <a href=\"https://twitter.com/akameco/status/954711876868259841?ref_src=twsrc%5Etfw\">January 20, 2018</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"}
+
+/***/ },
+/* 577 */
+/***/ function(module, exports) {
+
+	module.exports = {"title":"2018-01-21","date":"2018-01-21","path":"/2018-01-21/","body":"<h2>s2s</h2>\n<p>3つのライブラリをリリースした。</p>\n<ul>\n<li><a href=\"https://github.com/akameco/css-to-flow\">akameco/css-to-flow</a></li>\n<li><a href=\"https://github.com/akameco/find-css-classes\">akameco/find-css-classes: find css classes</a></li>\n<li><a href=\"https://github.com/akameco/s2s/tree/master/packages/s2s-handler-css-to-flow\">s2s/packages/s2s-handler-css-to-flow at master · akameco/s2s</a></li>\n</ul>\n<p>目的は、cssからflowの型定義を作成するためだ。\n個人的にはstyeld-componentsがベストだと考えるが、あくまでjsから見た場合であり、既存の資産がある場合はcssを活用した方がいいのは明白だ。\nしかし、cssは型がなく補完もない。タイポも検知しずらい。\nそこで、cssからflowの型定義を生成するライブラリを書いた。\nすでにts版や独立したflow版もあるがflow版はテストがなく利用する価値が低いため、作り直した。\nポイントとしては、他のライブラリと違い、ファイルパスを必要としない。\nそして小さい。\n個人的にはモジュールは<code>index.js</code>ファイル一つより大きくなった時点で分割すべきだと考えている。\nさて、ファイルパスに依存しないので、s2sに乗せることが容易になったので、s2sの仕組みの上で動作する。</p>\n<pre><code class=\"language-js\"><span class=\"hljs-keyword\">const</span> handlerCssToFlow = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">'s2s-handler-css-to-flow'</span>).default\n\n<span class=\"hljs-built_in\">module</span>.exports = {\n  <span class=\"hljs-attr\">watch</span>: <span class=\"hljs-string\">'./**/*.css'</span>,\n  <span class=\"hljs-attr\">plugins</span>: [\n    {\n      <span class=\"hljs-attr\">test</span>: <span class=\"hljs-regexp\">/.*.css$/</span>,\n      <span class=\"hljs-attr\">handler</span>: handlerCssToFlow,\n      <span class=\"hljs-attr\">output</span>: <span class=\"hljs-string\">'[name].css.flow'</span>,\n    },\n  ],\n}\n</code></pre>\n<p>flowは同じディレクトリの同じファイル名のあとに<code>.flow</code>がついていれば対象の型定義とみなすため、特に設定する必要はない。\nこれで型安全にcssを扱うことが出来る。</p>\n<blockquote class=\"twitter-tweet\" data-partner=\"tweetdeck\"><p lang=\"ja\" dir=\"ltr\">s2sでreact-css-modulesのために、cssのクラスセレクタを型定義に変換してcssを型安全に使う <a href=\"https://t.co/wnOznkkNYB\">pic.twitter.com/wnOznkkNYB</a></p>&mdash; あかめ@アルバイト.js (@akameco) <a href=\"https://twitter.com/akameco/status/954886445411348480?ref_src=twsrc%5Etfw\">January 21, 2018</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n<p>ちょっとflowのキャッシュまわりで問題が起こることがあるが、ないよりましだ。</p>\n<h3>s2s</h3>\n<p>久々にメンテした。\nテンプレートを分離出来るようにしたのでプロジェクトに余分なファイルを入れずに済む。\nこれで新規プロジェクトへの導入が楽だ。\nまた、create-react-appをフォークして、s2s+reduxバージョンを作成したい。\nが、CRAのv2が出てから取り組んだ方が良さそうだ。</p>\n<h2>気持ち</h2>\n<p>読書忘れた。\n習慣付けたい。</p>\n"}
+
+/***/ },
+/* 578 */
+/***/ function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ },
+/* 579 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46737,7 +46849,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(576);
+	var _Footer = __webpack_require__(580);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -46823,7 +46935,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 576 */
+/* 580 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46880,7 +46992,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 577 */
+/* 581 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
