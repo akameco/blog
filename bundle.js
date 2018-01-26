@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[581, 7],
+[585, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5811,7 +5811,7 @@
 
 /***/ },
 /* 50 */
-[581, 35],
+[585, 35],
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31661,6 +31661,90 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2018-01-22",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-22",
+					"stem": "index",
+					"path": "2018-01-22/index.md"
+				},
+				"requirePath": "2018-01-22/index.md",
+				"path": "/2018-01-22/",
+				"data": {
+					"title": "2018-01-22",
+					"date": "2018-01-22",
+					"path": "/2018-01-22/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
+					"dir": "2018-01-23",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-23",
+					"stem": "index",
+					"path": "2018-01-23/index.md"
+				},
+				"requirePath": "2018-01-23/index.md",
+				"path": "/2018-01-23/",
+				"data": {
+					"title": "2018-01-23",
+					"date": "2018-01-23",
+					"path": "/2018-01-23/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
+					"dir": "2018-01-24",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-24",
+					"stem": "index",
+					"path": "2018-01-24/index.md"
+				},
+				"requirePath": "2018-01-24/index.md",
+				"path": "/2018-01-24/",
+				"data": {
+					"title": "2018-01-24",
+					"date": "2018-01-24",
+					"path": "/2018-01-24/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
+					"dir": "2018-01-26",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-01-26",
+					"stem": "index",
+					"path": "2018-01-26/index.md"
+				},
+				"requirePath": "2018-01-26/index.md",
+				"path": "/2018-01-26/",
+				"data": {
+					"title": "2018-01-26",
+					"date": "2018-01-26",
+					"path": "/2018-01-26/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "",
 					"base": "404.md",
 					"ext": "md",
@@ -46631,9 +46715,13 @@
 		"./2018-01-19/index.md": 575,
 		"./2018-01-20/index.md": 576,
 		"./2018-01-21/index.md": 577,
-		"./404.md": 578,
+		"./2018-01-22/index.md": 578,
+		"./2018-01-23/index.md": 579,
+		"./2018-01-24/index.md": 580,
+		"./2018-01-26/index.md": 581,
+		"./404.md": 582,
 		"./_template.js": 386,
-		"./index.js": 579
+		"./index.js": 583
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46803,10 +46891,34 @@
 /* 578 */
 /***/ function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"2018-01-22","date":"2018-01-22","path":"/2018-01-22/","body":"<p>バイトは休み。や、ちょうどよく休みを入れておいてよかった。\n雪がものすごい。\n何となく買い物に行って服がびしゃびしゃになってしまって、明日何を着ていくかちょっと悩む。</p>\n<p>お昼頃起きて、寒くて寝てしまったので、ほとんど何もしてない日だった。</p>\n<h2>Links</h2>\n<p><a href=\"https://qiita.com/shinshin86/items/d68cdce126a61b8f7f8e\">vuexのボイラープレートをbabelで飛び越えろ！ -&gt; s2sを使ってソースコードからソースコードへのリアルタイムコード生成をしてみた、3歩目 - Qiita</a></p>\n<p>s2sをVuexに適用。Vueをよく知らないのであれだけど、知らない領域まで生成出来るのを見ると嬉しいものがある。</p>\n<blockquote class=\"twitter-tweet\" data-partner=\"tweetdeck\"><p lang=\"ja\" dir=\"ltr\">Alpha Zeroの衝撃と技術的失業｜山本 一成@Ponanza｜note（ノート） <a href=\"https://t.co/YfJ9wyLAxu\">https://t.co/YfJ9wyLAxu</a> / これから色々な領域でこの流れが来るのだろうな。自分の仕事が必要になくなったとき、同じように悔しいと思うのだろうか</p>&mdash; あかめ@アルバイト.js (@akameco) <a href=\"https://twitter.com/akameco/status/955452320170389504?ref_src=twsrc%5Etfw\">January 22, 2018</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"}
 
 /***/ },
 /* 579 */
+/***/ function(module, exports) {
+
+	module.exports = {"title":"2018-01-23","date":"2018-01-23","path":"/2018-01-23/","body":"<h2>仕事</h2>\n<p>1PRを投げた。やはりenzymeはのテストは書きやすい。個人プロジェクトなら<code>date-test</code>属性で要素を特定するが、いきなり使えないので、<code>text()</code>で要素全体のテキストを取得して、<code>match</code>で特定の言葉があるかみたいな大雑把な方針にした。\n<code>css</code>が全然書けなくてダメダメみたいなところがあるのでシュッと書けるようになっていきたい。</p>\n<h2>プログラム</h2>\n<p>s2sの開発のためにbuildのwatchを追加した。\n多段表示はs2s自体に還元したい。</p>\n<p>今まで<code>list-staged</code>の使い方を完全に誤解していた。めっちゃ便利だった…</p>\n<h2>Links</h2>\n<p><a href=\"http://blog.jnito.com/entry/2018/01/23/075856\">ブログに技術書の内容を丸写しする問題点と、オリジナルなコンテンツを書くためのアイデア - give IT a try</a></p>\n<p>ブログに技術書の内容をどうアウトプットするかについて。\n自分の感想を積極的に散りばめるのはいいと思った。\n自分はあまり技術書自体を読まないけど、機械があればこの方針でやりたい。</p>\n"}
+
+/***/ },
+/* 580 */
+/***/ function(module, exports) {
+
+	module.exports = {"title":"2018-01-24","date":"2018-01-24","path":"/2018-01-24/","body":"<h2>Work</h2>\n<p>レビューに対応していたら一日が終わった。\nめっちゃ書いた気もするが、何も進捗してない気がする。</p>\n<h2>プログラム</h2>\n<p>ちょっとProxyオブジェクトを触ってみた。\nうーん。シンタックス提供用か？\nQiitaに記事も置いておいた。</p>\n<h2>本</h2>\n<p>お金2.0読み終わった。感想は読書メーターに書いた。</p>\n"}
+
+/***/ },
+/* 581 */
+/***/ function(module, exports) {
+
+	module.exports = {"title":"2018-01-26","date":"2018-01-26","path":"/2018-01-26/","body":"<p>あー昨日日報書き忘れた！！</p>\n<p>StoryBookを色々いじってた。\nStoryBook便利of便利なので楽しい。</p>\n"}
+
+/***/ },
+/* 582 */
+/***/ function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ },
+/* 583 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46849,7 +46961,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(580);
+	var _Footer = __webpack_require__(584);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -46935,7 +47047,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 580 */
+/* 584 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46992,7 +47104,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 581 */
+/* 585 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
