@@ -590,7 +590,7 @@
 
 /***/ },
 /* 6 */
-[594, 7],
+[595, 7],
 /* 7 */
 /***/ function(module, exports) {
 
@@ -5811,7 +5811,7 @@
 
 /***/ },
 /* 50 */
-[594, 35],
+[595, 35],
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -31934,6 +31934,27 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2018-03-24",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-03-24",
+					"stem": "index",
+					"path": "2018-03-24/index.md"
+				},
+				"requirePath": "2018-03-24/index.md",
+				"path": "/2018-03-24/",
+				"data": {
+					"title": "2018-03-24",
+					"date": "2018-03-24",
+					"path": "/2018-03-24/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "",
 					"base": "404.md",
 					"ext": "md",
@@ -46917,9 +46938,10 @@
 		"./2018-02-02/index.md": 588,
 		"./2018-02-08/index.md": 589,
 		"./2018-02-14/index.md": 590,
-		"./404.md": 591,
+		"./2018-03-24/index.md": 591,
+		"./404.md": 592,
 		"./_template.js": 386,
-		"./index.js": 592
+		"./index.js": 593
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -47167,10 +47189,16 @@
 /* 591 */
 /***/ function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"2018-03-24","date":"2018-03-24","path":"/2018-03-24/","body":"<p><code>reducerTester</code>を公開した</p>\n<blockquote class=\"twitter-tweet\" data-partner=\"tweetdeck\"><p lang=\"en\" dir=\"ltr\">Utilities for testing redux reducers <a href=\"https://t.co/TYd5yiZIbx\">https://t.co/TYd5yiZIbx</a> <a href=\"https://twitter.com/hashtag/redux?src=hash&amp;ref_src=twsrc%5Etfw\">#redux</a> <a href=\"https://t.co/ppjgRlMqgZ\">pic.twitter.com/ppjgRlMqgZ</a></p>&mdash; 𝔸𝕂𝔸𝕄𝔼@新卒.js (@akameco) <a href=\"https://twitter.com/akameco/status/977531488580218880?ref_src=twsrc%5Etfw\">March 24, 2018</a></blockquote>\n<blockquote class=\"twitter-tweet\" data-conversation=\"none\" data-cards=\"hidden\" data-partner=\"tweetdeck\"><p lang=\"ja\" dir=\"ltr\">reducerのテストは、どこが変更されたかと対応するアクションに対してのリグレッションを防げればいいので、結論としてsnapshotのdiffという結論。<br><br>- スナップショットを見ればどこが変更されたらひと目<br>-スナップショットなので変更が楽<br>- 新しいアクションは配列に一つ足すだけ</p>&mdash; 𝔸𝕂𝔸𝕄𝔼@新卒.js (@akameco) <a href=\"https://twitter.com/akameco/status/977533222748749824?ref_src=twsrc%5Etfw\">March 24, 2018</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n<p>reducerのテストをシンプルにするテスター。\nやはり新しい環境を見ると新しい発想が生まれてよい。</p>\n<h2>買い物</h2>\n<p>自転車を買った。Amazonで2万円以内で見ていたが梱包がどうとかでレビューがあれだったので、3万円のクロスバイクを買った。自分の貯金的には厳しいが、まあわりと毎日使うとなるとペイするだろう。</p>\n<h2>ビデオ</h2>\n<p>プライムビデオにReLife完結編がきていたので見た。\nボロ泣きした。\nEDが世代なので、オレンジレンジの花でボロ泣きし、YUIでボロ泣きしという感じだった。</p>\n<h2>Links</h2>\n<p><a href=\"https://github.com/akameco/reducer-tester\">https://github.com/akameco/reducer-tester</a></p>\n"}
 
 /***/ },
 /* 592 */
+/***/ function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ },
+/* 593 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47213,7 +47241,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(593);
+	var _Footer = __webpack_require__(594);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -47299,7 +47327,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 593 */
+/* 594 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47356,7 +47384,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 594 */
+/* 595 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
