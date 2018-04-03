@@ -1180,7 +1180,7 @@
 
 /***/ }),
 /* 15 */
-[597, 6],
+[599, 6],
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6026,7 +6026,7 @@
 
 /***/ }),
 /* 50 */
-[597, 35],
+[599, 35],
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -32138,6 +32138,48 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2018-04-01",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-04-01",
+					"stem": "index",
+					"path": "2018-04-01/index.md"
+				},
+				"requirePath": "2018-04-01/index.md",
+				"path": "/2018-04-01/",
+				"data": {
+					"title": "2018-04-01",
+					"date": "2018-04-01",
+					"path": "/2018-04-01/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
+					"dir": "2018-04-03",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-04-03",
+					"stem": "index",
+					"path": "2018-04-03/index.md"
+				},
+				"requirePath": "2018-04-03/index.md",
+				"path": "/2018-04-03/",
+				"data": {
+					"title": "2018-04-03",
+					"date": "2018-04-03",
+					"path": "/2018-04-03/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "",
 					"base": "404.md",
 					"ext": "md",
@@ -46336,9 +46378,11 @@
 		"./2018-03-25/index.md": 591,
 		"./2018-03-26/index.md": 592,
 		"./2018-03-27/index.md": 593,
-		"./404.md": 594,
+		"./2018-04-01/index.md": 594,
+		"./2018-04-03/index.md": 595,
+		"./404.md": 596,
 		"./_template.js": 387,
-		"./index.js": 595
+		"./index.js": 597
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46610,10 +46654,22 @@
 /* 594 */
 /***/ (function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"2018-04-01","date":"2018-04-01","path":"/2018-04-01/","body":"<p>記事を3つ書いた</p>\n<p><a href=\"https://qiita.com/akameco/items/31e2078c38ff2fd60213\">どのようにreduxのreducerのテストを書くか？ - Qiita</a>\n<a href=\"https://qiita.com/akameco/items/f5de714b595c7005c873\">css-modulesをstyled-styleでstyled-componentsライクに扱う - Qiita</a>\n<a href=\"https://qiita.com/akameco/items/58ae0ed316db298f384a\">epic-tester で redux-observable のマーブルテストを簡潔にする - Qiita</a></p>\n<p>明日は入社式</p>\n<p>19:30起床したので起きれるか不安である。</p>\n"}
 
 /***/ }),
 /* 595 */
+/***/ (function(module, exports) {
+
+	module.exports = {"title":"2018-04-03","date":"2018-04-03","path":"/2018-04-03/","body":"<p>入社2日目。色々お話聞いた感じだった。\n入社1日目はいきなり皿を割るインシデントを起こしたが、本日は問題なく過ごせたが、長時間イスに座りすぎて腰がやばい。\n何かクッションを持ち歩くべきかリアルに検討すべきか。</p>\n<h2>やったこと</h2>\n<p>aws lambdaにnode 8に対応したので、upを使って試してみたらupのでデフォルトの設定がnode6だった。まあasync/await動くことを確認したのでよし。ただ、バンドルサイズを減らすためにやはりビルドは必要な感じがある。</p>\n"}
+
+/***/ }),
+/* 596 */
+/***/ (function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ }),
+/* 597 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46656,7 +46712,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(596);
+	var _Footer = __webpack_require__(598);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -46742,7 +46798,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 596 */
+/* 598 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46799,7 +46855,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 597 */
+/* 599 */
 /***/ (function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
