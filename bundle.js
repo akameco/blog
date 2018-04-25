@@ -1180,7 +1180,7 @@
 
 /***/ }),
 /* 15 */
-[599, 6],
+[601, 6],
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6026,7 +6026,7 @@
 
 /***/ }),
 /* 50 */
-[599, 35],
+[601, 35],
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -32180,6 +32180,48 @@
 			{
 				"file": {
 					"root": "",
+					"dir": "2018-04-05",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-04-05",
+					"stem": "index",
+					"path": "2018-04-05/index.md"
+				},
+				"requirePath": "2018-04-05/index.md",
+				"path": "/2018-04-05/",
+				"data": {
+					"title": "2018-04-05",
+					"date": "2018-04-05",
+					"path": "/2018-04-05/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
+					"dir": "2018-04-25",
+					"base": "index.md",
+					"ext": "md",
+					"name": "index",
+					"extname": ".md",
+					"basename": "index.md",
+					"dirname": "2018-04-25",
+					"stem": "index",
+					"path": "2018-04-25/index.md"
+				},
+				"requirePath": "2018-04-25/index.md",
+				"path": "/2018-04-25/",
+				"data": {
+					"title": "2018-04-25",
+					"date": "2018-04-25",
+					"path": "/2018-04-25/"
+				}
+			},
+			{
+				"file": {
+					"root": "",
 					"dir": "",
 					"base": "404.md",
 					"ext": "md",
@@ -46380,9 +46422,11 @@
 		"./2018-03-27/index.md": 593,
 		"./2018-04-01/index.md": 594,
 		"./2018-04-03/index.md": 595,
-		"./404.md": 596,
+		"./2018-04-05/index.md": 596,
+		"./2018-04-25/index.md": 597,
+		"./404.md": 598,
 		"./_template.js": 387,
-		"./index.js": 597
+		"./index.js": 599
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -46666,10 +46710,22 @@
 /* 596 */
 /***/ (function(module, exports) {
 
-	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+	module.exports = {"title":"2018-04-05","date":"2018-04-05","path":"/2018-04-05/","body":"<p>研修4日目。\n椅子に長時間座りすぎて、腰が崩壊した。\n研修中はメモとりつつ、どんなライブラリを書くかを頭で考える時間になっている。</p>\n<p>椅子に座っている間はコーディングしたい気持ちでいっぱいになるのだけど、家に帰るとグダってしまうのよろしくないな。</p>\n"}
 
 /***/ }),
 /* 597 */
+/***/ (function(module, exports) {
+
+	module.exports = {"title":"2018-04-25","date":"2018-04-25","path":"/2018-04-25/","body":"<p>初任給入った。わーい。\n先月のバイトの給料も同時だったのでいきなりマネーが増えた。さらにわーい。\n全ての借金の返済終わった。最高。\nBabelに寄付した。感謝。</p>\n<p>今日の外部講師を呼んだマナー研修はありていに言えば最悪だった。\n同期が粛清された。</p>\n"}
+
+/***/ }),
+/* 598 */
+/***/ (function(module, exports) {
+
+	module.exports = {"path":"/404.html","body":"<h1>NOT FOUND</h1>\n<p>You just hit a route that doesn’t exist… the sadness.</p>\n"}
+
+/***/ }),
+/* 599 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46712,7 +46768,7 @@
 	
 	var _include2 = _interopRequireDefault(_include);
 	
-	var _Footer = __webpack_require__(598);
+	var _Footer = __webpack_require__(600);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -46798,7 +46854,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 598 */
+/* 600 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46855,7 +46911,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 599 */
+/* 601 */
 /***/ (function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/**
